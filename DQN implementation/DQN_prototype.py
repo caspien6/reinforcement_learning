@@ -3,17 +3,34 @@ import skimage.transform as ST
 import keras
 from keras.models import Sequential
 from keras.layers import Dense, Activation
+import itertools, collections, gym
+import numpy as np
 
+global all_action
+
+def create_all_action():
+	global all_action
+	all_action = list(itertools.permutations([0,0,0,0,0,1])) + list(itertools.permutations([0,0,0,0,1,1])) + list(itertools.permutations([0,0,0,1,1,1])) + list(itertools.permutations([0,0,1,1,1,1])) + list(itertools.permutations([0,1,1,1,1,1])) + [(1,1,1,1,1,1)] + [(0,0,0,0,0,0)]
+	dt=np.dtype('int,int,int,int,int,int')
+	all_action = np.array(all_action,dtype=dt)
 
 def preprocess_image(image):
 	image = image[40:210]
-	return ST.resize(image, (84,84))
+	observation = ST.resize(image, (84,84))
+	for rowi in range(observation.shape[0]):
+		for pixeli in range(observation.shape[1]):
+			element = observation[rowi,pixeli]
+			observation[rowi,pixeli] = float(element[0])*0.299 + 0.587*float(element[1]) + float(element[2])*0.114
+	return observation[:,:,0]
 
 def argmax(Q, observation):
 	#tfh. az all_action-ben az összes action kombináció benne van, pl. egy eleme: [0,0,0,0,0,0]
 	max_rew = 0
+	global all_action
 	for action in all_action:
-		rew = Q.predict_on_batch((observation, action))
+		print(np.array(action).shape)
+		print(observation.shape)
+		rew = Q.predict_on_batch(np.concatenate( (observation, np.array(action))))
 		if rew[0] > max_rew:
 			max_action = action
 			max_rew = rew[0]
@@ -25,22 +42,22 @@ D = collections.deque(maxlen = 20) #Experience replay dataset (st,at,rt,st+1)
 #Initialize neural networks--
 
 Q = Sequential()
-Q.add(Dense(32, activation='relu', input_dim=84))
+Q.add(Dense(32, activation='relu', input_dim=84*84 + 6))
 Q.add(Dense(1, activation='sigmoid'))
 Q.compile(optimizer='sgd',loss='binary_crossentropy',metrics=['accuracy'])
 
 Q_freeze = Sequential()
-Q_freeze.add(Dense(32, activation='relu', input_dim=84))
+Q_freeze.add(Dense(32, activation='relu', input_dim=84*84 + 6))
 Q_freeze.add(Dense(1, activation='sigmoid'))
 Q_freeze.compile(optimizer='sgd',loss='binary_crossentropy',metrics=['accuracy'])
 
-Q_freeze.set_weights(Q.get_weights)
-
+Q_freeze.set_weights(Q.get_weights())
+create_all_action()
 for epoch in range(1,10):
 	#Start the environment
 
 	env = gym.make('SuperMarioBros-1-1-v0')
-
+	env.reset()
 	#random action
 	action = env.action_space.sample() 
 	
@@ -54,6 +71,7 @@ for epoch in range(1,10):
 		if 98 < randint(0, 100):
 			action_t = env.action_space.sample()
 		else:
+			print(type(preprocessed_img[t]))
 			action_t = argmax(Q,preprocessed_img[t])
 
 		observation, reward, done, info = env.step(action_t)
