@@ -47,6 +47,9 @@ def gradient_descent_step(Q, fifo, yj):
 	Q.train_on_batch(np.reshape(data,(1,84*84*4)), np.reshape(yj, (1,6)) )
 	return Q
 
+def get_epsilon(x, maxrange):
+	return (0.01-0.1)/(maxrange-1.0)*x + 0.1 + (-1.0*(0.01-0.1)/(maxrange-1.0))
+
 D = collections.deque(maxlen = 200) #Experience replay dataset (st,at,rt,st+1)
 
 #Initialize neural networks--
@@ -72,7 +75,9 @@ Q_freeze.compile(optimizer='sgd',
 Q_freeze.set_weights(Q.get_weights())
 
 
-for epoch in range(1,200):
+maxrange=200
+
+for epoch in range(1,maxrange):
 	#Start the environment
 
 	env = gym.make('SuperMarioBros-1-1-v0')
@@ -86,11 +91,13 @@ for epoch in range(1,200):
 	preprocessed_img = []
 	preprocessed_img.append(fifo.copy())
 
-	learning_factor = 0.3
+	epsilon = get_epsilon(float(epoch+1.0),float(maxrange))
+	learning_factor = 1
 	t = 0
+	print(epsilon)
 	while not done:
 
-		if -0.5*epoch + 100.5 > randint(0, 1000):
+		if epsilon >= random.uniform(0,1):
 			action_t = get_random_action(Q, fifo)
 		else:
 			action_t = argmax(Q,fifo)
