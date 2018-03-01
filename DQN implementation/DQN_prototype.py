@@ -5,6 +5,7 @@ from keras.models import Sequential
 from keras.layers import Dense, Activation
 import itertools, collections, gym, random, os
 import numpy as np
+from gym.monitoring import VideoRecorder
 
 
 
@@ -50,83 +51,99 @@ def gradient_descent_step(Q, fifo, yj):
 def get_epsilon(x, maxrange):
 	return (0.01-0.1)/(maxrange-1.0)*x + 0.1 + (-1.0*(0.01-0.1)/(maxrange-1.0))
 
-D = collections.deque(maxlen = 200) #Experience replay dataset (st,at,rt,st+1)
+def init_network():
+	Q = Sequential()
+	Q.add(Dense(84*6, activation='relu', input_dim=84*84*4))
+	Q.add(Dense(54, activation='relu'))
+	Q.add(Dense(6, activation='sigmoid'))
+	Q.compile(optimizer='sgd',
+				  loss='binary_crossentropy',
+				  metrics=['accuracy'])
+	return Q
 
-#Initialize neural networks--
+def main():
+	try:
+		D = collections.deque(maxlen = 200) #Experience replay dataset (st,at,rt,st+1)
 
-Q = Sequential()
-Q.add(Dense(84*6, activation='relu', input_dim=84*84*4))
-Q.add(Dense(54, activation='relu'))
-Q.add(Dense(6, activation='sigmoid'))
-Q.compile(optimizer='sgd',
-			  loss='binary_crossentropy',
-			  metrics=['accuracy'])
-if os.path.isfile('./weights.h5'):
-	Q.load_weights('weights.h5')
+		#Initialize neural networks--
 
-Q_freeze = Sequential()
-Q_freeze.add(Dense(84*6, activation='relu', input_dim=84*84*4))
-Q_freeze.add(Dense(54, activation='relu'))
-Q_freeze.add(Dense(6, activation='sigmoid'))
-Q_freeze.compile(optimizer='sgd',
-			  loss='binary_crossentropy',
-			  metrics=['accuracy'])
+		Q = init_network()
 
-Q_freeze.set_weights(Q.get_weights())
+		if os.path.isfile('./weights.h5'):
+			Q.load_weights('weights.h5')
+
+		Q_freeze = init_network()
+		Q_freeze.set_weights(Q.get_weights())
+
+		maxrange=200
+
+		for epoch in range(1,maxrange):
+			#Start the environment
+
+			env = gym.make('SuperMarioBros-1-1-v0')
+			env.reset()
+			video_recorder = VideoRecorder(env, './records/els'+str(epoch)+'.mp4', enabled=True)
+			if epoch%10==1:
+				video_recorder.enabled=True
+			else:
+				video_recorder.enabled=False
+
+			#random action
+			action = env.action_space.sample() 
+			observation, reward, done, info = env.step(action)
+
+			#Preprocess image
+			fifo = init_fifo()
+			preprocessed_img = []
+			preprocessed_img.append(fifo.copy())
 
 
-maxrange=200
+			epsilon = get_epsilon(float(epoch+1.0),float(maxrange))
+			learning_factor = 1
+			t = 0
+			print(epsilon)
+			while not done:
+				video_recorder.capture_frame()
+				
+				if epsilon >= random.uniform(0,1):
+					action_t = get_random_action(Q, fifo)
+				else:
+					action_t = argmax(Q,fifo)
 
-for epoch in range(1,maxrange):
-	#Start the environment
+				print("Action_t: ", action_t)
 
-	env = gym.make('SuperMarioBros-1-1-v0')
-	env.reset()
-	#random action
-	action = env.action_space.sample() 
-	
-	observation, reward, done, info = env.step(action)
-	#Preprocess image
-	fifo = init_fifo()
-	preprocessed_img = []
-	preprocessed_img.append(fifo.copy())
+				observation, reward, done, info = env.step(action_t)
+				fifo.appendleft(np.array(preprocess_image(observation), dtype=np.uint8))
 
-	epsilon = get_epsilon(float(epoch+1.0),float(maxrange))
-	learning_factor = 1
-	t = 0
-	print(epsilon)
-	while not done:
+				preprocessed_img.append(fifo.copy())
 
-		if epsilon >= random.uniform(0,1):
-			action_t = get_random_action(Q, fifo)
-		else:
-			action_t = argmax(Q,fifo)
+				D.appendleft( [preprocessed_img[t],
+				action_t, reward, (preprocessed_img[t+1],done)] )
+				minibatch = random.sample(D, 1) 
+				
+				if minibatch[0][3][1]:   #done igaz-e
+					yj = minibatch[0][2] + np.zeros((1,6), dtype=np.uint8) #csak a rewardra figyelünk
+				else:
+					r = learning_factor*argmax(Q_freeze,minibatch[0][3][0])#fifo n+1
+					print("Minibatc: ", minibatch[0][2])
+					yj = minibatch[0][2] + r 
+				
+				print("yj: ", yj)
 
-		print("Action_t: ", action_t)
+				Q = gradient_descent_step(Q, minibatch[0][0], yj)
+				
+				
+				
+				if (t) % 100 == 0:
+					Q_freeze.set_weights(Q.get_weights())
+				if (t) % 1000 == 0 or done:
+					Q.save_weights('weights.h5')
+				t = t + 1
+	finally:
+		video_recorder.close()
+		video_recorder.enabled = False
 
-		observation, reward, done, info = env.step(action_t)
-		fifo.appendleft(np.array(preprocess_image(observation), dtype=np.uint8))
 
-		preprocessed_img.append(fifo.copy())
 
-		D.appendleft( [preprocessed_img[t],
-		action_t, reward*10, (preprocessed_img[t+1],done)] )
-		minibatch = random.sample(D, 1) 
-		
-		if minibatch[0][3][1]:   #done igaz-e
-			yj = minibatch[0][2] + np.zeros((1,6), dtype=np.uint8) #csak a rewardra figyelünk
-		else:
-			r = learning_factor*argmax(Q_freeze,minibatch[0][3][0])#fifo n+1
-			print("Minibatc: ", minibatch[0][2])
-			yj = minibatch[0][2] + r 
-		
-		print("yj: ", yj)
+main()
 
-		Q = gradient_descent_step(Q, minibatch[0][0], yj)
-		
-		
-		if (t) % 100 == 0:
-			Q_freeze.set_weights(Q.get_weights())
-		if (t) % 1000 == 0 or done:
-			Q.save_weights('weights.h5')
-		t = t + 1
