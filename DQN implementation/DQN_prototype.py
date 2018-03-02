@@ -95,6 +95,7 @@ def get_yj(minibatch, Q_freeze, learning_factor):
 		r = learning_factor*s_next#fifo n+1
 		#print("Minibatc: ", minibatch[0][2])
 		yj = minibatch[0][2] + r
+	print(yj)
 	return yj
 
 def main():
@@ -155,6 +156,9 @@ def main():
 				print("Action_t: ", action_t)
 
 				observation, reward, done, info = env.step(action_t)
+
+				if reward > 0: reward = 1
+				elif reward < 0: reward = -1
 				sum_rewards += reward
 
 				preprocessed_img.append(fifo.copy())
