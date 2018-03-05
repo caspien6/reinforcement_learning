@@ -70,8 +70,8 @@ def init_network():
 	model.add(Dense(units=512, activation='relu'))
 	model.add(Dense(units=6, activation='relu'))
 
-	model.compile(optimizer='sgd',
-			  loss='binary_crossentropy',
+	model.compile(optimizer='adam',
+			  loss='mse',
 			  metrics=['accuracy'])
 	return model
 
