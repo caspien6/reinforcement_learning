@@ -7,6 +7,7 @@ import itertools, collections, gym, random, os, sys, logging
 import numpy as np
 from gym.monitoring import VideoRecorder
 from gym.wrappers import Monitor
+from pyvirtualdisplay import Display
 
 
 
@@ -101,6 +102,8 @@ def get_yj(minibatch, Q_freeze, learning_factor):
 
 def main():
 	try:
+		display = Display(visible=0, size=(1400,900))
+		display.start()
 		D = collections.deque(maxlen = 500) #Experience replay dataset (st,at,rt,st+1)
 
 		#Initialize neural networks--
@@ -120,7 +123,7 @@ def main():
 		for epoch in range(1,maxrange):
 			#Start the environment
 			env = gym.make('SuperMarioBros-1-1-v0')
-			env = Monitor(env, './records', lambda episode_id: episode_id%10==0)
+			env = Monitor(env, './records', lambda episode_id: episode_id%10==0, force=True)
 			env.reset()
 
 			#Video recorder init
