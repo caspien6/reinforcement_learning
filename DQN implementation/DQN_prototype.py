@@ -6,6 +6,7 @@ from keras.layers import Dense, Activation
 import itertools, collections, gym, random, os, sys, logging
 import numpy as np
 from gym.monitoring import VideoRecorder
+from gym.wrappers import Monitor
 
 
 
@@ -119,16 +120,17 @@ def main():
 		for epoch in range(1,maxrange):
 			#Start the environment
 			env = gym.make('SuperMarioBros-1-1-v0')
+			env = Monitor(env, './records', lambda episode_id: episode_id%10==0)
 			env.reset()
 
 			#Video recorder init
-			video_recorder = VideoRecorder(env, './records/els'+str(epoch)+'.mp4', enabled=True)
+			#video_recorder = VideoRecorder(env, './records/els'+str(epoch)+'.mp4', enabled=True)
 			
 
-			if epoch%10==1:
-				video_recorder.enabled=True
-			else:
-				video_recorder.enabled=False
+			# if epoch%10==1:
+			# 	video_recorder.enabled=True
+			# else:
+			# 	video_recorder.enabled=False
 
 			#random action
 			action = env.action_space.sample() 
@@ -145,7 +147,7 @@ def main():
 			sum_rewards = 0
 			t = 0
 			while not done:
-				video_recorder.capture_frame()
+				#video_recorder.capture_frame()
 				
 				if epsilon >= random.uniform(0,1):
 					print("Random:")
@@ -180,8 +182,9 @@ def main():
 				t = t + 1
 			logger.info(str(t) + " lépésszám mellett, reward: " + str(sum_rewards))
 	finally:
-		video_recorder.close()
-		video_recorder.enabled = False
+		print()
+		#video_recorder.close()
+		#video_recorder.enabled = False
 
 
 
