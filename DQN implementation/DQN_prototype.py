@@ -10,7 +10,6 @@ from gym.wrappers import Monitor
 from pyvirtualdisplay import Display
 
 
-
 def get_random_action(Q, fifo):
 	data = np.concatenate( (fifo[0],fifo[1],fifo[2],fifo[3]), axis=3)
 	max_action = Q.predict_on_batch( data)
@@ -91,13 +90,13 @@ def init_logger(outdir):
 
 def get_yj(minibatch, Q_freeze, learning_factor):
 	if minibatch[0][3][1]:   #done igaz-e
-		yj = minibatch[0][2] + np.zeros((1,6), dtype=np.uint8) #csak a rewardra figyelünk
+		yj = minibatch[0][2] + np.zeros((1,6), dtype=np.uint8) #csak a rewardra figyelÃ¼nk
 	else:
 		s_next=argmax(Q_freeze,minibatch[0][3][0])
 		r = learning_factor*s_next#fifo n+1
 		#print("Minibatc: ", minibatch[0][2])
 		yj = minibatch[0][2] + r
-	print(yj)
+	#print(yj)
 	return yj
 
 def main():
@@ -112,7 +111,7 @@ def main():
 		logger = init_logger('./records/els.log')
 
 		if sys.argv[-1] == 'y' and os.path.isfile('./weights.h5'):
-			print(sys.argv)
+			#print(sys.argv)
 			Q.load_weights('weights.h5')
 
 		Q_freeze = init_network()
@@ -123,7 +122,7 @@ def main():
 		for epoch in range(1,maxrange):
 			#Start the environment
 			env = gym.make('SuperMarioBros-1-1-v0')
-			env = Monitor(env, './records', lambda episode_id: episode_id%10==0, force=True)
+			#env = Monitor(env, './records', lambda episode_id: episode_id%10==0, force=True)
 			env.reset()
 
 			#Video recorder init
@@ -153,12 +152,12 @@ def main():
 				#video_recorder.capture_frame()
 				
 				if epsilon >= random.uniform(0,1):
-					print("Random:")
+					#print("Random:")
 					action_t = get_random_action(Q, fifo)
 				else:
 					action_t = argmax(Q,fifo)
 
-				print("Action_t: ", action_t)
+				#print("Action_t: ", action_t)
 
 				observation, reward, done, info = env.step(action_t)
 
@@ -183,7 +182,7 @@ def main():
 				if (t) % 100 == 0 or done:
 					Q.save_weights('weights.h5')
 				t = t + 1
-			logger.info(str(t) + " lépésszám mellett, reward: " + str(sum_rewards))
+			logger.info(str(t) + " lÃ©pÃ©sszÃ¡m mellett, reward: " + str(sum_rewards))
 	finally:
 		print()
 		#video_recorder.close()
