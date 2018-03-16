@@ -52,11 +52,12 @@ def preprocess_image(image):
 
 def argmax(Q,fifo):
 	data = np.concatenate((fifo[0],fifo[1],fifo[2],fifo[3]), axis=3)
-	return np.rint(Q.predict_on_batch( data)).flatten()
+	vlmi = Q.predict_on_batch( data).flatten()
+	return vlmi
 
-def gradient_descent_step(Q, fifo, yj):
+def gradient_descent_step(Q, fifo, diff):
 	data = np.concatenate((fifo[0],fifo[1],fifo[2],fifo[3]), axis=3)
-	Q.train_on_batch(data, np.reshape(yj, (1,6)) )
+	loss = Q.train_on_batch(data, np.reshape(diff, (1,6)) )
 	return Q
 
 def get_epsilon(x, maxrange):
@@ -90,20 +91,18 @@ def init_logger(outdir):
 
 def get_yj(minibatch, Q_freeze, learning_factor):
 	if minibatch[0][3][1]:   #done igaz-e
-		yj = minibatch[0][2] + np.zeros((1,6), dtype=np.uint8) #csak a rewardra figyelÃ¼nk
+		yj = minibatch[0][2] + np.zeros((1,6), dtype=np.uint8) #csak a rewardra figyelünk
 	else:
-		s_next=argmax(Q_freeze,minibatch[0][3][0])
+		s_next=np.rint(argmax(Q_freeze,minibatch[0][3][0]))
 		r = learning_factor*s_next#fifo n+1
-		#print("Minibatc: ", minibatch[0][2])
-		yj = minibatch[0][2] + r
-	#print(yj)
+		yj = minibatch[0][2] + r # reward + learningfactor*argmax(Qf)
 	return yj
 
 def main():
 	try:
 		display = Display(visible=0, size=(1400,900))
 		display.start()
-		D = collections.deque(maxlen = 500) #Experience replay dataset (st,at,rt,st+1)
+		D = collections.deque(maxlen = 6000) #Experience replay dataset (st,at,rt,st+1)
 
 		#Initialize neural networks--
 
@@ -111,13 +110,13 @@ def main():
 		logger = init_logger('./records/els.log')
 
 		if sys.argv[-1] == 'y' and os.path.isfile('./weights.h5'):
-			#print(sys.argv)
+			print('loading weights')
 			Q.load_weights('weights.h5')
 
 		Q_freeze = init_network()
 		Q_freeze.set_weights(Q.get_weights())
 
-		maxrange=200
+		maxrange=2000
 
 		for epoch in range(1,maxrange):
 			#Start the environment
@@ -145,19 +144,17 @@ def main():
 
 
 			epsilon = get_epsilon(float(epoch+1.0),float(maxrange))
-			learning_factor = 0.5
+			print('epsilon: ', epsilon)
+			learning_factor = 0.7
 			sum_rewards = 0
 			t = 0
 			while not done:
 				#video_recorder.capture_frame()
 				
 				if epsilon >= random.uniform(0,1):
-					#print("Random:")
 					action_t = get_random_action(Q, fifo)
 				else:
-					action_t = argmax(Q,fifo)
-
-				#print("Action_t: ", action_t)
+					action_t = np.rint(argmax(Q,fifo))
 
 				observation, reward, done, info = env.step(action_t)
 
@@ -171,18 +168,18 @@ def main():
 				minibatch = random.sample(D, 1)
 				
 				yj = get_yj(minibatch, Q_freeze, learning_factor)
-							
+				#print('yj_out of function: ', yj)
 				#Backpropagation
 
-				Q = gradient_descent_step(Q, minibatch[0][0], yj)
+				Q = gradient_descent_step(Q, minibatch[0][0], (yj - argmax(Q, minibatch[0][0]))**2 )
 				
 				
-				if (t) % 100 == 0:
+				if (t) % 500 == 0:
 					Q_freeze.set_weights(Q.get_weights())
 				if (t) % 100 == 0 or done:
 					Q.save_weights('weights.h5')
 				t = t + 1
-			logger.info(str(t) + " lÃ©pÃ©sszÃ¡m mellett, reward: " + str(sum_rewards))
+			logger.info(str(t) + " lépésszám mellett, reward: " + str(sum_rewards))
 	finally:
 		print()
 		#video_recorder.close()
