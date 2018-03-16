@@ -48,7 +48,9 @@ def preprocess_image(image):
 		for pixeli in range(observation.shape[1]):
 			element = observation[rowi,pixeli]
 			observation[rowi,pixeli] = element[0]*0.299 + 0.587*element[1] + element[2]*0.114
-	return observation[:,:,0]
+	prec = np.expand_dims(observation[:,:,0], axis=2)
+	prec = np.expand_dims(prec, axis=0)
+	return prec
 
 def argmax(Q,fifo):
 	data = np.concatenate((fifo[0],fifo[1],fifo[2],fifo[3]), axis=3)
@@ -161,7 +163,8 @@ def main():
 				if reward > 0: reward = 1
 				elif reward < 0: reward = -1
 				sum_rewards += reward
-
+				
+				fifo.appendleft(preprocess_image(observation))
 				preprocessed_img.append(fifo.copy())
 
 				D.appendleft( [preprocessed_img[t],action_t, reward, (preprocessed_img[t+1],done)] )
@@ -188,4 +191,3 @@ def main():
 
 
 main()
-
