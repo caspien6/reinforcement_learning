@@ -95,16 +95,15 @@ def get_yj(minibatch, Q_freeze, learning_factor):
 	if minibatch[0][3][1]:   #done igaz-e
 		yj = minibatch[0][2] + np.zeros((1,6), dtype=np.uint8) #csak a rewardra figyelünk
 	else:
-		s_next=np.rint(argmax(Q_freeze,minibatch[0][3][0]))
-		r = learning_factor*s_next#fifo n+1
-		yj = minibatch[0][2] + r # reward + learningfactor*argmax(Qf)
+		s_next= argmax(Q_freeze,minibatch[0][3][0])
+		yj = minibatch[0][2] + learning_factor*s_next # reward + learningfactor*argmax(Qf)
 	return yj
 
 def main():
 	try:
 		display = Display(visible=0, size=(1400,900))
 		display.start()
-		D = collections.deque(maxlen = 6000) #Experience replay dataset (st,at,rt,st+1)
+		D = collections.deque(maxlen = 300) #Experience replay dataset (st,at,rt,st+1)
 
 		#Initialize neural networks--
 
@@ -141,13 +140,17 @@ def main():
 
 			#Preprocess image
 			fifo = init_fifo()
+			fifo.appendleft(preprocess_image(observation))
+			fifo.appendleft(preprocess_image(observation))
+			fifo.appendleft(preprocess_image(observation))
+			fifo.appendleft(preprocess_image(observation))
 			preprocessed_img = []
 			preprocessed_img.append(fifo.copy())
 
 
 			epsilon = get_epsilon(float(epoch+1.0),float(maxrange))
 			print('epsilon: ', epsilon)
-			learning_factor = 0.7
+			learning_factor = 0.5
 			sum_rewards = 0
 			t = 0
 			while not done:
@@ -169,12 +172,16 @@ def main():
 
 				D.appendleft( [preprocessed_img[t],action_t, reward, (preprocessed_img[t+1],done)] )
 				minibatch = random.sample(D, 1)
-				
 				yj = get_yj(minibatch, Q_freeze, learning_factor)
 				#print('yj_out of function: ', yj)
+				
 				#Backpropagation
+				error = (yj - argmax(Q, minibatch[0][0]))**2
 
-				Q = gradient_descent_step(Q, minibatch[0][0], (yj - argmax(Q, minibatch[0][0]))**2 )
+				#gradient descent !! TEST----------------------------------
+				data = np.concatenate((fifo[0],fifo[1],fifo[2],fifo[3]), axis=3)
+				loss = Q.train_on_batch(data, np.reshape(error, (1,6)) )
+				#Q = gradient_descent_step(Q, minibatch[0][0], error )-----
 				
 				
 				if (t) % 500 == 0:
