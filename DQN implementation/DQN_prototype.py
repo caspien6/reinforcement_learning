@@ -10,35 +10,25 @@ from gym.wrappers import Monitor
 from pyvirtualdisplay import Display
 
 
+global all_action
+
+def get_all_action():
+	return list(itertools.product([0,1], repeat=6))
+
 def get_random_action(Q, fifo):
-	data = np.concatenate( (fifo[0],fifo[1],fifo[2],fifo[3]), axis=3)
-	max_action = Q.predict_on_batch( data)
+	data = np.concatenate( (fifo[3],fifo[2],fifo[1],fifo[0]), axis=3)
+	action_predictions = Q.predict_on_batch( data).flatten()
+	index = action_predictions.argmax(axis=0)
+	max_action = list(all_action[index])
+
 	rnd_action = [random.randint(0,1),	random.randint(0,1),	random.randint(0,1),	random.randint(0,1),	random.randint(0,1),	random.randint(0,1)]
-	while [i for i,j in zip(rnd_action, max_action.tolist()) if i == j]:
+	while [i for i,j in zip(rnd_action, max_action) if i == j]:
 		rnd_action = [random.randint(0,1),	random.randint(0,1),	random.randint(0,1),	random.randint(0,1),	random.randint(0,1),	random.randint(0,1)]
 
 	return rnd_action
 
 def init_fifo():
 	fifo = collections.deque(maxlen=4)
-	one = np.ones((84,84),dtype=np.uint8)
-	two = np.ones((84,84),dtype=np.uint8)
-	three = np.ones((84,84),dtype=np.uint8)
-	four = np.ones((84,84),dtype=np.uint8)
-
-	one = np.expand_dims(one, axis=2)
-	two = np.expand_dims(two, axis=2)
-	three = np.expand_dims(three, axis=2)
-	four = np.expand_dims(four, axis=2)
-	one = np.expand_dims(one, axis=0)
-	two = np.expand_dims(two, axis=0)
-	three = np.expand_dims(three, axis=0)
-	four = np.expand_dims(four, axis=0)
-
-	fifo.appendleft(one)
-	fifo.appendleft(two)
-	fifo.appendleft(three)
-	fifo.appendleft(four)
 	return fifo
 
 def preprocess_image(image):
@@ -53,12 +43,14 @@ def preprocess_image(image):
 	return prec
 
 def argmax(Q,fifo):
-	data = np.concatenate((fifo[0],fifo[1],fifo[2],fifo[3]), axis=3)
-	vlmi = Q.predict_on_batch( data).flatten()
-	return vlmi
+	data = np.concatenate((fifo[3],fifo[2],fifo[1],fifo[0]), axis=3)
+	action_predictions = Q.predict_on_batch( data).flatten()
+	index = action_predictions.argmax(axis=0)
+	print('winner: ', all_action[index])
+	return list(all_action[index])
 
 def gradient_descent_step(Q, fifo, diff):
-	data = np.concatenate((fifo[0],fifo[1],fifo[2],fifo[3]), axis=3)
+	data = np.concatenate((fifo[3],fifo[2],fifo[1],fifo[0]), axis=3)
 	loss = Q.train_on_batch(data, np.reshape(diff, (1,6)) )
 	return Q
 
@@ -67,12 +59,14 @@ def get_epsilon(x, maxrange):
 
 def init_network():
 	model = Sequential()
-	model.add(keras.layers.Conv2D(32, (8,8), strides=(4, 4), activation='relu', input_shape=(84,84,4)))
+	model.add(keras.layers.Conv2D(32, (8,8), data_format='channels_last',
+	 strides=(4, 4), activation='relu', input_shape=(84,84,4) ) )
+
 	model.add(keras.layers.Conv2D(64, (4,4), strides=(2, 2), activation='relu'))
 	model.add(keras.layers.Conv2D(64, (3,3), strides=(1, 1), activation='relu'))
 	model.add(keras.layers.Flatten())
 	model.add(Dense(units=512, activation='relu'))
-	model.add(Dense(units=6, activation='relu'))
+	model.add(Dense(units=64, activation='relu'))
 
 	model.compile(optimizer='adam',
 			  loss='mse',
@@ -92,18 +86,24 @@ def init_logger(outdir):
 	return logger
 
 def get_yj(minibatch, Q_freeze, learning_factor):
-	if minibatch[0][3][1]:   #done igaz-e
-		yj = minibatch[0][2] + np.zeros((1,6), dtype=np.uint8) #csak a rewardra figyelünk
-	else:
-		s_next= argmax(Q_freeze,minibatch[0][3][0])
-		yj = minibatch[0][2] + learning_factor*s_next # reward + learningfactor*argmax(Qf)
-	return yj
+	y = np.empty([32,64])
+	i = 0
+	for batch in minibatch:
+		if not batch[3][1]:   #done igaz-e
+			y[i] = batch[2] + np.zeros((1,64), dtype=np.uint8) #csak a rewardra figyelünk
+		else:
+			action_predictions = Q_freeze.predict_on_batch(batch[3][0]).flatten()
+			index = action_predictions.argmax(axis=0)
+			action_predictions[index] = batch[2] + learning_factor*action_predictions[index]
+			y[i] = action_predictions
+		i += 1
+	return y
 
 def main():
 	try:
 		display = Display(visible=0, size=(1400,900))
 		display.start()
-		D = collections.deque(maxlen = 300) #Experience replay dataset (st,at,rt,st+1)
+		D = collections.deque(maxlen = 1000000) #Experience replay dataset (st,at,rt,st+1)
 
 		#Initialize neural networks--
 
@@ -116,6 +116,9 @@ def main():
 
 		Q_freeze = init_network()
 		Q_freeze.set_weights(Q.get_weights())
+
+		global all_action
+		all_action = get_all_action()
 
 		maxrange=2000
 
@@ -150,7 +153,7 @@ def main():
 
 			epsilon = get_epsilon(float(epoch+1.0),float(maxrange))
 			print('epsilon: ', epsilon)
-			learning_factor = 0.5
+			learning_factor = 0.2
 			sum_rewards = 0
 			t = 0
 			while not done:
@@ -159,7 +162,7 @@ def main():
 				if epsilon >= random.uniform(0,1):
 					action_t = get_random_action(Q, fifo)
 				else:
-					action_t = np.rint(argmax(Q,fifo))
+					action_t = argmax(Q,fifo)
 
 				observation, reward, done, info = env.step(action_t)
 
@@ -167,21 +170,28 @@ def main():
 				elif reward < 0: reward = -1
 				sum_rewards += reward
 				
+				
 				fifo.appendleft(preprocess_image(observation))
 				preprocessed_img.append(fifo.copy())
-
-				D.appendleft( [preprocessed_img[t],action_t, reward, (preprocessed_img[t+1],done)] )
-				minibatch = random.sample(D, 1)
-				yj = get_yj(minibatch, Q_freeze, learning_factor)
-				#print('yj_out of function: ', yj)
+				pi_t = np.concatenate((preprocessed_img[t][3],preprocessed_img[t][2],preprocessed_img[t][1],preprocessed_img[t][0]), axis=3)
+				pi_tt = np.concatenate((preprocessed_img[t+1][3],preprocessed_img[t+1][2],preprocessed_img[t+1][1],preprocessed_img[t+1][0]), axis=3)
 				
-				#Backpropagation
-				error = (yj - argmax(Q, minibatch[0][0]))**2
+				D.appendleft( [pi_t,action_t, reward, (pi_tt,done)] )
+				
+				if t >= 32:
+					minibatch = random.sample(D, 32)
+					yj = get_yj(minibatch, Q_freeze, learning_factor)
+					#print('yj_out of function: ', yj)
 
-				#gradient descent !! TEST----------------------------------
-				data = np.concatenate((fifo[0],fifo[1],fifo[2],fifo[3]), axis=3)
-				loss = Q.train_on_batch(data, np.reshape(error, (1,6)) )
-				#Q = gradient_descent_step(Q, minibatch[0][0], error )-----
+					#gradient descent !! TEST----------------------------------
+					for i in range(31):
+						if i != 0:
+							data = np.append(data,minibatch[i+1][0], axis=0)
+						else:
+							data = np.append(minibatch[0][0],minibatch[1][0], axis=0)
+
+					loss = Q.train_on_batch(data,  yj )
+					#Q = gradient_descent_step(Q, minibatch[0][0], error )-----
 				
 				
 				if (t) % 500 == 0:
