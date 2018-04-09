@@ -9,16 +9,17 @@ from gym.monitoring import VideoRecorder
 from gym.wrappers import Monitor
 from pyvirtualdisplay import Display
 import matplotlib.pyplot as plt
+from keras import regularizers
 
 
 global all_action
 
 def get_all_action():
 	allactionlist = []
-	allactionlist.append([0,0,0,1,0,0])
-	allactionlist.append([0,0,0,0,0,0])
-	allactionlist.append([1,0,0,0,0,0])
 	allactionlist.append([0,1,0,0,0,0])
+	allactionlist.append([0,0,0,1,0,0])
+	allactionlist.append([1,0,0,0,0,0])
+	allactionlist.append([0,0,0,0,0,0])
 	allactionlist.append([0,0,1,0,0,0])
 	allactionlist.append([1,1,0,0,0,0])
 	allactionlist.append([1,0,0,1,0,0])
@@ -76,7 +77,7 @@ def get_epsilon(x, maxrange):
 
 def init_network():
 	model = Sequential()
-	model.add(keras.layers.Conv2D(32, (8,8), data_format='channels_last',
+	model.add(keras.layers.Conv2D(64, (8,8), data_format='channels_last',
 	 strides=(4, 4), activation='relu', input_shape=(84,84,4) ) )
 
 	model.add(keras.layers.Conv2D(64, (4,4), strides=(2, 2), activation='relu'))
@@ -84,6 +85,7 @@ def init_network():
 	model.add(keras.layers.Flatten())
 	model.add(Dense(units=512, activation='relu'))
 	model.add(Dense(units=12, activation='relu'))
+
 
 	model.compile(optimizer='adam',
 			  loss='mse',
@@ -103,16 +105,19 @@ def init_logger(outdir):
 	return logger
 
 def get_yj(minibatch, Q_freeze, learning_factor):
-	y = np.empty([32,12])
+	y = np.empty([64,12])
 
 	i = 0
-	for i in range(32):
+	for i in range(64):
 		if minibatch[i][3][1]:   #done igaz-e
+			
 			y[i] = minibatch[i][2] + np.zeros((1,12), dtype=np.float32) #csak a rewardra figyelünk
 		else:
 			action_predictions = Q_freeze.predict_on_batch(minibatch[i][3][0].astype(np.float32)).flatten()
 			index = action_predictions.argmax()
+			print("Before: ",action_predictions[index])
 			action_predictions[index] = minibatch[i][2] + learning_factor*action_predictions[index]
+			print("After: ",action_predictions[index])
 			y[i] = action_predictions[:]
 	return y
 
@@ -181,11 +186,13 @@ def main():
 					action_t = get_random_action(Q, fifo)
 				else:
 					action_t = argmax(Q,fifo)
-				#print(action_t)
+				print(action_t)
+
+
 				observation, reward, done, info = env.step(action_t)
 
 				if reward > 0: reward = 1
-				elif reward < 0: reward = -1
+				elif reward <= 0: reward = -1
 				sum_rewards += reward
 				
 				
@@ -196,22 +203,22 @@ def main():
 				
 				D.appendleft( [pi_t,action_t, reward, (pi_tt,done)] )
 				
-				if t >= 32:
+				if t >= 64:
 
-					minibatch = random.sample(D, 32)
+					minibatch = random.sample(list(D), 64)
 					yj = get_yj(minibatch, Q_freeze, learning_factor)
-					#print('yj_out of function: ', yj)
+					
 
 					#gradient descent !! TEST----------------------------------
 
-					for i in range(31):
+					for i in range(63):
 						if i != 0:
 							data = np.append(data,minibatch[i+1][0], axis=0)
 						else:
 							data = np.append(minibatch[0][0],minibatch[1][0], axis=0)
 					data = data.astype(np.float32)
 					yj = yj.astype(np.float32)
-					print(data.shape, yj.shape)
+					
 					loss = Q.train_on_batch(data,  yj )
 					#Q = gradient_descent_step(Q, minibatch[0][0], error )-----
 				
