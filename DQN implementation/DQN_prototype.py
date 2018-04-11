@@ -13,6 +13,8 @@ from keras import regularizers
 
 
 global all_action
+ACTION_SET_LENGTH=13
+BATCH_SIZE= 32
 
 def get_all_action():
 	allactionlist = []
@@ -35,10 +37,15 @@ def get_random_action(Q, fifo):
 	data = np.concatenate( (fifo[3],fifo[2],fifo[1],fifo[0]), axis=3)
 	action_predictions = Q.predict_on_batch( data).flatten()
 	index = action_predictions.argmax(axis=0)
+	global all_action
 	max_action = list(all_action[index])
 
-	rnd_action = [random.randint(0,1),	random.randint(0,1),	random.randint(0,1),	random.randint(0,1),	random.randint(0,1),	random.randint(0,1)]
-	return rnd_action
+	random_index = random.randint(0,ACTION_SET_LENGTH-1)
+	
+	global all_action
+	while max_action == list(all_action[random_index]):
+		random_index = random.randint(0,ACTION_SET_LENGTH-1)
+	return all_action[random_index]
 
 def init_fifo():
 	fifo = collections.deque(maxlen=4)
@@ -68,23 +75,27 @@ def argmax(Q,fifo):
 	index = action_predictions.argmax(axis=0)
 	
 	# print('index: ', index)
-	# print(action_predictions)
+	#print(action_predictions)
 
 	return list(all_action[index])
 
 def get_epsilon(x, maxrange):
-	return (0.01-0.1)/(maxrange-1.0)*x + 0.1 + (-1.0*(0.01-0.1)/(maxrange-1.0))
+	percent = 0.95
+	threshold = maxrange - 500
+	if threshold < x: x = threshold
+
+	return percent - (x*percent / threshold * 1.12 )
 
 def init_network():
 	model = Sequential()
-	model.add(keras.layers.Conv2D(64, (8,8), data_format='channels_last',
+	model.add(keras.layers.Conv2D(32, (8,8), data_format='channels_last',
 	 strides=(4, 4), activation='relu', input_shape=(84,84,4) ) )
 
 	model.add(keras.layers.Conv2D(64, (4,4), strides=(2, 2), activation='relu'))
 	model.add(keras.layers.Conv2D(64, (3,3), strides=(1, 1), activation='relu'))
 	model.add(keras.layers.Flatten())
 	model.add(Dense(units=512, activation='relu'))
-	model.add(Dense(units=12, activation='relu'))
+	model.add(Dense(units=ACTION_SET_LENGTH, activation='relu'))
 
 
 	model.compile(optimizer='adam',
@@ -105,26 +116,27 @@ def init_logger(outdir):
 	return logger
 
 def get_yj(minibatch, Q_freeze, learning_factor):
-	y = np.empty([64,12])
+	y = np.zeros([BATCH_SIZE,ACTION_SET_LENGTH],dtype=np.uint8)
 
-	i = 0
-	for i in range(64):
+
+	for i in range(BATCH_SIZE):
 		if minibatch[i][3][1]:   #done igaz-e
-			
-			y[i] = minibatch[i][2] + np.zeros((1,12), dtype=np.float32) #csak a rewardra figyelünk
+			y[i] = minibatch[i][2] + np.zeros((1,ACTION_SET_LENGTH),dtype=np.float32)
 		else:
 			action_predictions = Q_freeze.predict_on_batch(minibatch[i][3][0].astype(np.float32)).flatten()
+			#print("Before: ",action_predictions )
 			index = action_predictions.argmax()
-			print("Before: ",action_predictions[index])
+
 			action_predictions[index] = minibatch[i][2] + learning_factor*action_predictions[index]
-			print("After: ",action_predictions[index])
+			#print("After: ",action_predictions)
 			y[i] = action_predictions[:]
+	
 	return y
 
 def main():
 	try:
-		# display = Display(visible=0, size=(1400,900))
-		# display.start()
+		display = Display(visible=0, size=(1400,900))
+		display.start()
 		D = collections.deque(maxlen = 100000) #Experience replay dataset (st,at,rt,st+1)
 
 		#Initialize neural networks--
@@ -173,9 +185,9 @@ def main():
 			preprocessed_img.append(fifo.copy())
 
 
-			epsilon = get_epsilon(float(epoch+1.0),float(maxrange))
+			epsilon = get_epsilon(float(epoch),float(maxrange))
 			print('epsilon: ', epsilon)
-			learning_factor = 0.0001
+			learning_factor = 0.000001
 			sum_rewards = 0
 			t = 0
 			while not done:
@@ -192,7 +204,7 @@ def main():
 				observation, reward, done, info = env.step(action_t)
 
 				if reward > 0: reward = 1
-				elif reward <= 0: reward = -1
+				else: reward = -1
 				sum_rewards += reward
 				
 				
@@ -203,23 +215,24 @@ def main():
 				
 				D.appendleft( [pi_t,action_t, reward, (pi_tt,done)] )
 				
-				if t >= 64:
+				if t >= BATCH_SIZE and t%2 == 0:
 
-					minibatch = random.sample(list(D), 64)
+					minibatch = random.sample(D, BATCH_SIZE)
 					yj = get_yj(minibatch, Q_freeze, learning_factor)
 					
 
 					#gradient descent !! TEST----------------------------------
 
-					for i in range(63):
+					for i in range(BATCH_SIZE-1):
 						if i != 0:
 							data = np.append(data,minibatch[i+1][0], axis=0)
 						else:
 							data = np.append(minibatch[0][0],minibatch[1][0], axis=0)
-					data = data.astype(np.float32)
-					yj = yj.astype(np.float32)
-					
+					#data = data.astype(np.float32)
+					#yj = yj.astype(np.float32)
+					#print(data[1])
 					loss = Q.train_on_batch(data,  yj )
+					#print('loss: ', loss)
 					#Q = gradient_descent_step(Q, minibatch[0][0], error )-----
 				
 				
@@ -228,7 +241,7 @@ def main():
 				t = t + 1
 			if epoch % 4 == 0:
 				Q.save_weights('weights' + str(epoch/4) + '.h5')
-			logger.info(str(t) + " lépésszám mellett, reward: " + str(sum_rewards))
+			logger.info('epsilon: '+ str(epsilon) + ' '+  str(t) + " lepesszam mellett, reward: " + str(sum_rewards))
 	finally:
 		print()
 		#video_recorder.close()
