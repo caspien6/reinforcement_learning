@@ -1,5 +1,7 @@
 from random import randint
 import skimage.transform as ST
+from skimage.transform import resize
+from skimage.color import rgb2gray
 import keras
 from keras.models import Sequential
 from keras.layers import Dense, Activation
@@ -11,47 +13,13 @@ from pyvirtualdisplay import Display
 import matplotlib.pyplot as plt
 from keras import regularizers
 
-
+random.seed(12)
 global all_action
 ACTION_SET_LENGTH=13
 BATCH_SIZE= 32
+STATE_LENGTH=4
 
-def get_all_action():
-	allactionlist = []
-	allactionlist.append([0,1,0,0,0,0])
-	allactionlist.append([0,0,0,1,0,0])
-	allactionlist.append([1,0,0,0,0,0])
-	allactionlist.append([0,0,0,0,0,0])
-	allactionlist.append([0,0,1,0,0,0])
-	allactionlist.append([1,1,0,0,0,0])
-	allactionlist.append([1,0,0,1,0,0])
-	allactionlist.append([0,0,0,0,1,0])
-	allactionlist.append([0,0,0,0,0,1])
-	allactionlist.append([0,0,0,1,1,0])
-	allactionlist.append([0,0,0,1,0,1])
-	allactionlist.append([0,1,0,0,1,0])
-	allactionlist.append([0,1,0,0,0,1])
-	return allactionlist
-
-def get_random_action(Q, fifo):
-	data = np.concatenate( (fifo[3],fifo[2],fifo[1],fifo[0]), axis=3)
-	action_predictions = Q.predict_on_batch( data).flatten()
-	index = action_predictions.argmax(axis=0)
-	global all_action
-	max_action = list(all_action[index])
-
-	random_index = random.randint(0,ACTION_SET_LENGTH-1)
-	
-	global all_action
-	while max_action == list(all_action[random_index]):
-		random_index = random.randint(0,ACTION_SET_LENGTH-1)
-	return all_action[random_index]
-
-def init_fifo():
-	fifo = collections.deque(maxlen=4)
-	return fifo
-
-def preprocess_image(image):
+def preprocess_image_regi(image):
 
 	image = image[40:210]
 	observation = ST.resize(image, (84,84), preserve_range=True)
@@ -61,23 +29,64 @@ def preprocess_image(image):
 
 			observation[rowi,pixeli] = element[0]*0.299 + 0.587*element[1] + element[2]*0.114
 
-	#plt.imshow(observation)
-	#plt.show()
+	plt.imshow(observation)
+	plt.show()
 
 	prec = np.expand_dims(observation[:,:,0], axis=2)
 	prec = np.expand_dims(prec, axis=0)
 	prec = prec.astype(np.uint8)
 	return prec
 
-def argmax(Q,fifo):
-	data = np.concatenate( (fifo[3],fifo[2],fifo[1],fifo[0]), axis=3)
-	action_predictions = Q.predict_on_batch( data.astype(np.float32)).flatten()
+def get_all_action():
+	allactionlist = np.zeros((13,6))
+	allactionlist[0] = [0,1,0,0,0,0]
+	allactionlist[1] = [0,0,0,1,0,0]
+	allactionlist[2] = [1,0,0,0,0,0]
+	allactionlist[3] = [0,0,0,0,0,0]
+	allactionlist[4] = [0,0,1,0,0,0]
+	allactionlist[5] = [1,1,0,0,0,0]
+	allactionlist[6] = [1,0,0,1,0,0]
+	allactionlist[7] = [0,0,0,0,1,0]
+	allactionlist[8] = [0,0,0,0,0,1]
+	allactionlist[9] = [0,0,0,1,1,0]
+	allactionlist[10] = [0,0,0,1,0,1]
+	allactionlist[11] = [0,1,0,0,1,0]
+	allactionlist[12] = [0,1,0,0,0,1]
+	return allactionlist
+
+def get_random_action(Q, state):
+	action_predictions = Q.predict_on_batch( np.float32(state / 255.0).reshape((1,84,84,4)) ).flatten()
+
+	index = action_predictions.argmax(axis=0)
+	global all_action
+	max_action = list(all_action[index])
+
+	random_index = random.randint(0,ACTION_SET_LENGTH-1)
+	
+	global all_action
+	while max_action == list(all_action[random_index]):
+		random_index = random.randint(0,ACTION_SET_LENGTH-1)
+
+	return all_action[random_index]
+
+
+
+
+def preprocess_image(observation, last_observation):
+	processed_observation = np.maximum(observation, last_observation)[30:210]
+	processed_observation = np.uint8(resize(rgb2gray(processed_observation), (84, 84)) * 255)
+	#plt.imshow(processed_observation)
+	#plt.show()
+	return np.reshape(processed_observation, (84, 84, 1))
+
+def argmax(Q,state):
+	action_predictions = Q.predict_on_batch( np.float32(state / 255.0).reshape((1,84,84,4)) ).flatten()
 	index = action_predictions.argmax(axis=0)
 	
 	# print('index: ', index)
 	#print(action_predictions)
 
-	return list(all_action[index])
+	return all_action[index]
 
 def get_epsilon(x, maxrange):
 	percent = 0.95
@@ -88,14 +97,13 @@ def get_epsilon(x, maxrange):
 
 def init_network():
 	model = Sequential()
-	model.add(keras.layers.Conv2D(32, (8,8), data_format='channels_last',
-	 strides=(4, 4), activation='relu', input_shape=(84,84,4) ) )
+	model.add(keras.layers.Conv2D(32, (8,8), strides=(4, 4), data_format='channels_last', activation='relu', input_shape=(84,84,STATE_LENGTH) ) )
 
 	model.add(keras.layers.Conv2D(64, (4,4), strides=(2, 2), activation='relu'))
 	model.add(keras.layers.Conv2D(64, (3,3), strides=(1, 1), activation='relu'))
 	model.add(keras.layers.Flatten())
 	model.add(Dense(units=512, activation='relu'))
-	model.add(Dense(units=ACTION_SET_LENGTH, activation='relu'))
+	model.add(Dense(units=ACTION_SET_LENGTH))
 
 
 	model.compile(optimizer='adam',
@@ -115,28 +123,54 @@ def init_logger(outdir):
 	logger.addHandler(handler)
 	return logger
 
-def get_yj(minibatch, Q_freeze, learning_factor):
-	y = np.zeros([BATCH_SIZE,ACTION_SET_LENGTH],dtype=np.uint8)
+def VideoRecord(env, epoch):
+	#Video recorder init
+	video_recorder = VideoRecorder(env, './records/els'+str(epoch)+'.mp4', enabled=True)
+	if epoch%10==1:
+		video_recorder.enabled=True
+	else:
+		video_recorder.enabled=False
 
+def get_initial_state(observation, last_observation):
+	processed_observation = np.maximum(observation, last_observation)[30:210]
+	processed_observation = np.uint8(resize(rgb2gray(processed_observation), (84, 84)) * 255)
+	state = [processed_observation for _ in range(STATE_LENGTH)]
+	return np.stack(state, axis=2)
 
-	for i in range(BATCH_SIZE):
-		if minibatch[i][3][1]:   #done igaz-e
-			y[i] = minibatch[i][2] + np.zeros((1,ACTION_SET_LENGTH),dtype=np.float32)
-		else:
-			action_predictions = Q_freeze.predict_on_batch(minibatch[i][3][0].astype(np.float32)).flatten()
-			#print("Before: ",action_predictions )
-			index = action_predictions.argmax()
+def get_action(epsilon, Q, state):
+	if epsilon >= random.uniform(0,1):
+		print("random:")
+		action_t = get_random_action(Q, state)
+	else:
+		action_t = argmax(Q,state)
+	return action_t
 
-			action_predictions[index] = minibatch[i][2] + learning_factor*action_predictions[index]
-			#print("After: ",action_predictions)
-			y[i] = action_predictions[:]
-	
-	return y
+def train_network(D, Q, Q_freeze, learning_factor):
+
+	batch = random.sample(D, BATCH_SIZE)
+
+	y = np.zeros((BATCH_SIZE))
+	actions_output = np.zeros((BATCH_SIZE, 13))
+	states = np.zeros((BATCH_SIZE, 84,84,4))
+
+	global all_action
+
+	for i in range(0, BATCH_SIZE):
+		action_predictions = Q_freeze.predict_on_batch(np.float32( batch[i][3] / 255.0).reshape((1,84,84,4)) ).flatten() 
+		index = action_predictions.argmax()
+		y[i] = batch[i][2] + learning_factor * action_predictions[index]
+
+		actions_output[i] = action_predictions[:]
+		actions_output[i][index] = y[i]
+		states[i] = batch[i][0]
+
+	Q.train_on_batch(states[:], actions_output[:])
+	return Q
 
 def main():
 	try:
-		display = Display(visible=0, size=(1400,900))
-		display.start()
+		#display = Display(visible=0, size=(1400,900))
+		#display.start()
 		D = collections.deque(maxlen = 100000) #Experience replay dataset (st,at,rt,st+1)
 
 		#Initialize neural networks--
@@ -149,7 +183,7 @@ def main():
 			Q.load_weights('weights1.h5')
 
 		Q_freeze = init_network()
-		Q_freeze.set_weights(Q.get_weights())
+		#Q_freeze.set_weights(Q.get_weights())
 
 		global all_action
 		all_action = get_all_action()
@@ -157,85 +191,54 @@ def main():
 		maxrange=2000
 
 		for epoch in range(1,maxrange):
-			#Start the environment
-			env = gym.make('SuperMarioBros-1-1-v0')
-			#env = Monitor(env, './records', lambda episode_id: episode_id%10==0, force=True)
-			env.reset()
-
-			#Video recorder init
-			#video_recorder = VideoRecorder(env, './records/els'+str(epoch)+'.mp4', enabled=True)
 			
+			env = gym.make('SuperMarioBros-1-1-v0')
+			
+			observation = env.reset()
 
-			# if epoch%10==1:
-			# 	video_recorder.enabled=True
-			# else:
-			# 	video_recorder.enabled=False
-
-			#random action
-			action = env.action_space.sample() 
-			observation, reward, done, info = env.step(action)
-
+			
+			last_observation = observation
+			observation, _, _, _ = env.step([0,0,0,0,0,0])  # Do nothing
+			env.render()
 			#Preprocess image
-			fifo = init_fifo()
-			fifo.appendleft(preprocess_image(observation))
-			fifo.appendleft(preprocess_image(observation))
-			fifo.appendleft(preprocess_image(observation))
-			fifo.appendleft(preprocess_image(observation))
-			preprocessed_img = []
-			preprocessed_img.append(fifo.copy())
-
+			state = get_initial_state(observation, last_observation)
 
 			epsilon = get_epsilon(float(epoch),float(maxrange))
 			print('epsilon: ', epsilon)
 			learning_factor = 0.000001
 			sum_rewards = 0
 			t = 0
+			done=False
 			while not done:
+				env.render()
 				#video_recorder.capture_frame()
-				
-				if epsilon >= random.uniform(0,1):
-					print("random:")
-					action_t = get_random_action(Q, fifo)
-				else:
-					action_t = argmax(Q,fifo)
+
+				last_observation = observation
+
+				action_t = get_action(epsilon, Q, state)
 				print(action_t)
 
 
-				observation, reward, done, info = env.step(action_t)
+				observation, reward, done, info = env.step((1,0,0,0,0,0))
+				env.render()
 
 				if reward > 0: reward = 1
 				else: reward = -1
 				sum_rewards += reward
+
+				processed_observation = preprocess_image(observation, last_observation)
 				
-				
-				fifo.appendleft(preprocess_image(observation))
-				preprocessed_img.append(fifo.copy())
-				pi_t = np.concatenate((preprocessed_img[t][3],preprocessed_img[t][2],preprocessed_img[t][1],preprocessed_img[t][0]), axis=3)
-				pi_tt = np.concatenate((preprocessed_img[t+1][3],preprocessed_img[t+1][2],preprocessed_img[t+1][1],preprocessed_img[t+1][0]), axis=3)
-				
-				D.appendleft( [pi_t,action_t, reward, (pi_tt,done)] )
-				
+				next_state = np.append(state[:, :, 1:], processed_observation, axis=2)
+
+				# Store transition in replay memory
+				D.append((state, action_t, reward, next_state, done))
+
 				if t >= BATCH_SIZE and t%2 == 0:
-
-					minibatch = random.sample(D, BATCH_SIZE)
-					yj = get_yj(minibatch, Q_freeze, learning_factor)
-					
-
-					#gradient descent !! TEST----------------------------------
-
-					for i in range(BATCH_SIZE-1):
-						if i != 0:
-							data = np.append(data,minibatch[i+1][0], axis=0)
-						else:
-							data = np.append(minibatch[0][0],minibatch[1][0], axis=0)
-					#data = data.astype(np.float32)
-					#yj = yj.astype(np.float32)
-					#print(data[1])
-					loss = Q.train_on_batch(data,  yj )
-					#print('loss: ', loss)
-					#Q = gradient_descent_step(Q, minibatch[0][0], error )-----
+					# Train network
+					Q = train_network(D, Q, Q_freeze, learning_factor)
 				
-				
+				state = next_state
+
 				if (t) % 500 == 0:
 					Q_freeze.set_weights(Q.get_weights())
 				t = t + 1
