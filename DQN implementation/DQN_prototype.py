@@ -13,29 +13,13 @@ from pyvirtualdisplay import Display
 import matplotlib.pyplot as plt
 from keras import regularizers
 
-random.seed(12)
+
 global all_action
 ACTION_SET_LENGTH=13
 BATCH_SIZE= 32
 STATE_LENGTH=4
 
-def preprocess_image_regi(image):
 
-	image = image[40:210]
-	observation = ST.resize(image, (84,84), preserve_range=True)
-	for rowi in range(observation.shape[0]):
-		for pixeli in range(observation.shape[1]):
-			element = observation[rowi,pixeli]
-
-			observation[rowi,pixeli] = element[0]*0.299 + 0.587*element[1] + element[2]*0.114
-
-	plt.imshow(observation)
-	plt.show()
-
-	prec = np.expand_dims(observation[:,:,0], axis=2)
-	prec = np.expand_dims(prec, axis=0)
-	prec = prec.astype(np.uint8)
-	return prec
 
 def get_all_action():
 	allactionlist = np.zeros((13,6))
@@ -169,8 +153,8 @@ def train_network(D, Q, Q_freeze, learning_factor):
 
 def main():
 	try:
-		#display = Display(visible=0, size=(1400,900))
-		#display.start()
+		display = Display(visible=0, size=(1400,900))
+		display.start()
 		D = collections.deque(maxlen = 100000) #Experience replay dataset (st,at,rt,st+1)
 
 		#Initialize neural networks--
@@ -198,8 +182,8 @@ def main():
 
 			
 			last_observation = observation
-			observation, _, _, _ = env.step([0,0,0,0,0,0])  # Do nothing
-			env.render()
+			observation, _, _, _ = env.step(env.action_space.sample())  # Do nothing
+			
 			#Preprocess image
 			state = get_initial_state(observation, last_observation)
 
@@ -210,7 +194,7 @@ def main():
 			t = 0
 			done=False
 			while not done:
-				env.render()
+				
 				#video_recorder.capture_frame()
 
 				last_observation = observation
@@ -219,8 +203,8 @@ def main():
 				print(action_t)
 
 
-				observation, reward, done, info = env.step((1,0,0,0,0,0))
-				env.render()
+				observation, reward, done, info = env.step(action_t.astype(np.uint8).tolist())
+				
 
 				if reward > 0: reward = 1
 				else: reward = -1
@@ -242,8 +226,8 @@ def main():
 				if (t) % 500 == 0:
 					Q_freeze.set_weights(Q.get_weights())
 				t = t + 1
-			if epoch % 4 == 0:
-				Q.save_weights('weights' + str(epoch/4) + '.h5')
+			if epoch % 5 == 0:
+				Q.save_weights('weights' + str(epoch/5) + '.h5')
 			logger.info('epsilon: '+ str(epsilon) + ' '+  str(t) + " lepesszam mellett, reward: " + str(sum_rewards))
 	finally:
 		print()
