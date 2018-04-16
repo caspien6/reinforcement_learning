@@ -15,14 +15,34 @@ from keras import regularizers
 
 
 global all_action
-ACTION_SET_LENGTH=13
+ACTION_SET_LENGTH=7
 BATCH_SIZE= 32
 STATE_LENGTH=4
+EXPLORATION_STEPS = 1000000
+INITIAL_EPSILON = 1.0
+FINAL_EPSILON = 0.1
+INITIAL_REPLAY_SIZE = 20000  # Number of steps to populate the replay memory before training starts
+NUM_REPLAY_MEMORY = 400000  # Number of replay memory the agent uses for training
+LEARNING_FACTOR = 0.000025
 
+
+
+class EpsilonGreedy():
+
+	def __init__(self):
+		self.epsilon = INITIAL_EPSILON
+		self.epsilon_step = (INITIAL_EPSILON - FINAL_EPSILON) / EXPLORATION_STEPS
+		self.t = 0
+
+	def step_EPSILON(self):
+		if self.epsilon > FINAL_EPSILON and self.t >= INITIAL_REPLAY_SIZE:
+			self.epsilon -= self.epsilon_step
+		self.t += 1
+		return self.epsilon
 
 
 def get_all_action():
-	allactionlist = np.zeros((13,6))
+	allactionlist = np.zeros((ACTION_SET_LENGTH,6))
 	allactionlist[0] = [0,1,0,0,0,0]
 	allactionlist[1] = [0,0,0,1,0,0]
 	allactionlist[2] = [1,0,0,0,0,0]
@@ -30,12 +50,6 @@ def get_all_action():
 	allactionlist[4] = [0,0,1,0,0,0]
 	allactionlist[5] = [1,1,0,0,0,0]
 	allactionlist[6] = [1,0,0,1,0,0]
-	allactionlist[7] = [0,0,0,0,1,0]
-	allactionlist[8] = [0,0,0,0,0,1]
-	allactionlist[9] = [0,0,0,1,1,0]
-	allactionlist[10] = [0,0,0,1,0,1]
-	allactionlist[11] = [0,1,0,0,1,0]
-	allactionlist[12] = [0,1,0,0,0,1]
 	return allactionlist
 
 def get_random_action(Q, state):
@@ -72,12 +86,7 @@ def argmax(Q,state):
 
 	return all_action[index]
 
-def get_epsilon(x, maxrange):
-	percent = 0.95
-	threshold = maxrange - 500
-	if threshold < x: x = threshold
 
-	return percent - (x*percent / threshold * 1.12 )
 
 def init_network():
 	model = Sequential()
@@ -121,20 +130,20 @@ def get_initial_state(observation, last_observation):
 	state = [processed_observation for _ in range(STATE_LENGTH)]
 	return np.stack(state, axis=2)
 
-def get_action(epsilon, Q, state):
-	if epsilon >= random.uniform(0,1):
+def get_action(epsilo, Q, state):
+	if epsilo >= random.uniform(0,1):
 		print("random:")
 		action_t = get_random_action(Q, state)
 	else:
 		action_t = argmax(Q,state)
 	return action_t
 
-def train_network(D, Q, Q_freeze, learning_factor):
+def train_network(D, Q, Q_freeze, LEARNING_FACTOR):
 
 	batch = random.sample(D, BATCH_SIZE)
 
 	y = np.zeros((BATCH_SIZE))
-	actions_output = np.zeros((BATCH_SIZE, 13))
+	actions_output = np.zeros((BATCH_SIZE, ACTION_SET_LENGTH))
 	states = np.zeros((BATCH_SIZE, 84,84,4))
 
 	global all_action
@@ -142,7 +151,7 @@ def train_network(D, Q, Q_freeze, learning_factor):
 	for i in range(0, BATCH_SIZE):
 		action_predictions = Q_freeze.predict_on_batch(np.float32( batch[i][3] / 255.0).reshape((1,84,84,4)) ).flatten() 
 		index = action_predictions.argmax()
-		y[i] = batch[i][2] + learning_factor * action_predictions[index]
+		y[i] = batch[i][2] + LEARNING_FACTOR * action_predictions[index]
 
 		actions_output[i] = action_predictions[:]
 		actions_output[i][index] = y[i]
@@ -155,8 +164,8 @@ def main():
 	try:
 		display = Display(visible=0, size=(1400,900))
 		display.start()
-		D = collections.deque(maxlen = 100000) #Experience replay dataset (st,at,rt,st+1)
-
+		D = collections.deque(maxlen = NUM_REPLAY_MEMORY) 
+		epsgrdy = EpsilonGreedy()
 		#Initialize neural networks--
 
 		Q = init_network()
@@ -187,9 +196,8 @@ def main():
 			#Preprocess image
 			state = get_initial_state(observation, last_observation)
 
-			epsilon = get_epsilon(float(epoch),float(maxrange))
-			print('epsilon: ', epsilon)
-			learning_factor = 0.000001
+			
+			
 			sum_rewards = 0
 			t = 0
 			done=False
@@ -198,7 +206,9 @@ def main():
 				#video_recorder.capture_frame()
 
 				last_observation = observation
+				epsilon = epsgrdy.step_EPSILON()
 
+				print('EPSILON: ', epsilon)
 				action_t = get_action(epsilon, Q, state)
 				print(action_t)
 
@@ -207,7 +217,7 @@ def main():
 				
 
 				if reward > 0: reward = 1
-				else: reward = -1
+				elif reward < 0: reward = -1
 				sum_rewards += reward
 
 				processed_observation = preprocess_image(observation, last_observation)
@@ -216,19 +226,19 @@ def main():
 
 				# Store transition in replay memory
 				D.append((state, action_t, reward, next_state, done))
-
-				if t >= BATCH_SIZE and t%2 == 0:
+				
+				if epsgrdy.t >= INITIAL_REPLAY_SIZE and t%5 == 0:
 					# Train network
-					Q = train_network(D, Q, Q_freeze, learning_factor)
+					Q = train_network(D, Q, Q_freeze, LEARNING_FACTOR)
 				
 				state = next_state
 
 				if (t) % 500 == 0:
 					Q_freeze.set_weights(Q.get_weights())
 				t = t + 1
-			if epoch % 5 == 0:
-				Q.save_weights('weights' + str(epoch/5) + '.h5')
-			logger.info('epsilon: '+ str(epsilon) + ' '+  str(t) + " lepesszam mellett, reward: " + str(sum_rewards))
+			if epoch % 20 == 0:
+				Q.save_weights('weights' + str(epoch/20) + '.h5')
+			logger.info('EPSILON: '+ str(epsilon) + ' '+  str(t) + " lepesszam mellett, reward: " + str(sum_rewards))
 	finally:
 		print()
 		#video_recorder.close()
