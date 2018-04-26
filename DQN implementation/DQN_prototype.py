@@ -15,17 +15,45 @@ from keras import regularizers
 
 
 global all_action
-ACTION_SET_LENGTH=7
+ACTION_SET=6
 BATCH_SIZE= 32
+UPDATE_FREQUENCY=4
 STATE_LENGTH=4
 EXPLORATION_STEPS = 1000000
 INITIAL_EPSILON = 1.0
 FINAL_EPSILON = 0.1
-INITIAL_REPLAY_SIZE = 20000  # Number of steps to populate the replay memory before training starts
+INITIAL_REPLAY_SIZE = 50000  # Number of steps to populate the replay memory before training starts
 NUM_REPLAY_MEMORY = 400000  # Number of replay memory the agent uses for training
-LEARNING_FACTOR = 0.000025
+LEARNING_FACTOR = 0.00025
+INFO_GRAPH_WEIGHTS_DIR='./record0426_3/'
 
 
+def init_logger(outdir):
+	logger = logging.getLogger()
+	logger.setLevel(logging.DEBUG)
+	
+	# create console handler and set level to info
+	handler = logging.FileHandler(outdir)
+	handler.setLevel(logging.INFO)
+	formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
+	handler.setFormatter(formatter)
+	logger.addHandler(handler)
+	return logger
+
+def init_logger2(outdir):
+	logger = logging.getLogger()
+	logger.setLevel(logging.DEBUG)
+	
+	# create console handler and set level to info
+	handler = logging.FileHandler(outdir)
+	handler.setLevel(logging.DEBUG)
+	formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
+	handler.setFormatter(formatter)
+	logger.addHandler(handler)
+	return logger
+
+logger = init_logger(INFO_GRAPH_WEIGHTS_DIR + 'info.log')
+logger2 = init_logger2(INFO_GRAPH_WEIGHTS_DIR + 'action.log')
 
 class EpsilonGreedy():
 
@@ -42,14 +70,13 @@ class EpsilonGreedy():
 
 
 def get_all_action():
-	allactionlist = np.zeros((ACTION_SET_LENGTH,6))
+	allactionlist = np.zeros((ACTION_SET,6))
 	allactionlist[0] = [0,1,0,0,0,0]
 	allactionlist[1] = [0,0,0,1,0,0]
 	allactionlist[2] = [1,0,0,0,0,0]
 	allactionlist[3] = [0,0,0,0,0,0]
-	allactionlist[4] = [0,0,1,0,0,0]
-	allactionlist[5] = [1,1,0,0,0,0]
-	allactionlist[6] = [1,0,0,1,0,0]
+	allactionlist[4] = [0,1,0,0,1,0]
+	allactionlist[5] = [0,0,0,1,1,0]
 	return allactionlist
 
 def get_random_action(Q, state):
@@ -59,11 +86,11 @@ def get_random_action(Q, state):
 	global all_action
 	max_action = list(all_action[index])
 
-	random_index = random.randint(0,ACTION_SET_LENGTH-1)
+	random_index = random.randint(0,ACTION_SET-1)
 	
 	global all_action
 	while max_action == list(all_action[random_index]):
-		random_index = random.randint(0,ACTION_SET_LENGTH-1)
+		random_index = random.randint(0,ACTION_SET-1)
 
 	return all_action[random_index]
 
@@ -77,8 +104,9 @@ def preprocess_image(observation, last_observation):
 	#plt.show()
 	return np.reshape(processed_observation, (84, 84, 1))
 
-def argmax(Q,state):
+def argmax(Q,state, t=1):
 	action_predictions = Q.predict_on_batch( np.float32(state / 255.0).reshape((1,84,84,4)) ).flatten()
+	if t%100 == 0: logger2.debug(action_predictions)
 	index = action_predictions.argmax(axis=0)
 	
 	# print('index: ', index)
@@ -96,7 +124,7 @@ def init_network():
 	model.add(keras.layers.Conv2D(64, (3,3), strides=(1, 1), activation='relu'))
 	model.add(keras.layers.Flatten())
 	model.add(Dense(units=512, activation='relu'))
-	model.add(Dense(units=ACTION_SET_LENGTH))
+	model.add(Dense(units=ACTION_SET))
 
 
 	model.compile(optimizer='adam',
@@ -104,21 +132,10 @@ def init_network():
 			  metrics=['accuracy'])
 	return model
 
-def init_logger(outdir):
-	logger = logging.getLogger()
-	logger.setLevel(logging.DEBUG)
-	
-	# create console handler and set level to info
-	handler = logging.FileHandler(outdir)
-	handler.setLevel(logging.INFO)
-	formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
-	handler.setFormatter(formatter)
-	logger.addHandler(handler)
-	return logger
 
 def VideoRecord(env, epoch):
 	#Video recorder init
-	video_recorder = VideoRecorder(env, './records/els'+str(epoch)+'.mp4', enabled=True)
+	video_recorder = VideoRecorder(env, INFO_GRAPH_WEIGHTS_DIR +'els'+str(epoch)+'.mp4', enabled=True)
 	if epoch%10==1:
 		video_recorder.enabled=True
 	else:
@@ -130,12 +147,13 @@ def get_initial_state(observation, last_observation):
 	state = [processed_observation for _ in range(STATE_LENGTH)]
 	return np.stack(state, axis=2)
 
-def get_action(epsilo, Q, state):
-	if epsilo >= random.uniform(0,1):
-		print("random:")
+def get_action(epsilon, Q, state, logger, t):
+	if epsilon >= random.uniform(0,1):
 		action_t = get_random_action(Q, state)
+		if t%100==0: logger2.debug("random")
 	else:
-		action_t = argmax(Q,state)
+		action_t = argmax(Q,state, t)
+	if t%100==0: logger2.debug(action_t)
 	return action_t
 
 def train_network(D, Q, Q_freeze, LEARNING_FACTOR):
@@ -143,7 +161,7 @@ def train_network(D, Q, Q_freeze, LEARNING_FACTOR):
 	batch = random.sample(D, BATCH_SIZE)
 
 	y = np.zeros((BATCH_SIZE))
-	actions_output = np.zeros((BATCH_SIZE, ACTION_SET_LENGTH))
+	actions_output = np.zeros((BATCH_SIZE, ACTION_SET))
 	states = np.zeros((BATCH_SIZE, 84,84,4))
 
 	global all_action
@@ -164,16 +182,19 @@ def main():
 	try:
 		display = Display(visible=0, size=(1400,900))
 		display.start()
+		rewards_list = []
 		D = collections.deque(maxlen = NUM_REPLAY_MEMORY) 
 		epsgrdy = EpsilonGreedy()
 		#Initialize neural networks--
 
 		Q = init_network()
-		logger = init_logger('./records/els.log')
+		logger = init_logger(INFO_GRAPH_WEIGHTS_DIR + 'info.log')
+		logger2 = init_logger(INFO_GRAPH_WEIGHTS_DIR + 'action.log')
 
-		if sys.argv[-1] == 'y' and os.path.isfile('./weights1.h5'):
+		if sys.argv[-1] == 'y' and os.path.isfile(INFO_GRAPH_WEIGHTS_DIR+'weights7.h5'):
 			print('loading weights')
-			Q.load_weights('weights1.h5')
+			Q.load_weights(INFO_GRAPH_WEIGHTS_DIR + 'weights7.h5')
+			epsgrdy.epsilon = 0.8995
 
 		Q_freeze = init_network()
 		#Q_freeze.set_weights(Q.get_weights())
@@ -181,7 +202,7 @@ def main():
 		global all_action
 		all_action = get_all_action()
 
-		maxrange=2000
+		maxrange=50000
 
 		for epoch in range(1,maxrange):
 			
@@ -196,11 +217,14 @@ def main():
 			#Preprocess image
 			state = get_initial_state(observation, last_observation)
 
-			
+			Q_freeze.set_weights(Q.get_weights())
 			
 			sum_rewards = 0
 			t = 0
 			done=False
+
+			same_action_policy = 0
+
 			while not done:
 				
 				#video_recorder.capture_frame()
@@ -208,16 +232,33 @@ def main():
 				last_observation = observation
 				epsilon = epsgrdy.step_EPSILON()
 
-				print('EPSILON: ', epsilon)
-				action_t = get_action(epsilon, Q, state)
-				print(action_t)
+				if t == 0 :
+					last_action = get_action(epsilon, Q, state, logger2, t)
+				else:
+					last_action = action_t
 
-
-				observation, reward, done, info = env.step(action_t.astype(np.uint8).tolist())
 				
+				if t % 4 == 0 or t == 0:
+					action_t = get_action(epsilon, Q, state, logger2, t)
 
-				if reward > 0: reward = 1
-				elif reward < 0: reward = -1
+				#print(action_t)
+
+				if last_action.astype(np.uint8).tolist() == action_t.astype(np.uint8).tolist() and same_action_policy<10:
+					observation, reward, done, info = env.step(action_t.astype(np.uint8).tolist())
+					same_action_policy += 1
+				elif last_action.astype(np.uint8).tolist() == action_t.astype(np.uint8).tolist() and same_action_policy >= 10: 
+					observation, reward, done, info = env.step([0,0,0,0,0,0])
+					same_action_policy = 0
+				else:
+					same_action_policy = 0
+					observation, reward, done, info = env.step(action_t.astype(np.uint8).tolist())
+
+				
+				if reward <= 0: reward = -1
+				else: reward = 1
+				
+				#if reward > 0: reward = 1
+				#elif reward < 0: reward = -1
 				sum_rewards += reward
 
 				processed_observation = preprocess_image(observation, last_observation)
@@ -227,7 +268,7 @@ def main():
 				# Store transition in replay memory
 				D.append((state, action_t, reward, next_state, done))
 				
-				if epsgrdy.t >= INITIAL_REPLAY_SIZE and t%5 == 0:
+				if epsgrdy.t >= INITIAL_REPLAY_SIZE and t%UPDATE_FREQUENCY == 0:
 					# Train network
 					Q = train_network(D, Q, Q_freeze, LEARNING_FACTOR)
 				
@@ -235,12 +276,23 @@ def main():
 
 				if (t) % 500 == 0:
 					Q_freeze.set_weights(Q.get_weights())
+				
 				t = t + 1
-			if epoch % 20 == 0:
-				Q.save_weights('weights' + str(epoch/20) + '.h5')
+			rewards_list.append(sum_rewards)
+			if epoch % 50 == 0:
+				Q.save_weights(INFO_GRAPH_WEIGHTS_DIR + 'weights' + str(int(epoch/50)) + '.h5')
+			if epoch % 100 == 0:
+				plt.plot(rewards_list)
+				plt.savefig(INFO_GRAPH_WEIGHTS_DIR+'reward_diagram'+str(epoch)+'.png')
+				plt.close()
 			logger.info('EPSILON: '+ str(epsilon) + ' '+  str(t) + " lepesszam mellett, reward: " + str(sum_rewards))
 	finally:
-		print()
+		
+		plt.plot(rewards_list)
+		plt.savefig(INFO_GRAPH_WEIGHTS_DIR+'reward_diagram_final.png')
+		plt.close()
+		Q.save_weights( INFO_GRAPH_WEIGHTS_DIR+ 'weights_final.h5')
+		logger.info('--Felbeszakitas: EPSILON: '+ str(epsilon) + ' '+  str(t) + " lepesszam mellett, reward: " + str(sum_rewards))
 		#video_recorder.close()
 		#video_recorder.enabled = False
 
