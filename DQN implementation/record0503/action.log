@@ -1,0 +1,584 @@
+2018-05-04 19:52:06,765 - DEBUG - param: "['Xvfb', '-help']" 
+2018-05-04 19:52:06,766 - DEBUG - command: ['Xvfb', '-help']
+2018-05-04 19:52:06,766 - DEBUG - joined command: Xvfb -help
+2018-05-04 19:52:06,818 - DEBUG - process was started (pid=3292)
+2018-05-04 19:52:06,858 - DEBUG - process has ended
+2018-05-04 19:52:06,860 - DEBUG - return code=0
+2018-05-04 19:52:06,860 - DEBUG - stdout=
+2018-05-04 19:52:06,862 - DEBUG - stderr=use: X [:<display>] [option]
+-a #                   default pointer acceleration (factor)
+-ac                    disable access control restrictions
+-audit int             set audit trail level
+-auth file             select authorization file
+-br                    create root window with black background
++bs                    enable any backing store support
+-bs                    disable any backing store support
+-c                     turns off key-click
+c #                    key-click volume (0-100)
+-cc int                default color visual class
+-nocursor              disable the cursor
+-core                  generate core dump on fatal error
+-displayfd fd          file descriptor to write display number to when ready to connect
+-dpi int               screen resolution in dots per inch
+-dpms                  disables VESA DPMS monitor control
+-deferglyphs [none|all|16] defer loading of [no|all|16-bit] glyphs
+-f #                   bell base (0-100)
+-fc string             cursor font
+-fn string             default font name
+-fp string             default font path
+-help                  prints message with these options
++iglx                  Allow creating indirect GLX contexts
+-iglx                  Prohibit creating indirect GLX contexts (default)
+-I                     ignore all remaining arguments
+-ld int                limit data space to N Kb
+-lf int                limit number of open files to N
+-ls int                limit stack space to N Kb
+-nolock                disable the locking mechanism
+-maxclients n          set maximum number of clients (power of two)
+-nolisten string       don't listen on protocol
+-listen string         listen on protocol
+-noreset               don't reset after last client exists
+-background [none]     create root window with no background
+-reset                 reset after last client exists
+-p #                   screen-saver pattern duration (minutes)
+-pn                    accept failure to listen on all ports
+-nopn                  reject failure to listen on all ports
+-r                     turns off auto-repeat
+r                      turns on auto-repeat 
+-render [default|mono|gray|color] set render color alloc policy
+-retro                 start with classic stipple and cursor
+-s #                   screen-saver timeout (minutes)
+-seat string           seat to run on
+-t #                   default pointer threshold (pixels/t)
+-terminate             terminate at server reset
+-to #                  connection time out
+-tst                   disable testing extensions
+ttyxx                  server started from init on /dev/ttyxx
+v                      video blanking for screen-saver
+-v                     screen-saver without video blanking
+-wm                    WhenMapped default backing-store
+-wr                    create root window with white background
+-maxbigreqsize         set maximal bigrequest size 
++xinerama              Enable XINERAMA extension
+-xinerama              Disable XINERAMA extension
+-dumbSched             Disable smart scheduling, enable old behavior
+-schedInterval int     Set scheduler interval in msec
+-sigstop               Enable SIGSTOP based startup
++extension name        Enable extension
+-extension name        Disable extension
+-query host-name       contact named host for XDMCP
+-broadcast             broadcast for XDMCP
+-multicast [addr [hops]] IPv6 multicast for XDMCP
+-indirect host-name    contact named host for indirect XDMCP
+-port port-num         UDP port number to send messages to
+-from local-address    specify the local address to connect from
+-once                  Terminate server after one session
+-class display-class   specify display class to send in manage
+-cookie xdm-auth-bits  specify the magic cookie for XDMCP
+-displayID display-id  manufacturer display ID for request
+[+-]accessx [ timeout [ timeout_mask [ feedback [ options_mask] ] ] ]
+                       enable/disable accessx key sequences
+-ardelay               set XKB autorepeat delay
+-arinterval            set XKB autorepeat interval
+-screen scrn WxHxD     set screen's width, height, depth
+-pixdepths list-of-int support given pixmap depths
++/-render		   turn on/off RENDER extension support(default on)
+-linebias n            adjust thin line pixelization
+-blackpixel n          pixel value for black
+-whitepixel n          pixel value for white
+-fbdir directory       put framebuffers in mmap'ed files in directory
+-shmem                 put framebuffers in shared memory
+2018-05-04 19:52:06,870 - DEBUG - param: "['xauth', '-h']" 
+2018-05-04 19:52:06,871 - DEBUG - command: ['xauth', '-h']
+2018-05-04 19:52:06,872 - DEBUG - joined command: xauth -h
+2018-05-04 19:52:06,882 - DEBUG - process was started (pid=3293)
+2018-05-04 19:52:06,886 - DEBUG - process has ended
+2018-05-04 19:52:06,887 - DEBUG - return code=1
+2018-05-04 19:52:06,888 - DEBUG - stdout=
+2018-05-04 19:52:06,889 - DEBUG - stderr=usage:  xauth [-options ...] [command arg ...]
+
+where options include:
+    -f authfilename                name of authority file to use
+    -v                             turn on extra messages
+    -q                             turn off extra messages
+    -i                             ignore locks on authority file
+    -b                             break locks on authority file
+    -V                             show version number of xauth
+
+and commands have the following syntax:
+
+    add dpyname protoname hexkey   add entry
+    exit                           save changes and exit program
+    extract filename dpyname...    extract entries into file
+    help [topic]                   print help
+    info                           print information about entries
+    list [dpyname...]              list entries
+    merge filename...              merge entries from files
+    nextract filename dpyname...   numerically extract entries
+    nlist [dpyname...]             numerically list entries
+    nmerge filename...             numerically merge entries
+    quit                           abort changes and exit program
+    remove dpyname...              remove entries
+    source filename                read commands from file
+    version                        show version number of xauth
+    ?                              list available commands
+    generate dpyname protoname [options]  use server to generate entry
+    options are:
+      timeout n    authorization expiration time in seconds
+      trusted      clients using this entry are trusted
+      untrusted    clients using this entry are untrusted
+      group n      clients using this entry belong to application group n
+      data hexkey  auth protocol specific data needed to generate the entry
+
+
+A dash may be used with the "merge" and "source" to read from the
+standard input.  Commands beginning with "n" use numeric format.
+
+2018-05-04 19:52:06,895 - DEBUG - param: "['Xvfb', '-br', '-nolisten', 'tcp', '-screen', '0', '1400x900x24', ':1000']" 
+2018-05-04 19:52:06,896 - DEBUG - command: ['Xvfb', '-br', '-nolisten', 'tcp', '-screen', '0', '1400x900x24', ':1000']
+2018-05-04 19:52:06,896 - DEBUG - joined command: Xvfb -br -nolisten tcp -screen 0 1400x900x24 :1000
+2018-05-04 19:52:06,897 - DEBUG - param: "['xauth', '-h']" 
+2018-05-04 19:52:06,898 - DEBUG - command: ['xauth', '-h']
+2018-05-04 19:52:06,898 - DEBUG - joined command: xauth -h
+2018-05-04 19:52:06,906 - DEBUG - process was started (pid=3294)
+2018-05-04 19:52:06,908 - DEBUG - process has ended
+2018-05-04 19:52:06,909 - DEBUG - return code=1
+2018-05-04 19:52:06,909 - DEBUG - stdout=
+2018-05-04 19:52:06,910 - DEBUG - stderr=usage:  xauth [-options ...] [command arg ...]
+
+where options include:
+    -f authfilename                name of authority file to use
+    -v                             turn on extra messages
+    -q                             turn off extra messages
+    -i                             ignore locks on authority file
+    -b                             break locks on authority file
+    -V                             show version number of xauth
+
+and commands have the following syntax:
+
+    add dpyname protoname hexkey   add entry
+    exit                           save changes and exit program
+    extract filename dpyname...    extract entries into file
+    help [topic]                   print help
+    info                           print information about entries
+    list [dpyname...]              list entries
+    merge filename...              merge entries from files
+    nextract filename dpyname...   numerically extract entries
+    nlist [dpyname...]             numerically list entries
+    nmerge filename...             numerically merge entries
+    quit                           abort changes and exit program
+    remove dpyname...              remove entries
+    source filename                read commands from file
+    version                        show version number of xauth
+    ?                              list available commands
+    generate dpyname protoname [options]  use server to generate entry
+    options are:
+      timeout n    authorization expiration time in seconds
+      trusted      clients using this entry are trusted
+      untrusted    clients using this entry are untrusted
+      group n      clients using this entry belong to application group n
+      data hexkey  auth protocol specific data needed to generate the entry
+
+
+A dash may be used with the "merge" and "source" to read from the
+standard input.  Commands beginning with "n" use numeric format.
+
+2018-05-04 19:52:06,915 - DEBUG - param: "['Xvfb', '-br', '-nolisten', 'tcp', '-screen', '0', '1400x900x24', ':1001']" 
+2018-05-04 19:52:06,916 - DEBUG - command: ['Xvfb', '-br', '-nolisten', 'tcp', '-screen', '0', '1400x900x24', ':1001']
+2018-05-04 19:52:06,917 - DEBUG - joined command: Xvfb -br -nolisten tcp -screen 0 1400x900x24 :1001
+2018-05-04 19:52:06,929 - DEBUG - process was started (pid=3295)
+2018-05-04 19:52:06,930 - DEBUG - DISPLAY=:1001
+2018-05-04 19:52:07,517 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 19:52:07,517 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 19:52:12,667 - DEBUG - random
+2018-05-04 19:52:12,668 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 19:52:12,672 - DEBUG - random
+2018-05-04 19:52:12,673 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 19:53:13,180 - DEBUG - param: "['Xvfb', '-help']" 
+2018-05-04 19:53:13,181 - DEBUG - command: ['Xvfb', '-help']
+2018-05-04 19:53:13,181 - DEBUG - joined command: Xvfb -help
+2018-05-04 19:53:13,200 - DEBUG - process was started (pid=3348)
+2018-05-04 19:53:13,232 - DEBUG - process has ended
+2018-05-04 19:53:13,236 - DEBUG - return code=0
+2018-05-04 19:53:13,237 - DEBUG - stdout=
+2018-05-04 19:53:13,237 - DEBUG - stderr=use: X [:<display>] [option]
+-a #                   default pointer acceleration (factor)
+-ac                    disable access control restrictions
+-audit int             set audit trail level
+-auth file             select authorization file
+-br                    create root window with black background
++bs                    enable any backing store support
+-bs                    disable any backing store support
+-c                     turns off key-click
+c #                    key-click volume (0-100)
+-cc int                default color visual class
+-nocursor              disable the cursor
+-core                  generate core dump on fatal error
+-displayfd fd          file descriptor to write display number to when ready to connect
+-dpi int               screen resolution in dots per inch
+-dpms                  disables VESA DPMS monitor control
+-deferglyphs [none|all|16] defer loading of [no|all|16-bit] glyphs
+-f #                   bell base (0-100)
+-fc string             cursor font
+-fn string             default font name
+-fp string             default font path
+-help                  prints message with these options
++iglx                  Allow creating indirect GLX contexts
+-iglx                  Prohibit creating indirect GLX contexts (default)
+-I                     ignore all remaining arguments
+-ld int                limit data space to N Kb
+-lf int                limit number of open files to N
+-ls int                limit stack space to N Kb
+-nolock                disable the locking mechanism
+-maxclients n          set maximum number of clients (power of two)
+-nolisten string       don't listen on protocol
+-listen string         listen on protocol
+-noreset               don't reset after last client exists
+-background [none]     create root window with no background
+-reset                 reset after last client exists
+-p #                   screen-saver pattern duration (minutes)
+-pn                    accept failure to listen on all ports
+-nopn                  reject failure to listen on all ports
+-r                     turns off auto-repeat
+r                      turns on auto-repeat 
+-render [default|mono|gray|color] set render color alloc policy
+-retro                 start with classic stipple and cursor
+-s #                   screen-saver timeout (minutes)
+-seat string           seat to run on
+-t #                   default pointer threshold (pixels/t)
+-terminate             terminate at server reset
+-to #                  connection time out
+-tst                   disable testing extensions
+ttyxx                  server started from init on /dev/ttyxx
+v                      video blanking for screen-saver
+-v                     screen-saver without video blanking
+-wm                    WhenMapped default backing-store
+-wr                    create root window with white background
+-maxbigreqsize         set maximal bigrequest size 
++xinerama              Enable XINERAMA extension
+-xinerama              Disable XINERAMA extension
+-dumbSched             Disable smart scheduling, enable old behavior
+-schedInterval int     Set scheduler interval in msec
+-sigstop               Enable SIGSTOP based startup
++extension name        Enable extension
+-extension name        Disable extension
+-query host-name       contact named host for XDMCP
+-broadcast             broadcast for XDMCP
+-multicast [addr [hops]] IPv6 multicast for XDMCP
+-indirect host-name    contact named host for indirect XDMCP
+-port port-num         UDP port number to send messages to
+-from local-address    specify the local address to connect from
+-once                  Terminate server after one session
+-class display-class   specify display class to send in manage
+-cookie xdm-auth-bits  specify the magic cookie for XDMCP
+-displayID display-id  manufacturer display ID for request
+[+-]accessx [ timeout [ timeout_mask [ feedback [ options_mask] ] ] ]
+                       enable/disable accessx key sequences
+-ardelay               set XKB autorepeat delay
+-arinterval            set XKB autorepeat interval
+-screen scrn WxHxD     set screen's width, height, depth
+-pixdepths list-of-int support given pixmap depths
++/-render		   turn on/off RENDER extension support(default on)
+-linebias n            adjust thin line pixelization
+-blackpixel n          pixel value for black
+-whitepixel n          pixel value for white
+-fbdir directory       put framebuffers in mmap'ed files in directory
+-shmem                 put framebuffers in shared memory
+2018-05-04 19:53:13,247 - DEBUG - param: "['xauth', '-h']" 
+2018-05-04 19:53:13,247 - DEBUG - command: ['xauth', '-h']
+2018-05-04 19:53:13,247 - DEBUG - joined command: xauth -h
+2018-05-04 19:53:13,288 - DEBUG - process was started (pid=3349)
+2018-05-04 19:53:13,299 - DEBUG - process has ended
+2018-05-04 19:53:13,304 - DEBUG - return code=1
+2018-05-04 19:53:13,308 - DEBUG - stdout=
+2018-05-04 19:53:13,308 - DEBUG - stderr=usage:  xauth [-options ...] [command arg ...]
+
+where options include:
+    -f authfilename                name of authority file to use
+    -v                             turn on extra messages
+    -q                             turn off extra messages
+    -i                             ignore locks on authority file
+    -b                             break locks on authority file
+    -V                             show version number of xauth
+
+and commands have the following syntax:
+
+    add dpyname protoname hexkey   add entry
+    exit                           save changes and exit program
+    extract filename dpyname...    extract entries into file
+    help [topic]                   print help
+    info                           print information about entries
+    list [dpyname...]              list entries
+    merge filename...              merge entries from files
+    nextract filename dpyname...   numerically extract entries
+    nlist [dpyname...]             numerically list entries
+    nmerge filename...             numerically merge entries
+    quit                           abort changes and exit program
+    remove dpyname...              remove entries
+    source filename                read commands from file
+    version                        show version number of xauth
+    ?                              list available commands
+    generate dpyname protoname [options]  use server to generate entry
+    options are:
+      timeout n    authorization expiration time in seconds
+      trusted      clients using this entry are trusted
+      untrusted    clients using this entry are untrusted
+      group n      clients using this entry belong to application group n
+      data hexkey  auth protocol specific data needed to generate the entry
+
+
+A dash may be used with the "merge" and "source" to read from the
+standard input.  Commands beginning with "n" use numeric format.
+
+2018-05-04 19:53:13,310 - DEBUG - param: "['Xvfb', '-br', '-nolisten', 'tcp', '-screen', '0', '1400x900x24', ':1000']" 
+2018-05-04 19:53:13,312 - DEBUG - command: ['Xvfb', '-br', '-nolisten', 'tcp', '-screen', '0', '1400x900x24', ':1000']
+2018-05-04 19:53:13,312 - DEBUG - joined command: Xvfb -br -nolisten tcp -screen 0 1400x900x24 :1000
+2018-05-04 19:53:13,313 - DEBUG - param: "['xauth', '-h']" 
+2018-05-04 19:53:13,313 - DEBUG - command: ['xauth', '-h']
+2018-05-04 19:53:13,314 - DEBUG - joined command: xauth -h
+2018-05-04 19:53:13,348 - DEBUG - process was started (pid=3350)
+2018-05-04 19:53:13,352 - DEBUG - process has ended
+2018-05-04 19:53:13,360 - DEBUG - return code=1
+2018-05-04 19:53:13,367 - DEBUG - stdout=
+2018-05-04 19:53:13,367 - DEBUG - stderr=usage:  xauth [-options ...] [command arg ...]
+
+where options include:
+    -f authfilename                name of authority file to use
+    -v                             turn on extra messages
+    -q                             turn off extra messages
+    -i                             ignore locks on authority file
+    -b                             break locks on authority file
+    -V                             show version number of xauth
+
+and commands have the following syntax:
+
+    add dpyname protoname hexkey   add entry
+    exit                           save changes and exit program
+    extract filename dpyname...    extract entries into file
+    help [topic]                   print help
+    info                           print information about entries
+    list [dpyname...]              list entries
+    merge filename...              merge entries from files
+    nextract filename dpyname...   numerically extract entries
+    nlist [dpyname...]             numerically list entries
+    nmerge filename...             numerically merge entries
+    quit                           abort changes and exit program
+    remove dpyname...              remove entries
+    source filename                read commands from file
+    version                        show version number of xauth
+    ?                              list available commands
+    generate dpyname protoname [options]  use server to generate entry
+    options are:
+      timeout n    authorization expiration time in seconds
+      trusted      clients using this entry are trusted
+      untrusted    clients using this entry are untrusted
+      group n      clients using this entry belong to application group n
+      data hexkey  auth protocol specific data needed to generate the entry
+
+
+A dash may be used with the "merge" and "source" to read from the
+standard input.  Commands beginning with "n" use numeric format.
+
+2018-05-04 19:53:13,369 - DEBUG - param: "['Xvfb', '-br', '-nolisten', 'tcp', '-screen', '0', '1400x900x24', ':1001']" 
+2018-05-04 19:53:13,370 - DEBUG - command: ['Xvfb', '-br', '-nolisten', 'tcp', '-screen', '0', '1400x900x24', ':1001']
+2018-05-04 19:53:13,370 - DEBUG - joined command: Xvfb -br -nolisten tcp -screen 0 1400x900x24 :1001
+2018-05-04 19:53:13,391 - DEBUG - process was started (pid=3351)
+2018-05-04 19:53:13,397 - DEBUG - DISPLAY=:1001
+2018-05-04 19:53:14,823 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 19:53:14,823 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 19:53:26,859 - DEBUG - random
+2018-05-04 19:53:26,860 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 19:53:26,873 - DEBUG - random
+2018-05-04 19:53:26,880 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 19:54:31,600 - DEBUG - param: "['Xvfb', '-help']" 
+2018-05-04 19:54:31,601 - DEBUG - command: ['Xvfb', '-help']
+2018-05-04 19:54:31,607 - DEBUG - joined command: Xvfb -help
+2018-05-04 19:54:31,636 - DEBUG - process was started (pid=3398)
+2018-05-04 19:54:31,666 - DEBUG - process has ended
+2018-05-04 19:54:31,668 - DEBUG - return code=0
+2018-05-04 19:54:31,672 - DEBUG - stdout=
+2018-05-04 19:54:31,673 - DEBUG - stderr=use: X [:<display>] [option]
+-a #                   default pointer acceleration (factor)
+-ac                    disable access control restrictions
+-audit int             set audit trail level
+-auth file             select authorization file
+-br                    create root window with black background
++bs                    enable any backing store support
+-bs                    disable any backing store support
+-c                     turns off key-click
+c #                    key-click volume (0-100)
+-cc int                default color visual class
+-nocursor              disable the cursor
+-core                  generate core dump on fatal error
+-displayfd fd          file descriptor to write display number to when ready to connect
+-dpi int               screen resolution in dots per inch
+-dpms                  disables VESA DPMS monitor control
+-deferglyphs [none|all|16] defer loading of [no|all|16-bit] glyphs
+-f #                   bell base (0-100)
+-fc string             cursor font
+-fn string             default font name
+-fp string             default font path
+-help                  prints message with these options
++iglx                  Allow creating indirect GLX contexts
+-iglx                  Prohibit creating indirect GLX contexts (default)
+-I                     ignore all remaining arguments
+-ld int                limit data space to N Kb
+-lf int                limit number of open files to N
+-ls int                limit stack space to N Kb
+-nolock                disable the locking mechanism
+-maxclients n          set maximum number of clients (power of two)
+-nolisten string       don't listen on protocol
+-listen string         listen on protocol
+-noreset               don't reset after last client exists
+-background [none]     create root window with no background
+-reset                 reset after last client exists
+-p #                   screen-saver pattern duration (minutes)
+-pn                    accept failure to listen on all ports
+-nopn                  reject failure to listen on all ports
+-r                     turns off auto-repeat
+r                      turns on auto-repeat 
+-render [default|mono|gray|color] set render color alloc policy
+-retro                 start with classic stipple and cursor
+-s #                   screen-saver timeout (minutes)
+-seat string           seat to run on
+-t #                   default pointer threshold (pixels/t)
+-terminate             terminate at server reset
+-to #                  connection time out
+-tst                   disable testing extensions
+ttyxx                  server started from init on /dev/ttyxx
+v                      video blanking for screen-saver
+-v                     screen-saver without video blanking
+-wm                    WhenMapped default backing-store
+-wr                    create root window with white background
+-maxbigreqsize         set maximal bigrequest size 
++xinerama              Enable XINERAMA extension
+-xinerama              Disable XINERAMA extension
+-dumbSched             Disable smart scheduling, enable old behavior
+-schedInterval int     Set scheduler interval in msec
+-sigstop               Enable SIGSTOP based startup
++extension name        Enable extension
+-extension name        Disable extension
+-query host-name       contact named host for XDMCP
+-broadcast             broadcast for XDMCP
+-multicast [addr [hops]] IPv6 multicast for XDMCP
+-indirect host-name    contact named host for indirect XDMCP
+-port port-num         UDP port number to send messages to
+-from local-address    specify the local address to connect from
+-once                  Terminate server after one session
+-class display-class   specify display class to send in manage
+-cookie xdm-auth-bits  specify the magic cookie for XDMCP
+-displayID display-id  manufacturer display ID for request
+[+-]accessx [ timeout [ timeout_mask [ feedback [ options_mask] ] ] ]
+                       enable/disable accessx key sequences
+-ardelay               set XKB autorepeat delay
+-arinterval            set XKB autorepeat interval
+-screen scrn WxHxD     set screen's width, height, depth
+-pixdepths list-of-int support given pixmap depths
++/-render		   turn on/off RENDER extension support(default on)
+-linebias n            adjust thin line pixelization
+-blackpixel n          pixel value for black
+-whitepixel n          pixel value for white
+-fbdir directory       put framebuffers in mmap'ed files in directory
+-shmem                 put framebuffers in shared memory
+2018-05-04 19:54:31,682 - DEBUG - param: "['xauth', '-h']" 
+2018-05-04 19:54:31,696 - DEBUG - command: ['xauth', '-h']
+2018-05-04 19:54:31,697 - DEBUG - joined command: xauth -h
+2018-05-04 19:54:31,748 - DEBUG - process was started (pid=3399)
+2018-05-04 19:54:31,752 - DEBUG - process has ended
+2018-05-04 19:54:31,753 - DEBUG - return code=1
+2018-05-04 19:54:31,753 - DEBUG - stdout=
+2018-05-04 19:54:31,754 - DEBUG - stderr=usage:  xauth [-options ...] [command arg ...]
+
+where options include:
+    -f authfilename                name of authority file to use
+    -v                             turn on extra messages
+    -q                             turn off extra messages
+    -i                             ignore locks on authority file
+    -b                             break locks on authority file
+    -V                             show version number of xauth
+
+and commands have the following syntax:
+
+    add dpyname protoname hexkey   add entry
+    exit                           save changes and exit program
+    extract filename dpyname...    extract entries into file
+    help [topic]                   print help
+    info                           print information about entries
+    list [dpyname...]              list entries
+    merge filename...              merge entries from files
+    nextract filename dpyname...   numerically extract entries
+    nlist [dpyname...]             numerically list entries
+    nmerge filename...             numerically merge entries
+    quit                           abort changes and exit program
+    remove dpyname...              remove entries
+    source filename                read commands from file
+    version                        show version number of xauth
+    ?                              list available commands
+    generate dpyname protoname [options]  use server to generate entry
+    options are:
+      timeout n    authorization expiration time in seconds
+      trusted      clients using this entry are trusted
+      untrusted    clients using this entry are untrusted
+      group n      clients using this entry belong to application group n
+      data hexkey  auth protocol specific data needed to generate the entry
+
+
+A dash may be used with the "merge" and "source" to read from the
+standard input.  Commands beginning with "n" use numeric format.
+
+2018-05-04 19:54:31,758 - DEBUG - param: "['Xvfb', '-br', '-nolisten', 'tcp', '-screen', '0', '1400x900x24', ':1000']" 
+2018-05-04 19:54:31,759 - DEBUG - command: ['Xvfb', '-br', '-nolisten', 'tcp', '-screen', '0', '1400x900x24', ':1000']
+2018-05-04 19:54:31,759 - DEBUG - joined command: Xvfb -br -nolisten tcp -screen 0 1400x900x24 :1000
+2018-05-04 19:54:31,760 - DEBUG - param: "['xauth', '-h']" 
+2018-05-04 19:54:31,760 - DEBUG - command: ['xauth', '-h']
+2018-05-04 19:54:31,765 - DEBUG - joined command: xauth -h
+2018-05-04 19:54:31,805 - DEBUG - process was started (pid=3400)
+2018-05-04 19:54:31,810 - DEBUG - process has ended
+2018-05-04 19:54:31,811 - DEBUG - return code=1
+2018-05-04 19:54:31,816 - DEBUG - stdout=
+2018-05-04 19:54:31,817 - DEBUG - stderr=usage:  xauth [-options ...] [command arg ...]
+
+where options include:
+    -f authfilename                name of authority file to use
+    -v                             turn on extra messages
+    -q                             turn off extra messages
+    -i                             ignore locks on authority file
+    -b                             break locks on authority file
+    -V                             show version number of xauth
+
+and commands have the following syntax:
+
+    add dpyname protoname hexkey   add entry
+    exit                           save changes and exit program
+    extract filename dpyname...    extract entries into file
+    help [topic]                   print help
+    info                           print information about entries
+    list [dpyname...]              list entries
+    merge filename...              merge entries from files
+    nextract filename dpyname...   numerically extract entries
+    nlist [dpyname...]             numerically list entries
+    nmerge filename...             numerically merge entries
+    quit                           abort changes and exit program
+    remove dpyname...              remove entries
+    source filename                read commands from file
+    version                        show version number of xauth
+    ?                              list available commands
+    generate dpyname protoname [options]  use server to generate entry
+    options are:
+      timeout n    authorization expiration time in seconds
+      trusted      clients using this entry are trusted
+      untrusted    clients using this entry are untrusted
+      group n      clients using this entry belong to application group n
+      data hexkey  auth protocol specific data needed to generate the entry
+
+
+A dash may be used with the "merge" and "source" to read from the
+standard input.  Commands beginning with "n" use numeric format.
+
+2018-05-04 19:54:31,822 - DEBUG - param: "['Xvfb', '-br', '-nolisten', 'tcp', '-screen', '0', '1400x900x24', ':1001']" 
+2018-05-04 19:54:31,823 - DEBUG - command: ['Xvfb', '-br', '-nolisten', 'tcp', '-screen', '0', '1400x900x24', ':1001']
+2018-05-04 19:54:31,823 - DEBUG - joined command: Xvfb -br -nolisten tcp -screen 0 1400x900x24 :1001
+2018-05-04 19:54:31,858 - DEBUG - process was started (pid=3401)
+2018-05-04 19:54:31,859 - DEBUG - DISPLAY=:1001
+2018-05-04 19:54:34,115 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 19:54:34,115 - INFO - Making new env: SuperMarioBros-1-1-v0
