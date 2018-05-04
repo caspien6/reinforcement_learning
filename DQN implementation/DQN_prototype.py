@@ -19,14 +19,27 @@ ACTION_SET=6
 BATCH_SIZE= 32
 UPDATE_FREQUENCY=4
 STATE_LENGTH=4
-EXPLORATION_STEPS = 1000000
+EXPLORATION_STEPS = 2000000
 INITIAL_EPSILON = 1.0
 FINAL_EPSILON = 0.1
 INITIAL_REPLAY_SIZE = 50000  # Number of steps to populate the replay memory before training starts
 NUM_REPLAY_MEMORY = 400000  # Number of replay memory the agent uses for training
 LEARNING_FACTOR = 0.00025
-INFO_GRAPH_WEIGHTS_DIR='./record0426_3/'
+INFO_GRAPH_WEIGHTS_DIR='./record0503/'
 
+def printParameters(mylogger):
+	mylogger.info('ACTION_SET: ' + str(ACTION_SET))
+	mylogger.info('BATCH_SIZE: ' + str(BATCH_SIZE))
+	mylogger.info('UPDATE_FREQUENCY: ' + str(UPDATE_FREQUENCY))
+	mylogger.info('STATE_LENGTH: ' + str(STATE_LENGTH))
+	mylogger.info('EXPLORATION_STEPS: ' + str(EXPLORATION_STEPS)) 
+	mylogger.info('INITIAL_EPSILON: ' + str(INITIAL_EPSILON))
+	mylogger.info('FINAL_EPSILON: ' + str(FINAL_EPSILON)) 
+	mylogger.info('INITIAL_REPLAY_SIZE: ' + str(INITIAL_REPLAY_SIZE)) 
+	mylogger.info('NUM_REPLAY_MEMORY: ' + str(NUM_REPLAY_MEMORY))
+	mylogger.info('LEARNING_FACTOR: ' + str(LEARNING_FACTOR)) 
+	mylogger.info('INFO_GRAPH_WEIGHTS_DIR: ' + INFO_GRAPH_WEIGHTS_DIR)
+	mylogger.info('REFRESH_Q_WEIGHT_STEP: ' + str(REFRESH_Q_WEIGHT_STEP))
 
 def init_logger(outdir):
 	logger = logging.getLogger()
@@ -73,7 +86,7 @@ def get_all_action():
 	allactionlist = np.zeros((ACTION_SET,6))
 	allactionlist[0] = [0,1,0,0,0,0]
 	allactionlist[1] = [0,0,0,1,0,0]
-	allactionlist[2] = [1,0,0,0,0,0]
+	allactionlist[2] = [0,0,0,0,1,0]
 	allactionlist[3] = [0,0,0,0,0,0]
 	allactionlist[4] = [0,1,0,0,1,0]
 	allactionlist[5] = [0,0,0,1,1,0]
@@ -98,7 +111,7 @@ def get_random_action(Q, state):
 
 
 def preprocess_image(observation, last_observation):
-	processed_observation = np.maximum(observation, last_observation)[30:210]
+	processed_observation = np.maximum(observation, last_observation)[50:]
 	processed_observation = np.uint8(resize(rgb2gray(processed_observation), (84, 84)) * 255)
 	#plt.imshow(processed_observation)
 	#plt.show()
@@ -178,6 +191,8 @@ def train_network(D, Q, Q_freeze, LEARNING_FACTOR):
 	Q.train_on_batch(states[:], actions_output[:])
 	return Q
 
+
+
 def main():
 	try:
 		display = Display(visible=0, size=(1400,900))
@@ -189,12 +204,13 @@ def main():
 
 		Q = init_network()
 		logger = init_logger(INFO_GRAPH_WEIGHTS_DIR + 'info.log')
+		printParameters(logger)
 		logger2 = init_logger(INFO_GRAPH_WEIGHTS_DIR + 'action.log')
 
 		if sys.argv[-1] == 'y' and os.path.isfile(INFO_GRAPH_WEIGHTS_DIR+'weights7.h5'):
 			print('loading weights')
-			Q.load_weights(INFO_GRAPH_WEIGHTS_DIR + 'weights7.h5')
-			epsgrdy.epsilon = 0.8995
+			Q.load_weights(INFO_GRAPH_WEIGHTS_DIR + 'weights1.h5')
+			epsgrdy.epsilon = 0.93168
 
 		Q_freeze = init_network()
 		#Q_freeze.set_weights(Q.get_weights())

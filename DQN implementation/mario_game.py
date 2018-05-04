@@ -1,8 +1,16 @@
 import gym
 import keyboard #Using module keyboard
+import numpy as np
+from skimage.transform import resize
+from skimage.color import rgb2gray
+import matplotlib.pyplot as plt
 
-
-
+def preprocess_image(observation, last_observation):
+	processed_observation = np.maximum(observation, last_observation)[70:220]
+	processed_observation = np.uint8(resize(rgb2gray(processed_observation), (84, 84)) * 255)
+	plt.imshow(processed_observation)
+	plt.show()
+	return np.reshape(processed_observation, (84, 84, 1))
 
 for i in range(0,10):
 
@@ -40,4 +48,5 @@ for i in range(0,10):
 			# 	observation, reward, _, info = env.step([0,0,0,0,0,0])
 			# 	break#finshing the loop
 		observation, reward, done, info = env.step([0,1,0,0,0,0])
+		preprocess_image(observation, observation)
 		print(reward)

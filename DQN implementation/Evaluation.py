@@ -25,7 +25,7 @@ FINAL_EPSILON = 0.1
 INITIAL_REPLAY_SIZE = 50000  # Number of steps to populate the replay memory before training starts
 NUM_REPLAY_MEMORY = 400000  # Number of replay memory the agent uses for training
 LEARNING_FACTOR = 0.00025
-INFO_GRAPH_WEIGHTS_DIR='./record0426_2/'
+INFO_GRAPH_WEIGHTS_DIR='./record0503/'
 
 
 
@@ -72,7 +72,7 @@ def get_random_action(Q, state):
 
 
 def preprocess_image(observation, last_observation):
-	processed_observation = np.maximum(observation, last_observation)[30:210]
+	processed_observation = np.maximum(observation, last_observation)[70:220]
 	processed_observation = np.uint8(resize(rgb2gray(processed_observation), (84, 84)) * 255)
 	#plt.imshow(processed_observation)
 	#plt.show()
@@ -106,13 +106,11 @@ def init_network():
 	return model
 
 
-def VideoRecord(env, epoch):
+def VideoRecord(env, episode):
 	#Video recorder init
-	video_recorder = VideoRecorder(env, INFO_GRAPH_WEIGHTS_DIR +'els'+str(epoch)+'.mp4', enabled=True)
-	if epoch%10==1:
-		video_recorder.enabled=True
-	else:
-		video_recorder.enabled=False
+	video_recorder = VideoRecorder(env, INFO_GRAPH_WEIGHTS_DIR +'video_with_weight34'+str(episode)+'.mp4', enabled=True)
+	video_recorder.enabled=True
+	return video_recorder
 
 def get_initial_state(observation, last_observation):
 	processed_observation = np.maximum(observation, last_observation)[30:210]
@@ -159,9 +157,9 @@ def main():
 
 		Q = init_network()
 
-		if sys.argv[-1] == 'y' and os.path.isfile(INFO_GRAPH_WEIGHTS_DIR+'weights3.h5'):
+		if os.path.isfile(INFO_GRAPH_WEIGHTS_DIR+'weights34.h5'):
 			print('loading weights')
-			Q.load_weights(INFO_GRAPH_WEIGHTS_DIR + 'weights3.h5')
+			Q.load_weights(INFO_GRAPH_WEIGHTS_DIR + 'weights34.h5')
 			epsgrdy.epsilon = 0.1
 
 		#Q_freeze.set_weights(Q.get_weights())
@@ -171,7 +169,7 @@ def main():
 
 		maxrange=50000
 
-		for epoch in range(1,maxrange):
+		for episode in range(1,maxrange):
 			
 			env = gym.make('SuperMarioBros-1-1-v0')
 			
@@ -190,9 +188,9 @@ def main():
 
 			same_action_policy = 0
 			
-
+			video_recorder = VideoRecord(env, episode)
 			while not done:
-				
+				video_recorder.capture_frame()
 				epsilon = epsgrdy.epsilon
 				if t == 0 :
 					last_action = get_action(epsilon, Q, state)
@@ -213,7 +211,7 @@ def main():
 					observation, reward, done, info = env.step(action_t.astype(np.uint8).tolist())
 
 				
-				print(action_t)
+				
 				#observation, reward, done, info = env.step(action_t)
 				
 				#observation, reward, done, info = env.step(action_t.astype(np.uint8).tolist())
