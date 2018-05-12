@@ -18,28 +18,15 @@ global all_action
 ACTION_SET=6
 BATCH_SIZE= 32
 UPDATE_FREQUENCY=4
-STATE_LENGTH=4
+FRAME_COUNT_FOR_ONE_PICTURE=4
 EXPLORATION_STEPS = 2000000
 INITIAL_EPSILON = 1.0
 FINAL_EPSILON = 0.1
-INITIAL_REPLAY_SIZE = 50000  # Number of steps to populate the replay memory before training starts
+INITIAL_REPLAY_SIZE = 60000  # Number of steps to populate the replay memory before training starts
 NUM_REPLAY_MEMORY = 400000  # Number of replay memory the agent uses for training
-LEARNING_FACTOR = 0.00025
-INFO_GRAPH_WEIGHTS_DIR='./record0503/'
+LEARNING_FACTOR = 0.00027
+INFO_GRAPH_WEIGHTS_DIR='./mario_0512/'
 
-def printParameters(mylogger):
-	mylogger.info('ACTION_SET: ' + str(ACTION_SET))
-	mylogger.info('BATCH_SIZE: ' + str(BATCH_SIZE))
-	mylogger.info('UPDATE_FREQUENCY: ' + str(UPDATE_FREQUENCY))
-	mylogger.info('STATE_LENGTH: ' + str(STATE_LENGTH))
-	mylogger.info('EXPLORATION_STEPS: ' + str(EXPLORATION_STEPS)) 
-	mylogger.info('INITIAL_EPSILON: ' + str(INITIAL_EPSILON))
-	mylogger.info('FINAL_EPSILON: ' + str(FINAL_EPSILON)) 
-	mylogger.info('INITIAL_REPLAY_SIZE: ' + str(INITIAL_REPLAY_SIZE)) 
-	mylogger.info('NUM_REPLAY_MEMORY: ' + str(NUM_REPLAY_MEMORY))
-	mylogger.info('LEARNING_FACTOR: ' + str(LEARNING_FACTOR)) 
-	mylogger.info('INFO_GRAPH_WEIGHTS_DIR: ' + INFO_GRAPH_WEIGHTS_DIR)
-	mylogger.info('REFRESH_Q_WEIGHT_STEP: ' + str(REFRESH_Q_WEIGHT_STEP))
 
 def init_logger(outdir):
 	logger = logging.getLogger()
@@ -111,7 +98,7 @@ def get_random_action(Q, state):
 
 
 def preprocess_image(observation, last_observation):
-	processed_observation = np.maximum(observation, last_observation)[50:]
+	processed_observation = np.maximum(observation, last_observation)[80:210]
 	processed_observation = np.uint8(resize(rgb2gray(processed_observation), (84, 84)) * 255)
 	#plt.imshow(processed_observation)
 	#plt.show()
@@ -131,7 +118,7 @@ def argmax(Q,state, t=1):
 
 def init_network():
 	model = Sequential()
-	model.add(keras.layers.Conv2D(32, (8,8), strides=(4, 4), data_format='channels_last', activation='relu', input_shape=(84,84,STATE_LENGTH) ) )
+	model.add(keras.layers.Conv2D(32, (8,8), strides=(4, 4), data_format='channels_last', activation='relu', input_shape=(84,84,FRAME_COUNT_FOR_ONE_PICTURE) ) )
 
 	model.add(keras.layers.Conv2D(64, (4,4), strides=(2, 2), activation='relu'))
 	model.add(keras.layers.Conv2D(64, (3,3), strides=(1, 1), activation='relu'))
@@ -157,7 +144,7 @@ def VideoRecord(env, epoch):
 def get_initial_state(observation, last_observation):
 	processed_observation = np.maximum(observation, last_observation)[30:210]
 	processed_observation = np.uint8(resize(rgb2gray(processed_observation), (84, 84)) * 255)
-	state = [processed_observation for _ in range(STATE_LENGTH)]
+	state = [processed_observation for _ in range(FRAME_COUNT_FOR_ONE_PICTURE)]
 	return np.stack(state, axis=2)
 
 def get_action(epsilon, Q, state, logger, t):
@@ -191,6 +178,18 @@ def train_network(D, Q, Q_freeze, LEARNING_FACTOR):
 	Q.train_on_batch(states[:], actions_output[:])
 	return Q
 
+def printParameters(mylogger):
+	mylogger.info('ACTION_SET: ' + str(ACTION_SET))
+	mylogger.info('BATCH_SIZE: ' + str(BATCH_SIZE))
+	mylogger.info('UPDATE_FREQUENCY: ' + str(UPDATE_FREQUENCY))
+	mylogger.info('FRAME_COUNT_FOR_ONE_PICTURE: ' + str(FRAME_COUNT_FOR_ONE_PICTURE))
+	mylogger.info('EXPLORATION_STEPS: ' + str(EXPLORATION_STEPS)) 
+	mylogger.info('INITIAL_EPSILON: ' + str(INITIAL_EPSILON))
+	mylogger.info('FINAL_EPSILON: ' + str(FINAL_EPSILON)) 
+	mylogger.info('INITIAL_REPLAY_SIZE: ' + str(INITIAL_REPLAY_SIZE)) 
+	mylogger.info('NUM_REPLAY_MEMORY: ' + str(NUM_REPLAY_MEMORY))
+	mylogger.info('LEARNING_FACTOR: ' + str(LEARNING_FACTOR)) 
+	mylogger.info('INFO_GRAPH_WEIGHTS_DIR: ' + INFO_GRAPH_WEIGHTS_DIR)
 
 
 def main():
@@ -198,6 +197,7 @@ def main():
 		display = Display(visible=0, size=(1400,900))
 		display.start()
 		rewards_list = []
+		original_rew_list = []
 		D = collections.deque(maxlen = NUM_REPLAY_MEMORY) 
 		epsgrdy = EpsilonGreedy()
 		#Initialize neural networks--
@@ -206,11 +206,11 @@ def main():
 		logger = init_logger(INFO_GRAPH_WEIGHTS_DIR + 'info.log')
 		printParameters(logger)
 		logger2 = init_logger(INFO_GRAPH_WEIGHTS_DIR + 'action.log')
-
-		if sys.argv[-1] == 'y' and os.path.isfile(INFO_GRAPH_WEIGHTS_DIR+'weights7.h5'):
+		
+		if sys.argv[-1] == 'y' and os.path.isfile(INFO_GRAPH_WEIGHTS_DIR+'weights34.h5'):
 			print('loading weights')
-			Q.load_weights(INFO_GRAPH_WEIGHTS_DIR + 'weights1.h5')
-			epsgrdy.epsilon = 0.93168
+			Q.load_weights(INFO_GRAPH_WEIGHTS_DIR + 'weights34.h5')
+			epsgrdy.epsilon = 0.1
 
 		Q_freeze = init_network()
 		#Q_freeze.set_weights(Q.get_weights())
@@ -236,6 +236,7 @@ def main():
 			Q_freeze.set_weights(Q.get_weights())
 			
 			sum_rewards = 0
+			original_rewards = 0
 			t = 0
 			done=False
 
@@ -254,7 +255,7 @@ def main():
 					last_action = action_t
 
 				
-				if t % 4 == 0 or t == 0:
+				if t % 2 == 0 or t == 0:
 					action_t = get_action(epsilon, Q, state, logger2, t)
 
 				#print(action_t)
@@ -269,7 +270,7 @@ def main():
 					same_action_policy = 0
 					observation, reward, done, info = env.step(action_t.astype(np.uint8).tolist())
 
-				
+				original_rewards += reward;
 				if reward <= 0: reward = -1
 				else: reward = 1
 				
@@ -295,13 +296,17 @@ def main():
 				
 				t = t + 1
 			rewards_list.append(sum_rewards)
-			if epoch % 50 == 0:
-				Q.save_weights(INFO_GRAPH_WEIGHTS_DIR + 'weights' + str(int(epoch/50)) + '.h5')
+			original_rew_list.append(original_rewards)
+			if epoch % 100 == 0:
+				Q.save_weights(INFO_GRAPH_WEIGHTS_DIR + 'weights' + str(int(epoch/100)) + '.h5')
 			if epoch % 100 == 0:
 				plt.plot(rewards_list)
 				plt.savefig(INFO_GRAPH_WEIGHTS_DIR+'reward_diagram'+str(epoch)+'.png')
 				plt.close()
-			logger.info('EPSILON: '+ str(epsilon) + ' '+  str(t) + " lepesszam mellett, reward: " + str(sum_rewards))
+				plt.plot(original_rew_list)
+				plt.savefig(INFO_GRAPH_WEIGHTS_DIR+'original_diagram'+str(epoch)+'.png')
+				plt.close()
+			logger.info('EPSILON: '+ str(epsilon) + ' '+  str(t) + " lepesszam mellett, reward: " + str(sum_rewards) + "  eredeti reward: " + str(original_rewards))
 	finally:
 		
 		plt.plot(rewards_list)

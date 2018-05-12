@@ -1,0 +1,3042 @@
+2018-05-04 20:09:03,988 - DEBUG - param: "['Xvfb', '-help']" 
+2018-05-04 20:09:03,988 - DEBUG - command: ['Xvfb', '-help']
+2018-05-04 20:09:03,988 - DEBUG - joined command: Xvfb -help
+2018-05-04 20:09:03,994 - DEBUG - process was started (pid=10287)
+2018-05-04 20:09:03,996 - DEBUG - process has ended
+2018-05-04 20:09:03,996 - DEBUG - return code=0
+2018-05-04 20:09:03,996 - DEBUG - stdout=
+2018-05-04 20:09:03,997 - DEBUG - stderr=use: X [:<display>] [option]
+-a #                   default pointer acceleration (factor)
+-ac                    disable access control restrictions
+-audit int             set audit trail level
+-auth file             select authorization file
+-br                    create root window with black background
++bs                    enable any backing store support
+-bs                    disable any backing store support
+-c                     turns off key-click
+c #                    key-click volume (0-100)
+-cc int                default color visual class
+-nocursor              disable the cursor
+-core                  generate core dump on fatal error
+-displayfd fd          file descriptor to write display number to when ready to connect
+-dpi int               screen resolution in dots per inch
+-dpms                  disables VESA DPMS monitor control
+-deferglyphs [none|all|16] defer loading of [no|all|16-bit] glyphs
+-f #                   bell base (0-100)
+-fc string             cursor font
+-fn string             default font name
+-fp string             default font path
+-help                  prints message with these options
++iglx                  Allow creating indirect GLX contexts
+-iglx                  Prohibit creating indirect GLX contexts (default)
+-I                     ignore all remaining arguments
+-ld int                limit data space to N Kb
+-lf int                limit number of open files to N
+-ls int                limit stack space to N Kb
+-nolock                disable the locking mechanism
+-maxclients n          set maximum number of clients (power of two)
+-nolisten string       don't listen on protocol
+-listen string         listen on protocol
+-noreset               don't reset after last client exists
+-background [none]     create root window with no background
+-reset                 reset after last client exists
+-p #                   screen-saver pattern duration (minutes)
+-pn                    accept failure to listen on all ports
+-nopn                  reject failure to listen on all ports
+-r                     turns off auto-repeat
+r                      turns on auto-repeat 
+-render [default|mono|gray|color] set render color alloc policy
+-retro                 start with classic stipple and cursor
+-s #                   screen-saver timeout (minutes)
+-seat string           seat to run on
+-t #                   default pointer threshold (pixels/t)
+-terminate             terminate at server reset
+-to #                  connection time out
+-tst                   disable testing extensions
+ttyxx                  server started from init on /dev/ttyxx
+v                      video blanking for screen-saver
+-v                     screen-saver without video blanking
+-wm                    WhenMapped default backing-store
+-wr                    create root window with white background
+-maxbigreqsize         set maximal bigrequest size 
++xinerama              Enable XINERAMA extension
+-xinerama              Disable XINERAMA extension
+-dumbSched             Disable smart scheduling, enable old behavior
+-schedInterval int     Set scheduler interval in msec
+-sigstop               Enable SIGSTOP based startup
++extension name        Enable extension
+-extension name        Disable extension
+-query host-name       contact named host for XDMCP
+-broadcast             broadcast for XDMCP
+-multicast [addr [hops]] IPv6 multicast for XDMCP
+-indirect host-name    contact named host for indirect XDMCP
+-port port-num         UDP port number to send messages to
+-from local-address    specify the local address to connect from
+-once                  Terminate server after one session
+-class display-class   specify display class to send in manage
+-cookie xdm-auth-bits  specify the magic cookie for XDMCP
+-displayID display-id  manufacturer display ID for request
+[+-]accessx [ timeout [ timeout_mask [ feedback [ options_mask] ] ] ]
+                       enable/disable accessx key sequences
+-ardelay               set XKB autorepeat delay
+-arinterval            set XKB autorepeat interval
+-screen scrn WxHxD     set screen's width, height, depth
+-pixdepths list-of-int support given pixmap depths
++/-render		   turn on/off RENDER extension support(default on)
+-linebias n            adjust thin line pixelization
+-blackpixel n          pixel value for black
+-whitepixel n          pixel value for white
+-fbdir directory       put framebuffers in mmap'ed files in directory
+-shmem                 put framebuffers in shared memory
+2018-05-04 20:09:03,997 - DEBUG - param: "['xauth', '-h']" 
+2018-05-04 20:09:03,997 - DEBUG - command: ['xauth', '-h']
+2018-05-04 20:09:03,997 - DEBUG - joined command: xauth -h
+2018-05-04 20:09:04,001 - DEBUG - process was started (pid=10289)
+2018-05-04 20:09:04,002 - DEBUG - process has ended
+2018-05-04 20:09:04,002 - DEBUG - return code=1
+2018-05-04 20:09:04,002 - DEBUG - stdout=
+2018-05-04 20:09:04,002 - DEBUG - stderr=usage:  xauth [-options ...] [command arg ...]
+
+where options include:
+    -f authfilename                name of authority file to use
+    -v                             turn on extra messages
+    -q                             turn off extra messages
+    -i                             ignore locks on authority file
+    -b                             break locks on authority file
+    -V                             show version number of xauth
+
+and commands have the following syntax:
+
+    add dpyname protoname hexkey   add entry
+    exit                           save changes and exit program
+    extract filename dpyname...    extract entries into file
+    help [topic]                   print help
+    info                           print information about entries
+    list [dpyname...]              list entries
+    merge filename...              merge entries from files
+    nextract filename dpyname...   numerically extract entries
+    nlist [dpyname...]             numerically list entries
+    nmerge filename...             numerically merge entries
+    quit                           abort changes and exit program
+    remove dpyname...              remove entries
+    source filename                read commands from file
+    version                        show version number of xauth
+    ?                              list available commands
+    generate dpyname protoname [options]  use server to generate entry
+    options are:
+      timeout n    authorization expiration time in seconds
+      trusted      clients using this entry are trusted
+      untrusted    clients using this entry are untrusted
+      group n      clients using this entry belong to application group n
+      data hexkey  auth protocol specific data needed to generate the entry
+
+
+A dash may be used with the "merge" and "source" to read from the
+standard input.  Commands beginning with "n" use numeric format.
+
+2018-05-04 20:09:04,002 - DEBUG - param: "['Xvfb', '-br', '-nolisten', 'tcp', '-screen', '0', '1400x900x24', ':1004']" 
+2018-05-04 20:09:04,002 - DEBUG - command: ['Xvfb', '-br', '-nolisten', 'tcp', '-screen', '0', '1400x900x24', ':1004']
+2018-05-04 20:09:04,002 - DEBUG - joined command: Xvfb -br -nolisten tcp -screen 0 1400x900x24 :1004
+2018-05-04 20:09:04,003 - DEBUG - param: "['xauth', '-h']" 
+2018-05-04 20:09:04,003 - DEBUG - command: ['xauth', '-h']
+2018-05-04 20:09:04,003 - DEBUG - joined command: xauth -h
+2018-05-04 20:09:04,006 - DEBUG - process was started (pid=10290)
+2018-05-04 20:09:04,007 - DEBUG - process has ended
+2018-05-04 20:09:04,007 - DEBUG - return code=1
+2018-05-04 20:09:04,007 - DEBUG - stdout=
+2018-05-04 20:09:04,007 - DEBUG - stderr=usage:  xauth [-options ...] [command arg ...]
+
+where options include:
+    -f authfilename                name of authority file to use
+    -v                             turn on extra messages
+    -q                             turn off extra messages
+    -i                             ignore locks on authority file
+    -b                             break locks on authority file
+    -V                             show version number of xauth
+
+and commands have the following syntax:
+
+    add dpyname protoname hexkey   add entry
+    exit                           save changes and exit program
+    extract filename dpyname...    extract entries into file
+    help [topic]                   print help
+    info                           print information about entries
+    list [dpyname...]              list entries
+    merge filename...              merge entries from files
+    nextract filename dpyname...   numerically extract entries
+    nlist [dpyname...]             numerically list entries
+    nmerge filename...             numerically merge entries
+    quit                           abort changes and exit program
+    remove dpyname...              remove entries
+    source filename                read commands from file
+    version                        show version number of xauth
+    ?                              list available commands
+    generate dpyname protoname [options]  use server to generate entry
+    options are:
+      timeout n    authorization expiration time in seconds
+      trusted      clients using this entry are trusted
+      untrusted    clients using this entry are untrusted
+      group n      clients using this entry belong to application group n
+      data hexkey  auth protocol specific data needed to generate the entry
+
+
+A dash may be used with the "merge" and "source" to read from the
+standard input.  Commands beginning with "n" use numeric format.
+
+2018-05-04 20:09:04,007 - DEBUG - param: "['Xvfb', '-br', '-nolisten', 'tcp', '-screen', '0', '1400x900x24', ':1005']" 
+2018-05-04 20:09:04,008 - DEBUG - command: ['Xvfb', '-br', '-nolisten', 'tcp', '-screen', '0', '1400x900x24', ':1005']
+2018-05-04 20:09:04,008 - DEBUG - joined command: Xvfb -br -nolisten tcp -screen 0 1400x900x24 :1005
+2018-05-04 20:09:04,011 - DEBUG - process was started (pid=10291)
+2018-05-04 20:09:04,011 - DEBUG - DISPLAY=:1005
+2018-05-04 20:09:04,289 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:09:04,289 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:09:08,638 - DEBUG - random
+2018-05-04 20:09:08,639 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 20:09:08,640 - DEBUG - random
+2018-05-04 20:09:08,640 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 20:09:09,090 - INFO - Could not load matplotlib icon: bad option "foobar": must be aspect, attributes, client, colormapwindows, command, deiconify, focusmodel, forget, frame, geometry, grid, group, iconbitmap, iconify, iconmask, iconname, iconphoto, iconposition, iconwindow, manage, maxsize, minsize, overrideredirect, positionfrom, protocol, resizable, sizefrom, stackorder, state, title, transient, or withdraw
+2018-05-04 20:09:09,090 - INFO - Could not load matplotlib icon: bad option "foobar": must be aspect, attributes, client, colormapwindows, command, deiconify, focusmodel, forget, frame, geometry, grid, group, iconbitmap, iconify, iconmask, iconname, iconphoto, iconposition, iconwindow, manage, maxsize, minsize, overrideredirect, positionfrom, protocol, resizable, sizefrom, stackorder, state, title, transient, or withdraw
+2018-05-04 20:09:09,139 - DEBUG - findfont: Matching :family=sans-serif:style=normal:variant=normal:weight=normal:stretch=normal:size=10.0 to DejaVu Sans ('/userhome/student/kede/openai/reinforce/lib/python3.5/site-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSans.ttf') with score of 0.050000
+2018-05-04 20:09:35,591 - DEBUG - param: "['Xvfb', '-help']" 
+2018-05-04 20:09:35,592 - DEBUG - command: ['Xvfb', '-help']
+2018-05-04 20:09:35,592 - DEBUG - joined command: Xvfb -help
+2018-05-04 20:09:35,595 - DEBUG - process was started (pid=10490)
+2018-05-04 20:09:35,598 - DEBUG - process has ended
+2018-05-04 20:09:35,598 - DEBUG - return code=0
+2018-05-04 20:09:35,598 - DEBUG - stdout=
+2018-05-04 20:09:35,598 - DEBUG - stderr=use: X [:<display>] [option]
+-a #                   default pointer acceleration (factor)
+-ac                    disable access control restrictions
+-audit int             set audit trail level
+-auth file             select authorization file
+-br                    create root window with black background
++bs                    enable any backing store support
+-bs                    disable any backing store support
+-c                     turns off key-click
+c #                    key-click volume (0-100)
+-cc int                default color visual class
+-nocursor              disable the cursor
+-core                  generate core dump on fatal error
+-displayfd fd          file descriptor to write display number to when ready to connect
+-dpi int               screen resolution in dots per inch
+-dpms                  disables VESA DPMS monitor control
+-deferglyphs [none|all|16] defer loading of [no|all|16-bit] glyphs
+-f #                   bell base (0-100)
+-fc string             cursor font
+-fn string             default font name
+-fp string             default font path
+-help                  prints message with these options
++iglx                  Allow creating indirect GLX contexts
+-iglx                  Prohibit creating indirect GLX contexts (default)
+-I                     ignore all remaining arguments
+-ld int                limit data space to N Kb
+-lf int                limit number of open files to N
+-ls int                limit stack space to N Kb
+-nolock                disable the locking mechanism
+-maxclients n          set maximum number of clients (power of two)
+-nolisten string       don't listen on protocol
+-listen string         listen on protocol
+-noreset               don't reset after last client exists
+-background [none]     create root window with no background
+-reset                 reset after last client exists
+-p #                   screen-saver pattern duration (minutes)
+-pn                    accept failure to listen on all ports
+-nopn                  reject failure to listen on all ports
+-r                     turns off auto-repeat
+r                      turns on auto-repeat 
+-render [default|mono|gray|color] set render color alloc policy
+-retro                 start with classic stipple and cursor
+-s #                   screen-saver timeout (minutes)
+-seat string           seat to run on
+-t #                   default pointer threshold (pixels/t)
+-terminate             terminate at server reset
+-to #                  connection time out
+-tst                   disable testing extensions
+ttyxx                  server started from init on /dev/ttyxx
+v                      video blanking for screen-saver
+-v                     screen-saver without video blanking
+-wm                    WhenMapped default backing-store
+-wr                    create root window with white background
+-maxbigreqsize         set maximal bigrequest size 
++xinerama              Enable XINERAMA extension
+-xinerama              Disable XINERAMA extension
+-dumbSched             Disable smart scheduling, enable old behavior
+-schedInterval int     Set scheduler interval in msec
+-sigstop               Enable SIGSTOP based startup
++extension name        Enable extension
+-extension name        Disable extension
+-query host-name       contact named host for XDMCP
+-broadcast             broadcast for XDMCP
+-multicast [addr [hops]] IPv6 multicast for XDMCP
+-indirect host-name    contact named host for indirect XDMCP
+-port port-num         UDP port number to send messages to
+-from local-address    specify the local address to connect from
+-once                  Terminate server after one session
+-class display-class   specify display class to send in manage
+-cookie xdm-auth-bits  specify the magic cookie for XDMCP
+-displayID display-id  manufacturer display ID for request
+[+-]accessx [ timeout [ timeout_mask [ feedback [ options_mask] ] ] ]
+                       enable/disable accessx key sequences
+-ardelay               set XKB autorepeat delay
+-arinterval            set XKB autorepeat interval
+-screen scrn WxHxD     set screen's width, height, depth
+-pixdepths list-of-int support given pixmap depths
++/-render		   turn on/off RENDER extension support(default on)
+-linebias n            adjust thin line pixelization
+-blackpixel n          pixel value for black
+-whitepixel n          pixel value for white
+-fbdir directory       put framebuffers in mmap'ed files in directory
+-shmem                 put framebuffers in shared memory
+2018-05-04 20:09:35,599 - DEBUG - param: "['xauth', '-h']" 
+2018-05-04 20:09:35,599 - DEBUG - command: ['xauth', '-h']
+2018-05-04 20:09:35,599 - DEBUG - joined command: xauth -h
+2018-05-04 20:09:35,602 - DEBUG - process was started (pid=10491)
+2018-05-04 20:09:35,602 - DEBUG - process has ended
+2018-05-04 20:09:35,602 - DEBUG - return code=1
+2018-05-04 20:09:35,602 - DEBUG - stdout=
+2018-05-04 20:09:35,602 - DEBUG - stderr=usage:  xauth [-options ...] [command arg ...]
+
+where options include:
+    -f authfilename                name of authority file to use
+    -v                             turn on extra messages
+    -q                             turn off extra messages
+    -i                             ignore locks on authority file
+    -b                             break locks on authority file
+    -V                             show version number of xauth
+
+and commands have the following syntax:
+
+    add dpyname protoname hexkey   add entry
+    exit                           save changes and exit program
+    extract filename dpyname...    extract entries into file
+    help [topic]                   print help
+    info                           print information about entries
+    list [dpyname...]              list entries
+    merge filename...              merge entries from files
+    nextract filename dpyname...   numerically extract entries
+    nlist [dpyname...]             numerically list entries
+    nmerge filename...             numerically merge entries
+    quit                           abort changes and exit program
+    remove dpyname...              remove entries
+    source filename                read commands from file
+    version                        show version number of xauth
+    ?                              list available commands
+    generate dpyname protoname [options]  use server to generate entry
+    options are:
+      timeout n    authorization expiration time in seconds
+      trusted      clients using this entry are trusted
+      untrusted    clients using this entry are untrusted
+      group n      clients using this entry belong to application group n
+      data hexkey  auth protocol specific data needed to generate the entry
+
+
+A dash may be used with the "merge" and "source" to read from the
+standard input.  Commands beginning with "n" use numeric format.
+
+2018-05-04 20:09:35,603 - DEBUG - param: "['Xvfb', '-br', '-nolisten', 'tcp', '-screen', '0', '1400x900x24', ':1004']" 
+2018-05-04 20:09:35,603 - DEBUG - command: ['Xvfb', '-br', '-nolisten', 'tcp', '-screen', '0', '1400x900x24', ':1004']
+2018-05-04 20:09:35,603 - DEBUG - joined command: Xvfb -br -nolisten tcp -screen 0 1400x900x24 :1004
+2018-05-04 20:09:35,603 - DEBUG - param: "['xauth', '-h']" 
+2018-05-04 20:09:35,603 - DEBUG - command: ['xauth', '-h']
+2018-05-04 20:09:35,603 - DEBUG - joined command: xauth -h
+2018-05-04 20:09:35,606 - DEBUG - process was started (pid=10492)
+2018-05-04 20:09:35,606 - DEBUG - process has ended
+2018-05-04 20:09:35,606 - DEBUG - return code=1
+2018-05-04 20:09:35,606 - DEBUG - stdout=
+2018-05-04 20:09:35,607 - DEBUG - stderr=usage:  xauth [-options ...] [command arg ...]
+
+where options include:
+    -f authfilename                name of authority file to use
+    -v                             turn on extra messages
+    -q                             turn off extra messages
+    -i                             ignore locks on authority file
+    -b                             break locks on authority file
+    -V                             show version number of xauth
+
+and commands have the following syntax:
+
+    add dpyname protoname hexkey   add entry
+    exit                           save changes and exit program
+    extract filename dpyname...    extract entries into file
+    help [topic]                   print help
+    info                           print information about entries
+    list [dpyname...]              list entries
+    merge filename...              merge entries from files
+    nextract filename dpyname...   numerically extract entries
+    nlist [dpyname...]             numerically list entries
+    nmerge filename...             numerically merge entries
+    quit                           abort changes and exit program
+    remove dpyname...              remove entries
+    source filename                read commands from file
+    version                        show version number of xauth
+    ?                              list available commands
+    generate dpyname protoname [options]  use server to generate entry
+    options are:
+      timeout n    authorization expiration time in seconds
+      trusted      clients using this entry are trusted
+      untrusted    clients using this entry are untrusted
+      group n      clients using this entry belong to application group n
+      data hexkey  auth protocol specific data needed to generate the entry
+
+
+A dash may be used with the "merge" and "source" to read from the
+standard input.  Commands beginning with "n" use numeric format.
+
+2018-05-04 20:09:35,607 - DEBUG - param: "['Xvfb', '-br', '-nolisten', 'tcp', '-screen', '0', '1400x900x24', ':1005']" 
+2018-05-04 20:09:35,607 - DEBUG - command: ['Xvfb', '-br', '-nolisten', 'tcp', '-screen', '0', '1400x900x24', ':1005']
+2018-05-04 20:09:35,607 - DEBUG - joined command: Xvfb -br -nolisten tcp -screen 0 1400x900x24 :1005
+2018-05-04 20:09:35,610 - DEBUG - process was started (pid=10493)
+2018-05-04 20:09:35,610 - DEBUG - DISPLAY=:1005
+2018-05-04 20:09:35,827 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:09:35,827 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:09:40,195 - DEBUG - random
+2018-05-04 20:09:40,196 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 20:09:40,197 - DEBUG - random
+2018-05-04 20:09:40,198 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 20:09:44,374 - DEBUG - random
+2018-05-04 20:09:44,374 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 20:09:50,309 - DEBUG - random
+2018-05-04 20:09:50,309 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 20:09:54,712 - DEBUG - random
+2018-05-04 20:09:54,712 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 20:09:57,394 - DEBUG - random
+2018-05-04 20:09:57,395 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 20:10:00,247 - DEBUG - random
+2018-05-04 20:10:00,247 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 20:10:03,230 - DEBUG - random
+2018-05-04 20:10:03,230 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 20:10:07,322 - DEBUG - random
+2018-05-04 20:10:07,322 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 20:10:12,761 - DEBUG - random
+2018-05-04 20:10:12,761 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 20:10:16,663 - DEBUG - random
+2018-05-04 20:10:16,663 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 20:10:19,373 - DEBUG - random
+2018-05-04 20:10:19,373 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 20:10:22,142 - DEBUG - random
+2018-05-04 20:10:22,143 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 20:10:24,888 - DEBUG - random
+2018-05-04 20:10:24,888 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 20:10:27,158 - DEBUG - random
+2018-05-04 20:10:27,158 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 20:10:29,382 - DEBUG - random
+2018-05-04 20:10:29,382 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 20:10:31,832 - DEBUG - random
+2018-05-04 20:10:31,832 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 20:10:34,423 - DEBUG - random
+2018-05-04 20:10:34,423 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 20:10:37,012 - DEBUG - random
+2018-05-04 20:10:37,012 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 20:10:39,861 - DEBUG - random
+2018-05-04 20:10:39,861 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 20:10:42,746 - DEBUG - random
+2018-05-04 20:10:42,746 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 20:10:45,914 - DEBUG - random
+2018-05-04 20:10:45,914 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 20:10:47,331 - INFO - EPSILON: 1.0 2017 lepesszam mellett, reward: -421
+2018-05-04 20:10:47,331 - INFO - EPSILON: 1.0 2017 lepesszam mellett, reward: -421
+2018-05-04 20:10:47,331 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:10:47,331 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:10:49,172 - DEBUG - random
+2018-05-04 20:10:49,172 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 20:10:49,174 - DEBUG - random
+2018-05-04 20:10:49,174 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 20:10:55,854 - DEBUG - random
+2018-05-04 20:10:55,854 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 20:11:04,209 - DEBUG - random
+2018-05-04 20:11:04,210 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 20:11:07,930 - INFO - EPSILON: 1.0 258 lepesszam mellett, reward: 214
+2018-05-04 20:11:07,930 - INFO - EPSILON: 1.0 258 lepesszam mellett, reward: 214
+2018-05-04 20:11:07,930 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:11:07,930 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:11:09,824 - DEBUG - random
+2018-05-04 20:11:09,824 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 20:11:09,826 - DEBUG - random
+2018-05-04 20:11:09,826 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 20:11:13,611 - DEBUG - random
+2018-05-04 20:11:13,611 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 20:11:19,424 - DEBUG - random
+2018-05-04 20:11:19,424 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 20:11:23,688 - DEBUG - random
+2018-05-04 20:11:23,689 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 20:11:27,376 - DEBUG - random
+2018-05-04 20:11:27,377 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 20:11:32,625 - DEBUG - random
+2018-05-04 20:11:32,625 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 20:11:36,409 - DEBUG - random
+2018-05-04 20:11:36,410 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 20:11:39,000 - DEBUG - random
+2018-05-04 20:11:39,000 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 20:11:41,711 - DEBUG - random
+2018-05-04 20:11:41,711 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 20:11:46,998 - DEBUG - random
+2018-05-04 20:11:46,998 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 20:11:49,823 - DEBUG - random
+2018-05-04 20:11:49,823 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 20:11:56,086 - DEBUG - random
+2018-05-04 20:11:56,086 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 20:12:01,200 - DEBUG - random
+2018-05-04 20:12:01,200 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 20:12:05,459 - DEBUG - random
+2018-05-04 20:12:05,459 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 20:12:09,511 - INFO - EPSILON: 1.0 1399 lepesszam mellett, reward: 55
+2018-05-04 20:12:09,511 - INFO - EPSILON: 1.0 1399 lepesszam mellett, reward: 55
+2018-05-04 20:12:09,512 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:12:09,512 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:12:11,088 - DEBUG - random
+2018-05-04 20:12:11,088 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 20:12:11,090 - DEBUG - random
+2018-05-04 20:12:11,090 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 20:12:17,422 - DEBUG - random
+2018-05-04 20:12:17,423 - DEBUG - [0. 1. 0. 0. 0. 0.]
+2018-05-04 20:12:22,006 - DEBUG - random
+2018-05-04 20:12:22,007 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 20:12:26,525 - DEBUG - random
+2018-05-04 20:12:26,525 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 20:12:32,138 - DEBUG - random
+2018-05-04 20:12:32,138 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 20:12:35,603 - DEBUG - random
+2018-05-04 20:12:35,603 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 20:12:41,246 - DEBUG - random
+2018-05-04 20:12:41,246 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 20:12:44,230 - DEBUG - random
+2018-05-04 20:12:44,230 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 20:12:46,754 - DEBUG - random
+2018-05-04 20:12:46,754 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 20:12:49,416 - DEBUG - random
+2018-05-04 20:12:49,416 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 20:12:52,156 - DEBUG - random
+2018-05-04 20:12:52,156 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 20:12:56,360 - INFO - EPSILON: 1.0 1062 lepesszam mellett, reward: 48
+2018-05-04 20:12:56,360 - INFO - EPSILON: 1.0 1062 lepesszam mellett, reward: 48
+2018-05-04 20:12:56,361 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:12:56,361 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:12:58,067 - DEBUG - random
+2018-05-04 20:12:58,068 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 20:12:58,070 - DEBUG - random
+2018-05-04 20:12:58,070 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 20:13:02,126 - DEBUG - random
+2018-05-04 20:13:02,127 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 20:13:05,558 - DEBUG - random
+2018-05-04 20:13:05,558 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 20:13:07,658 - INFO - EPSILON: 1.0 237 lepesszam mellett, reward: 41
+2018-05-04 20:13:07,658 - INFO - EPSILON: 1.0 237 lepesszam mellett, reward: 41
+2018-05-04 20:13:07,658 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:13:07,658 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:13:09,493 - DEBUG - random
+2018-05-04 20:13:09,493 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 20:13:09,495 - DEBUG - random
+2018-05-04 20:13:09,496 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 20:13:13,801 - DEBUG - random
+2018-05-04 20:13:13,801 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 20:13:19,873 - DEBUG - random
+2018-05-04 20:13:19,873 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 20:13:25,159 - DEBUG - random
+2018-05-04 20:13:25,159 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 20:13:29,782 - DEBUG - random
+2018-05-04 20:13:29,782 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 20:13:33,232 - DEBUG - random
+2018-05-04 20:13:33,232 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 20:13:38,839 - DEBUG - random
+2018-05-04 20:13:38,840 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 20:13:41,988 - DEBUG - random
+2018-05-04 20:13:41,988 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 20:13:44,621 - DEBUG - random
+2018-05-04 20:13:44,621 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 20:13:47,343 - DEBUG - random
+2018-05-04 20:13:47,343 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 20:13:50,170 - DEBUG - random
+2018-05-04 20:13:50,170 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 20:13:53,191 - DEBUG - random
+2018-05-04 20:13:53,191 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 20:13:56,718 - DEBUG - random
+2018-05-04 20:13:56,719 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 20:13:59,393 - DEBUG - random
+2018-05-04 20:13:59,393 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 20:14:02,484 - DEBUG - random
+2018-05-04 20:14:02,484 - DEBUG - [0. 1. 0. 0. 0. 0.]
+2018-05-04 20:14:06,139 - DEBUG - random
+2018-05-04 20:14:06,139 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 20:14:08,476 - DEBUG - random
+2018-05-04 20:14:08,476 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 20:14:11,159 - DEBUG - random
+2018-05-04 20:14:11,159 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 20:14:14,046 - DEBUG - random
+2018-05-04 20:14:14,046 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 20:14:16,747 - DEBUG - random
+2018-05-04 20:14:16,747 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 20:14:19,439 - DEBUG - random
+2018-05-04 20:14:19,439 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 20:14:22,350 - DEBUG - random
+2018-05-04 20:14:22,351 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 20:14:26,874 - DEBUG - random
+2018-05-04 20:14:26,875 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 20:14:31,809 - DEBUG - random
+2018-05-04 20:14:31,809 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 20:14:35,836 - DEBUG - random
+2018-05-04 20:14:35,836 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 20:14:41,022 - INFO - EPSILON: 1.0 2486 lepesszam mellett, reward: -340
+2018-05-04 20:14:41,022 - INFO - EPSILON: 1.0 2486 lepesszam mellett, reward: -340
+2018-05-04 20:14:41,023 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:14:41,023 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:14:42,890 - DEBUG - random
+2018-05-04 20:14:42,890 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 20:14:42,892 - DEBUG - random
+2018-05-04 20:14:42,892 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 20:14:48,387 - DEBUG - random
+2018-05-04 20:14:48,387 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 20:14:53,226 - DEBUG - random
+2018-05-04 20:14:53,226 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 20:14:59,505 - DEBUG - random
+2018-05-04 20:14:59,505 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 20:15:06,158 - DEBUG - random
+2018-05-04 20:15:06,158 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 20:15:09,607 - DEBUG - random
+2018-05-04 20:15:09,607 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 20:15:15,739 - DEBUG - random
+2018-05-04 20:15:15,739 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 20:15:19,046 - DEBUG - random
+2018-05-04 20:15:19,046 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 20:15:21,733 - DEBUG - random
+2018-05-04 20:15:21,733 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 20:15:24,204 - DEBUG - random
+2018-05-04 20:15:24,204 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 20:15:26,998 - DEBUG - random
+2018-05-04 20:15:26,998 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 20:15:31,360 - DEBUG - random
+2018-05-04 20:15:31,360 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 20:15:32,374 - INFO - EPSILON: 1.0 1114 lepesszam mellett, reward: -82
+2018-05-04 20:15:32,374 - INFO - EPSILON: 1.0 1114 lepesszam mellett, reward: -82
+2018-05-04 20:15:32,374 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:15:32,374 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:15:34,230 - DEBUG - random
+2018-05-04 20:15:34,230 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 20:15:34,231 - DEBUG - random
+2018-05-04 20:15:34,231 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 20:15:39,137 - DEBUG - random
+2018-05-04 20:15:39,137 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 20:15:41,459 - INFO - EPSILON: 1.0 151 lepesszam mellett, reward: 63
+2018-05-04 20:15:41,459 - INFO - EPSILON: 1.0 151 lepesszam mellett, reward: 63
+2018-05-04 20:15:41,459 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:15:41,459 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:15:43,128 - DEBUG - random
+2018-05-04 20:15:43,128 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 20:15:43,130 - DEBUG - random
+2018-05-04 20:15:43,130 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 20:15:45,986 - DEBUG - random
+2018-05-04 20:15:45,986 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 20:15:51,137 - DEBUG - random
+2018-05-04 20:15:51,138 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 20:15:52,136 - INFO - EPSILON: 1.0 220 lepesszam mellett, reward: 46
+2018-05-04 20:15:52,136 - INFO - EPSILON: 1.0 220 lepesszam mellett, reward: 46
+2018-05-04 20:15:52,136 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:15:52,136 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:15:53,873 - DEBUG - random
+2018-05-04 20:15:53,874 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 20:15:53,876 - DEBUG - random
+2018-05-04 20:15:53,876 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 20:15:57,185 - DEBUG - random
+2018-05-04 20:15:57,185 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 20:16:00,386 - DEBUG - random
+2018-05-04 20:16:00,387 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 20:16:06,662 - DEBUG - random
+2018-05-04 20:16:06,662 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 20:16:10,585 - DEBUG - random
+2018-05-04 20:16:10,586 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 20:16:14,607 - DEBUG - random
+2018-05-04 20:16:14,607 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 20:16:19,125 - DEBUG - random
+2018-05-04 20:16:19,126 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 20:16:23,723 - DEBUG - random
+2018-05-04 20:16:23,723 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 20:16:29,213 - DEBUG - random
+2018-05-04 20:16:29,213 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 20:16:32,523 - DEBUG - random
+2018-05-04 20:16:32,523 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 20:16:35,550 - DEBUG - random
+2018-05-04 20:16:35,550 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 20:16:38,533 - DEBUG - random
+2018-05-04 20:16:38,533 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 20:16:41,539 - DEBUG - random
+2018-05-04 20:16:41,539 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 20:16:44,337 - DEBUG - random
+2018-05-04 20:16:44,337 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 20:16:46,890 - DEBUG - random
+2018-05-04 20:16:46,890 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 20:16:49,331 - DEBUG - random
+2018-05-04 20:16:49,331 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 20:16:52,270 - DEBUG - random
+2018-05-04 20:16:52,271 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 20:16:54,921 - DEBUG - random
+2018-05-04 20:16:54,921 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 20:16:57,738 - DEBUG - random
+2018-05-04 20:16:57,739 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 20:17:00,396 - DEBUG - random
+2018-05-04 20:17:00,396 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 20:17:03,389 - DEBUG - random
+2018-05-04 20:17:03,389 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 20:17:06,186 - DEBUG - random
+2018-05-04 20:17:06,186 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 20:17:08,958 - DEBUG - random
+2018-05-04 20:17:08,958 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 20:17:11,600 - DEBUG - random
+2018-05-04 20:17:11,600 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 20:17:14,651 - DEBUG - random
+2018-05-04 20:17:14,651 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 20:17:18,674 - DEBUG - random
+2018-05-04 20:17:18,674 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 20:17:21,707 - DEBUG - random
+2018-05-04 20:17:21,707 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 20:17:24,666 - DEBUG - random
+2018-05-04 20:17:24,667 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 20:17:28,073 - DEBUG - random
+2018-05-04 20:17:28,074 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 20:17:35,399 - DEBUG - random
+2018-05-04 20:17:35,399 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 20:17:39,270 - INFO - EPSILON: 1.0 2973 lepesszam mellett, reward: -749
+2018-05-04 20:17:39,270 - INFO - EPSILON: 1.0 2973 lepesszam mellett, reward: -749
+2018-05-04 20:17:39,271 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:17:39,271 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:17:41,134 - DEBUG - random
+2018-05-04 20:17:41,135 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 20:17:41,138 - DEBUG - random
+2018-05-04 20:17:41,139 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 20:17:48,076 - INFO - EPSILON: 1.0 99 lepesszam mellett, reward: 85
+2018-05-04 20:17:48,076 - INFO - EPSILON: 1.0 99 lepesszam mellett, reward: 85
+2018-05-04 20:17:48,077 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:17:48,077 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:17:49,921 - DEBUG - random
+2018-05-04 20:17:49,922 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 20:17:49,924 - DEBUG - random
+2018-05-04 20:17:49,924 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 20:17:56,799 - DEBUG - random
+2018-05-04 20:17:56,799 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 20:18:02,585 - DEBUG - random
+2018-05-04 20:18:02,585 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 20:18:06,621 - DEBUG - random
+2018-05-04 20:18:06,621 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 20:18:11,571 - DEBUG - random
+2018-05-04 20:18:11,571 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 20:18:15,231 - DEBUG - random
+2018-05-04 20:18:15,231 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 20:18:20,807 - DEBUG - random
+2018-05-04 20:18:20,807 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 20:18:25,438 - DEBUG - random
+2018-05-04 20:18:25,438 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 20:18:27,022 - INFO - EPSILON: 1.0 720 lepesszam mellett, reward: 92
+2018-05-04 20:18:27,022 - INFO - EPSILON: 1.0 720 lepesszam mellett, reward: 92
+2018-05-04 20:18:27,022 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:18:27,022 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:18:28,808 - DEBUG - random
+2018-05-04 20:18:28,809 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 20:18:28,812 - DEBUG - random
+2018-05-04 20:18:28,812 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 20:18:32,246 - DEBUG - random
+2018-05-04 20:18:32,246 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 20:18:38,282 - DEBUG - random
+2018-05-04 20:18:38,282 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 20:18:44,083 - DEBUG - random
+2018-05-04 20:18:44,083 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 20:18:48,922 - DEBUG - random
+2018-05-04 20:18:48,922 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 20:18:56,047 - DEBUG - random
+2018-05-04 20:18:56,047 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 20:19:00,562 - DEBUG - random
+2018-05-04 20:19:00,562 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 20:19:04,193 - DEBUG - random
+2018-05-04 20:19:04,193 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 20:19:07,422 - DEBUG - random
+2018-05-04 20:19:07,422 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 20:19:14,014 - DEBUG - random
+2018-05-04 20:19:14,014 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 20:19:17,660 - DEBUG - random
+2018-05-04 20:19:17,660 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 20:19:24,517 - DEBUG - random
+2018-05-04 20:19:24,517 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 20:19:28,549 - DEBUG - random
+2018-05-04 20:19:28,549 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 20:19:32,410 - DEBUG - random
+2018-05-04 20:19:32,410 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 20:19:37,006 - INFO - EPSILON: 1.0 1393 lepesszam mellett, reward: 121
+2018-05-04 20:19:37,006 - INFO - EPSILON: 1.0 1393 lepesszam mellett, reward: 121
+2018-05-04 20:19:37,007 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:19:37,007 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:19:38,669 - DEBUG - random
+2018-05-04 20:19:38,670 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 20:19:38,672 - DEBUG - random
+2018-05-04 20:19:38,672 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 20:19:43,471 - DEBUG - random
+2018-05-04 20:19:43,472 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 20:19:46,621 - INFO - EPSILON: 1.0 157 lepesszam mellett, reward: 59
+2018-05-04 20:19:46,621 - INFO - EPSILON: 1.0 157 lepesszam mellett, reward: 59
+2018-05-04 20:19:46,622 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:19:46,622 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:19:48,534 - DEBUG - random
+2018-05-04 20:19:48,534 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 20:19:48,537 - DEBUG - random
+2018-05-04 20:19:48,537 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 20:19:54,433 - DEBUG - random
+2018-05-04 20:19:54,433 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 20:20:01,290 - DEBUG - random
+2018-05-04 20:20:01,290 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 20:20:06,150 - DEBUG - random
+2018-05-04 20:20:06,150 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 20:20:09,657 - DEBUG - random
+2018-05-04 20:20:09,657 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 20:20:15,009 - DEBUG - random
+2018-05-04 20:20:15,009 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 20:20:17,789 - DEBUG - random
+2018-05-04 20:20:17,789 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 20:20:20,611 - DEBUG - random
+2018-05-04 20:20:20,611 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 20:20:23,629 - DEBUG - random
+2018-05-04 20:20:23,629 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 20:20:26,142 - DEBUG - random
+2018-05-04 20:20:26,142 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 20:20:28,534 - DEBUG - random
+2018-05-04 20:20:28,534 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 20:20:30,765 - DEBUG - random
+2018-05-04 20:20:30,765 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 20:20:33,096 - DEBUG - random
+2018-05-04 20:20:33,097 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 20:20:35,702 - DEBUG - random
+2018-05-04 20:20:35,702 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 20:20:40,683 - DEBUG - random
+2018-05-04 20:20:40,683 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 20:20:45,734 - DEBUG - random
+2018-05-04 20:20:45,734 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 20:20:50,111 - DEBUG - random
+2018-05-04 20:20:50,111 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 20:20:53,894 - DEBUG - random
+2018-05-04 20:20:53,894 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 20:20:56,052 - INFO - EPSILON: 1.0 1736 lepesszam mellett, reward: -272
+2018-05-04 20:20:56,052 - INFO - EPSILON: 1.0 1736 lepesszam mellett, reward: -272
+2018-05-04 20:20:56,052 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:20:56,052 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:20:57,894 - DEBUG - random
+2018-05-04 20:20:57,894 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 20:20:57,896 - DEBUG - random
+2018-05-04 20:20:57,896 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 20:21:04,325 - INFO - EPSILON: 1.0 89 lepesszam mellett, reward: 81
+2018-05-04 20:21:04,325 - INFO - EPSILON: 1.0 89 lepesszam mellett, reward: 81
+2018-05-04 20:21:04,325 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:21:04,325 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:21:05,926 - DEBUG - random
+2018-05-04 20:21:05,926 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 20:21:05,928 - DEBUG - random
+2018-05-04 20:21:05,928 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 20:21:11,877 - DEBUG - random
+2018-05-04 20:21:11,877 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 20:21:17,691 - DEBUG - random
+2018-05-04 20:21:17,691 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 20:21:24,335 - DEBUG - random
+2018-05-04 20:21:24,335 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 20:21:29,740 - DEBUG - random
+2018-05-04 20:21:29,740 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 20:21:33,347 - DEBUG - random
+2018-05-04 20:21:33,347 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 20:21:36,108 - DEBUG - random
+2018-05-04 20:21:36,108 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 20:21:38,964 - DEBUG - random
+2018-05-04 20:21:38,964 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 20:21:41,554 - DEBUG - random
+2018-05-04 20:21:41,554 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 20:21:44,519 - DEBUG - random
+2018-05-04 20:21:44,519 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 20:21:47,384 - DEBUG - random
+2018-05-04 20:21:47,384 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 20:21:49,947 - DEBUG - random
+2018-05-04 20:21:49,947 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 20:21:52,841 - DEBUG - random
+2018-05-04 20:21:52,842 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 20:21:57,970 - DEBUG - random
+2018-05-04 20:21:57,970 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 20:22:02,314 - DEBUG - random
+2018-05-04 20:22:02,314 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 20:22:05,017 - DEBUG - random
+2018-05-04 20:22:05,017 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 20:22:07,863 - DEBUG - random
+2018-05-04 20:22:07,863 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 20:22:10,747 - DEBUG - random
+2018-05-04 20:22:10,747 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 20:22:14,293 - DEBUG - random
+2018-05-04 20:22:14,294 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 20:22:20,237 - DEBUG - random
+2018-05-04 20:22:20,237 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 20:22:21,216 - INFO - EPSILON: 1.0 1922 lepesszam mellett, reward: -240
+2018-05-04 20:22:21,216 - INFO - EPSILON: 1.0 1922 lepesszam mellett, reward: -240
+2018-05-04 20:22:21,217 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:22:21,217 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:22:22,966 - DEBUG - random
+2018-05-04 20:22:22,966 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 20:22:22,968 - DEBUG - random
+2018-05-04 20:22:22,968 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 20:22:27,936 - DEBUG - random
+2018-05-04 20:22:27,936 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 20:22:30,346 - INFO - EPSILON: 1.0 136 lepesszam mellett, reward: 88
+2018-05-04 20:22:30,346 - INFO - EPSILON: 1.0 136 lepesszam mellett, reward: 88
+2018-05-04 20:22:30,346 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:22:30,346 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:22:32,109 - DEBUG - random
+2018-05-04 20:22:32,109 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 20:22:32,111 - DEBUG - random
+2018-05-04 20:22:32,111 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 20:22:35,811 - DEBUG - random
+2018-05-04 20:22:35,811 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 20:22:41,290 - INFO - EPSILON: 1.0 188 lepesszam mellett, reward: 70
+2018-05-04 20:22:41,290 - INFO - EPSILON: 1.0 188 lepesszam mellett, reward: 70
+2018-05-04 20:22:41,290 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:22:41,290 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:22:43,159 - DEBUG - random
+2018-05-04 20:22:43,159 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 20:22:43,161 - DEBUG - random
+2018-05-04 20:22:43,162 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 20:22:49,877 - DEBUG - random
+2018-05-04 20:22:49,877 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 20:22:53,806 - DEBUG - random
+2018-05-04 20:22:53,807 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 20:22:58,946 - DEBUG - random
+2018-05-04 20:22:58,946 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 20:23:04,216 - DEBUG - random
+2018-05-04 20:23:04,216 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 20:23:09,174 - DEBUG - random
+2018-05-04 20:23:09,174 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 20:23:09,558 - INFO - EPSILON: 1.0 510 lepesszam mellett, reward: 124
+2018-05-04 20:23:09,558 - INFO - EPSILON: 1.0 510 lepesszam mellett, reward: 124
+2018-05-04 20:23:09,559 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:23:09,559 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:23:11,311 - DEBUG - random
+2018-05-04 20:23:11,311 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 20:23:11,314 - DEBUG - random
+2018-05-04 20:23:11,314 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 20:23:15,259 - DEBUG - random
+2018-05-04 20:23:15,260 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 20:23:18,053 - DEBUG - random
+2018-05-04 20:23:18,053 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 20:23:22,399 - DEBUG - random
+2018-05-04 20:23:22,399 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 20:23:23,033 - INFO - EPSILON: 1.0 312 lepesszam mellett, reward: 36
+2018-05-04 20:23:23,033 - INFO - EPSILON: 1.0 312 lepesszam mellett, reward: 36
+2018-05-04 20:23:23,033 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:23:23,033 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:23:24,789 - DEBUG - random
+2018-05-04 20:23:24,789 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 20:23:24,792 - DEBUG - random
+2018-05-04 20:23:24,792 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 20:23:29,142 - DEBUG - random
+2018-05-04 20:23:29,142 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 20:23:33,350 - DEBUG - random
+2018-05-04 20:23:33,350 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 20:23:37,253 - DEBUG - random
+2018-05-04 20:23:37,253 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 20:23:43,762 - DEBUG - random
+2018-05-04 20:23:43,762 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 20:23:49,093 - DEBUG - random
+2018-05-04 20:23:49,093 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 20:23:53,709 - INFO - EPSILON: 1.0 567 lepesszam mellett, reward: 77
+2018-05-04 20:23:53,709 - INFO - EPSILON: 1.0 567 lepesszam mellett, reward: 77
+2018-05-04 20:23:53,709 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:23:53,709 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:23:55,558 - DEBUG - random
+2018-05-04 20:23:55,558 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 20:23:55,562 - DEBUG - random
+2018-05-04 20:23:55,562 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 20:23:59,937 - DEBUG - random
+2018-05-04 20:23:59,937 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 20:24:03,798 - INFO - EPSILON: 1.0 196 lepesszam mellett, reward: 28
+2018-05-04 20:24:03,798 - INFO - EPSILON: 1.0 196 lepesszam mellett, reward: 28
+2018-05-04 20:24:03,798 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:24:03,798 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:24:05,527 - DEBUG - random
+2018-05-04 20:24:05,527 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 20:24:05,529 - DEBUG - random
+2018-05-04 20:24:05,529 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 20:24:10,037 - DEBUG - random
+2018-05-04 20:24:10,037 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 20:24:14,162 - INFO - EPSILON: 1.0 173 lepesszam mellett, reward: 53
+2018-05-04 20:24:14,162 - INFO - EPSILON: 1.0 173 lepesszam mellett, reward: 53
+2018-05-04 20:24:14,162 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:24:14,162 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:24:15,979 - DEBUG - random
+2018-05-04 20:24:15,980 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 20:24:15,982 - DEBUG - random
+2018-05-04 20:24:15,982 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 20:24:21,835 - INFO - EPSILON: 1.0 86 lepesszam mellett, reward: 78
+2018-05-04 20:24:21,835 - INFO - EPSILON: 1.0 86 lepesszam mellett, reward: 78
+2018-05-04 20:24:21,835 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:24:21,835 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:24:23,503 - DEBUG - random
+2018-05-04 20:24:23,504 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 20:24:23,505 - DEBUG - random
+2018-05-04 20:24:23,505 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 20:24:28,019 - DEBUG - random
+2018-05-04 20:24:28,019 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 20:24:32,886 - DEBUG - random
+2018-05-04 20:24:32,886 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 20:24:33,470 - INFO - EPSILON: 1.0 210 lepesszam mellett, reward: 88
+2018-05-04 20:24:33,470 - INFO - EPSILON: 1.0 210 lepesszam mellett, reward: 88
+2018-05-04 20:24:33,471 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:24:33,471 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:24:35,134 - DEBUG - random
+2018-05-04 20:24:35,134 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 20:24:35,136 - DEBUG - random
+2018-05-04 20:24:35,136 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 20:24:40,006 - DEBUG - random
+2018-05-04 20:24:40,006 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 20:24:44,485 - DEBUG - random
+2018-05-04 20:24:44,485 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 20:24:49,010 - DEBUG - random
+2018-05-04 20:24:49,010 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 20:24:53,193 - DEBUG - random
+2018-05-04 20:24:53,193 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 20:24:56,711 - DEBUG - random
+2018-05-04 20:24:56,712 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 20:25:01,598 - DEBUG - random
+2018-05-04 20:25:01,599 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 20:25:06,288 - DEBUG - random
+2018-05-04 20:25:06,288 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 20:25:09,030 - DEBUG - random
+2018-05-04 20:25:09,030 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 20:25:11,982 - DEBUG - random
+2018-05-04 20:25:11,983 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 20:25:17,201 - DEBUG - random
+2018-05-04 20:25:17,202 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 20:25:22,496 - DEBUG - random
+2018-05-04 20:25:22,496 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 20:25:27,110 - DEBUG - random
+2018-05-04 20:25:27,110 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 20:25:32,038 - INFO - EPSILON: 1.0 1281 lepesszam mellett, reward: 17
+2018-05-04 20:25:32,038 - INFO - EPSILON: 1.0 1281 lepesszam mellett, reward: 17
+2018-05-04 20:25:32,038 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:25:32,038 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:25:33,840 - DEBUG - random
+2018-05-04 20:25:33,841 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 20:25:33,843 - DEBUG - random
+2018-05-04 20:25:33,843 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 20:25:37,629 - DEBUG - random
+2018-05-04 20:25:37,630 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 20:25:41,130 - DEBUG - random
+2018-05-04 20:25:41,130 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 20:25:45,187 - DEBUG - random
+2018-05-04 20:25:45,187 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 20:25:46,679 - INFO - EPSILON: 1.0 342 lepesszam mellett, reward: -78
+2018-05-04 20:25:46,679 - INFO - EPSILON: 1.0 342 lepesszam mellett, reward: -78
+2018-05-04 20:25:46,679 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:25:46,679 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:25:48,578 - DEBUG - random
+2018-05-04 20:25:48,579 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 20:25:48,580 - DEBUG - random
+2018-05-04 20:25:48,581 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 20:25:53,285 - DEBUG - random
+2018-05-04 20:25:53,285 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 20:25:55,914 - DEBUG - random
+2018-05-04 20:25:55,914 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 20:25:59,345 - DEBUG - random
+2018-05-04 20:25:59,346 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 20:25:59,578 - INFO - EPSILON: 1.0 309 lepesszam mellett, reward: 37
+2018-05-04 20:25:59,578 - INFO - EPSILON: 1.0 309 lepesszam mellett, reward: 37
+2018-05-04 20:25:59,579 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:25:59,579 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:26:01,188 - DEBUG - random
+2018-05-04 20:26:01,188 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 20:26:01,189 - DEBUG - random
+2018-05-04 20:26:01,190 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 20:26:06,937 - DEBUG - random
+2018-05-04 20:26:06,937 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 20:26:07,445 - INFO - EPSILON: 1.0 112 lepesszam mellett, reward: 90
+2018-05-04 20:26:07,445 - INFO - EPSILON: 1.0 112 lepesszam mellett, reward: 90
+2018-05-04 20:26:07,445 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:26:07,445 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:26:09,308 - DEBUG - random
+2018-05-04 20:26:09,308 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 20:26:09,311 - DEBUG - random
+2018-05-04 20:26:09,311 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 20:26:13,055 - DEBUG - random
+2018-05-04 20:26:13,055 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 20:26:18,214 - INFO - EPSILON: 1.0 178 lepesszam mellett, reward: 58
+2018-05-04 20:26:18,214 - INFO - EPSILON: 1.0 178 lepesszam mellett, reward: 58
+2018-05-04 20:26:18,215 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:26:18,215 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:26:19,794 - DEBUG - random
+2018-05-04 20:26:19,794 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 20:26:19,795 - DEBUG - random
+2018-05-04 20:26:19,795 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 20:26:25,509 - DEBUG - random
+2018-05-04 20:26:25,509 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 20:26:27,884 - INFO - EPSILON: 1.0 166 lepesszam mellett, reward: 42
+2018-05-04 20:26:27,884 - INFO - EPSILON: 1.0 166 lepesszam mellett, reward: 42
+2018-05-04 20:26:27,884 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:26:27,884 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:26:29,747 - DEBUG - random
+2018-05-04 20:26:29,748 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 20:26:29,749 - DEBUG - random
+2018-05-04 20:26:29,749 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 20:26:34,307 - DEBUG - random
+2018-05-04 20:26:34,307 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 20:26:40,109 - DEBUG - random
+2018-05-04 20:26:40,109 - DEBUG - [0. 1. 0. 0. 0. 0.]
+2018-05-04 20:26:45,586 - DEBUG - random
+2018-05-04 20:26:45,586 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 20:26:50,111 - DEBUG - random
+2018-05-04 20:26:50,111 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 20:26:55,327 - DEBUG - random
+2018-05-04 20:26:55,328 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 20:26:59,010 - DEBUG - random
+2018-05-04 20:26:59,010 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 20:27:01,689 - DEBUG - random
+2018-05-04 20:27:01,689 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 20:27:03,947 - DEBUG - random
+2018-05-04 20:27:03,947 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 20:27:06,524 - DEBUG - random
+2018-05-04 20:27:06,524 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 20:27:09,045 - DEBUG - random
+2018-05-04 20:27:09,045 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 20:27:14,648 - DEBUG - random
+2018-05-04 20:27:14,648 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 20:27:18,052 - DEBUG - random
+2018-05-04 20:27:18,052 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 20:27:20,817 - DEBUG - random
+2018-05-04 20:27:20,817 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 20:27:23,381 - DEBUG - random
+2018-05-04 20:27:23,381 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 20:27:26,212 - DEBUG - random
+2018-05-04 20:27:26,212 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 20:27:28,828 - DEBUG - random
+2018-05-04 20:27:28,828 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 20:27:31,587 - DEBUG - random
+2018-05-04 20:27:31,587 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 20:27:34,321 - DEBUG - random
+2018-05-04 20:27:34,321 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 20:27:37,165 - DEBUG - random
+2018-05-04 20:27:37,165 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 20:27:39,879 - DEBUG - random
+2018-05-04 20:27:39,879 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 20:27:42,631 - DEBUG - random
+2018-05-04 20:27:42,631 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 20:27:45,756 - DEBUG - random
+2018-05-04 20:27:45,756 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 20:27:51,543 - DEBUG - random
+2018-05-04 20:27:51,543 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 20:27:54,573 - DEBUG - random
+2018-05-04 20:27:54,573 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 20:27:57,358 - DEBUG - random
+2018-05-04 20:27:57,358 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 20:27:59,690 - DEBUG - random
+2018-05-04 20:27:59,690 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 20:28:02,391 - DEBUG - random
+2018-05-04 20:28:02,392 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 20:28:05,068 - DEBUG - random
+2018-05-04 20:28:05,068 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 20:28:07,576 - DEBUG - random
+2018-05-04 20:28:07,576 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 20:28:10,235 - DEBUG - random
+2018-05-04 20:28:10,235 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 20:28:14,113 - DEBUG - random
+2018-05-04 20:28:14,113 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 20:28:16,643 - INFO - EPSILON: 1.0 3138 lepesszam mellett, reward: -804
+2018-05-04 20:28:16,643 - INFO - EPSILON: 1.0 3138 lepesszam mellett, reward: -804
+2018-05-04 20:28:16,644 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:28:16,644 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:28:18,282 - DEBUG - random
+2018-05-04 20:28:18,283 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 20:28:18,287 - DEBUG - random
+2018-05-04 20:28:18,287 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 20:28:21,434 - DEBUG - random
+2018-05-04 20:28:21,434 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 20:28:26,566 - DEBUG - random
+2018-05-04 20:28:26,566 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 20:28:32,871 - DEBUG - random
+2018-05-04 20:28:32,871 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 20:28:38,358 - DEBUG - random
+2018-05-04 20:28:38,358 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 20:28:41,154 - DEBUG - random
+2018-05-04 20:28:41,154 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 20:28:43,981 - DEBUG - random
+2018-05-04 20:28:43,982 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 20:28:48,207 - DEBUG - random
+2018-05-04 20:28:48,207 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 20:28:51,989 - DEBUG - random
+2018-05-04 20:28:51,989 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 20:28:54,646 - DEBUG - random
+2018-05-04 20:28:54,646 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 20:28:57,459 - DEBUG - random
+2018-05-04 20:28:57,459 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 20:29:00,281 - DEBUG - random
+2018-05-04 20:29:00,281 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 20:29:02,864 - DEBUG - random
+2018-05-04 20:29:02,865 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 20:29:05,218 - DEBUG - random
+2018-05-04 20:29:05,218 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 20:29:07,806 - DEBUG - random
+2018-05-04 20:29:07,807 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 20:29:10,360 - DEBUG - random
+2018-05-04 20:29:10,360 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 20:29:13,100 - DEBUG - random
+2018-05-04 20:29:13,100 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 20:29:16,871 - INFO - EPSILON: 1.0 1683 lepesszam mellett, reward: -53
+2018-05-04 20:29:16,871 - INFO - EPSILON: 1.0 1683 lepesszam mellett, reward: -53
+2018-05-04 20:29:16,871 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:29:16,871 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:29:18,580 - DEBUG - random
+2018-05-04 20:29:18,580 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 20:29:18,582 - DEBUG - random
+2018-05-04 20:29:18,582 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 20:29:25,066 - DEBUG - random
+2018-05-04 20:29:25,066 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 20:29:25,739 - INFO - EPSILON: 1.0 118 lepesszam mellett, reward: 62
+2018-05-04 20:29:25,739 - INFO - EPSILON: 1.0 118 lepesszam mellett, reward: 62
+2018-05-04 20:29:25,739 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:29:25,739 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:29:27,703 - DEBUG - random
+2018-05-04 20:29:27,704 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 20:29:27,706 - DEBUG - random
+2018-05-04 20:29:27,706 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 20:29:33,100 - DEBUG - random
+2018-05-04 20:29:33,100 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 20:29:37,358 - INFO - EPSILON: 1.0 168 lepesszam mellett, reward: 56
+2018-05-04 20:29:37,358 - INFO - EPSILON: 1.0 168 lepesszam mellett, reward: 56
+2018-05-04 20:29:37,359 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:29:37,359 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:29:39,236 - DEBUG - random
+2018-05-04 20:29:39,237 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 20:29:39,239 - DEBUG - random
+2018-05-04 20:29:39,239 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 20:29:43,912 - DEBUG - random
+2018-05-04 20:29:43,912 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 20:29:50,495 - DEBUG - random
+2018-05-04 20:29:50,495 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 20:29:50,914 - INFO - EPSILON: 1.0 207 lepesszam mellett, reward: 63
+2018-05-04 20:29:50,914 - INFO - EPSILON: 1.0 207 lepesszam mellett, reward: 63
+2018-05-04 20:29:50,914 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:29:50,914 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:29:52,844 - DEBUG - random
+2018-05-04 20:29:52,845 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 20:29:52,847 - DEBUG - random
+2018-05-04 20:29:52,847 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 20:29:58,836 - DEBUG - random
+2018-05-04 20:29:58,837 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 20:30:04,678 - DEBUG - random
+2018-05-04 20:30:04,678 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 20:30:09,890 - DEBUG - random
+2018-05-04 20:30:09,890 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 20:30:15,967 - DEBUG - random
+2018-05-04 20:30:15,967 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 20:30:21,723 - DEBUG - random
+2018-05-04 20:30:21,723 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 20:30:28,108 - DEBUG - random
+2018-05-04 20:30:28,108 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 20:30:34,155 - DEBUG - random
+2018-05-04 20:30:34,155 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 20:30:37,042 - DEBUG - random
+2018-05-04 20:30:37,042 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 20:30:40,876 - DEBUG - random
+2018-05-04 20:30:40,876 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 20:30:43,657 - DEBUG - random
+2018-05-04 20:30:43,657 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 20:30:47,350 - DEBUG - random
+2018-05-04 20:30:47,350 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 20:30:50,329 - DEBUG - random
+2018-05-04 20:30:50,329 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 20:30:53,332 - DEBUG - random
+2018-05-04 20:30:53,333 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 20:30:57,681 - INFO - EPSILON: 1.0 1378 lepesszam mellett, reward: -190
+2018-05-04 20:30:57,681 - INFO - EPSILON: 1.0 1378 lepesszam mellett, reward: -190
+2018-05-04 20:30:57,681 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:30:57,681 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:30:59,592 - DEBUG - random
+2018-05-04 20:30:59,592 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 20:30:59,594 - DEBUG - random
+2018-05-04 20:30:59,594 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 20:31:06,014 - DEBUG - random
+2018-05-04 20:31:06,015 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 20:31:11,346 - DEBUG - random
+2018-05-04 20:31:11,346 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 20:31:17,716 - DEBUG - random
+2018-05-04 20:31:17,717 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 20:31:26,082 - DEBUG - random
+2018-05-04 20:31:26,082 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 20:31:31,014 - DEBUG - random
+2018-05-04 20:31:31,014 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 20:31:34,689 - DEBUG - random
+2018-05-04 20:31:34,689 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 20:31:39,694 - DEBUG - random
+2018-05-04 20:31:39,694 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 20:31:46,474 - DEBUG - random
+2018-05-04 20:31:46,475 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 20:31:49,971 - DEBUG - random
+2018-05-04 20:31:49,971 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 20:31:53,205 - DEBUG - random
+2018-05-04 20:31:53,205 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 20:31:57,593 - DEBUG - random
+2018-05-04 20:31:57,593 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 20:32:02,780 - DEBUG - random
+2018-05-04 20:32:02,780 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 20:32:06,901 - INFO - EPSILON: 1.0 1271 lepesszam mellett, reward: -29
+2018-05-04 20:32:06,901 - INFO - EPSILON: 1.0 1271 lepesszam mellett, reward: -29
+2018-05-04 20:32:06,901 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:32:06,901 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:32:08,774 - DEBUG - random
+2018-05-04 20:32:08,774 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 20:32:08,777 - DEBUG - random
+2018-05-04 20:32:08,777 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 20:32:14,942 - DEBUG - random
+2018-05-04 20:32:14,942 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 20:32:17,409 - INFO - EPSILON: 1.0 139 lepesszam mellett, reward: 95
+2018-05-04 20:32:17,409 - INFO - EPSILON: 1.0 139 lepesszam mellett, reward: 95
+2018-05-04 20:32:17,410 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:32:17,410 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:32:19,134 - DEBUG - random
+2018-05-04 20:32:19,135 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 20:32:19,137 - DEBUG - random
+2018-05-04 20:32:19,137 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 20:32:24,694 - DEBUG - random
+2018-05-04 20:32:24,694 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 20:32:29,640 - DEBUG - random
+2018-05-04 20:32:29,640 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 20:32:38,331 - DEBUG - random
+2018-05-04 20:32:38,331 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 20:32:44,255 - DEBUG - random
+2018-05-04 20:32:44,255 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 20:32:48,643 - DEBUG - random
+2018-05-04 20:32:48,643 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 20:32:52,231 - DEBUG - random
+2018-05-04 20:32:52,231 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 20:32:54,874 - DEBUG - random
+2018-05-04 20:32:54,874 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 20:32:58,601 - DEBUG - random
+2018-05-04 20:32:58,601 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 20:33:01,993 - DEBUG - random
+2018-05-04 20:33:01,993 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 20:33:05,015 - DEBUG - random
+2018-05-04 20:33:05,016 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 20:33:08,426 - DEBUG - random
+2018-05-04 20:33:08,426 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 20:33:11,425 - DEBUG - random
+2018-05-04 20:33:11,426 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 20:33:14,633 - DEBUG - random
+2018-05-04 20:33:14,633 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 20:33:18,034 - DEBUG - random
+2018-05-04 20:33:18,034 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 20:33:20,960 - DEBUG - random
+2018-05-04 20:33:20,961 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 20:33:24,369 - DEBUG - random
+2018-05-04 20:33:24,369 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 20:33:27,711 - DEBUG - random
+2018-05-04 20:33:27,711 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 20:33:33,830 - DEBUG - random
+2018-05-04 20:33:33,830 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 20:33:38,328 - DEBUG - random
+2018-05-04 20:33:38,328 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 20:33:45,224 - DEBUG - random
+2018-05-04 20:33:45,225 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 20:33:46,347 - INFO - EPSILON: 1.0 2036 lepesszam mellett, reward: -428
+2018-05-04 20:33:46,347 - INFO - EPSILON: 1.0 2036 lepesszam mellett, reward: -428
+2018-05-04 20:33:46,347 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:33:46,347 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:33:48,260 - DEBUG - random
+2018-05-04 20:33:48,260 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 20:33:48,262 - DEBUG - random
+2018-05-04 20:33:48,262 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 20:33:53,010 - DEBUG - random
+2018-05-04 20:33:53,010 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 20:33:57,999 - INFO - EPSILON: 1.0 180 lepesszam mellett, reward: 68
+2018-05-04 20:33:57,999 - INFO - EPSILON: 1.0 180 lepesszam mellett, reward: 68
+2018-05-04 20:33:57,999 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:33:57,999 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:33:59,924 - DEBUG - random
+2018-05-04 20:33:59,925 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 20:33:59,927 - DEBUG - random
+2018-05-04 20:33:59,927 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 20:34:04,535 - DEBUG - random
+2018-05-04 20:34:04,535 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 20:34:11,600 - DEBUG - random
+2018-05-04 20:34:11,600 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 20:34:19,427 - DEBUG - random
+2018-05-04 20:34:19,427 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 20:34:27,140 - DEBUG - random
+2018-05-04 20:34:27,140 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 20:34:28,184 - INFO - EPSILON: 1.0 435 lepesszam mellett, reward: 193
+2018-05-04 20:34:28,184 - INFO - EPSILON: 1.0 435 lepesszam mellett, reward: 193
+2018-05-04 20:34:28,184 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:34:28,184 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:34:30,127 - DEBUG - random
+2018-05-04 20:34:30,128 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 20:34:30,130 - DEBUG - random
+2018-05-04 20:34:30,130 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 20:34:33,820 - DEBUG - random
+2018-05-04 20:34:33,820 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 20:34:39,405 - DEBUG - random
+2018-05-04 20:34:39,405 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 20:34:46,202 - DEBUG - random
+2018-05-04 20:34:46,202 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 20:34:54,135 - DEBUG - random
+2018-05-04 20:34:54,135 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 20:34:58,410 - DEBUG - random
+2018-05-04 20:34:58,410 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 20:35:03,152 - INFO - EPSILON: 1.0 582 lepesszam mellett, reward: 96
+2018-05-04 20:35:03,152 - INFO - EPSILON: 1.0 582 lepesszam mellett, reward: 96
+2018-05-04 20:35:03,152 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:35:03,152 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:35:05,003 - DEBUG - random
+2018-05-04 20:35:05,003 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 20:35:05,005 - DEBUG - random
+2018-05-04 20:35:05,006 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 20:35:08,912 - DEBUG - random
+2018-05-04 20:35:08,913 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 20:35:13,707 - DEBUG - random
+2018-05-04 20:35:13,707 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 20:35:16,661 - INFO - EPSILON: 1.0 240 lepesszam mellett, reward: 14
+2018-05-04 20:35:16,661 - INFO - EPSILON: 1.0 240 lepesszam mellett, reward: 14
+2018-05-04 20:35:16,661 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:35:16,661 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:35:18,474 - DEBUG - random
+2018-05-04 20:35:18,475 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 20:35:18,477 - DEBUG - random
+2018-05-04 20:35:18,477 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 20:35:24,428 - DEBUG - random
+2018-05-04 20:35:24,428 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 20:35:30,934 - DEBUG - random
+2018-05-04 20:35:30,934 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 20:35:36,492 - DEBUG - random
+2018-05-04 20:35:36,492 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 20:35:42,097 - DEBUG - random
+2018-05-04 20:35:42,097 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 20:35:48,106 - DEBUG - random
+2018-05-04 20:35:48,106 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 20:35:52,524 - DEBUG - random
+2018-05-04 20:35:52,524 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 20:35:56,614 - DEBUG - random
+2018-05-04 20:35:56,614 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 20:36:00,312 - DEBUG - random
+2018-05-04 20:36:00,313 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 20:36:04,388 - INFO - EPSILON: 1.0 870 lepesszam mellett, reward: 8
+2018-05-04 20:36:04,388 - INFO - EPSILON: 1.0 870 lepesszam mellett, reward: 8
+2018-05-04 20:36:04,388 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:36:04,388 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:36:06,246 - DEBUG - random
+2018-05-04 20:36:06,246 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 20:36:06,248 - DEBUG - random
+2018-05-04 20:36:06,248 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 20:36:13,926 - DEBUG - random
+2018-05-04 20:36:13,926 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 20:36:19,143 - DEBUG - random
+2018-05-04 20:36:19,143 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 20:36:22,448 - DEBUG - random
+2018-05-04 20:36:22,449 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 20:36:26,871 - DEBUG - random
+2018-05-04 20:36:26,871 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 20:36:32,730 - DEBUG - random
+2018-05-04 20:36:32,730 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 20:36:38,065 - DEBUG - random
+2018-05-04 20:36:38,065 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 20:36:42,362 - DEBUG - random
+2018-05-04 20:36:42,362 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 20:36:46,670 - DEBUG - random
+2018-05-04 20:36:46,670 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 20:36:50,183 - DEBUG - random
+2018-05-04 20:36:50,183 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 20:36:55,729 - DEBUG - random
+2018-05-04 20:36:55,729 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 20:37:00,450 - DEBUG - random
+2018-05-04 20:37:00,451 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 20:37:04,731 - DEBUG - random
+2018-05-04 20:37:04,731 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 20:37:09,343 - DEBUG - random
+2018-05-04 20:37:09,343 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 20:37:16,827 - DEBUG - random
+2018-05-04 20:37:16,827 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 20:37:22,758 - DEBUG - random
+2018-05-04 20:37:22,758 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 20:37:28,213 - DEBUG - random
+2018-05-04 20:37:28,213 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 20:37:29,334 - INFO - EPSILON: 1.0 1617 lepesszam mellett, reward: -71
+2018-05-04 20:37:29,334 - INFO - EPSILON: 1.0 1617 lepesszam mellett, reward: -71
+2018-05-04 20:37:29,334 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:37:29,334 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:37:30,975 - DEBUG - random
+2018-05-04 20:37:30,975 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 20:37:30,978 - DEBUG - random
+2018-05-04 20:37:30,978 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 20:37:36,743 - DEBUG - random
+2018-05-04 20:37:36,743 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 20:37:43,840 - DEBUG - random
+2018-05-04 20:37:43,840 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 20:37:48,417 - DEBUG - random
+2018-05-04 20:37:48,417 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 20:37:56,929 - DEBUG - random
+2018-05-04 20:37:56,929 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 20:38:04,109 - DEBUG - random
+2018-05-04 20:38:04,110 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 20:38:10,181 - DEBUG - random
+2018-05-04 20:38:10,181 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 20:38:13,569 - DEBUG - random
+2018-05-04 20:38:13,569 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 20:38:17,227 - DEBUG - random
+2018-05-04 20:38:17,228 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 20:38:20,672 - DEBUG - random
+2018-05-04 20:38:20,672 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 20:38:24,140 - DEBUG - random
+2018-05-04 20:38:24,140 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 20:38:27,515 - DEBUG - random
+2018-05-04 20:38:27,515 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 20:38:30,318 - DEBUG - random
+2018-05-04 20:38:30,318 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 20:38:33,285 - DEBUG - random
+2018-05-04 20:38:33,286 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 20:38:37,902 - INFO - EPSILON: 1.0 1364 lepesszam mellett, reward: 98
+2018-05-04 20:38:37,902 - INFO - EPSILON: 1.0 1364 lepesszam mellett, reward: 98
+2018-05-04 20:38:37,902 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:38:37,902 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:38:39,885 - DEBUG - random
+2018-05-04 20:38:39,885 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 20:38:39,887 - DEBUG - random
+2018-05-04 20:38:39,887 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 20:38:45,359 - DEBUG - random
+2018-05-04 20:38:45,360 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 20:38:54,328 - DEBUG - random
+2018-05-04 20:38:54,328 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 20:39:00,152 - DEBUG - random
+2018-05-04 20:39:00,152 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 20:39:03,474 - DEBUG - random
+2018-05-04 20:39:03,474 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 20:39:07,466 - DEBUG - random
+2018-05-04 20:39:07,466 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 20:39:10,584 - DEBUG - random
+2018-05-04 20:39:10,584 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 20:39:13,521 - DEBUG - random
+2018-05-04 20:39:13,521 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 20:39:17,767 - DEBUG - random
+2018-05-04 20:39:17,767 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 20:39:22,274 - DEBUG - random
+2018-05-04 20:39:22,274 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 20:39:27,486 - DEBUG - random
+2018-05-04 20:39:27,486 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 20:39:29,081 - INFO - EPSILON: 1.0 1017 lepesszam mellett, reward: -31
+2018-05-04 20:39:29,081 - INFO - EPSILON: 1.0 1017 lepesszam mellett, reward: -31
+2018-05-04 20:39:29,081 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:39:29,081 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:39:30,885 - DEBUG - random
+2018-05-04 20:39:30,885 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 20:39:30,887 - DEBUG - random
+2018-05-04 20:39:30,887 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 20:39:34,613 - DEBUG - random
+2018-05-04 20:39:34,613 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 20:39:37,536 - DEBUG - random
+2018-05-04 20:39:37,537 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 20:39:43,998 - DEBUG - random
+2018-05-04 20:39:43,998 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 20:39:44,768 - INFO - EPSILON: 1.0 310 lepesszam mellett, reward: 34
+2018-05-04 20:39:44,768 - INFO - EPSILON: 1.0 310 lepesszam mellett, reward: 34
+2018-05-04 20:39:44,769 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:39:44,769 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:39:46,423 - DEBUG - random
+2018-05-04 20:39:46,423 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 20:39:46,425 - DEBUG - random
+2018-05-04 20:39:46,426 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 20:39:52,335 - DEBUG - random
+2018-05-04 20:39:52,336 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 20:39:57,192 - INFO - EPSILON: 1.0 181 lepesszam mellett, reward: 19
+2018-05-04 20:39:57,192 - INFO - EPSILON: 1.0 181 lepesszam mellett, reward: 19
+2018-05-04 20:39:57,192 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:39:57,192 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:39:58,924 - DEBUG - random
+2018-05-04 20:39:58,925 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 20:39:58,926 - DEBUG - random
+2018-05-04 20:39:58,926 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 20:40:05,624 - DEBUG - random
+2018-05-04 20:40:05,624 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 20:40:09,305 - INFO - EPSILON: 1.0 166 lepesszam mellett, reward: 70
+2018-05-04 20:40:09,305 - INFO - EPSILON: 1.0 166 lepesszam mellett, reward: 70
+2018-05-04 20:40:09,305 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:40:09,305 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:40:10,991 - DEBUG - random
+2018-05-04 20:40:10,992 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 20:40:10,994 - DEBUG - random
+2018-05-04 20:40:10,994 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 20:40:15,090 - DEBUG - random
+2018-05-04 20:40:15,091 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 20:40:18,049 - DEBUG - random
+2018-05-04 20:40:18,049 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 20:40:22,753 - DEBUG - random
+2018-05-04 20:40:22,753 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 20:40:30,471 - DEBUG - random
+2018-05-04 20:40:30,471 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 20:40:35,572 - DEBUG - random
+2018-05-04 20:40:35,573 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 20:40:44,094 - DEBUG - random
+2018-05-04 20:40:44,094 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 20:40:51,947 - DEBUG - random
+2018-05-04 20:40:51,947 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 20:40:58,194 - DEBUG - random
+2018-05-04 20:40:58,195 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 20:41:01,167 - INFO - EPSILON: 1.0 863 lepesszam mellett, reward: 275
+2018-05-04 20:41:01,167 - INFO - EPSILON: 1.0 863 lepesszam mellett, reward: 275
+2018-05-04 20:41:01,167 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:41:01,167 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:41:03,070 - DEBUG - random
+2018-05-04 20:41:03,071 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 20:41:03,072 - DEBUG - random
+2018-05-04 20:41:03,072 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 20:41:07,189 - DEBUG - random
+2018-05-04 20:41:07,189 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 20:41:13,065 - DEBUG - random
+2018-05-04 20:41:13,065 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 20:41:18,063 - DEBUG - random
+2018-05-04 20:41:18,063 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 20:41:24,101 - DEBUG - random
+2018-05-04 20:41:24,101 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 20:41:28,357 - DEBUG - random
+2018-05-04 20:41:28,357 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 20:41:34,743 - DEBUG - random
+2018-05-04 20:41:34,743 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 20:41:38,563 - DEBUG - random
+2018-05-04 20:41:38,563 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 20:41:41,099 - DEBUG - random
+2018-05-04 20:41:41,099 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 20:41:44,092 - DEBUG - random
+2018-05-04 20:41:44,092 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 20:41:46,660 - DEBUG - random
+2018-05-04 20:41:46,660 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 20:41:53,374 - DEBUG - random
+2018-05-04 20:41:53,374 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 20:41:56,672 - DEBUG - random
+2018-05-04 20:41:56,672 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 20:41:59,983 - DEBUG - random
+2018-05-04 20:41:59,983 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 20:42:05,694 - DEBUG - random
+2018-05-04 20:42:05,694 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 20:42:10,455 - DEBUG - random
+2018-05-04 20:42:10,455 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 20:42:17,530 - DEBUG - random
+2018-05-04 20:42:17,530 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 20:42:17,622 - INFO - EPSILON: 1.0 1602 lepesszam mellett, reward: 50
+2018-05-04 20:42:17,622 - INFO - EPSILON: 1.0 1602 lepesszam mellett, reward: 50
+2018-05-04 20:42:17,622 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:42:17,622 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:42:19,527 - DEBUG - random
+2018-05-04 20:42:19,527 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 20:42:19,529 - DEBUG - random
+2018-05-04 20:42:19,529 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 20:42:26,464 - DEBUG - random
+2018-05-04 20:42:26,464 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 20:42:32,952 - DEBUG - random
+2018-05-04 20:42:32,952 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 20:42:37,682 - DEBUG - random
+2018-05-04 20:42:37,682 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 20:42:41,938 - DEBUG - random
+2018-05-04 20:42:41,938 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 20:42:45,966 - DEBUG - random
+2018-05-04 20:42:45,967 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 20:42:51,791 - DEBUG - random
+2018-05-04 20:42:51,791 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 20:42:54,903 - DEBUG - random
+2018-05-04 20:42:54,903 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 20:42:58,832 - DEBUG - random
+2018-05-04 20:42:58,832 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 20:43:06,750 - DEBUG - random
+2018-05-04 20:43:06,750 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 20:43:11,017 - DEBUG - random
+2018-05-04 20:43:11,017 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 20:43:14,132 - DEBUG - random
+2018-05-04 20:43:14,132 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 20:43:21,148 - DEBUG - random
+2018-05-04 20:43:21,148 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 20:43:27,510 - DEBUG - random
+2018-05-04 20:43:27,510 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 20:43:34,597 - DEBUG - random
+2018-05-04 20:43:34,597 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 20:43:35,140 - INFO - EPSILON: 1.0 1413 lepesszam mellett, reward: 87
+2018-05-04 20:43:35,140 - INFO - EPSILON: 1.0 1413 lepesszam mellett, reward: 87
+2018-05-04 20:43:35,140 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:43:35,140 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:43:36,913 - DEBUG - random
+2018-05-04 20:43:36,913 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 20:43:36,915 - DEBUG - random
+2018-05-04 20:43:36,915 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 20:43:43,669 - DEBUG - random
+2018-05-04 20:43:43,669 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 20:43:49,706 - DEBUG - random
+2018-05-04 20:43:49,707 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 20:43:53,587 - DEBUG - random
+2018-05-04 20:43:53,588 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 20:43:59,847 - DEBUG - random
+2018-05-04 20:43:59,847 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 20:44:03,673 - DEBUG - random
+2018-05-04 20:44:03,673 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 20:44:07,892 - DEBUG - random
+2018-05-04 20:44:07,892 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 20:44:13,511 - DEBUG - random
+2018-05-04 20:44:13,511 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 20:44:19,821 - DEBUG - random
+2018-05-04 20:44:19,821 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 20:44:26,165 - DEBUG - random
+2018-05-04 20:44:26,165 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 20:44:30,979 - DEBUG - random
+2018-05-04 20:44:30,979 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 20:44:35,002 - DEBUG - random
+2018-05-04 20:44:35,002 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 20:44:38,905 - DEBUG - random
+2018-05-04 20:44:38,905 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 20:44:45,709 - DEBUG - random
+2018-05-04 20:44:45,710 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 20:44:49,562 - DEBUG - random
+2018-05-04 20:44:49,562 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 20:44:53,518 - DEBUG - random
+2018-05-04 20:44:53,518 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 20:44:56,660 - DEBUG - random
+2018-05-04 20:44:56,660 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 20:45:00,966 - DEBUG - random
+2018-05-04 20:45:00,966 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 20:45:08,012 - DEBUG - random
+2018-05-04 20:45:08,012 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 20:45:08,028 - INFO - EPSILON: 1.0 1801 lepesszam mellett, reward: -199
+2018-05-04 20:45:08,028 - INFO - EPSILON: 1.0 1801 lepesszam mellett, reward: -199
+2018-05-04 20:45:08,028 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:45:08,028 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:45:09,947 - DEBUG - random
+2018-05-04 20:45:09,948 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 20:45:09,950 - DEBUG - random
+2018-05-04 20:45:09,950 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 20:45:16,624 - DEBUG - random
+2018-05-04 20:45:16,624 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 20:45:23,557 - DEBUG - random
+2018-05-04 20:45:23,558 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 20:45:31,693 - DEBUG - random
+2018-05-04 20:45:31,694 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 20:45:36,218 - DEBUG - random
+2018-05-04 20:45:36,218 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 20:45:39,622 - DEBUG - random
+2018-05-04 20:45:39,622 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 20:45:43,420 - DEBUG - random
+2018-05-04 20:45:43,420 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 20:45:49,424 - DEBUG - random
+2018-05-04 20:45:49,424 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 20:45:53,045 - DEBUG - random
+2018-05-04 20:45:53,045 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 20:45:56,372 - DEBUG - random
+2018-05-04 20:45:56,372 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 20:45:59,891 - DEBUG - random
+2018-05-04 20:45:59,891 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 20:46:05,645 - DEBUG - random
+2018-05-04 20:46:05,645 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 20:46:08,141 - INFO - EPSILON: 1.0 1142 lepesszam mellett, reward: -18
+2018-05-04 20:46:08,141 - INFO - EPSILON: 1.0 1142 lepesszam mellett, reward: -18
+2018-05-04 20:46:08,141 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:46:08,141 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:46:09,926 - DEBUG - random
+2018-05-04 20:46:09,926 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 20:46:09,929 - DEBUG - random
+2018-05-04 20:46:09,929 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 20:46:14,623 - DEBUG - random
+2018-05-04 20:46:14,624 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 20:46:19,128 - DEBUG - random
+2018-05-04 20:46:19,128 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 20:46:26,990 - DEBUG - random
+2018-05-04 20:46:26,990 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 20:46:30,342 - DEBUG - random
+2018-05-04 20:46:30,342 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 20:46:33,506 - DEBUG - random
+2018-05-04 20:46:33,506 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 20:46:39,345 - DEBUG - random
+2018-05-04 20:46:39,345 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 20:46:45,418 - DEBUG - random
+2018-05-04 20:46:45,419 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 20:46:51,180 - DEBUG - random
+2018-05-04 20:46:51,180 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 20:46:56,603 - INFO - EPSILON: 1.0 859 lepesszam mellett, reward: 165
+2018-05-04 20:46:56,603 - INFO - EPSILON: 1.0 859 lepesszam mellett, reward: 165
+2018-05-04 20:46:56,603 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:46:56,603 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:46:58,489 - DEBUG - random
+2018-05-04 20:46:58,490 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 20:46:58,492 - DEBUG - random
+2018-05-04 20:46:58,492 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 20:47:06,281 - DEBUG - random
+2018-05-04 20:47:06,281 - DEBUG - [0. 1. 0. 0. 0. 0.]
+2018-05-04 20:47:11,296 - DEBUG - random
+2018-05-04 20:47:11,296 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 20:47:14,435 - DEBUG - random
+2018-05-04 20:47:14,435 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 20:47:17,929 - DEBUG - random
+2018-05-04 20:47:17,929 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 20:47:25,422 - DEBUG - random
+2018-05-04 20:47:25,422 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 20:47:30,829 - DEBUG - random
+2018-05-04 20:47:30,830 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 20:47:36,437 - DEBUG - random
+2018-05-04 20:47:36,437 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 20:47:41,219 - DEBUG - random
+2018-05-04 20:47:41,219 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 20:47:46,271 - DEBUG - random
+2018-05-04 20:47:46,271 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 20:47:49,191 - DEBUG - random
+2018-05-04 20:47:49,191 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 20:47:52,557 - DEBUG - random
+2018-05-04 20:47:52,557 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 20:47:56,302 - DEBUG - random
+2018-05-04 20:47:56,302 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 20:47:59,960 - DEBUG - random
+2018-05-04 20:47:59,960 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 20:48:03,366 - DEBUG - random
+2018-05-04 20:48:03,366 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 20:48:07,339 - DEBUG - random
+2018-05-04 20:48:07,339 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 20:48:10,429 - DEBUG - random
+2018-05-04 20:48:10,429 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 20:48:13,310 - DEBUG - random
+2018-05-04 20:48:13,310 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 20:48:16,138 - DEBUG - random
+2018-05-04 20:48:16,138 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 20:48:19,384 - DEBUG - random
+2018-05-04 20:48:19,384 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 20:48:22,941 - DEBUG - random
+2018-05-04 20:48:22,941 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 20:48:25,871 - DEBUG - random
+2018-05-04 20:48:25,872 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 20:48:31,539 - DEBUG - random
+2018-05-04 20:48:31,539 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 20:48:38,328 - DEBUG - random
+2018-05-04 20:48:38,328 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 20:48:41,834 - DEBUG - random
+2018-05-04 20:48:41,834 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 20:48:46,302 - DEBUG - random
+2018-05-04 20:48:46,302 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 20:48:50,118 - DEBUG - random
+2018-05-04 20:48:50,119 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 20:48:53,734 - DEBUG - random
+2018-05-04 20:48:53,735 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 20:48:57,279 - DEBUG - random
+2018-05-04 20:48:57,279 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 20:49:01,037 - DEBUG - random
+2018-05-04 20:49:01,037 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 20:49:04,878 - DEBUG - random
+2018-05-04 20:49:04,878 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 20:49:08,591 - DEBUG - random
+2018-05-04 20:49:08,591 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 20:49:14,218 - DEBUG - random
+2018-05-04 20:49:14,218 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 20:49:18,896 - INFO - EPSILON: 0.9994905999999854 3270 lepesszam mellett, reward: -782
+2018-05-04 20:49:18,896 - INFO - EPSILON: 0.9994905999999854 3270 lepesszam mellett, reward: -782
+2018-05-04 20:49:18,896 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:49:18,896 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:49:20,510 - DEBUG - random
+2018-05-04 20:49:20,510 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 20:49:20,512 - DEBUG - random
+2018-05-04 20:49:20,512 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 20:49:25,455 - DEBUG - random
+2018-05-04 20:49:25,455 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 20:49:31,706 - DEBUG - random
+2018-05-04 20:49:31,706 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 20:49:33,595 - INFO - EPSILON: 0.9993573999999815 222 lepesszam mellett, reward: 26
+2018-05-04 20:49:33,595 - INFO - EPSILON: 0.9993573999999815 222 lepesszam mellett, reward: 26
+2018-05-04 20:49:33,595 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:49:33,595 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:49:35,372 - DEBUG - random
+2018-05-04 20:49:35,372 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 20:49:35,374 - DEBUG - random
+2018-05-04 20:49:35,375 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 20:49:42,492 - DEBUG - random
+2018-05-04 20:49:42,492 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 20:49:49,121 - DEBUG - random
+2018-05-04 20:49:49,121 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 20:49:57,169 - DEBUG - random
+2018-05-04 20:49:57,169 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 20:50:03,550 - DEBUG - random
+2018-05-04 20:50:03,550 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 20:50:08,621 - DEBUG - random
+2018-05-04 20:50:08,621 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 20:50:13,053 - DEBUG - random
+2018-05-04 20:50:13,053 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 20:50:17,243 - DEBUG - random
+2018-05-04 20:50:17,243 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 20:50:22,882 - DEBUG - random
+2018-05-04 20:50:22,883 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 20:50:28,204 - DEBUG - random
+2018-05-04 20:50:28,208 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 20:50:34,991 - DEBUG - random
+2018-05-04 20:50:34,991 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 20:50:40,914 - DEBUG - random
+2018-05-04 20:50:40,914 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 20:50:46,449 - DEBUG - random
+2018-05-04 20:50:46,450 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 20:50:53,072 - DEBUG - random
+2018-05-04 20:50:53,072 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 20:50:58,330 - INFO - EPSILON: 0.9985317999999578 1376 lepesszam mellett, reward: 60
+2018-05-04 20:50:58,330 - INFO - EPSILON: 0.9985317999999578 1376 lepesszam mellett, reward: 60
+2018-05-04 20:50:58,330 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:50:58,330 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:51:00,077 - DEBUG - random
+2018-05-04 20:51:00,077 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 20:51:00,078 - DEBUG - random
+2018-05-04 20:51:00,079 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 20:51:08,213 - DEBUG - random
+2018-05-04 20:51:08,213 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 20:51:14,290 - DEBUG - random
+2018-05-04 20:51:14,290 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 20:51:20,957 - DEBUG - random
+2018-05-04 20:51:20,958 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 20:51:26,218 - DEBUG - random
+2018-05-04 20:51:26,219 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 20:51:32,034 - DEBUG - random
+2018-05-04 20:51:32,034 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 20:51:39,910 - DEBUG - random
+2018-05-04 20:51:39,910 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 20:51:44,241 - DEBUG - random
+2018-05-04 20:51:44,241 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 20:51:49,097 - DEBUG - random
+2018-05-04 20:51:49,097 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 20:51:53,156 - DEBUG - random
+2018-05-04 20:51:53,157 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 20:51:56,990 - DEBUG - random
+2018-05-04 20:51:56,991 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 20:52:00,952 - DEBUG - random
+2018-05-04 20:52:00,953 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 20:52:04,782 - DEBUG - random
+2018-05-04 20:52:04,782 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 20:52:08,800 - DEBUG - random
+2018-05-04 20:52:08,801 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 20:52:12,578 - DEBUG - random
+2018-05-04 20:52:12,578 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 20:52:17,241 - DEBUG - random
+2018-05-04 20:52:17,241 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 20:52:26,110 - DEBUG - random
+2018-05-04 20:52:26,110 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 20:52:32,114 - DEBUG - random
+2018-05-04 20:52:32,114 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 20:52:36,052 - INFO - EPSILON: 0.9974829999999276 1748 lepesszam mellett, reward: -128
+2018-05-04 20:52:36,052 - INFO - EPSILON: 0.9974829999999276 1748 lepesszam mellett, reward: -128
+2018-05-04 20:52:36,052 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:52:36,052 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:52:37,649 - DEBUG - random
+2018-05-04 20:52:37,649 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 20:52:37,651 - DEBUG - random
+2018-05-04 20:52:37,651 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 20:52:43,098 - DEBUG - random
+2018-05-04 20:52:43,098 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 20:52:47,866 - DEBUG - random
+2018-05-04 20:52:47,866 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 20:52:53,026 - DEBUG - random
+2018-05-04 20:52:53,027 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 20:52:58,598 - DEBUG - random
+2018-05-04 20:52:58,598 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 20:53:06,534 - DEBUG - random
+2018-05-04 20:53:06,534 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 20:53:12,744 - DEBUG - random
+2018-05-04 20:53:12,744 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 20:53:17,307 - DEBUG - random
+2018-05-04 20:53:17,307 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 20:53:21,556 - DEBUG - random
+2018-05-04 20:53:21,556 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 20:53:25,479 - DEBUG - random
+2018-05-04 20:53:25,479 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 20:53:29,161 - DEBUG - random
+2018-05-04 20:53:29,161 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 20:53:36,599 - DEBUG - random
+2018-05-04 20:53:36,599 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 20:53:41,774 - DEBUG - random
+2018-05-04 20:53:41,774 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 20:53:48,594 - DEBUG - random
+2018-05-04 20:53:48,595 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 20:53:53,449 - DEBUG - random
+2018-05-04 20:53:53,449 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 20:53:57,022 - DEBUG - random
+2018-05-04 20:53:57,022 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 20:53:58,624 - INFO - EPSILON: 0.996556599999901 1544 lepesszam mellett, reward: -156
+2018-05-04 20:53:58,624 - INFO - EPSILON: 0.996556599999901 1544 lepesszam mellett, reward: -156
+2018-05-04 20:53:58,624 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:53:58,624 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:54:00,491 - DEBUG - random
+2018-05-04 20:54:00,491 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 20:54:00,493 - DEBUG - random
+2018-05-04 20:54:00,493 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 20:54:06,701 - DEBUG - random
+2018-05-04 20:54:06,701 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 20:54:13,945 - DEBUG - random
+2018-05-04 20:54:13,945 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 20:54:21,422 - DEBUG - random
+2018-05-04 20:54:21,422 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 20:54:27,251 - DEBUG - random
+2018-05-04 20:54:27,251 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 20:54:34,248 - DEBUG - random
+2018-05-04 20:54:34,248 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 20:54:36,190 - INFO - EPSILON: 0.9962283999998915 547 lepesszam mellett, reward: 119
+2018-05-04 20:54:36,190 - INFO - EPSILON: 0.9962283999998915 547 lepesszam mellett, reward: 119
+2018-05-04 20:54:36,190 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:54:36,190 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:54:37,795 - DEBUG - random
+2018-05-04 20:54:37,795 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 20:54:37,797 - DEBUG - random
+2018-05-04 20:54:37,797 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 20:54:43,209 - DEBUG - random
+2018-05-04 20:54:43,209 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 20:54:49,306 - INFO - EPSILON: 0.9961149999998883 189 lepesszam mellett, reward: 79
+2018-05-04 20:54:49,306 - INFO - EPSILON: 0.9961149999998883 189 lepesszam mellett, reward: 79
+2018-05-04 20:54:49,306 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:54:49,306 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:54:51,091 - DEBUG - random
+2018-05-04 20:54:51,092 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 20:54:51,095 - DEBUG - random
+2018-05-04 20:54:51,095 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 20:54:58,616 - INFO - EPSILON: 0.9960591999998867 93 lepesszam mellett, reward: 69
+2018-05-04 20:54:58,616 - INFO - EPSILON: 0.9960591999998867 93 lepesszam mellett, reward: 69
+2018-05-04 20:54:58,616 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:54:58,616 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:55:00,583 - DEBUG - random
+2018-05-04 20:55:00,583 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 20:55:00,585 - DEBUG - random
+2018-05-04 20:55:00,585 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 20:55:06,188 - DEBUG - random
+2018-05-04 20:55:06,188 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 20:55:11,963 - DEBUG - random
+2018-05-04 20:55:11,963 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 20:55:13,136 - INFO - EPSILON: 0.9959217999998827 229 lepesszam mellett, reward: -17
+2018-05-04 20:55:13,136 - INFO - EPSILON: 0.9959217999998827 229 lepesszam mellett, reward: -17
+2018-05-04 20:55:13,136 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:55:13,136 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:55:14,739 - DEBUG - random
+2018-05-04 20:55:14,740 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 20:55:14,742 - DEBUG - random
+2018-05-04 20:55:14,742 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 20:55:20,678 - DEBUG - random
+2018-05-04 20:55:20,679 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 20:55:25,152 - INFO - EPSILON: 0.99582879999988 155 lepesszam mellett, reward: 69
+2018-05-04 20:55:25,152 - INFO - EPSILON: 0.99582879999988 155 lepesszam mellett, reward: 69
+2018-05-04 20:55:25,152 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:55:25,152 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:55:26,995 - DEBUG - random
+2018-05-04 20:55:26,996 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 20:55:26,997 - DEBUG - random
+2018-05-04 20:55:26,997 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 20:55:36,006 - DEBUG - random
+2018-05-04 20:55:36,006 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 20:55:42,573 - DEBUG - random
+2018-05-04 20:55:42,573 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 20:55:47,994 - DEBUG - random
+2018-05-04 20:55:47,994 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 20:55:52,636 - DEBUG - random
+2018-05-04 20:55:52,636 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 20:55:56,474 - DEBUG - random
+2018-05-04 20:55:56,474 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 20:56:00,606 - DEBUG - random
+2018-05-04 20:56:00,606 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 20:56:04,297 - DEBUG - random
+2018-05-04 20:56:04,298 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 20:56:08,598 - DEBUG - random
+2018-05-04 20:56:08,598 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 20:56:13,051 - DEBUG - random
+2018-05-04 20:56:13,051 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 20:56:16,782 - DEBUG - random
+2018-05-04 20:56:16,783 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 20:56:22,700 - DEBUG - random
+2018-05-04 20:56:22,700 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 20:56:29,438 - DEBUG - random
+2018-05-04 20:56:29,439 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 20:56:33,552 - DEBUG - random
+2018-05-04 20:56:33,552 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 20:56:41,308 - DEBUG - random
+2018-05-04 20:56:41,309 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 20:56:46,562 - DEBUG - random
+2018-05-04 20:56:46,562 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 20:56:51,420 - DEBUG - random
+2018-05-04 20:56:51,420 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 20:56:55,020 - DEBUG - random
+2018-05-04 20:56:55,021 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 20:56:58,558 - DEBUG - random
+2018-05-04 20:56:58,558 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 20:57:03,197 - DEBUG - random
+2018-05-04 20:57:03,197 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 20:57:06,603 - DEBUG - random
+2018-05-04 20:57:06,603 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 20:57:10,612 - DEBUG - random
+2018-05-04 20:57:10,612 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 20:57:14,322 - DEBUG - random
+2018-05-04 20:57:14,322 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 20:57:18,602 - DEBUG - random
+2018-05-04 20:57:18,602 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 20:57:25,703 - DEBUG - random
+2018-05-04 20:57:25,703 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 20:57:26,868 - INFO - EPSILON: 0.9943797999998384 2415 lepesszam mellett, reward: -311
+2018-05-04 20:57:26,868 - INFO - EPSILON: 0.9943797999998384 2415 lepesszam mellett, reward: -311
+2018-05-04 20:57:26,868 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:57:26,868 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:57:28,896 - DEBUG - random
+2018-05-04 20:57:28,896 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 20:57:28,898 - DEBUG - random
+2018-05-04 20:57:28,898 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 20:57:34,142 - DEBUG - random
+2018-05-04 20:57:34,142 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 20:57:40,149 - DEBUG - random
+2018-05-04 20:57:40,149 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 20:57:45,371 - DEBUG - random
+2018-05-04 20:57:45,371 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 20:57:51,938 - DEBUG - random
+2018-05-04 20:57:51,938 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 20:57:59,256 - DEBUG - random
+2018-05-04 20:57:59,256 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 20:58:03,305 - DEBUG - random
+2018-05-04 20:58:03,305 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 20:58:09,299 - DEBUG - random
+2018-05-04 20:58:09,299 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 20:58:14,346 - DEBUG - random
+2018-05-04 20:58:14,346 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 20:58:21,465 - DEBUG - random
+2018-05-04 20:58:21,465 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 20:58:25,674 - DEBUG - random
+2018-05-04 20:58:25,674 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 20:58:30,074 - DEBUG - random
+2018-05-04 20:58:30,074 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 20:58:33,679 - DEBUG - [ 0.83660334  0.14864549  0.11416633  0.02466971  0.06096993 -0.0655686 ]
+2018-05-04 20:58:33,679 - DEBUG - [0. 1. 0. 0. 0. 0.]
+2018-05-04 20:58:37,698 - DEBUG - random
+2018-05-04 20:58:37,698 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 20:58:43,294 - INFO - EPSILON: 0.9935637999998149 1360 lepesszam mellett, reward: -54
+2018-05-04 20:58:43,294 - INFO - EPSILON: 0.9935637999998149 1360 lepesszam mellett, reward: -54
+2018-05-04 20:58:43,294 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:58:43,294 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:58:45,030 - DEBUG - random
+2018-05-04 20:58:45,030 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 20:58:45,033 - DEBUG - random
+2018-05-04 20:58:45,033 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 20:58:50,510 - DEBUG - random
+2018-05-04 20:58:50,510 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 20:58:55,599 - DEBUG - random
+2018-05-04 20:58:55,599 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 20:58:59,501 - INFO - EPSILON: 0.9934167999998107 245 lepesszam mellett, reward: 59
+2018-05-04 20:58:59,501 - INFO - EPSILON: 0.9934167999998107 245 lepesszam mellett, reward: 59
+2018-05-04 20:58:59,501 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:58:59,501 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:59:01,405 - DEBUG - random
+2018-05-04 20:59:01,405 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 20:59:01,408 - DEBUG - random
+2018-05-04 20:59:01,408 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 20:59:08,935 - DEBUG - random
+2018-05-04 20:59:08,936 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 20:59:14,914 - DEBUG - random
+2018-05-04 20:59:14,914 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 20:59:20,838 - DEBUG - random
+2018-05-04 20:59:20,838 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 20:59:29,366 - DEBUG - random
+2018-05-04 20:59:29,366 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 20:59:31,528 - INFO - EPSILON: 0.9931611999998033 426 lepesszam mellett, reward: 128
+2018-05-04 20:59:31,528 - INFO - EPSILON: 0.9931611999998033 426 lepesszam mellett, reward: 128
+2018-05-04 20:59:31,528 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:59:31,528 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:59:33,431 - DEBUG - random
+2018-05-04 20:59:33,431 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 20:59:33,433 - DEBUG - random
+2018-05-04 20:59:33,434 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 20:59:41,364 - DEBUG - random
+2018-05-04 20:59:41,364 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 20:59:48,424 - DEBUG - random
+2018-05-04 20:59:48,425 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 20:59:56,665 - DEBUG - random
+2018-05-04 20:59:56,665 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 21:00:02,197 - DEBUG - random
+2018-05-04 21:00:02,197 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 21:00:07,429 - DEBUG - random
+2018-05-04 21:00:07,430 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 21:00:12,603 - DEBUG - random
+2018-05-04 21:00:12,604 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 21:00:14,175 - INFO - EPSILON: 0.9927891999997926 620 lepesszam mellett, reward: 104
+2018-05-04 21:00:14,175 - INFO - EPSILON: 0.9927891999997926 620 lepesszam mellett, reward: 104
+2018-05-04 21:00:14,175 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 21:00:14,175 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 21:00:15,959 - DEBUG - random
+2018-05-04 21:00:15,959 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 21:00:15,962 - DEBUG - random
+2018-05-04 21:00:15,962 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 21:00:21,121 - DEBUG - random
+2018-05-04 21:00:21,122 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 21:00:26,906 - DEBUG - random
+2018-05-04 21:00:26,906 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 21:00:32,271 - DEBUG - random
+2018-05-04 21:00:32,271 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 21:00:37,926 - DEBUG - random
+2018-05-04 21:00:37,926 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 21:00:42,929 - DEBUG - random
+2018-05-04 21:00:42,930 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 21:00:48,111 - DEBUG - random
+2018-05-04 21:00:48,111 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 21:00:52,286 - DEBUG - random
+2018-05-04 21:00:52,286 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 21:00:56,089 - DEBUG - random
+2018-05-04 21:00:56,089 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 21:01:03,571 - DEBUG - random
+2018-05-04 21:01:03,571 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 21:01:10,674 - DEBUG - random
+2018-05-04 21:01:10,674 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 21:01:15,022 - DEBUG - random
+2018-05-04 21:01:15,022 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 21:01:19,132 - DEBUG - random
+2018-05-04 21:01:19,132 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 21:01:23,401 - DEBUG - random
+2018-05-04 21:01:23,401 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 21:01:26,925 - DEBUG - random
+2018-05-04 21:01:26,926 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 21:01:30,819 - DEBUG - random
+2018-05-04 21:01:30,819 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 21:01:34,691 - DEBUG - random
+2018-05-04 21:01:34,691 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 21:01:38,572 - DEBUG - random
+2018-05-04 21:01:38,572 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 21:01:43,690 - DEBUG - random
+2018-05-04 21:01:43,690 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 21:01:44,876 - INFO - EPSILON: 0.9917007999997614 1814 lepesszam mellett, reward: -378
+2018-05-04 21:01:44,876 - INFO - EPSILON: 0.9917007999997614 1814 lepesszam mellett, reward: -378
+2018-05-04 21:01:44,876 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 21:01:44,876 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 21:01:46,540 - DEBUG - random
+2018-05-04 21:01:46,540 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 21:01:46,542 - DEBUG - random
+2018-05-04 21:01:46,542 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 21:01:50,916 - DEBUG - random
+2018-05-04 21:01:50,916 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 21:01:58,476 - DEBUG - random
+2018-05-04 21:01:58,476 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 21:02:05,484 - DEBUG - random
+2018-05-04 21:02:05,484 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 21:02:11,709 - DEBUG - random
+2018-05-04 21:02:11,709 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 21:02:18,724 - DEBUG - random
+2018-05-04 21:02:18,724 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 21:02:19,187 - INFO - EPSILON: 0.9913929999997525 513 lepesszam mellett, reward: 159
+2018-05-04 21:02:19,187 - INFO - EPSILON: 0.9913929999997525 513 lepesszam mellett, reward: 159
+2018-05-04 21:02:19,188 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 21:02:19,188 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 21:02:21,051 - DEBUG - random
+2018-05-04 21:02:21,051 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 21:02:21,053 - DEBUG - random
+2018-05-04 21:02:21,053 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 21:02:27,105 - DEBUG - random
+2018-05-04 21:02:27,106 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 21:02:32,752 - INFO - EPSILON: 0.9912849999997494 180 lepesszam mellett, reward: 60
+2018-05-04 21:02:32,752 - INFO - EPSILON: 0.9912849999997494 180 lepesszam mellett, reward: 60
+2018-05-04 21:02:32,752 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 21:02:32,752 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 21:02:34,420 - DEBUG - random
+2018-05-04 21:02:34,421 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 21:02:34,423 - DEBUG - random
+2018-05-04 21:02:34,423 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 21:02:40,414 - DEBUG - random
+2018-05-04 21:02:40,414 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 21:02:45,087 - INFO - EPSILON: 0.9911901999997467 158 lepesszam mellett, reward: 84
+2018-05-04 21:02:45,087 - INFO - EPSILON: 0.9911901999997467 158 lepesszam mellett, reward: 84
+2018-05-04 21:02:45,088 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 21:02:45,088 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 21:02:47,027 - DEBUG - random
+2018-05-04 21:02:47,027 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 21:02:47,030 - DEBUG - random
+2018-05-04 21:02:47,030 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 21:02:55,221 - DEBUG - random
+2018-05-04 21:02:55,221 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 21:02:56,407 - INFO - EPSILON: 0.9911223999997447 113 lepesszam mellett, reward: 81
+2018-05-04 21:02:56,407 - INFO - EPSILON: 0.9911223999997447 113 lepesszam mellett, reward: 81
+2018-05-04 21:02:56,407 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 21:02:56,407 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 21:02:58,368 - DEBUG - random
+2018-05-04 21:02:58,368 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 21:02:58,370 - DEBUG - random
+2018-05-04 21:02:58,370 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 21:03:04,522 - DEBUG - random
+2018-05-04 21:03:04,522 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 21:03:11,592 - DEBUG - random
+2018-05-04 21:03:11,592 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 21:03:19,372 - DEBUG - random
+2018-05-04 21:03:19,372 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 21:03:26,996 - INFO - EPSILON: 0.990890199999738 387 lepesszam mellett, reward: 225
+2018-05-04 21:03:26,996 - INFO - EPSILON: 0.990890199999738 387 lepesszam mellett, reward: 225
+2018-05-04 21:03:26,996 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 21:03:26,996 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 21:03:28,922 - DEBUG - random
+2018-05-04 21:03:28,922 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 21:03:28,925 - DEBUG - random
+2018-05-04 21:03:28,925 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 21:03:36,838 - DEBUG - random
+2018-05-04 21:03:36,838 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 21:03:37,639 - INFO - EPSILON: 0.990818199999736 120 lepesszam mellett, reward: 68
+2018-05-04 21:03:37,639 - INFO - EPSILON: 0.990818199999736 120 lepesszam mellett, reward: 68
+2018-05-04 21:03:37,639 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 21:03:37,639 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 21:03:39,597 - DEBUG - random
+2018-05-04 21:03:39,597 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 21:03:39,599 - DEBUG - random
+2018-05-04 21:03:39,600 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 21:03:47,043 - DEBUG - random
+2018-05-04 21:03:47,043 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 21:03:51,598 - DEBUG - random
+2018-05-04 21:03:51,598 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 21:03:59,240 - DEBUG - random
+2018-05-04 21:03:59,240 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 21:04:05,306 - DEBUG - random
+2018-05-04 21:04:05,306 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 21:04:10,139 - DEBUG - random
+2018-05-04 21:04:10,139 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 21:04:15,449 - DEBUG - random
+2018-05-04 21:04:15,449 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 21:04:20,381 - DEBUG - random
+2018-05-04 21:04:20,381 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 21:04:24,168 - DEBUG - random
+2018-05-04 21:04:24,168 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 21:04:27,916 - DEBUG - random
+2018-05-04 21:04:27,916 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 21:04:34,085 - DEBUG - random
+2018-05-04 21:04:34,085 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 21:04:38,430 - DEBUG - random
+2018-05-04 21:04:38,430 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 21:04:42,717 - DEBUG - random
+2018-05-04 21:04:42,717 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 21:04:46,802 - DEBUG - random
+2018-05-04 21:04:46,802 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 21:04:52,601 - DEBUG - random
+2018-05-04 21:04:52,601 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 21:04:58,470 - INFO - EPSILON: 0.9899229999997102 1492 lepesszam mellett, reward: -110
+2018-05-04 21:04:58,470 - INFO - EPSILON: 0.9899229999997102 1492 lepesszam mellett, reward: -110
+2018-05-04 21:04:58,470 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 21:04:58,470 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 21:05:00,265 - DEBUG - random
+2018-05-04 21:05:00,265 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 21:05:00,267 - DEBUG - random
+2018-05-04 21:05:00,267 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 21:05:05,589 - DEBUG - random
+2018-05-04 21:05:05,589 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 21:05:11,344 - INFO - EPSILON: 0.989810799999707 187 lepesszam mellett, reward: 33
+2018-05-04 21:05:11,344 - INFO - EPSILON: 0.989810799999707 187 lepesszam mellett, reward: 33
+2018-05-04 21:05:11,345 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 21:05:11,345 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 21:05:13,251 - DEBUG - random
+2018-05-04 21:05:13,251 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 21:05:13,253 - DEBUG - random
+2018-05-04 21:05:13,253 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 21:05:20,387 - DEBUG - random
+2018-05-04 21:05:20,388 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 21:05:22,331 - INFO - EPSILON: 0.9897363999997049 124 lepesszam mellett, reward: 72
+2018-05-04 21:05:22,331 - INFO - EPSILON: 0.9897363999997049 124 lepesszam mellett, reward: 72
+2018-05-04 21:05:22,331 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 21:05:22,331 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 21:05:24,201 - DEBUG - random
+2018-05-04 21:05:24,201 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 21:05:24,203 - DEBUG - random
+2018-05-04 21:05:24,204 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 21:05:29,654 - DEBUG - random
+2018-05-04 21:05:29,654 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 21:05:36,920 - INFO - EPSILON: 0.9896205999997015 193 lepesszam mellett, reward: 59
+2018-05-04 21:05:36,920 - INFO - EPSILON: 0.9896205999997015 193 lepesszam mellett, reward: 59
+2018-05-04 21:05:36,920 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 21:05:36,920 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 21:05:38,822 - DEBUG - random
+2018-05-04 21:05:38,822 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 21:05:38,824 - DEBUG - random
+2018-05-04 21:05:38,824 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 21:05:43,685 - DEBUG - random
+2018-05-04 21:05:43,685 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 21:05:50,970 - DEBUG - random
+2018-05-04 21:05:50,971 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 21:06:00,117 - DEBUG - random
+2018-05-04 21:06:00,118 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 21:06:04,693 - DEBUG - random
+2018-05-04 21:06:04,693 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 21:06:08,538 - DEBUG - random
+2018-05-04 21:06:08,538 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 21:06:14,265 - INFO - EPSILON: 0.9892749999996916 576 lepesszam mellett, reward: 146
+2018-05-04 21:06:14,265 - INFO - EPSILON: 0.9892749999996916 576 lepesszam mellett, reward: 146
+2018-05-04 21:06:14,265 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 21:06:14,265 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 21:06:15,967 - DEBUG - random
+2018-05-04 21:06:15,967 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 21:06:15,969 - DEBUG - random
+2018-05-04 21:06:15,969 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 21:06:22,543 - DEBUG - random
+2018-05-04 21:06:22,543 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 21:06:25,851 - INFO - EPSILON: 0.9891909999996892 140 lepesszam mellett, reward: 74
+2018-05-04 21:06:25,851 - INFO - EPSILON: 0.9891909999996892 140 lepesszam mellett, reward: 74
+2018-05-04 21:06:25,851 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 21:06:25,851 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 21:06:27,616 - DEBUG - random
+2018-05-04 21:06:27,616 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 21:06:27,618 - DEBUG - random
+2018-05-04 21:06:27,618 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 21:06:32,700 - DEBUG - random
+2018-05-04 21:06:32,701 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 21:06:39,026 - DEBUG - random
+2018-05-04 21:06:39,026 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 21:06:45,515 - DEBUG - random
+2018-05-04 21:06:45,515 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 21:06:49,493 - DEBUG - random
+2018-05-04 21:06:49,493 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 21:06:55,167 - DEBUG - random
+2018-05-04 21:06:55,167 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 21:06:59,741 - DEBUG - random
+2018-05-04 21:06:59,742 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 21:07:04,209 - DEBUG - random
+2018-05-04 21:07:04,210 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 21:07:10,506 - DEBUG - random
+2018-05-04 21:07:10,506 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 21:07:16,187 - DEBUG - random
+2018-05-04 21:07:16,187 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 21:07:22,608 - DEBUG - random
+2018-05-04 21:07:22,608 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 21:07:29,986 - DEBUG - random
+2018-05-04 21:07:29,986 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 21:07:34,876 - DEBUG - random
+2018-05-04 21:07:34,876 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 21:07:39,694 - DEBUG - random
+2018-05-04 21:07:39,694 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 21:07:44,218 - DEBUG - random
+2018-05-04 21:07:44,218 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 21:07:47,761 - DEBUG - random
+2018-05-04 21:07:47,761 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 21:07:51,778 - DEBUG - random
+2018-05-04 21:07:51,778 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 21:07:55,611 - DEBUG - random
+2018-05-04 21:07:55,611 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 21:08:00,486 - DEBUG - random
+2018-05-04 21:08:00,486 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 21:08:04,216 - DEBUG - random
+2018-05-04 21:08:04,216 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 21:08:08,053 - DEBUG - random
+2018-05-04 21:08:08,053 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 21:08:13,017 - DEBUG - random
+2018-05-04 21:08:13,017 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 21:08:20,546 - DEBUG - random
+2018-05-04 21:08:20,546 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 21:08:25,187 - DEBUG - random
+2018-05-04 21:08:25,188 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 21:08:29,168 - DEBUG - random
+2018-05-04 21:08:29,168 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 21:08:33,095 - DEBUG - random
+2018-05-04 21:08:33,095 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 21:08:37,008 - DEBUG - random
+2018-05-04 21:08:37,008 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 21:08:40,609 - DEBUG - random
+2018-05-04 21:08:40,609 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 21:08:44,074 - DEBUG - random
+2018-05-04 21:08:44,074 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 21:08:44,364 - INFO - EPSILON: 0.9875067999996407 2807 lepesszam mellett, reward: -827
+2018-05-04 21:08:44,364 - INFO - EPSILON: 0.9875067999996407 2807 lepesszam mellett, reward: -827
+2018-05-04 21:08:44,364 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 21:08:44,364 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 21:08:46,058 - DEBUG - random
+2018-05-04 21:08:46,058 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 21:08:46,059 - DEBUG - random
+2018-05-04 21:08:46,059 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 21:08:52,070 - DEBUG - random
+2018-05-04 21:08:52,070 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 21:08:59,329 - DEBUG - random
+2018-05-04 21:08:59,329 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 21:09:04,771 - DEBUG - random
+2018-05-04 21:09:04,771 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 21:09:08,683 - DEBUG - random
+2018-05-04 21:09:08,683 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 21:09:13,613 - DEBUG - random
+2018-05-04 21:09:13,613 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 21:09:17,762 - DEBUG - random
+2018-05-04 21:09:17,763 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 21:09:21,969 - DEBUG - random
+2018-05-04 21:09:21,969 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 21:09:25,718 - DEBUG - random
+2018-05-04 21:09:25,718 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 21:09:31,506 - DEBUG - random
+2018-05-04 21:09:31,506 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 21:09:38,353 - DEBUG - random
+2018-05-04 21:09:38,353 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 21:09:44,223 - DEBUG - random
+2018-05-04 21:09:44,223 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 21:09:48,714 - DEBUG - random
+2018-05-04 21:09:48,714 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 21:09:53,317 - DEBUG - random
+2018-05-04 21:09:53,317 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 21:09:57,746 - DEBUG - random
+2018-05-04 21:09:57,746 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 21:10:04,743 - DEBUG - random
+2018-05-04 21:10:04,743 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 21:10:09,034 - DEBUG - random
+2018-05-04 21:10:09,034 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 21:10:15,918 - DEBUG - random
+2018-05-04 21:10:15,918 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 21:10:20,387 - DEBUG - random
+2018-05-04 21:10:20,387 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 21:10:28,305 - INFO - EPSILON: 0.986369199999608 1896 lepesszam mellett, reward: -136
+2018-05-04 21:10:28,305 - INFO - EPSILON: 0.986369199999608 1896 lepesszam mellett, reward: -136
+2018-05-04 21:10:28,305 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 21:10:28,305 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 21:10:30,171 - DEBUG - random
+2018-05-04 21:10:30,171 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 21:10:30,174 - DEBUG - random
+2018-05-04 21:10:30,174 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 21:10:37,978 - DEBUG - random
+2018-05-04 21:10:37,978 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 21:10:43,382 - DEBUG - random
+2018-05-04 21:10:43,382 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 21:10:52,250 - DEBUG - random
+2018-05-04 21:10:52,250 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 21:10:58,339 - DEBUG - random
+2018-05-04 21:10:58,339 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 21:11:04,554 - DEBUG - random
+2018-05-04 21:11:04,554 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 21:11:10,432 - INFO - EPSILON: 0.9860175999995979 586 lepesszam mellett, reward: 102
+2018-05-04 21:11:10,432 - INFO - EPSILON: 0.9860175999995979 586 lepesszam mellett, reward: 102
+2018-05-04 21:11:10,432 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 21:11:10,432 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 21:11:12,279 - DEBUG - random
+2018-05-04 21:11:12,280 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 21:11:12,281 - DEBUG - random
+2018-05-04 21:11:12,282 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 21:11:18,409 - DEBUG - random
+2018-05-04 21:11:18,409 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 21:11:22,066 - DEBUG - random
+2018-05-04 21:11:22,066 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 21:11:25,856 - DEBUG - random
+2018-05-04 21:11:25,856 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 21:11:29,795 - DEBUG - random
+2018-05-04 21:11:29,796 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 21:11:34,209 - DEBUG - random
+2018-05-04 21:11:34,209 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 21:11:35,837 - INFO - EPSILON: 0.9857043999995889 522 lepesszam mellett, reward: -42
+2018-05-04 21:11:35,837 - INFO - EPSILON: 0.9857043999995889 522 lepesszam mellett, reward: -42
+2018-05-04 21:11:35,837 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 21:11:35,837 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 21:11:37,687 - DEBUG - random
+2018-05-04 21:11:37,687 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 21:11:37,689 - DEBUG - random
+2018-05-04 21:11:37,690 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 21:11:46,397 - DEBUG - random
+2018-05-04 21:11:46,397 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 21:11:53,340 - DEBUG - random
+2018-05-04 21:11:53,340 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 21:12:01,502 - DEBUG - random
+2018-05-04 21:12:01,503 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 21:12:09,288 - DEBUG - random
+2018-05-04 21:12:09,288 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 21:12:15,713 - DEBUG - random
+2018-05-04 21:12:15,713 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 21:12:22,145 - DEBUG - random
+2018-05-04 21:12:22,145 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 21:12:22,872 - INFO - EPSILON: 0.9853305999995782 623 lepesszam mellett, reward: 225
+2018-05-04 21:12:22,872 - INFO - EPSILON: 0.9853305999995782 623 lepesszam mellett, reward: 225
+2018-05-04 21:12:22,873 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 21:12:22,873 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 21:12:24,828 - DEBUG - random
+2018-05-04 21:12:24,829 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 21:12:24,831 - DEBUG - random
+2018-05-04 21:12:24,831 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 21:12:33,159 - DEBUG - random
+2018-05-04 21:12:33,159 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 21:12:34,956 - INFO - EPSILON: 0.9852447999995757 143 lepesszam mellett, reward: 35
+2018-05-04 21:12:34,956 - INFO - EPSILON: 0.9852447999995757 143 lepesszam mellett, reward: 35
+2018-05-04 21:12:34,956 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 21:12:34,956 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 21:12:36,802 - DEBUG - random
+2018-05-04 21:12:36,802 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 21:12:36,804 - DEBUG - random
+2018-05-04 21:12:36,804 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 21:12:44,178 - DEBUG - random
+2018-05-04 21:12:44,178 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 21:12:51,085 - DEBUG - random
+2018-05-04 21:12:51,085 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 21:12:55,890 - DEBUG - random
+2018-05-04 21:12:55,890 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 21:13:02,952 - DEBUG - random
+2018-05-04 21:13:02,953 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 21:13:10,156 - DEBUG - random
+2018-05-04 21:13:10,156 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 21:13:17,842 - DEBUG - random
+2018-05-04 21:13:17,843 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 21:13:25,167 - DEBUG - random
+2018-05-04 21:13:25,168 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 21:13:31,204 - DEBUG - random
+2018-05-04 21:13:31,205 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 21:13:35,345 - DEBUG - random
+2018-05-04 21:13:35,345 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 21:13:36,219 - INFO - EPSILON: 0.9846891999995597 926 lepesszam mellett, reward: 66
+2018-05-04 21:13:36,219 - INFO - EPSILON: 0.9846891999995597 926 lepesszam mellett, reward: 66
+2018-05-04 21:13:36,220 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 21:13:36,220 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 21:13:38,016 - DEBUG - random
+2018-05-04 21:13:38,016 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 21:13:38,019 - DEBUG - random
+2018-05-04 21:13:38,019 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 21:13:43,540 - DEBUG - random
+2018-05-04 21:13:43,541 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 21:13:49,681 - DEBUG - random
+2018-05-04 21:13:49,681 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 21:13:50,460 - INFO - EPSILON: 0.9845553999995559 223 lepesszam mellett, reward: 3
+2018-05-04 21:13:50,460 - INFO - EPSILON: 0.9845553999995559 223 lepesszam mellett, reward: 3
+2018-05-04 21:13:50,460 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 21:13:50,460 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 21:13:52,468 - DEBUG - random
+2018-05-04 21:13:52,469 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 21:13:52,471 - DEBUG - random
+2018-05-04 21:13:52,471 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 21:13:56,913 - DEBUG - random
+2018-05-04 21:13:56,913 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 21:14:03,569 - DEBUG - random
+2018-05-04 21:14:03,570 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 21:14:09,673 - DEBUG - random
+2018-05-04 21:14:09,673 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 21:14:15,312 - DEBUG - random
+2018-05-04 21:14:15,313 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 21:14:21,207 - DEBUG - random
+2018-05-04 21:14:21,207 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 21:14:26,291 - DEBUG - random
+2018-05-04 21:14:26,291 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 21:14:33,138 - DEBUG - random
+2018-05-04 21:14:33,139 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 21:14:38,335 - DEBUG - random
+2018-05-04 21:14:38,335 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 21:14:44,943 - DEBUG - random
+2018-05-04 21:14:44,943 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 21:14:50,701 - DEBUG - random
+2018-05-04 21:14:50,701 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 21:14:55,517 - DEBUG - random
+2018-05-04 21:14:55,518 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 21:15:00,132 - DEBUG - random
+2018-05-04 21:15:00,132 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 21:15:07,554 - DEBUG - random
+2018-05-04 21:15:07,555 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 21:15:13,430 - DEBUG - random
+2018-05-04 21:15:13,430 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 21:15:15,116 - INFO - EPSILON: 0.9836835999995308 1453 lepesszam mellett, reward: -45
+2018-05-04 21:15:15,116 - INFO - EPSILON: 0.9836835999995308 1453 lepesszam mellett, reward: -45
+2018-05-04 21:15:15,116 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 21:15:15,116 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 21:15:16,778 - DEBUG - random
+2018-05-04 21:15:16,778 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 21:15:16,781 - DEBUG - random
+2018-05-04 21:15:16,781 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 21:15:23,333 - DEBUG - random
+2018-05-04 21:15:23,334 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 21:15:31,074 - DEBUG - random
+2018-05-04 21:15:31,074 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 21:15:36,138 - DEBUG - random
+2018-05-04 21:15:36,138 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 21:15:42,491 - DEBUG - random
+2018-05-04 21:15:42,491 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 21:15:50,302 - DEBUG - random
+2018-05-04 21:15:50,302 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 21:15:55,238 - DEBUG - random
+2018-05-04 21:15:55,238 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 21:15:59,156 - DEBUG - random
+2018-05-04 21:15:59,156 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 21:16:02,893 - DEBUG - random
+2018-05-04 21:16:02,893 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 21:16:06,874 - DEBUG - random
+2018-05-04 21:16:06,874 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 21:16:10,431 - DEBUG - random
+2018-05-04 21:16:10,431 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 21:16:15,089 - DEBUG - random
+2018-05-04 21:16:15,089 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 21:16:21,076 - DEBUG - random
+2018-05-04 21:16:21,076 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 21:16:27,428 - DEBUG - random
+2018-05-04 21:16:27,428 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 21:16:33,227 - DEBUG - random
+2018-05-04 21:16:33,227 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 21:16:36,786 - DEBUG - random
+2018-05-04 21:16:36,786 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 21:16:40,886 - DEBUG - random
+2018-05-04 21:16:40,886 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 21:16:46,889 - DEBUG - random
+2018-05-04 21:16:46,889 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 21:16:53,448 - DEBUG - random
+2018-05-04 21:16:53,449 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 21:16:53,773 - INFO - EPSILON: 0.9825993999994996 1807 lepesszam mellett, reward: -179
+2018-05-04 21:16:53,773 - INFO - EPSILON: 0.9825993999994996 1807 lepesszam mellett, reward: -179
+2018-05-04 21:16:53,773 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 21:16:53,773 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 21:16:55,593 - DEBUG - random
+2018-05-04 21:16:55,593 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 21:16:55,595 - DEBUG - random
+2018-05-04 21:16:55,595 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 21:17:02,490 - DEBUG - random
+2018-05-04 21:17:02,490 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 21:17:08,008 - DEBUG - random
+2018-05-04 21:17:08,008 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 21:17:14,767 - DEBUG - random
+2018-05-04 21:17:14,768 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 21:17:20,534 - DEBUG - random
+2018-05-04 21:17:20,534 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 21:17:29,649 - DEBUG - random
+2018-05-04 21:17:29,649 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 21:17:34,999 - DEBUG - random
+2018-05-04 21:17:35,000 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 21:17:39,811 - DEBUG - random
+2018-05-04 21:17:39,812 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 21:17:43,275 - DEBUG - random
+2018-05-04 21:17:43,275 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 21:17:47,418 - DEBUG - random
+2018-05-04 21:17:47,418 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 21:17:51,216 - DEBUG - random
+2018-05-04 21:17:51,217 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 21:17:58,800 - DEBUG - random
+2018-05-04 21:17:58,800 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 21:18:06,858 - DEBUG - random
+2018-05-04 21:18:06,858 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 21:18:07,621 - INFO - EPSILON: 0.9818727999994787 1211 lepesszam mellett, reward: 73
+2018-05-04 21:18:07,621 - INFO - EPSILON: 0.9818727999994787 1211 lepesszam mellett, reward: 73
+2018-05-04 21:18:07,621 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 21:18:07,621 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 21:18:09,308 - DEBUG - random
+2018-05-04 21:18:09,309 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 21:18:09,311 - DEBUG - random
+2018-05-04 21:18:09,311 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 21:18:17,334 - DEBUG - random
+2018-05-04 21:18:17,335 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 21:18:22,906 - DEBUG - random
+2018-05-04 21:18:22,906 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 21:18:27,163 - DEBUG - random
+2018-05-04 21:18:27,163 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 21:18:30,954 - DEBUG - random
+2018-05-04 21:18:30,955 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 21:18:39,427 - DEBUG - random
+2018-05-04 21:18:39,427 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 21:18:47,716 - DEBUG - random
+2018-05-04 21:18:47,716 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 21:18:55,046 - INFO - EPSILON: 0.9814581999994668 691 lepesszam mellett, reward: 187
+2018-05-04 21:18:55,046 - INFO - EPSILON: 0.9814581999994668 691 lepesszam mellett, reward: 187
+2018-05-04 21:18:55,046 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 21:18:55,046 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 21:18:56,928 - DEBUG - random
+2018-05-04 21:18:56,929 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 21:18:56,931 - DEBUG - random
+2018-05-04 21:18:56,931 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 21:19:03,069 - DEBUG - random
+2018-05-04 21:19:03,069 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 21:19:10,103 - DEBUG - random
+2018-05-04 21:19:10,104 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 21:19:17,913 - DEBUG - random
+2018-05-04 21:19:17,913 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 21:19:23,969 - DEBUG - random
+2018-05-04 21:19:23,969 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 21:19:27,603 - DEBUG - random
+2018-05-04 21:19:27,604 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 21:19:31,669 - DEBUG - random
+2018-05-04 21:19:31,669 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 21:19:38,305 - DEBUG - random
+2018-05-04 21:19:38,305 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 21:19:42,078 - DEBUG - random
+2018-05-04 21:19:42,079 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 21:19:49,956 - DEBUG - random
+2018-05-04 21:19:49,956 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 21:19:55,435 - DEBUG - random
+2018-05-04 21:19:55,435 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 21:20:00,605 - DEBUG - random
+2018-05-04 21:20:00,605 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 21:20:04,435 - DEBUG - random
+2018-05-04 21:20:04,435 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 21:20:08,106 - DEBUG - random
+2018-05-04 21:20:08,106 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 21:20:12,034 - DEBUG - random
+2018-05-04 21:20:12,034 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 21:20:15,727 - DEBUG - random
+2018-05-04 21:20:15,727 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 21:20:19,802 - DEBUG - random
+2018-05-04 21:20:19,802 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 21:20:23,395 - DEBUG - random
+2018-05-04 21:20:23,395 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 21:20:27,218 - DEBUG - random
+2018-05-04 21:20:27,218 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 21:20:32,799 - DEBUG - random
+2018-05-04 21:20:32,800 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 21:20:40,641 - DEBUG - random
+2018-05-04 21:20:40,641 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 21:20:45,591 - DEBUG - random
+2018-05-04 21:20:45,591 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 21:20:51,140 - DEBUG - random
+2018-05-04 21:20:51,141 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 21:20:54,755 - DEBUG - random
+2018-05-04 21:20:54,755 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 21:20:58,810 - DEBUG - random
+2018-05-04 21:20:58,811 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 21:21:02,881 - DEBUG - random
+2018-05-04 21:21:02,881 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 21:21:07,011 - DEBUG - random
+2018-05-04 21:21:07,011 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 21:21:09,342 - INFO - EPSILON: 0.9798783999994214 2633 lepesszam mellett, reward: -363
+2018-05-04 21:21:09,342 - INFO - EPSILON: 0.9798783999994214 2633 lepesszam mellett, reward: -363
+2018-05-04 21:21:09,342 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 21:21:09,342 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 21:21:11,009 - DEBUG - random
+2018-05-04 21:21:11,010 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 21:21:11,012 - DEBUG - random
+2018-05-04 21:21:11,012 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 21:21:16,201 - DEBUG - random
+2018-05-04 21:21:16,201 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 21:21:21,265 - DEBUG - random
+2018-05-04 21:21:21,265 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 21:21:25,142 - DEBUG - random
+2018-05-04 21:21:25,142 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 21:21:29,566 - DEBUG - random
+2018-05-04 21:21:29,567 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 21:21:32,632 - INFO - Could not load matplotlib icon: bad option "foobar": must be aspect, attributes, client, colormapwindows, command, deiconify, focusmodel, forget, frame, geometry, grid, group, iconbitmap, iconify, iconmask, iconname, iconphoto, iconposition, iconwindow, manage, maxsize, minsize, overrideredirect, positionfrom, protocol, resizable, sizefrom, stackorder, state, title, transient, or withdraw
+2018-05-04 21:21:32,632 - INFO - Could not load matplotlib icon: bad option "foobar": must be aspect, attributes, client, colormapwindows, command, deiconify, focusmodel, forget, frame, geometry, grid, group, iconbitmap, iconify, iconmask, iconname, iconphoto, iconposition, iconwindow, manage, maxsize, minsize, overrideredirect, positionfrom, protocol, resizable, sizefrom, stackorder, state, title, transient, or withdraw
+2018-05-04 21:21:32,685 - DEBUG - findfont: Matching :family=sans-serif:style=normal:variant=normal:weight=normal:stretch=normal:size=10.0 to DejaVu Sans ('/userhome/student/kede/openai/reinforce/lib/python3.5/site-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSans.ttf') with score of 0.050000
+2018-05-04 21:21:32,798 - INFO - EPSILON: 0.9796011999994134 462 lepesszam mellett, reward: -46
+2018-05-04 21:21:32,798 - INFO - EPSILON: 0.9796011999994134 462 lepesszam mellett, reward: -46
+2018-05-04 21:21:32,798 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 21:21:32,798 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 21:21:34,558 - DEBUG - random
+2018-05-04 21:21:34,559 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 21:21:34,561 - DEBUG - random
+2018-05-04 21:21:34,561 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 21:21:41,995 - DEBUG - random
+2018-05-04 21:21:41,995 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 21:21:48,767 - DEBUG - random
+2018-05-04 21:21:48,768 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 21:21:54,244 - DEBUG - random
+2018-05-04 21:21:54,244 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 21:21:59,077 - DEBUG - random
+2018-05-04 21:21:59,077 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 21:22:05,205 - DEBUG - random
+2018-05-04 21:22:05,205 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 21:22:11,525 - DEBUG - random
+2018-05-04 21:22:11,525 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 21:22:17,177 - DEBUG - random
+2018-05-04 21:22:17,177 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 21:22:21,345 - DEBUG - random
+2018-05-04 21:22:21,345 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 21:22:25,452 - DEBUG - [ 0.922597    0.33057174  0.13491438 -0.01445259  0.16829176 -0.64636385]
+2018-05-04 21:22:25,452 - DEBUG - [0. 1. 0. 0. 0. 0.]
+2018-05-04 21:22:29,282 - DEBUG - random
+2018-05-04 21:22:29,282 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 21:22:33,737 - DEBUG - random
+2018-05-04 21:22:33,737 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 21:22:37,334 - DEBUG - random
+2018-05-04 21:22:37,334 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 21:22:41,658 - DEBUG - random
+2018-05-04 21:22:41,658 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 21:22:45,714 - DEBUG - random
+2018-05-04 21:22:45,714 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 21:22:49,382 - DEBUG - random
+2018-05-04 21:22:49,382 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 21:22:53,215 - DEBUG - random
+2018-05-04 21:22:53,215 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 21:22:57,138 - DEBUG - random
+2018-05-04 21:22:57,138 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 21:23:01,325 - DEBUG - random
+2018-05-04 21:23:01,325 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 21:23:05,551 - DEBUG - random
+2018-05-04 21:23:05,551 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 21:23:09,578 - DEBUG - random
+2018-05-04 21:23:09,578 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 21:23:13,343 - DEBUG - random
+2018-05-04 21:23:13,343 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 21:23:16,988 - DEBUG - random
+2018-05-04 21:23:16,988 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 21:23:21,182 - DEBUG - random
+2018-05-04 21:23:21,182 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 21:23:25,159 - DEBUG - random
+2018-05-04 21:23:25,159 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 21:23:29,322 - DEBUG - random
+2018-05-04 21:23:29,322 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 21:23:33,275 - DEBUG - random
+2018-05-04 21:23:33,275 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 21:23:37,736 - DEBUG - random
+2018-05-04 21:23:37,737 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 21:23:42,013 - DEBUG - random
+2018-05-04 21:23:42,013 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 21:23:46,747 - DEBUG - random
+2018-05-04 21:23:46,747 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 21:23:51,366 - DEBUG - random
+2018-05-04 21:23:51,366 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 21:23:56,063 - DEBUG - random
+2018-05-04 21:23:56,063 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 21:24:00,137 - DEBUG - random
+2018-05-04 21:24:00,137 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 21:24:07,191 - DEBUG - random
+2018-05-04 21:24:07,191 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 21:24:12,866 - INFO - EPSILON: 0.9775647999993549 3394 lepesszam mellett, reward: -992
+2018-05-04 21:24:12,866 - INFO - EPSILON: 0.9775647999993549 3394 lepesszam mellett, reward: -992
+2018-05-04 21:24:12,866 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 21:24:12,866 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 21:24:14,637 - DEBUG - random
+2018-05-04 21:24:14,638 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 21:24:14,640 - DEBUG - random
+2018-05-04 21:24:14,640 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 21:24:22,588 - DEBUG - random
+2018-05-04 21:24:22,588 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 21:24:27,644 - DEBUG - random
+2018-05-04 21:24:27,644 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 21:24:32,916 - DEBUG - random
+2018-05-04 21:24:32,917 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 21:24:39,271 - DEBUG - random
+2018-05-04 21:24:39,271 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 21:24:47,975 - DEBUG - random
+2018-05-04 21:24:47,975 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 21:24:53,966 - DEBUG - random
+2018-05-04 21:24:53,966 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 21:24:57,802 - DEBUG - random
+2018-05-04 21:24:57,802 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 21:25:01,951 - DEBUG - random
+2018-05-04 21:25:01,952 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 21:25:06,675 - DEBUG - random
+2018-05-04 21:25:06,675 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 21:25:14,208 - DEBUG - random
+2018-05-04 21:25:14,208 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 21:25:18,899 - DEBUG - random
+2018-05-04 21:25:18,899 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 21:25:22,371 - DEBUG - random
+2018-05-04 21:25:22,371 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 21:25:26,266 - DEBUG - random
+2018-05-04 21:25:26,266 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 21:25:30,105 - DEBUG - random
+2018-05-04 21:25:30,105 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 21:25:34,195 - DEBUG - random
+2018-05-04 21:25:34,196 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 21:25:38,339 - DEBUG - random
+2018-05-04 21:25:38,339 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 21:25:42,270 - DEBUG - random
+2018-05-04 21:25:42,270 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 21:25:46,194 - DEBUG - [ 0.8969832   0.28037807  0.15585959  0.0183903   0.14228241 -0.6662808 ]
+2018-05-04 21:25:46,195 - DEBUG - [0. 1. 0. 0. 0. 0.]
+2018-05-04 21:25:51,342 - DEBUG - random
+2018-05-04 21:25:51,342 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 21:25:57,444 - DEBUG - [ 0.88965595  0.29419646  0.15225086  0.01246949  0.14977531 -0.65682656]
+2018-05-04 21:25:57,445 - DEBUG - [0. 1. 0. 0. 0. 0.]
+2018-05-04 21:25:58,184 - INFO - EPSILON: 0.9763575999993201 2012 lepesszam mellett, reward: -362
+2018-05-04 21:25:58,184 - INFO - EPSILON: 0.9763575999993201 2012 lepesszam mellett, reward: -362
+2018-05-04 21:25:58,184 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 21:25:58,184 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 21:25:59,859 - DEBUG - random
+2018-05-04 21:25:59,860 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 21:25:59,862 - DEBUG - random
+2018-05-04 21:25:59,862 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 21:26:05,130 - DEBUG - random
+2018-05-04 21:26:05,130 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 21:26:13,347 - DEBUG - random
+2018-05-04 21:26:13,347 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 21:26:19,459 - DEBUG - random
+2018-05-04 21:26:19,460 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 21:26:25,704 - DEBUG - random
+2018-05-04 21:26:25,704 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 21:26:30,649 - DEBUG - random
+2018-05-04 21:26:30,650 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 21:26:36,538 - DEBUG - random
+2018-05-04 21:26:36,539 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 21:26:42,470 - DEBUG - random
+2018-05-04 21:26:42,470 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 21:26:47,954 - DEBUG - random
+2018-05-04 21:26:47,954 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 21:26:54,639 - DEBUG - random
+2018-05-04 21:26:54,639 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 21:27:01,919 - DEBUG - random
+2018-05-04 21:27:01,919 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 21:27:06,133 - DEBUG - random
+2018-05-04 21:27:06,134 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 21:27:10,348 - DEBUG - random
+2018-05-04 21:27:10,348 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 21:27:13,653 - DEBUG - random
+2018-05-04 21:27:13,653 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 21:27:20,159 - DEBUG - random
+2018-05-04 21:27:20,159 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 21:27:25,124 - INFO - EPSILON: 0.9754605999992944 1495 lepesszam mellett, reward: 31
+2018-05-04 21:27:25,124 - INFO - EPSILON: 0.9754605999992944 1495 lepesszam mellett, reward: 31
+2018-05-04 21:27:25,124 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 21:27:25,124 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 21:27:27,043 - DEBUG - random
+2018-05-04 21:27:27,043 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 21:27:27,045 - DEBUG - random
+2018-05-04 21:27:27,045 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 21:27:32,958 - DEBUG - random
+2018-05-04 21:27:32,958 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 21:27:38,638 - INFO - EPSILON: 0.9753459999992911 191 lepesszam mellett, reward: 49
+2018-05-04 21:27:38,638 - INFO - EPSILON: 0.9753459999992911 191 lepesszam mellett, reward: 49
+2018-05-04 21:27:38,638 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 21:27:38,638 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 21:27:40,304 - DEBUG - random
+2018-05-04 21:27:40,304 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 21:27:40,306 - DEBUG - random
+2018-05-04 21:27:40,306 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 21:27:45,366 - DEBUG - random
+2018-05-04 21:27:45,366 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 21:27:51,266 - DEBUG - random
+2018-05-04 21:27:51,266 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 21:27:57,448 - DEBUG - random
+2018-05-04 21:27:57,448 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 21:28:02,574 - DEBUG - random
+2018-05-04 21:28:02,574 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 21:28:06,667 - DEBUG - random
+2018-05-04 21:28:06,667 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 21:28:12,223 - DEBUG - random
+2018-05-04 21:28:12,223 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 21:28:20,050 - DEBUG - random
+2018-05-04 21:28:20,050 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 21:28:28,082 - DEBUG - random
+2018-05-04 21:28:28,082 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 21:28:33,797 - DEBUG - random
+2018-05-04 21:28:33,798 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 21:28:39,154 - DEBUG - random
+2018-05-04 21:28:39,154 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 21:28:45,685 - DEBUG - random
+2018-05-04 21:28:45,686 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 21:28:51,874 - DEBUG - random
+2018-05-04 21:28:51,874 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 21:28:55,857 - DEBUG - random
+2018-05-04 21:28:55,857 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 21:28:58,412 - INFO - EPSILON: 0.9745383999992678 1346 lepesszam mellett, reward: -40
+2018-05-04 21:28:58,412 - INFO - EPSILON: 0.9745383999992678 1346 lepesszam mellett, reward: -40
+2018-05-04 21:28:58,413 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 21:28:58,413 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 21:29:00,201 - DEBUG - random
+2018-05-04 21:29:00,202 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 21:29:00,204 - DEBUG - random
+2018-05-04 21:29:00,204 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 21:29:06,641 - DEBUG - random
+2018-05-04 21:29:06,641 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 21:29:12,182 - DEBUG - random
+2018-05-04 21:29:12,182 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 21:29:15,864 - DEBUG - random
+2018-05-04 21:29:15,864 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 21:29:20,686 - DEBUG - random
+2018-05-04 21:29:20,686 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 21:29:24,883 - DEBUG - random
+2018-05-04 21:29:24,883 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 21:29:29,352 - DEBUG - random
+2018-05-04 21:29:29,352 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 21:29:33,603 - DEBUG - random
+2018-05-04 21:29:33,603 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-04 21:29:41,032 - DEBUG - random
+2018-05-04 21:29:41,033 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 21:29:45,930 - DEBUG - random
+2018-05-04 21:29:45,931 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 21:29:49,695 - DEBUG - random
+2018-05-04 21:29:49,695 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 21:29:53,402 - DEBUG - random
+2018-05-04 21:29:53,402 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 21:29:57,222 - DEBUG - random
+2018-05-04 21:29:57,223 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 21:30:01,520 - DEBUG - random
+2018-05-04 21:30:01,521 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 21:30:05,082 - DEBUG - random
+2018-05-04 21:30:05,082 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 21:30:08,719 - DEBUG - random
+2018-05-04 21:30:08,719 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 21:30:12,690 - DEBUG - random
+2018-05-04 21:30:12,690 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 21:30:17,114 - DEBUG - random
+2018-05-04 21:30:17,114 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 21:30:24,911 - DEBUG - random
+2018-05-04 21:30:24,911 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 21:30:30,844 - DEBUG - random
+2018-05-04 21:30:30,844 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 21:30:35,522 - DEBUG - random
+2018-05-04 21:30:35,522 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 21:30:39,462 - DEBUG - random
+2018-05-04 21:30:39,462 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 21:30:43,892 - DEBUG - random
+2018-05-04 21:30:43,892 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 21:30:47,993 - DEBUG - [ 0.84431773  0.26496077  0.13937914  0.02704689  0.1498424  -0.65883255]
+2018-05-04 21:30:47,994 - DEBUG - [0. 1. 0. 0. 0. 0.]
+2018-05-04 21:30:51,769 - DEBUG - random
+2018-05-04 21:30:51,769 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-04 21:30:55,809 - DEBUG - random
+2018-05-04 21:30:55,810 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-04 21:31:00,106 - DEBUG - random
+2018-05-04 21:31:00,106 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 21:31:04,308 - DEBUG - random
+2018-05-04 21:31:04,309 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 21:31:08,051 - DEBUG - random
+2018-05-04 21:31:08,051 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-04 21:31:12,705 - DEBUG - random
+2018-05-04 21:31:12,705 - DEBUG - [0. 1. 0. 0. 1. 0.]
+2018-05-04 21:31:16,586 - DEBUG - random
+2018-05-04 21:31:16,586 - DEBUG - [0. 0. 0. 1. 0. 0.]

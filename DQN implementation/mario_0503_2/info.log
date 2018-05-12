@@ -1,0 +1,428 @@
+2018-05-04 20:09:04,289 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:09:04,289 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:09:09,090 - INFO - Could not load matplotlib icon: bad option "foobar": must be aspect, attributes, client, colormapwindows, command, deiconify, focusmodel, forget, frame, geometry, grid, group, iconbitmap, iconify, iconmask, iconname, iconphoto, iconposition, iconwindow, manage, maxsize, minsize, overrideredirect, positionfrom, protocol, resizable, sizefrom, stackorder, state, title, transient, or withdraw
+2018-05-04 20:09:09,090 - INFO - Could not load matplotlib icon: bad option "foobar": must be aspect, attributes, client, colormapwindows, command, deiconify, focusmodel, forget, frame, geometry, grid, group, iconbitmap, iconify, iconmask, iconname, iconphoto, iconposition, iconwindow, manage, maxsize, minsize, overrideredirect, positionfrom, protocol, resizable, sizefrom, stackorder, state, title, transient, or withdraw
+2018-05-04 20:09:35,827 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:09:35,827 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:10:47,331 - INFO - EPSILON: 1.0 2017 lepesszam mellett, reward: -421
+2018-05-04 20:10:47,331 - INFO - EPSILON: 1.0 2017 lepesszam mellett, reward: -421
+2018-05-04 20:10:47,331 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:10:47,331 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:11:07,930 - INFO - EPSILON: 1.0 258 lepesszam mellett, reward: 214
+2018-05-04 20:11:07,930 - INFO - EPSILON: 1.0 258 lepesszam mellett, reward: 214
+2018-05-04 20:11:07,930 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:11:07,930 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:12:09,511 - INFO - EPSILON: 1.0 1399 lepesszam mellett, reward: 55
+2018-05-04 20:12:09,511 - INFO - EPSILON: 1.0 1399 lepesszam mellett, reward: 55
+2018-05-04 20:12:09,512 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:12:09,512 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:12:56,360 - INFO - EPSILON: 1.0 1062 lepesszam mellett, reward: 48
+2018-05-04 20:12:56,360 - INFO - EPSILON: 1.0 1062 lepesszam mellett, reward: 48
+2018-05-04 20:12:56,361 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:12:56,361 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:13:07,658 - INFO - EPSILON: 1.0 237 lepesszam mellett, reward: 41
+2018-05-04 20:13:07,658 - INFO - EPSILON: 1.0 237 lepesszam mellett, reward: 41
+2018-05-04 20:13:07,658 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:13:07,658 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:14:41,022 - INFO - EPSILON: 1.0 2486 lepesszam mellett, reward: -340
+2018-05-04 20:14:41,022 - INFO - EPSILON: 1.0 2486 lepesszam mellett, reward: -340
+2018-05-04 20:14:41,023 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:14:41,023 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:15:32,374 - INFO - EPSILON: 1.0 1114 lepesszam mellett, reward: -82
+2018-05-04 20:15:32,374 - INFO - EPSILON: 1.0 1114 lepesszam mellett, reward: -82
+2018-05-04 20:15:32,374 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:15:32,374 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:15:41,459 - INFO - EPSILON: 1.0 151 lepesszam mellett, reward: 63
+2018-05-04 20:15:41,459 - INFO - EPSILON: 1.0 151 lepesszam mellett, reward: 63
+2018-05-04 20:15:41,459 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:15:41,459 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:15:52,136 - INFO - EPSILON: 1.0 220 lepesszam mellett, reward: 46
+2018-05-04 20:15:52,136 - INFO - EPSILON: 1.0 220 lepesszam mellett, reward: 46
+2018-05-04 20:15:52,136 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:15:52,136 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:17:39,270 - INFO - EPSILON: 1.0 2973 lepesszam mellett, reward: -749
+2018-05-04 20:17:39,270 - INFO - EPSILON: 1.0 2973 lepesszam mellett, reward: -749
+2018-05-04 20:17:39,271 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:17:39,271 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:17:48,076 - INFO - EPSILON: 1.0 99 lepesszam mellett, reward: 85
+2018-05-04 20:17:48,076 - INFO - EPSILON: 1.0 99 lepesszam mellett, reward: 85
+2018-05-04 20:17:48,077 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:17:48,077 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:18:27,022 - INFO - EPSILON: 1.0 720 lepesszam mellett, reward: 92
+2018-05-04 20:18:27,022 - INFO - EPSILON: 1.0 720 lepesszam mellett, reward: 92
+2018-05-04 20:18:27,022 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:18:27,022 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:19:37,006 - INFO - EPSILON: 1.0 1393 lepesszam mellett, reward: 121
+2018-05-04 20:19:37,006 - INFO - EPSILON: 1.0 1393 lepesszam mellett, reward: 121
+2018-05-04 20:19:37,007 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:19:37,007 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:19:46,621 - INFO - EPSILON: 1.0 157 lepesszam mellett, reward: 59
+2018-05-04 20:19:46,621 - INFO - EPSILON: 1.0 157 lepesszam mellett, reward: 59
+2018-05-04 20:19:46,622 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:19:46,622 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:20:56,052 - INFO - EPSILON: 1.0 1736 lepesszam mellett, reward: -272
+2018-05-04 20:20:56,052 - INFO - EPSILON: 1.0 1736 lepesszam mellett, reward: -272
+2018-05-04 20:20:56,052 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:20:56,052 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:21:04,325 - INFO - EPSILON: 1.0 89 lepesszam mellett, reward: 81
+2018-05-04 20:21:04,325 - INFO - EPSILON: 1.0 89 lepesszam mellett, reward: 81
+2018-05-04 20:21:04,325 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:21:04,325 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:22:21,216 - INFO - EPSILON: 1.0 1922 lepesszam mellett, reward: -240
+2018-05-04 20:22:21,216 - INFO - EPSILON: 1.0 1922 lepesszam mellett, reward: -240
+2018-05-04 20:22:21,217 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:22:21,217 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:22:30,346 - INFO - EPSILON: 1.0 136 lepesszam mellett, reward: 88
+2018-05-04 20:22:30,346 - INFO - EPSILON: 1.0 136 lepesszam mellett, reward: 88
+2018-05-04 20:22:30,346 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:22:30,346 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:22:41,290 - INFO - EPSILON: 1.0 188 lepesszam mellett, reward: 70
+2018-05-04 20:22:41,290 - INFO - EPSILON: 1.0 188 lepesszam mellett, reward: 70
+2018-05-04 20:22:41,290 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:22:41,290 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:23:09,558 - INFO - EPSILON: 1.0 510 lepesszam mellett, reward: 124
+2018-05-04 20:23:09,558 - INFO - EPSILON: 1.0 510 lepesszam mellett, reward: 124
+2018-05-04 20:23:09,559 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:23:09,559 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:23:23,033 - INFO - EPSILON: 1.0 312 lepesszam mellett, reward: 36
+2018-05-04 20:23:23,033 - INFO - EPSILON: 1.0 312 lepesszam mellett, reward: 36
+2018-05-04 20:23:23,033 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:23:23,033 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:23:53,709 - INFO - EPSILON: 1.0 567 lepesszam mellett, reward: 77
+2018-05-04 20:23:53,709 - INFO - EPSILON: 1.0 567 lepesszam mellett, reward: 77
+2018-05-04 20:23:53,709 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:23:53,709 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:24:03,798 - INFO - EPSILON: 1.0 196 lepesszam mellett, reward: 28
+2018-05-04 20:24:03,798 - INFO - EPSILON: 1.0 196 lepesszam mellett, reward: 28
+2018-05-04 20:24:03,798 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:24:03,798 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:24:14,162 - INFO - EPSILON: 1.0 173 lepesszam mellett, reward: 53
+2018-05-04 20:24:14,162 - INFO - EPSILON: 1.0 173 lepesszam mellett, reward: 53
+2018-05-04 20:24:14,162 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:24:14,162 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:24:21,835 - INFO - EPSILON: 1.0 86 lepesszam mellett, reward: 78
+2018-05-04 20:24:21,835 - INFO - EPSILON: 1.0 86 lepesszam mellett, reward: 78
+2018-05-04 20:24:21,835 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:24:21,835 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:24:33,470 - INFO - EPSILON: 1.0 210 lepesszam mellett, reward: 88
+2018-05-04 20:24:33,470 - INFO - EPSILON: 1.0 210 lepesszam mellett, reward: 88
+2018-05-04 20:24:33,471 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:24:33,471 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:25:32,038 - INFO - EPSILON: 1.0 1281 lepesszam mellett, reward: 17
+2018-05-04 20:25:32,038 - INFO - EPSILON: 1.0 1281 lepesszam mellett, reward: 17
+2018-05-04 20:25:32,038 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:25:32,038 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:25:46,679 - INFO - EPSILON: 1.0 342 lepesszam mellett, reward: -78
+2018-05-04 20:25:46,679 - INFO - EPSILON: 1.0 342 lepesszam mellett, reward: -78
+2018-05-04 20:25:46,679 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:25:46,679 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:25:59,578 - INFO - EPSILON: 1.0 309 lepesszam mellett, reward: 37
+2018-05-04 20:25:59,578 - INFO - EPSILON: 1.0 309 lepesszam mellett, reward: 37
+2018-05-04 20:25:59,579 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:25:59,579 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:26:07,445 - INFO - EPSILON: 1.0 112 lepesszam mellett, reward: 90
+2018-05-04 20:26:07,445 - INFO - EPSILON: 1.0 112 lepesszam mellett, reward: 90
+2018-05-04 20:26:07,445 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:26:07,445 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:26:18,214 - INFO - EPSILON: 1.0 178 lepesszam mellett, reward: 58
+2018-05-04 20:26:18,214 - INFO - EPSILON: 1.0 178 lepesszam mellett, reward: 58
+2018-05-04 20:26:18,215 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:26:18,215 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:26:27,884 - INFO - EPSILON: 1.0 166 lepesszam mellett, reward: 42
+2018-05-04 20:26:27,884 - INFO - EPSILON: 1.0 166 lepesszam mellett, reward: 42
+2018-05-04 20:26:27,884 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:26:27,884 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:28:16,643 - INFO - EPSILON: 1.0 3138 lepesszam mellett, reward: -804
+2018-05-04 20:28:16,643 - INFO - EPSILON: 1.0 3138 lepesszam mellett, reward: -804
+2018-05-04 20:28:16,644 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:28:16,644 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:29:16,871 - INFO - EPSILON: 1.0 1683 lepesszam mellett, reward: -53
+2018-05-04 20:29:16,871 - INFO - EPSILON: 1.0 1683 lepesszam mellett, reward: -53
+2018-05-04 20:29:16,871 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:29:16,871 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:29:25,739 - INFO - EPSILON: 1.0 118 lepesszam mellett, reward: 62
+2018-05-04 20:29:25,739 - INFO - EPSILON: 1.0 118 lepesszam mellett, reward: 62
+2018-05-04 20:29:25,739 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:29:25,739 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:29:37,358 - INFO - EPSILON: 1.0 168 lepesszam mellett, reward: 56
+2018-05-04 20:29:37,358 - INFO - EPSILON: 1.0 168 lepesszam mellett, reward: 56
+2018-05-04 20:29:37,359 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:29:37,359 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:29:50,914 - INFO - EPSILON: 1.0 207 lepesszam mellett, reward: 63
+2018-05-04 20:29:50,914 - INFO - EPSILON: 1.0 207 lepesszam mellett, reward: 63
+2018-05-04 20:29:50,914 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:29:50,914 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:30:57,681 - INFO - EPSILON: 1.0 1378 lepesszam mellett, reward: -190
+2018-05-04 20:30:57,681 - INFO - EPSILON: 1.0 1378 lepesszam mellett, reward: -190
+2018-05-04 20:30:57,681 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:30:57,681 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:32:06,901 - INFO - EPSILON: 1.0 1271 lepesszam mellett, reward: -29
+2018-05-04 20:32:06,901 - INFO - EPSILON: 1.0 1271 lepesszam mellett, reward: -29
+2018-05-04 20:32:06,901 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:32:06,901 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:32:17,409 - INFO - EPSILON: 1.0 139 lepesszam mellett, reward: 95
+2018-05-04 20:32:17,409 - INFO - EPSILON: 1.0 139 lepesszam mellett, reward: 95
+2018-05-04 20:32:17,410 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:32:17,410 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:33:46,347 - INFO - EPSILON: 1.0 2036 lepesszam mellett, reward: -428
+2018-05-04 20:33:46,347 - INFO - EPSILON: 1.0 2036 lepesszam mellett, reward: -428
+2018-05-04 20:33:46,347 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:33:46,347 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:33:57,999 - INFO - EPSILON: 1.0 180 lepesszam mellett, reward: 68
+2018-05-04 20:33:57,999 - INFO - EPSILON: 1.0 180 lepesszam mellett, reward: 68
+2018-05-04 20:33:57,999 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:33:57,999 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:34:28,184 - INFO - EPSILON: 1.0 435 lepesszam mellett, reward: 193
+2018-05-04 20:34:28,184 - INFO - EPSILON: 1.0 435 lepesszam mellett, reward: 193
+2018-05-04 20:34:28,184 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:34:28,184 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:35:03,152 - INFO - EPSILON: 1.0 582 lepesszam mellett, reward: 96
+2018-05-04 20:35:03,152 - INFO - EPSILON: 1.0 582 lepesszam mellett, reward: 96
+2018-05-04 20:35:03,152 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:35:03,152 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:35:16,661 - INFO - EPSILON: 1.0 240 lepesszam mellett, reward: 14
+2018-05-04 20:35:16,661 - INFO - EPSILON: 1.0 240 lepesszam mellett, reward: 14
+2018-05-04 20:35:16,661 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:35:16,661 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:36:04,388 - INFO - EPSILON: 1.0 870 lepesszam mellett, reward: 8
+2018-05-04 20:36:04,388 - INFO - EPSILON: 1.0 870 lepesszam mellett, reward: 8
+2018-05-04 20:36:04,388 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:36:04,388 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:37:29,334 - INFO - EPSILON: 1.0 1617 lepesszam mellett, reward: -71
+2018-05-04 20:37:29,334 - INFO - EPSILON: 1.0 1617 lepesszam mellett, reward: -71
+2018-05-04 20:37:29,334 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:37:29,334 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:38:37,902 - INFO - EPSILON: 1.0 1364 lepesszam mellett, reward: 98
+2018-05-04 20:38:37,902 - INFO - EPSILON: 1.0 1364 lepesszam mellett, reward: 98
+2018-05-04 20:38:37,902 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:38:37,902 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:39:29,081 - INFO - EPSILON: 1.0 1017 lepesszam mellett, reward: -31
+2018-05-04 20:39:29,081 - INFO - EPSILON: 1.0 1017 lepesszam mellett, reward: -31
+2018-05-04 20:39:29,081 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:39:29,081 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:39:44,768 - INFO - EPSILON: 1.0 310 lepesszam mellett, reward: 34
+2018-05-04 20:39:44,768 - INFO - EPSILON: 1.0 310 lepesszam mellett, reward: 34
+2018-05-04 20:39:44,769 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:39:44,769 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:39:57,192 - INFO - EPSILON: 1.0 181 lepesszam mellett, reward: 19
+2018-05-04 20:39:57,192 - INFO - EPSILON: 1.0 181 lepesszam mellett, reward: 19
+2018-05-04 20:39:57,192 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:39:57,192 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:40:09,305 - INFO - EPSILON: 1.0 166 lepesszam mellett, reward: 70
+2018-05-04 20:40:09,305 - INFO - EPSILON: 1.0 166 lepesszam mellett, reward: 70
+2018-05-04 20:40:09,305 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:40:09,305 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:41:01,167 - INFO - EPSILON: 1.0 863 lepesszam mellett, reward: 275
+2018-05-04 20:41:01,167 - INFO - EPSILON: 1.0 863 lepesszam mellett, reward: 275
+2018-05-04 20:41:01,167 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:41:01,167 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:42:17,622 - INFO - EPSILON: 1.0 1602 lepesszam mellett, reward: 50
+2018-05-04 20:42:17,622 - INFO - EPSILON: 1.0 1602 lepesszam mellett, reward: 50
+2018-05-04 20:42:17,622 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:42:17,622 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:43:35,140 - INFO - EPSILON: 1.0 1413 lepesszam mellett, reward: 87
+2018-05-04 20:43:35,140 - INFO - EPSILON: 1.0 1413 lepesszam mellett, reward: 87
+2018-05-04 20:43:35,140 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:43:35,140 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:45:08,028 - INFO - EPSILON: 1.0 1801 lepesszam mellett, reward: -199
+2018-05-04 20:45:08,028 - INFO - EPSILON: 1.0 1801 lepesszam mellett, reward: -199
+2018-05-04 20:45:08,028 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:45:08,028 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:46:08,141 - INFO - EPSILON: 1.0 1142 lepesszam mellett, reward: -18
+2018-05-04 20:46:08,141 - INFO - EPSILON: 1.0 1142 lepesszam mellett, reward: -18
+2018-05-04 20:46:08,141 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:46:08,141 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:46:56,603 - INFO - EPSILON: 1.0 859 lepesszam mellett, reward: 165
+2018-05-04 20:46:56,603 - INFO - EPSILON: 1.0 859 lepesszam mellett, reward: 165
+2018-05-04 20:46:56,603 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:46:56,603 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:49:18,896 - INFO - EPSILON: 0.9994905999999854 3270 lepesszam mellett, reward: -782
+2018-05-04 20:49:18,896 - INFO - EPSILON: 0.9994905999999854 3270 lepesszam mellett, reward: -782
+2018-05-04 20:49:18,896 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:49:18,896 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:49:33,595 - INFO - EPSILON: 0.9993573999999815 222 lepesszam mellett, reward: 26
+2018-05-04 20:49:33,595 - INFO - EPSILON: 0.9993573999999815 222 lepesszam mellett, reward: 26
+2018-05-04 20:49:33,595 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:49:33,595 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:50:58,330 - INFO - EPSILON: 0.9985317999999578 1376 lepesszam mellett, reward: 60
+2018-05-04 20:50:58,330 - INFO - EPSILON: 0.9985317999999578 1376 lepesszam mellett, reward: 60
+2018-05-04 20:50:58,330 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:50:58,330 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:52:36,052 - INFO - EPSILON: 0.9974829999999276 1748 lepesszam mellett, reward: -128
+2018-05-04 20:52:36,052 - INFO - EPSILON: 0.9974829999999276 1748 lepesszam mellett, reward: -128
+2018-05-04 20:52:36,052 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:52:36,052 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:53:58,624 - INFO - EPSILON: 0.996556599999901 1544 lepesszam mellett, reward: -156
+2018-05-04 20:53:58,624 - INFO - EPSILON: 0.996556599999901 1544 lepesszam mellett, reward: -156
+2018-05-04 20:53:58,624 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:53:58,624 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:54:36,190 - INFO - EPSILON: 0.9962283999998915 547 lepesszam mellett, reward: 119
+2018-05-04 20:54:36,190 - INFO - EPSILON: 0.9962283999998915 547 lepesszam mellett, reward: 119
+2018-05-04 20:54:36,190 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:54:36,190 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:54:49,306 - INFO - EPSILON: 0.9961149999998883 189 lepesszam mellett, reward: 79
+2018-05-04 20:54:49,306 - INFO - EPSILON: 0.9961149999998883 189 lepesszam mellett, reward: 79
+2018-05-04 20:54:49,306 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:54:49,306 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:54:58,616 - INFO - EPSILON: 0.9960591999998867 93 lepesszam mellett, reward: 69
+2018-05-04 20:54:58,616 - INFO - EPSILON: 0.9960591999998867 93 lepesszam mellett, reward: 69
+2018-05-04 20:54:58,616 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:54:58,616 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:55:13,136 - INFO - EPSILON: 0.9959217999998827 229 lepesszam mellett, reward: -17
+2018-05-04 20:55:13,136 - INFO - EPSILON: 0.9959217999998827 229 lepesszam mellett, reward: -17
+2018-05-04 20:55:13,136 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:55:13,136 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:55:25,152 - INFO - EPSILON: 0.99582879999988 155 lepesszam mellett, reward: 69
+2018-05-04 20:55:25,152 - INFO - EPSILON: 0.99582879999988 155 lepesszam mellett, reward: 69
+2018-05-04 20:55:25,152 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:55:25,152 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:57:26,868 - INFO - EPSILON: 0.9943797999998384 2415 lepesszam mellett, reward: -311
+2018-05-04 20:57:26,868 - INFO - EPSILON: 0.9943797999998384 2415 lepesszam mellett, reward: -311
+2018-05-04 20:57:26,868 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:57:26,868 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:58:43,294 - INFO - EPSILON: 0.9935637999998149 1360 lepesszam mellett, reward: -54
+2018-05-04 20:58:43,294 - INFO - EPSILON: 0.9935637999998149 1360 lepesszam mellett, reward: -54
+2018-05-04 20:58:43,294 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:58:43,294 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:58:59,501 - INFO - EPSILON: 0.9934167999998107 245 lepesszam mellett, reward: 59
+2018-05-04 20:58:59,501 - INFO - EPSILON: 0.9934167999998107 245 lepesszam mellett, reward: 59
+2018-05-04 20:58:59,501 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:58:59,501 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:59:31,528 - INFO - EPSILON: 0.9931611999998033 426 lepesszam mellett, reward: 128
+2018-05-04 20:59:31,528 - INFO - EPSILON: 0.9931611999998033 426 lepesszam mellett, reward: 128
+2018-05-04 20:59:31,528 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 20:59:31,528 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 21:00:14,175 - INFO - EPSILON: 0.9927891999997926 620 lepesszam mellett, reward: 104
+2018-05-04 21:00:14,175 - INFO - EPSILON: 0.9927891999997926 620 lepesszam mellett, reward: 104
+2018-05-04 21:00:14,175 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 21:00:14,175 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 21:01:44,876 - INFO - EPSILON: 0.9917007999997614 1814 lepesszam mellett, reward: -378
+2018-05-04 21:01:44,876 - INFO - EPSILON: 0.9917007999997614 1814 lepesszam mellett, reward: -378
+2018-05-04 21:01:44,876 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 21:01:44,876 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 21:02:19,187 - INFO - EPSILON: 0.9913929999997525 513 lepesszam mellett, reward: 159
+2018-05-04 21:02:19,187 - INFO - EPSILON: 0.9913929999997525 513 lepesszam mellett, reward: 159
+2018-05-04 21:02:19,188 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 21:02:19,188 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 21:02:32,752 - INFO - EPSILON: 0.9912849999997494 180 lepesszam mellett, reward: 60
+2018-05-04 21:02:32,752 - INFO - EPSILON: 0.9912849999997494 180 lepesszam mellett, reward: 60
+2018-05-04 21:02:32,752 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 21:02:32,752 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 21:02:45,087 - INFO - EPSILON: 0.9911901999997467 158 lepesszam mellett, reward: 84
+2018-05-04 21:02:45,087 - INFO - EPSILON: 0.9911901999997467 158 lepesszam mellett, reward: 84
+2018-05-04 21:02:45,088 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 21:02:45,088 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 21:02:56,407 - INFO - EPSILON: 0.9911223999997447 113 lepesszam mellett, reward: 81
+2018-05-04 21:02:56,407 - INFO - EPSILON: 0.9911223999997447 113 lepesszam mellett, reward: 81
+2018-05-04 21:02:56,407 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 21:02:56,407 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 21:03:26,996 - INFO - EPSILON: 0.990890199999738 387 lepesszam mellett, reward: 225
+2018-05-04 21:03:26,996 - INFO - EPSILON: 0.990890199999738 387 lepesszam mellett, reward: 225
+2018-05-04 21:03:26,996 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 21:03:26,996 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 21:03:37,639 - INFO - EPSILON: 0.990818199999736 120 lepesszam mellett, reward: 68
+2018-05-04 21:03:37,639 - INFO - EPSILON: 0.990818199999736 120 lepesszam mellett, reward: 68
+2018-05-04 21:03:37,639 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 21:03:37,639 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 21:04:58,470 - INFO - EPSILON: 0.9899229999997102 1492 lepesszam mellett, reward: -110
+2018-05-04 21:04:58,470 - INFO - EPSILON: 0.9899229999997102 1492 lepesszam mellett, reward: -110
+2018-05-04 21:04:58,470 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 21:04:58,470 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 21:05:11,344 - INFO - EPSILON: 0.989810799999707 187 lepesszam mellett, reward: 33
+2018-05-04 21:05:11,344 - INFO - EPSILON: 0.989810799999707 187 lepesszam mellett, reward: 33
+2018-05-04 21:05:11,345 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 21:05:11,345 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 21:05:22,331 - INFO - EPSILON: 0.9897363999997049 124 lepesszam mellett, reward: 72
+2018-05-04 21:05:22,331 - INFO - EPSILON: 0.9897363999997049 124 lepesszam mellett, reward: 72
+2018-05-04 21:05:22,331 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 21:05:22,331 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 21:05:36,920 - INFO - EPSILON: 0.9896205999997015 193 lepesszam mellett, reward: 59
+2018-05-04 21:05:36,920 - INFO - EPSILON: 0.9896205999997015 193 lepesszam mellett, reward: 59
+2018-05-04 21:05:36,920 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 21:05:36,920 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 21:06:14,265 - INFO - EPSILON: 0.9892749999996916 576 lepesszam mellett, reward: 146
+2018-05-04 21:06:14,265 - INFO - EPSILON: 0.9892749999996916 576 lepesszam mellett, reward: 146
+2018-05-04 21:06:14,265 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 21:06:14,265 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 21:06:25,851 - INFO - EPSILON: 0.9891909999996892 140 lepesszam mellett, reward: 74
+2018-05-04 21:06:25,851 - INFO - EPSILON: 0.9891909999996892 140 lepesszam mellett, reward: 74
+2018-05-04 21:06:25,851 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 21:06:25,851 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 21:08:44,364 - INFO - EPSILON: 0.9875067999996407 2807 lepesszam mellett, reward: -827
+2018-05-04 21:08:44,364 - INFO - EPSILON: 0.9875067999996407 2807 lepesszam mellett, reward: -827
+2018-05-04 21:08:44,364 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 21:08:44,364 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 21:10:28,305 - INFO - EPSILON: 0.986369199999608 1896 lepesszam mellett, reward: -136
+2018-05-04 21:10:28,305 - INFO - EPSILON: 0.986369199999608 1896 lepesszam mellett, reward: -136
+2018-05-04 21:10:28,305 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 21:10:28,305 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 21:11:10,432 - INFO - EPSILON: 0.9860175999995979 586 lepesszam mellett, reward: 102
+2018-05-04 21:11:10,432 - INFO - EPSILON: 0.9860175999995979 586 lepesszam mellett, reward: 102
+2018-05-04 21:11:10,432 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 21:11:10,432 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 21:11:35,837 - INFO - EPSILON: 0.9857043999995889 522 lepesszam mellett, reward: -42
+2018-05-04 21:11:35,837 - INFO - EPSILON: 0.9857043999995889 522 lepesszam mellett, reward: -42
+2018-05-04 21:11:35,837 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 21:11:35,837 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 21:12:22,872 - INFO - EPSILON: 0.9853305999995782 623 lepesszam mellett, reward: 225
+2018-05-04 21:12:22,872 - INFO - EPSILON: 0.9853305999995782 623 lepesszam mellett, reward: 225
+2018-05-04 21:12:22,873 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 21:12:22,873 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 21:12:34,956 - INFO - EPSILON: 0.9852447999995757 143 lepesszam mellett, reward: 35
+2018-05-04 21:12:34,956 - INFO - EPSILON: 0.9852447999995757 143 lepesszam mellett, reward: 35
+2018-05-04 21:12:34,956 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 21:12:34,956 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 21:13:36,219 - INFO - EPSILON: 0.9846891999995597 926 lepesszam mellett, reward: 66
+2018-05-04 21:13:36,219 - INFO - EPSILON: 0.9846891999995597 926 lepesszam mellett, reward: 66
+2018-05-04 21:13:36,220 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 21:13:36,220 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 21:13:50,460 - INFO - EPSILON: 0.9845553999995559 223 lepesszam mellett, reward: 3
+2018-05-04 21:13:50,460 - INFO - EPSILON: 0.9845553999995559 223 lepesszam mellett, reward: 3
+2018-05-04 21:13:50,460 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 21:13:50,460 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 21:15:15,116 - INFO - EPSILON: 0.9836835999995308 1453 lepesszam mellett, reward: -45
+2018-05-04 21:15:15,116 - INFO - EPSILON: 0.9836835999995308 1453 lepesszam mellett, reward: -45
+2018-05-04 21:15:15,116 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 21:15:15,116 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 21:16:53,773 - INFO - EPSILON: 0.9825993999994996 1807 lepesszam mellett, reward: -179
+2018-05-04 21:16:53,773 - INFO - EPSILON: 0.9825993999994996 1807 lepesszam mellett, reward: -179
+2018-05-04 21:16:53,773 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 21:16:53,773 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 21:18:07,621 - INFO - EPSILON: 0.9818727999994787 1211 lepesszam mellett, reward: 73
+2018-05-04 21:18:07,621 - INFO - EPSILON: 0.9818727999994787 1211 lepesszam mellett, reward: 73
+2018-05-04 21:18:07,621 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 21:18:07,621 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 21:18:55,046 - INFO - EPSILON: 0.9814581999994668 691 lepesszam mellett, reward: 187
+2018-05-04 21:18:55,046 - INFO - EPSILON: 0.9814581999994668 691 lepesszam mellett, reward: 187
+2018-05-04 21:18:55,046 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 21:18:55,046 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 21:21:09,342 - INFO - EPSILON: 0.9798783999994214 2633 lepesszam mellett, reward: -363
+2018-05-04 21:21:09,342 - INFO - EPSILON: 0.9798783999994214 2633 lepesszam mellett, reward: -363
+2018-05-04 21:21:09,342 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 21:21:09,342 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 21:21:32,632 - INFO - Could not load matplotlib icon: bad option "foobar": must be aspect, attributes, client, colormapwindows, command, deiconify, focusmodel, forget, frame, geometry, grid, group, iconbitmap, iconify, iconmask, iconname, iconphoto, iconposition, iconwindow, manage, maxsize, minsize, overrideredirect, positionfrom, protocol, resizable, sizefrom, stackorder, state, title, transient, or withdraw
+2018-05-04 21:21:32,632 - INFO - Could not load matplotlib icon: bad option "foobar": must be aspect, attributes, client, colormapwindows, command, deiconify, focusmodel, forget, frame, geometry, grid, group, iconbitmap, iconify, iconmask, iconname, iconphoto, iconposition, iconwindow, manage, maxsize, minsize, overrideredirect, positionfrom, protocol, resizable, sizefrom, stackorder, state, title, transient, or withdraw
+2018-05-04 21:21:32,798 - INFO - EPSILON: 0.9796011999994134 462 lepesszam mellett, reward: -46
+2018-05-04 21:21:32,798 - INFO - EPSILON: 0.9796011999994134 462 lepesszam mellett, reward: -46
+2018-05-04 21:21:32,798 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 21:21:32,798 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 21:24:12,866 - INFO - EPSILON: 0.9775647999993549 3394 lepesszam mellett, reward: -992
+2018-05-04 21:24:12,866 - INFO - EPSILON: 0.9775647999993549 3394 lepesszam mellett, reward: -992
+2018-05-04 21:24:12,866 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 21:24:12,866 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 21:25:58,184 - INFO - EPSILON: 0.9763575999993201 2012 lepesszam mellett, reward: -362
+2018-05-04 21:25:58,184 - INFO - EPSILON: 0.9763575999993201 2012 lepesszam mellett, reward: -362
+2018-05-04 21:25:58,184 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 21:25:58,184 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 21:27:25,124 - INFO - EPSILON: 0.9754605999992944 1495 lepesszam mellett, reward: 31
+2018-05-04 21:27:25,124 - INFO - EPSILON: 0.9754605999992944 1495 lepesszam mellett, reward: 31
+2018-05-04 21:27:25,124 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 21:27:25,124 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 21:27:38,638 - INFO - EPSILON: 0.9753459999992911 191 lepesszam mellett, reward: 49
+2018-05-04 21:27:38,638 - INFO - EPSILON: 0.9753459999992911 191 lepesszam mellett, reward: 49
+2018-05-04 21:27:38,638 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 21:27:38,638 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 21:28:58,412 - INFO - EPSILON: 0.9745383999992678 1346 lepesszam mellett, reward: -40
+2018-05-04 21:28:58,412 - INFO - EPSILON: 0.9745383999992678 1346 lepesszam mellett, reward: -40
+2018-05-04 21:28:58,413 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-04 21:28:58,413 - INFO - Making new env: SuperMarioBros-1-1-v0

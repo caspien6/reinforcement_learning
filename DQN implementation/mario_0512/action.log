@@ -1,0 +1,1073 @@
+2018-05-12 12:31:05,007 - DEBUG - param: "['Xvfb', '-help']" 
+2018-05-12 12:31:05,008 - DEBUG - command: ['Xvfb', '-help']
+2018-05-12 12:31:05,008 - DEBUG - joined command: Xvfb -help
+2018-05-12 12:31:05,041 - DEBUG - process was started (pid=3406)
+2018-05-12 12:31:05,070 - DEBUG - process has ended
+2018-05-12 12:31:05,070 - DEBUG - return code=0
+2018-05-12 12:31:05,070 - DEBUG - stdout=
+2018-05-12 12:31:05,071 - DEBUG - stderr=use: X [:<display>] [option]
+-a #                   default pointer acceleration (factor)
+-ac                    disable access control restrictions
+-audit int             set audit trail level
+-auth file             select authorization file
+-br                    create root window with black background
++bs                    enable any backing store support
+-bs                    disable any backing store support
+-c                     turns off key-click
+c #                    key-click volume (0-100)
+-cc int                default color visual class
+-nocursor              disable the cursor
+-core                  generate core dump on fatal error
+-displayfd fd          file descriptor to write display number to when ready to connect
+-dpi int               screen resolution in dots per inch
+-dpms                  disables VESA DPMS monitor control
+-deferglyphs [none|all|16] defer loading of [no|all|16-bit] glyphs
+-f #                   bell base (0-100)
+-fc string             cursor font
+-fn string             default font name
+-fp string             default font path
+-help                  prints message with these options
++iglx                  Allow creating indirect GLX contexts
+-iglx                  Prohibit creating indirect GLX contexts (default)
+-I                     ignore all remaining arguments
+-ld int                limit data space to N Kb
+-lf int                limit number of open files to N
+-ls int                limit stack space to N Kb
+-nolock                disable the locking mechanism
+-maxclients n          set maximum number of clients (power of two)
+-nolisten string       don't listen on protocol
+-listen string         listen on protocol
+-noreset               don't reset after last client exists
+-background [none]     create root window with no background
+-reset                 reset after last client exists
+-p #                   screen-saver pattern duration (minutes)
+-pn                    accept failure to listen on all ports
+-nopn                  reject failure to listen on all ports
+-r                     turns off auto-repeat
+r                      turns on auto-repeat 
+-render [default|mono|gray|color] set render color alloc policy
+-retro                 start with classic stipple and cursor
+-s #                   screen-saver timeout (minutes)
+-seat string           seat to run on
+-t #                   default pointer threshold (pixels/t)
+-terminate             terminate at server reset
+-to #                  connection time out
+-tst                   disable testing extensions
+ttyxx                  server started from init on /dev/ttyxx
+v                      video blanking for screen-saver
+-v                     screen-saver without video blanking
+-wm                    WhenMapped default backing-store
+-wr                    create root window with white background
+-maxbigreqsize         set maximal bigrequest size 
++xinerama              Enable XINERAMA extension
+-xinerama              Disable XINERAMA extension
+-dumbSched             Disable smart scheduling, enable old behavior
+-schedInterval int     Set scheduler interval in msec
+-sigstop               Enable SIGSTOP based startup
++extension name        Enable extension
+-extension name        Disable extension
+-query host-name       contact named host for XDMCP
+-broadcast             broadcast for XDMCP
+-multicast [addr [hops]] IPv6 multicast for XDMCP
+-indirect host-name    contact named host for indirect XDMCP
+-port port-num         UDP port number to send messages to
+-from local-address    specify the local address to connect from
+-once                  Terminate server after one session
+-class display-class   specify display class to send in manage
+-cookie xdm-auth-bits  specify the magic cookie for XDMCP
+-displayID display-id  manufacturer display ID for request
+[+-]accessx [ timeout [ timeout_mask [ feedback [ options_mask] ] ] ]
+                       enable/disable accessx key sequences
+-ardelay               set XKB autorepeat delay
+-arinterval            set XKB autorepeat interval
+-screen scrn WxHxD     set screen's width, height, depth
+-pixdepths list-of-int support given pixmap depths
++/-render		   turn on/off RENDER extension support(default on)
+-linebias n            adjust thin line pixelization
+-blackpixel n          pixel value for black
+-whitepixel n          pixel value for white
+-fbdir directory       put framebuffers in mmap'ed files in directory
+-shmem                 put framebuffers in shared memory
+2018-05-12 12:31:05,074 - DEBUG - param: "['xauth', '-h']" 
+2018-05-12 12:31:05,074 - DEBUG - command: ['xauth', '-h']
+2018-05-12 12:31:05,075 - DEBUG - joined command: xauth -h
+2018-05-12 12:31:05,083 - DEBUG - process was started (pid=3407)
+2018-05-12 12:31:05,084 - DEBUG - process has ended
+2018-05-12 12:31:05,085 - DEBUG - return code=1
+2018-05-12 12:31:05,085 - DEBUG - stdout=
+2018-05-12 12:31:05,085 - DEBUG - stderr=usage:  xauth [-options ...] [command arg ...]
+
+where options include:
+    -f authfilename                name of authority file to use
+    -v                             turn on extra messages
+    -q                             turn off extra messages
+    -i                             ignore locks on authority file
+    -b                             break locks on authority file
+    -V                             show version number of xauth
+
+and commands have the following syntax:
+
+    add dpyname protoname hexkey   add entry
+    exit                           save changes and exit program
+    extract filename dpyname...    extract entries into file
+    help [topic]                   print help
+    info                           print information about entries
+    list [dpyname...]              list entries
+    merge filename...              merge entries from files
+    nextract filename dpyname...   numerically extract entries
+    nlist [dpyname...]             numerically list entries
+    nmerge filename...             numerically merge entries
+    quit                           abort changes and exit program
+    remove dpyname...              remove entries
+    source filename                read commands from file
+    version                        show version number of xauth
+    ?                              list available commands
+    generate dpyname protoname [options]  use server to generate entry
+    options are:
+      timeout n    authorization expiration time in seconds
+      trusted      clients using this entry are trusted
+      untrusted    clients using this entry are untrusted
+      group n      clients using this entry belong to application group n
+      data hexkey  auth protocol specific data needed to generate the entry
+
+
+A dash may be used with the "merge" and "source" to read from the
+standard input.  Commands beginning with "n" use numeric format.
+
+2018-05-12 12:31:05,087 - DEBUG - param: "['Xvfb', '-br', '-nolisten', 'tcp', '-screen', '0', '1400x900x24', ':1008']" 
+2018-05-12 12:31:05,087 - DEBUG - command: ['Xvfb', '-br', '-nolisten', 'tcp', '-screen', '0', '1400x900x24', ':1008']
+2018-05-12 12:31:05,087 - DEBUG - joined command: Xvfb -br -nolisten tcp -screen 0 1400x900x24 :1008
+2018-05-12 12:31:05,088 - DEBUG - param: "['xauth', '-h']" 
+2018-05-12 12:31:05,088 - DEBUG - command: ['xauth', '-h']
+2018-05-12 12:31:05,088 - DEBUG - joined command: xauth -h
+2018-05-12 12:31:05,094 - DEBUG - process was started (pid=3408)
+2018-05-12 12:31:05,096 - DEBUG - process has ended
+2018-05-12 12:31:05,096 - DEBUG - return code=1
+2018-05-12 12:31:05,096 - DEBUG - stdout=
+2018-05-12 12:31:05,096 - DEBUG - stderr=usage:  xauth [-options ...] [command arg ...]
+
+where options include:
+    -f authfilename                name of authority file to use
+    -v                             turn on extra messages
+    -q                             turn off extra messages
+    -i                             ignore locks on authority file
+    -b                             break locks on authority file
+    -V                             show version number of xauth
+
+and commands have the following syntax:
+
+    add dpyname protoname hexkey   add entry
+    exit                           save changes and exit program
+    extract filename dpyname...    extract entries into file
+    help [topic]                   print help
+    info                           print information about entries
+    list [dpyname...]              list entries
+    merge filename...              merge entries from files
+    nextract filename dpyname...   numerically extract entries
+    nlist [dpyname...]             numerically list entries
+    nmerge filename...             numerically merge entries
+    quit                           abort changes and exit program
+    remove dpyname...              remove entries
+    source filename                read commands from file
+    version                        show version number of xauth
+    ?                              list available commands
+    generate dpyname protoname [options]  use server to generate entry
+    options are:
+      timeout n    authorization expiration time in seconds
+      trusted      clients using this entry are trusted
+      untrusted    clients using this entry are untrusted
+      group n      clients using this entry belong to application group n
+      data hexkey  auth protocol specific data needed to generate the entry
+
+
+A dash may be used with the "merge" and "source" to read from the
+standard input.  Commands beginning with "n" use numeric format.
+
+2018-05-12 12:31:05,099 - DEBUG - param: "['Xvfb', '-br', '-nolisten', 'tcp', '-screen', '0', '1400x900x24', ':1009']" 
+2018-05-12 12:31:05,099 - DEBUG - command: ['Xvfb', '-br', '-nolisten', 'tcp', '-screen', '0', '1400x900x24', ':1009']
+2018-05-12 12:31:05,099 - DEBUG - joined command: Xvfb -br -nolisten tcp -screen 0 1400x900x24 :1009
+2018-05-12 12:31:05,118 - DEBUG - process was started (pid=3409)
+2018-05-12 12:31:05,119 - DEBUG - DISPLAY=:1009
+2018-05-12 12:31:05,487 - INFO - ACTION_SET: 6
+2018-05-12 12:31:05,488 - INFO - BATCH_SIZE: 32
+2018-05-12 12:31:05,488 - INFO - UPDATE_FREQUENCY: 4
+2018-05-12 12:31:05,488 - INFO - FRAME_COUNT_FOR_ONE_PICTURE: 4
+2018-05-12 12:31:05,488 - INFO - EXPLORATION_STEPS: 2000000
+2018-05-12 12:31:05,488 - INFO - INITIAL_EPSILON: 1.0
+2018-05-12 12:31:05,488 - INFO - FINAL_EPSILON: 0.1
+2018-05-12 12:31:05,488 - INFO - INITIAL_REPLAY_SIZE: 60000
+2018-05-12 12:31:05,488 - INFO - NUM_REPLAY_MEMORY: 400000
+2018-05-12 12:31:05,488 - INFO - LEARNING_FACTOR: 0.00027
+2018-05-12 12:31:05,488 - INFO - INFO_GRAPH_WEIGHTS_DIR: ./mario_0512/
+2018-05-12 12:31:05,555 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-12 12:31:05,555 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-12 12:31:15,080 - DEBUG - random
+2018-05-12 12:31:15,081 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-12 12:31:15,089 - DEBUG - random
+2018-05-12 12:31:15,090 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-12 12:31:21,510 - DEBUG - random
+2018-05-12 12:31:21,511 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-12 12:31:25,502 - INFO - EPSILON: 1.0 156 lepesszam mellett, reward: 58  eredeti reward: 12.0297
+2018-05-12 12:31:25,502 - INFO - EPSILON: 1.0 156 lepesszam mellett, reward: 58  eredeti reward: 12.0297
+2018-05-12 12:31:25,502 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-12 12:31:25,502 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-12 12:31:27,595 - DEBUG - random
+2018-05-12 12:31:27,596 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-12 12:31:27,598 - DEBUG - random
+2018-05-12 12:31:27,598 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-12 12:31:33,374 - DEBUG - random
+2018-05-12 12:31:33,374 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-12 12:31:38,036 - INFO - EPSILON: 1.0 154 lepesszam mellett, reward: 58  eredeti reward: 15.221300000000001
+2018-05-12 12:31:38,036 - INFO - EPSILON: 1.0 154 lepesszam mellett, reward: 58  eredeti reward: 15.221300000000001
+2018-05-12 12:31:38,037 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-12 12:31:38,037 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-12 12:31:39,897 - DEBUG - random
+2018-05-12 12:31:39,897 - DEBUG - [0. 1. 0. 0. 0. 0.]
+2018-05-12 12:31:39,899 - DEBUG - random
+2018-05-12 12:31:39,899 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-12 12:31:44,958 - DEBUG - random
+2018-05-12 12:31:44,958 - DEBUG - [0. 1. 0. 0. 0. 0.]
+2018-05-12 12:31:50,875 - DEBUG - random
+2018-05-12 12:31:50,876 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-12 12:31:52,844 - INFO - EPSILON: 1.0 231 lepesszam mellett, reward: 35  eredeti reward: 12.7049
+2018-05-12 12:31:52,844 - INFO - EPSILON: 1.0 231 lepesszam mellett, reward: 35  eredeti reward: 12.7049
+2018-05-12 12:31:52,845 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-12 12:31:52,845 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-12 12:31:54,929 - DEBUG - random
+2018-05-12 12:31:54,930 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-12 12:31:54,933 - DEBUG - random
+2018-05-12 12:31:54,934 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-12 12:32:03,360 - DEBUG - random
+2018-05-12 12:32:03,360 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-12 12:32:04,100 - INFO - EPSILON: 1.0 111 lepesszam mellett, reward: 79  eredeti reward: 15.159899999999999
+2018-05-12 12:32:04,100 - INFO - EPSILON: 1.0 111 lepesszam mellett, reward: 79  eredeti reward: 15.159899999999999
+2018-05-12 12:32:04,101 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-12 12:32:04,101 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-12 12:32:06,181 - DEBUG - random
+2018-05-12 12:32:06,181 - DEBUG - [0. 1. 0. 0. 0. 0.]
+2018-05-12 12:32:06,184 - DEBUG - random
+2018-05-12 12:32:06,184 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-12 12:32:12,777 - DEBUG - random
+2018-05-12 12:32:12,777 - DEBUG - [0. 1. 0. 0. 0. 0.]
+2018-05-12 12:32:18,772 - DEBUG - random
+2018-05-12 12:32:18,772 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-12 12:32:24,094 - DEBUG - random
+2018-05-12 12:32:24,094 - DEBUG - [0. 1. 0. 0. 0. 0.]
+2018-05-12 12:32:27,624 - DEBUG - random
+2018-05-12 12:32:27,624 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-12 12:32:30,909 - DEBUG - random
+2018-05-12 12:32:30,910 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-12 12:32:37,812 - DEBUG - random
+2018-05-12 12:32:37,812 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-12 12:32:42,521 - DEBUG - random
+2018-05-12 12:32:42,521 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-12 12:32:45,819 - DEBUG - random
+2018-05-12 12:32:45,820 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-12 12:32:52,497 - DEBUG - random
+2018-05-12 12:32:52,497 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-12 12:32:56,890 - DEBUG - random
+2018-05-12 12:32:56,890 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-12 12:33:00,848 - DEBUG - random
+2018-05-12 12:33:00,848 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-12 12:33:05,016 - DEBUG - random
+2018-05-12 12:33:05,016 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-12 12:33:08,198 - DEBUG - random
+2018-05-12 12:33:08,198 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-12 12:33:11,338 - DEBUG - random
+2018-05-12 12:33:11,339 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-12 12:33:15,810 - DEBUG - random
+2018-05-12 12:33:15,810 - DEBUG - [0. 1. 0. 0. 0. 0.]
+2018-05-12 12:33:21,338 - DEBUG - random
+2018-05-12 12:33:21,338 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-12 12:33:25,544 - DEBUG - random
+2018-05-12 12:33:25,544 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-12 12:33:29,325 - DEBUG - random
+2018-05-12 12:33:29,325 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-12 12:33:32,573 - DEBUG - random
+2018-05-12 12:33:32,573 - DEBUG - [0. 1. 0. 0. 0. 0.]
+2018-05-12 12:33:36,440 - DEBUG - random
+2018-05-12 12:33:36,440 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-12 12:33:39,986 - DEBUG - random
+2018-05-12 12:33:39,986 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-12 12:33:43,677 - DEBUG - random
+2018-05-12 12:33:43,677 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-12 12:33:47,585 - DEBUG - random
+2018-05-12 12:33:47,585 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-12 12:33:50,782 - DEBUG - random
+2018-05-12 12:33:50,782 - DEBUG - [0. 1. 0. 0. 0. 0.]
+2018-05-12 12:33:54,554 - DEBUG - random
+2018-05-12 12:33:54,554 - DEBUG - [0. 1. 0. 0. 0. 0.]
+2018-05-12 12:33:58,010 - DEBUG - random
+2018-05-12 12:33:58,011 - DEBUG - [0. 1. 0. 0. 0. 0.]
+2018-05-12 12:34:02,374 - DEBUG - random
+2018-05-12 12:34:02,374 - DEBUG - [0. 1. 0. 0. 0. 0.]
+2018-05-12 12:34:05,884 - DEBUG - random
+2018-05-12 12:34:05,884 - DEBUG - [0. 1. 0. 0. 0. 0.]
+2018-05-12 12:34:09,150 - DEBUG - random
+2018-05-12 12:34:09,150 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-12 12:34:12,801 - DEBUG - random
+2018-05-12 12:34:12,802 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-12 12:34:16,192 - DEBUG - random
+2018-05-12 12:34:16,192 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-12 12:34:23,833 - INFO - EPSILON: 1.0 3197 lepesszam mellett, reward: -1167  eredeti reward: 51.7402
+2018-05-12 12:34:23,833 - INFO - EPSILON: 1.0 3197 lepesszam mellett, reward: -1167  eredeti reward: 51.7402
+2018-05-12 12:34:23,833 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-12 12:34:23,833 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-12 12:34:25,971 - DEBUG - random
+2018-05-12 12:34:25,971 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-12 12:34:25,973 - DEBUG - random
+2018-05-12 12:34:25,973 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-12 12:34:30,918 - DEBUG - random
+2018-05-12 12:34:30,918 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-12 12:34:36,237 - DEBUG - random
+2018-05-12 12:34:36,237 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-12 12:34:39,493 - INFO - EPSILON: 1.0 285 lepesszam mellett, reward: -31  eredeti reward: 8.2858
+2018-05-12 12:34:39,493 - INFO - EPSILON: 1.0 285 lepesszam mellett, reward: -31  eredeti reward: 8.2858
+2018-05-12 12:34:39,493 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-12 12:34:39,493 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-12 12:34:41,633 - DEBUG - random
+2018-05-12 12:34:41,634 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-12 12:34:41,636 - DEBUG - random
+2018-05-12 12:34:41,636 - DEBUG - [0. 1. 0. 0. 0. 0.]
+2018-05-12 12:34:45,734 - DEBUG - random
+2018-05-12 12:34:45,734 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-12 12:34:54,454 - DEBUG - random
+2018-05-12 12:34:54,455 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-12 12:35:00,610 - DEBUG - random
+2018-05-12 12:35:00,610 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-12 12:35:07,208 - DEBUG - random
+2018-05-12 12:35:07,208 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-12 12:35:12,554 - DEBUG - random
+2018-05-12 12:35:12,554 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-12 12:35:15,827 - DEBUG - random
+2018-05-12 12:35:15,828 - DEBUG - [0. 1. 0. 0. 0. 0.]
+2018-05-12 12:35:19,764 - DEBUG - random
+2018-05-12 12:35:19,765 - DEBUG - [0. 1. 0. 0. 0. 0.]
+2018-05-12 12:35:23,526 - DEBUG - random
+2018-05-12 12:35:23,526 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-12 12:35:26,497 - DEBUG - random
+2018-05-12 12:35:26,497 - DEBUG - [0. 1. 0. 0. 0. 0.]
+2018-05-12 12:35:30,425 - DEBUG - random
+2018-05-12 12:35:30,425 - DEBUG - [0. 1. 0. 0. 0. 0.]
+2018-05-12 12:35:36,160 - DEBUG - random
+2018-05-12 12:35:36,160 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-12 12:35:39,236 - DEBUG - random
+2018-05-12 12:35:39,236 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-12 12:35:43,925 - DEBUG - random
+2018-05-12 12:35:43,925 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-12 12:35:47,889 - DEBUG - random
+2018-05-12 12:35:47,889 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-12 12:35:55,393 - DEBUG - random
+2018-05-12 12:35:55,393 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-12 12:35:58,660 - DEBUG - random
+2018-05-12 12:35:58,660 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-12 12:36:02,326 - DEBUG - random
+2018-05-12 12:36:02,326 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-12 12:36:04,770 - DEBUG - random
+2018-05-12 12:36:04,771 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-12 12:36:07,371 - DEBUG - random
+2018-05-12 12:36:07,371 - DEBUG - [0. 1. 0. 0. 0. 0.]
+2018-05-12 12:36:10,987 - DEBUG - random
+2018-05-12 12:36:10,987 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-12 12:36:14,704 - DEBUG - random
+2018-05-12 12:36:14,705 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-12 12:36:18,047 - DEBUG - random
+2018-05-12 12:36:18,047 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-12 12:36:21,088 - DEBUG - random
+2018-05-12 12:36:21,088 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-12 12:36:24,190 - DEBUG - random
+2018-05-12 12:36:24,191 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-12 12:36:27,146 - DEBUG - random
+2018-05-12 12:36:27,146 - DEBUG - [0. 1. 0. 0. 0. 0.]
+2018-05-12 12:36:30,445 - DEBUG - random
+2018-05-12 12:36:30,446 - DEBUG - [0. 1. 0. 0. 0. 0.]
+2018-05-12 12:36:33,878 - DEBUG - random
+2018-05-12 12:36:33,878 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-12 12:36:37,407 - DEBUG - random
+2018-05-12 12:36:37,408 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-12 12:36:40,519 - DEBUG - random
+2018-05-12 12:36:40,519 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-12 12:36:43,834 - DEBUG - random
+2018-05-12 12:36:43,835 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-12 12:36:47,320 - DEBUG - random
+2018-05-12 12:36:47,320 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-12 12:36:50,750 - DEBUG - random
+2018-05-12 12:36:50,751 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-12 12:36:54,354 - DEBUG - random
+2018-05-12 12:36:54,354 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-12 12:36:57,394 - DEBUG - random
+2018-05-12 12:36:57,394 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-12 12:37:01,182 - DEBUG - random
+2018-05-12 12:37:01,182 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-12 12:37:06,147 - DEBUG - random
+2018-05-12 12:37:06,147 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-12 12:37:11,652 - INFO - EPSILON: 1.0 3675 lepesszam mellett, reward: -1377  eredeti reward: 67.6367
+2018-05-12 12:37:11,652 - INFO - EPSILON: 1.0 3675 lepesszam mellett, reward: -1377  eredeti reward: 67.6367
+2018-05-12 12:37:11,653 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-12 12:37:11,653 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-12 12:37:14,049 - DEBUG - random
+2018-05-12 12:37:14,049 - DEBUG - [0. 1. 0. 0. 0. 0.]
+2018-05-12 12:37:14,052 - DEBUG - random
+2018-05-12 12:37:14,052 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-12 12:37:18,760 - DEBUG - random
+2018-05-12 12:37:18,761 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-12 12:37:24,664 - INFO - EPSILON: 1.0 167 lepesszam mellett, reward: 51  eredeti reward: 15.221300000000001
+2018-05-12 12:37:24,664 - INFO - EPSILON: 1.0 167 lepesszam mellett, reward: 51  eredeti reward: 15.221300000000001
+2018-05-12 12:37:24,664 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-12 12:37:24,664 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-12 12:37:26,835 - DEBUG - random
+2018-05-12 12:37:26,836 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-12 12:37:26,838 - DEBUG - random
+2018-05-12 12:37:26,838 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-12 12:37:33,717 - DEBUG - random
+2018-05-12 12:37:33,718 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-12 12:37:38,941 - DEBUG - random
+2018-05-12 12:37:38,941 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-12 12:37:46,893 - DEBUG - random
+2018-05-12 12:37:46,894 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-12 12:37:53,433 - DEBUG - random
+2018-05-12 12:37:53,434 - DEBUG - [0. 1. 0. 0. 0. 0.]
+2018-05-12 12:37:59,478 - INFO - EPSILON: 1.0 496 lepesszam mellett, reward: 96  eredeti reward: 40.3242
+2018-05-12 12:37:59,478 - INFO - EPSILON: 1.0 496 lepesszam mellett, reward: 96  eredeti reward: 40.3242
+2018-05-12 12:37:59,479 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-12 12:37:59,479 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-12 12:38:01,692 - DEBUG - random
+2018-05-12 12:38:01,693 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-12 12:38:01,695 - DEBUG - random
+2018-05-12 12:38:01,695 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-12 12:38:06,743 - DEBUG - random
+2018-05-12 12:38:06,743 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-12 12:38:10,329 - DEBUG - random
+2018-05-12 12:38:10,330 - DEBUG - [0. 1. 0. 0. 0. 0.]
+2018-05-12 12:38:19,478 - DEBUG - random
+2018-05-12 12:38:19,478 - DEBUG - [0. 1. 0. 0. 0. 0.]
+2018-05-12 12:38:23,693 - DEBUG - random
+2018-05-12 12:38:23,694 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-12 12:38:31,876 - DEBUG - random
+2018-05-12 12:38:31,877 - DEBUG - [0. 1. 0. 0. 0. 0.]
+2018-05-12 12:38:38,129 - DEBUG - random
+2018-05-12 12:38:38,129 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-12 12:38:44,178 - DEBUG - random
+2018-05-12 12:38:44,178 - DEBUG - [0. 1. 0. 0. 0. 0.]
+2018-05-12 12:38:50,182 - DEBUG - random
+2018-05-12 12:38:50,182 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-12 12:38:55,402 - DEBUG - random
+2018-05-12 12:38:55,402 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-12 12:38:59,175 - DEBUG - random
+2018-05-12 12:38:59,175 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-12 12:39:02,807 - DEBUG - random
+2018-05-12 12:39:02,807 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-12 12:39:06,040 - DEBUG - random
+2018-05-12 12:39:06,040 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-12 12:39:09,446 - DEBUG - random
+2018-05-12 12:39:09,446 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-12 12:39:13,126 - DEBUG - random
+2018-05-12 12:39:13,126 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-12 12:39:17,730 - DEBUG - random
+2018-05-12 12:39:17,730 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-12 12:39:22,319 - DEBUG - random
+2018-05-12 12:39:22,319 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-12 12:39:26,406 - DEBUG - random
+2018-05-12 12:39:26,406 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-12 12:39:30,610 - DEBUG - random
+2018-05-12 12:39:30,610 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-12 12:39:34,715 - DEBUG - random
+2018-05-12 12:39:34,715 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-12 12:39:38,501 - DEBUG - random
+2018-05-12 12:39:38,501 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-12 12:39:42,594 - DEBUG - random
+2018-05-12 12:39:42,594 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-12 12:39:46,534 - DEBUG - random
+2018-05-12 12:39:46,534 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-12 12:39:49,977 - DEBUG - random
+2018-05-12 12:39:49,977 - DEBUG - [0. 1. 0. 0. 0. 0.]
+2018-05-12 12:39:53,944 - DEBUG - random
+2018-05-12 12:39:53,944 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-12 12:39:58,006 - DEBUG - random
+2018-05-12 12:39:58,006 - DEBUG - [0. 1. 0. 0. 0. 0.]
+2018-05-12 12:40:02,103 - DEBUG - random
+2018-05-12 12:40:02,103 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-12 12:40:05,832 - DEBUG - random
+2018-05-12 12:40:05,832 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-12 12:40:10,138 - DEBUG - random
+2018-05-12 12:40:10,138 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-12 12:40:14,135 - DEBUG - random
+2018-05-12 12:40:14,135 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-12 12:40:17,867 - DEBUG - random
+2018-05-12 12:40:17,867 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-12 12:40:21,214 - DEBUG - random
+2018-05-12 12:40:21,214 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-12 12:40:25,051 - DEBUG - random
+2018-05-12 12:40:25,051 - DEBUG - [0. 1. 0. 0. 0. 0.]
+2018-05-12 12:40:28,979 - DEBUG - random
+2018-05-12 12:40:28,979 - DEBUG - [0. 1. 0. 0. 0. 0.]
+2018-05-12 12:40:32,582 - DEBUG - random
+2018-05-12 12:40:32,582 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-12 12:40:36,977 - DEBUG - random
+2018-05-12 12:40:36,978 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-12 12:40:40,901 - DEBUG - random
+2018-05-12 12:40:40,901 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-12 12:40:44,629 - DEBUG - random
+2018-05-12 12:40:44,629 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-12 12:40:48,358 - DEBUG - random
+2018-05-12 12:40:48,358 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-12 12:40:52,037 - DEBUG - random
+2018-05-12 12:40:52,037 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-12 12:40:55,944 - DEBUG - random
+2018-05-12 12:40:55,944 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-12 12:40:56,195 - INFO - EPSILON: 1.0 4010 lepesszam mellett, reward: -2052  eredeti reward: 41.858599999999996
+2018-05-12 12:40:56,195 - INFO - EPSILON: 1.0 4010 lepesszam mellett, reward: -2052  eredeti reward: 41.858599999999996
+2018-05-12 12:40:56,195 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-12 12:40:56,195 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-12 12:40:58,227 - DEBUG - random
+2018-05-12 12:40:58,227 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-12 12:40:58,234 - DEBUG - random
+2018-05-12 12:40:58,234 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-12 12:41:02,876 - DEBUG - random
+2018-05-12 12:41:02,876 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-12 12:41:08,370 - DEBUG - random
+2018-05-12 12:41:08,370 - DEBUG - [0. 1. 0. 0. 0. 0.]
+2018-05-12 12:41:12,286 - DEBUG - random
+2018-05-12 12:41:12,286 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-12 12:41:13,706 - INFO - EPSILON: 1.0 335 lepesszam mellett, reward: -109  eredeti reward: 7.7334
+2018-05-12 12:41:13,706 - INFO - EPSILON: 1.0 335 lepesszam mellett, reward: -109  eredeti reward: 7.7334
+2018-05-12 12:41:13,707 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-12 12:41:13,707 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-12 12:41:15,845 - DEBUG - random
+2018-05-12 12:41:15,845 - DEBUG - [0. 1. 0. 0. 0. 0.]
+2018-05-12 12:41:15,847 - DEBUG - random
+2018-05-12 12:41:15,847 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-12 12:41:24,143 - DEBUG - random
+2018-05-12 12:41:24,143 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-12 12:41:33,510 - DEBUG - random
+2018-05-12 12:41:33,510 - DEBUG - [0. 1. 0. 0. 0. 0.]
+2018-05-12 12:41:40,025 - DEBUG - random
+2018-05-12 12:41:40,025 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-12 12:41:44,509 - DEBUG - random
+2018-05-12 12:41:44,509 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-12 12:41:47,920 - DEBUG - random
+2018-05-12 12:41:47,920 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-12 12:41:55,043 - DEBUG - random
+2018-05-12 12:41:55,044 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-12 12:42:00,692 - DEBUG - random
+2018-05-12 12:42:00,692 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-12 12:42:08,322 - DEBUG - random
+2018-05-12 12:42:08,323 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-12 12:42:12,084 - DEBUG - random
+2018-05-12 12:42:12,084 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-12 12:42:15,261 - DEBUG - random
+2018-05-12 12:42:15,261 - DEBUG - [0. 1. 0. 0. 0. 0.]
+2018-05-12 12:42:18,658 - DEBUG - random
+2018-05-12 12:42:18,658 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-12 12:42:22,130 - DEBUG - random
+2018-05-12 12:42:22,130 - DEBUG - [0. 1. 0. 0. 0. 0.]
+2018-05-12 12:42:26,139 - DEBUG - random
+2018-05-12 12:42:26,139 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-12 12:42:29,823 - DEBUG - random
+2018-05-12 12:42:29,823 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-12 12:42:33,042 - DEBUG - random
+2018-05-12 12:42:33,042 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-12 12:42:36,507 - DEBUG - random
+2018-05-12 12:42:36,507 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-12 12:42:41,289 - DEBUG - random
+2018-05-12 12:42:41,289 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-12 12:42:48,246 - DEBUG - random
+2018-05-12 12:42:48,246 - DEBUG - [0. 1. 0. 0. 0. 0.]
+2018-05-12 12:42:48,900 - INFO - EPSILON: 1.0 1811 lepesszam mellett, reward: -375  eredeti reward: 67.1456
+2018-05-12 12:42:48,900 - INFO - EPSILON: 1.0 1811 lepesszam mellett, reward: -375  eredeti reward: 67.1456
+2018-05-12 12:42:48,901 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-12 12:42:48,901 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-12 12:42:51,001 - DEBUG - random
+2018-05-12 12:42:51,002 - DEBUG - [0. 1. 0. 0. 0. 0.]
+2018-05-12 12:42:51,004 - DEBUG - random
+2018-05-12 12:42:51,004 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-12 12:43:00,687 - DEBUG - random
+2018-05-12 12:43:00,687 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-12 12:43:08,046 - DEBUG - random
+2018-05-12 12:43:08,046 - DEBUG - [0. 1. 0. 0. 0. 0.]
+2018-05-12 12:43:12,813 - DEBUG - random
+2018-05-12 12:43:12,813 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-12 12:43:16,814 - DEBUG - random
+2018-05-12 12:43:16,814 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-12 12:43:20,469 - DEBUG - random
+2018-05-12 12:43:20,470 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-12 12:43:25,460 - DEBUG - random
+2018-05-12 12:43:25,460 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-12 12:43:30,724 - DEBUG - random
+2018-05-12 12:43:30,725 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-12 12:43:35,990 - DEBUG - random
+2018-05-12 12:43:35,990 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-12 12:43:42,629 - DEBUG - random
+2018-05-12 12:43:42,629 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-12 12:43:47,861 - DEBUG - random
+2018-05-12 12:43:47,861 - DEBUG - [0. 1. 0. 0. 0. 0.]
+2018-05-12 12:43:52,638 - DEBUG - random
+2018-05-12 12:43:52,638 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-12 12:43:56,674 - DEBUG - random
+2018-05-12 12:43:56,674 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-12 12:44:00,154 - DEBUG - random
+2018-05-12 12:44:00,154 - DEBUG - [0. 1. 0. 0. 0. 0.]
+2018-05-12 12:44:03,672 - DEBUG - random
+2018-05-12 12:44:03,672 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-12 12:44:07,735 - DEBUG - random
+2018-05-12 12:44:07,736 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-12 12:44:11,838 - DEBUG - random
+2018-05-12 12:44:11,838 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-12 12:44:16,141 - DEBUG - random
+2018-05-12 12:44:16,141 - DEBUG - [0. 1. 0. 0. 0. 0.]
+2018-05-12 12:44:19,993 - DEBUG - random
+2018-05-12 12:44:19,993 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-12 12:44:23,935 - DEBUG - random
+2018-05-12 12:44:23,935 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-12 12:44:27,854 - DEBUG - random
+2018-05-12 12:44:27,854 - DEBUG - [0. 1. 0. 0. 0. 0.]
+2018-05-12 12:44:31,475 - DEBUG - random
+2018-05-12 12:44:31,475 - DEBUG - [0. 1. 0. 0. 0. 0.]
+2018-05-12 12:44:35,467 - DEBUG - random
+2018-05-12 12:44:35,467 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-12 12:44:39,527 - DEBUG - random
+2018-05-12 12:44:39,527 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-12 12:44:43,159 - DEBUG - random
+2018-05-12 12:44:43,159 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-12 12:44:46,926 - DEBUG - random
+2018-05-12 12:44:46,926 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-12 12:44:49,941 - DEBUG - random
+2018-05-12 12:44:49,941 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-12 12:44:53,647 - DEBUG - random
+2018-05-12 12:44:53,648 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-12 12:44:57,078 - DEBUG - random
+2018-05-12 12:44:57,078 - DEBUG - [0. 1. 0. 0. 0. 0.]
+2018-05-12 12:45:01,055 - DEBUG - random
+2018-05-12 12:45:01,055 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-12 12:45:05,278 - DEBUG - random
+2018-05-12 12:45:05,278 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-12 12:45:08,910 - DEBUG - random
+2018-05-12 12:45:08,910 - DEBUG - [0. 1. 0. 0. 0. 0.]
+2018-05-12 12:45:12,558 - DEBUG - random
+2018-05-12 12:45:12,558 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-12 12:45:15,882 - DEBUG - random
+2018-05-12 12:45:15,882 - DEBUG - [0. 1. 0. 0. 0. 0.]
+2018-05-12 12:45:19,675 - DEBUG - random
+2018-05-12 12:45:19,675 - DEBUG - [0. 1. 0. 0. 0. 0.]
+2018-05-12 12:45:23,487 - DEBUG - random
+2018-05-12 12:45:23,488 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-12 12:45:27,662 - DEBUG - random
+2018-05-12 12:45:27,662 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-12 12:45:31,706 - DEBUG - random
+2018-05-12 12:45:31,706 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-12 12:45:35,446 - DEBUG - random
+2018-05-12 12:45:35,446 - DEBUG - [0. 1. 0. 0. 0. 0.]
+2018-05-12 12:45:39,260 - DEBUG - random
+2018-05-12 12:45:39,261 - DEBUG - [0. 1. 0. 0. 0. 0.]
+2018-05-12 12:45:42,875 - DEBUG - random
+2018-05-12 12:45:42,875 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-12 12:45:43,140 - INFO - EPSILON: 1.0 4010 lepesszam mellett, reward: -1760  eredeti reward: 38.4829
+2018-05-12 12:45:43,140 - INFO - EPSILON: 1.0 4010 lepesszam mellett, reward: -1760  eredeti reward: 38.4829
+2018-05-12 12:45:43,140 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-12 12:45:43,140 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-12 12:45:45,227 - DEBUG - random
+2018-05-12 12:45:45,227 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-12 12:45:45,229 - DEBUG - random
+2018-05-12 12:45:45,229 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-12 12:45:50,517 - DEBUG - random
+2018-05-12 12:45:50,517 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-12 12:45:57,830 - DEBUG - random
+2018-05-12 12:45:57,830 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-12 12:46:04,815 - DEBUG - random
+2018-05-12 12:46:04,815 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-12 12:46:09,544 - DEBUG - random
+2018-05-12 12:46:09,544 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-12 12:46:15,020 - DEBUG - random
+2018-05-12 12:46:15,020 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-12 12:46:21,463 - DEBUG - random
+2018-05-12 12:46:21,463 - DEBUG - [0. 1. 0. 0. 0. 0.]
+2018-05-12 12:46:25,952 - DEBUG - random
+2018-05-12 12:46:25,952 - DEBUG - [0. 1. 0. 0. 0. 0.]
+2018-05-12 12:46:29,428 - DEBUG - random
+2018-05-12 12:46:29,428 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-12 12:46:33,780 - DEBUG - random
+2018-05-12 12:46:33,781 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-12 12:46:39,049 - DEBUG - random
+2018-05-12 12:46:39,049 - DEBUG - [0. 1. 0. 0. 0. 0.]
+2018-05-12 12:46:44,551 - DEBUG - random
+2018-05-12 12:46:44,552 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-12 12:46:48,882 - DEBUG - random
+2018-05-12 12:46:48,882 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-12 12:46:53,245 - DEBUG - random
+2018-05-12 12:46:53,245 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-12 12:46:56,725 - DEBUG - random
+2018-05-12 12:46:56,725 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-12 12:47:00,893 - DEBUG - random
+2018-05-12 12:47:00,893 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-12 12:47:03,723 - DEBUG - random
+2018-05-12 12:47:03,723 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-12 12:47:06,426 - DEBUG - random
+2018-05-12 12:47:06,426 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-12 12:47:10,197 - DEBUG - random
+2018-05-12 12:47:10,197 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-12 12:47:13,230 - DEBUG - random
+2018-05-12 12:47:13,230 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-12 12:47:16,590 - DEBUG - random
+2018-05-12 12:47:16,590 - DEBUG - [0. 1. 0. 0. 0. 0.]
+2018-05-12 12:47:20,822 - DEBUG - random
+2018-05-12 12:47:20,822 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-12 12:47:24,300 - DEBUG - random
+2018-05-12 12:47:24,300 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-12 12:47:28,056 - DEBUG - random
+2018-05-12 12:47:28,056 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-12 12:47:31,542 - DEBUG - random
+2018-05-12 12:47:31,542 - DEBUG - [0. 1. 0. 0. 0. 0.]
+2018-05-12 12:47:35,659 - DEBUG - random
+2018-05-12 12:47:35,659 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-12 12:47:39,878 - DEBUG - random
+2018-05-12 12:47:39,878 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-12 12:47:43,895 - DEBUG - random
+2018-05-12 12:47:43,895 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-12 12:47:51,702 - DEBUG - random
+2018-05-12 12:47:51,702 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-12 12:47:54,890 - INFO - EPSILON: 1.0 2863 lepesszam mellett, reward: -1129  eredeti reward: 51.4947
+2018-05-12 12:47:54,890 - INFO - EPSILON: 1.0 2863 lepesszam mellett, reward: -1129  eredeti reward: 51.4947
+2018-05-12 12:47:54,891 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-12 12:47:54,891 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-12 12:47:57,077 - DEBUG - random
+2018-05-12 12:47:57,077 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-12 12:47:57,080 - DEBUG - random
+2018-05-12 12:47:57,080 - DEBUG - [0. 1. 0. 0. 0. 0.]
+2018-05-12 12:48:03,034 - DEBUG - random
+2018-05-12 12:48:03,034 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-12 12:48:12,913 - DEBUG - random
+2018-05-12 12:48:12,913 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-12 12:48:20,242 - DEBUG - random
+2018-05-12 12:48:20,242 - DEBUG - [0. 1. 0. 0. 0. 0.]
+2018-05-12 12:48:26,274 - DEBUG - random
+2018-05-12 12:48:26,275 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-12 12:48:28,385 - INFO - EPSILON: 1.0 431 lepesszam mellett, reward: 131  eredeti reward: 38.9125
+2018-05-12 12:48:28,385 - INFO - EPSILON: 1.0 431 lepesszam mellett, reward: 131  eredeti reward: 38.9125
+2018-05-12 12:48:28,385 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-12 12:48:28,385 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-12 12:48:30,449 - DEBUG - random
+2018-05-12 12:48:30,450 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-12 12:48:30,465 - DEBUG - random
+2018-05-12 12:48:30,465 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-12 12:48:37,392 - DEBUG - random
+2018-05-12 12:48:37,392 - DEBUG - [0. 1. 0. 0. 0. 0.]
+2018-05-12 12:48:41,436 - INFO - EPSILON: 1.0 149 lepesszam mellett, reward: 75  eredeti reward: 12.7049
+2018-05-12 12:48:41,436 - INFO - EPSILON: 1.0 149 lepesszam mellett, reward: 75  eredeti reward: 12.7049
+2018-05-12 12:48:41,436 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-12 12:48:41,436 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-12 12:48:43,767 - DEBUG - random
+2018-05-12 12:48:43,767 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-12 12:48:43,769 - DEBUG - random
+2018-05-12 12:48:43,769 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-12 12:48:49,484 - DEBUG - random
+2018-05-12 12:48:49,484 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-12 12:48:54,875 - DEBUG - random
+2018-05-12 12:48:54,876 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-12 12:49:01,730 - DEBUG - random
+2018-05-12 12:49:01,730 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-12 12:49:11,434 - DEBUG - random
+2018-05-12 12:49:11,434 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-12 12:49:18,192 - DEBUG - random
+2018-05-12 12:49:18,193 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-12 12:49:25,188 - DEBUG - random
+2018-05-12 12:49:25,188 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-12 12:49:29,156 - DEBUG - random
+2018-05-12 12:49:29,156 - DEBUG - [0. 1. 0. 0. 0. 0.]
+2018-05-12 12:49:32,963 - DEBUG - random
+2018-05-12 12:49:32,963 - DEBUG - [0. 1. 0. 0. 0. 0.]
+2018-05-12 12:49:36,585 - DEBUG - random
+2018-05-12 12:49:36,585 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-12 12:49:40,142 - DEBUG - random
+2018-05-12 12:49:40,142 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-12 12:49:44,485 - DEBUG - random
+2018-05-12 12:49:44,486 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-12 12:49:48,675 - DEBUG - random
+2018-05-12 12:49:48,676 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-12 12:49:52,691 - DEBUG - random
+2018-05-12 12:49:52,691 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-12 12:49:56,923 - DEBUG - random
+2018-05-12 12:49:56,923 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-12 12:50:00,695 - DEBUG - random
+2018-05-12 12:50:00,695 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-12 12:50:03,889 - DEBUG - random
+2018-05-12 12:50:03,890 - DEBUG - [0. 1. 0. 0. 0. 0.]
+2018-05-12 12:50:07,802 - DEBUG - random
+2018-05-12 12:50:07,803 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-12 12:50:11,232 - DEBUG - random
+2018-05-12 12:50:11,233 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-12 12:50:15,301 - DEBUG - random
+2018-05-12 12:50:15,302 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-12 12:50:19,005 - DEBUG - random
+2018-05-12 12:50:19,005 - DEBUG - [0. 1. 0. 0. 0. 0.]
+2018-05-12 12:50:23,069 - DEBUG - random
+2018-05-12 12:50:23,069 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-12 12:50:26,633 - DEBUG - random
+2018-05-12 12:50:26,633 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-12 12:50:30,350 - DEBUG - random
+2018-05-12 12:50:30,350 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-12 12:50:33,760 - DEBUG - random
+2018-05-12 12:50:33,760 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-12 12:50:37,206 - DEBUG - random
+2018-05-12 12:50:37,206 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-12 12:50:41,194 - DEBUG - random
+2018-05-12 12:50:41,194 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-12 12:50:45,410 - DEBUG - random
+2018-05-12 12:50:45,410 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-12 12:50:49,398 - DEBUG - random
+2018-05-12 12:50:49,398 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-12 12:50:53,655 - DEBUG - random
+2018-05-12 12:50:53,655 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-12 12:50:57,523 - DEBUG - random
+2018-05-12 12:50:57,524 - DEBUG - [0. 1. 0. 0. 0. 0.]
+2018-05-12 12:51:01,202 - DEBUG - random
+2018-05-12 12:51:01,202 - DEBUG - [0. 1. 0. 0. 0. 0.]
+2018-05-12 12:51:09,424 - DEBUG - random
+2018-05-12 12:51:09,424 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-12 12:51:12,946 - DEBUG - random
+2018-05-12 12:51:12,947 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-12 12:51:17,563 - DEBUG - random
+2018-05-12 12:51:17,564 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-12 12:51:21,334 - DEBUG - random
+2018-05-12 12:51:21,334 - DEBUG - [0. 1. 0. 0. 0. 0.]
+2018-05-12 12:51:24,698 - DEBUG - random
+2018-05-12 12:51:24,698 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-12 12:51:28,166 - DEBUG - random
+2018-05-12 12:51:28,166 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-12 12:51:32,391 - DEBUG - random
+2018-05-12 12:51:32,391 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-12 12:51:35,961 - DEBUG - random
+2018-05-12 12:51:35,962 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-12 12:51:39,675 - DEBUG - random
+2018-05-12 12:51:39,675 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-12 12:51:40,096 - INFO - EPSILON: 1.0 4010 lepesszam mellett, reward: -2028  eredeti reward: 52.2926
+2018-05-12 12:51:40,096 - INFO - EPSILON: 1.0 4010 lepesszam mellett, reward: -2028  eredeti reward: 52.2926
+2018-05-12 12:51:40,096 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-12 12:51:40,096 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-12 12:51:42,181 - DEBUG - random
+2018-05-12 12:51:42,181 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-12 12:51:42,183 - DEBUG - random
+2018-05-12 12:51:42,183 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-12 12:51:49,911 - DEBUG - random
+2018-05-12 12:51:49,911 - DEBUG - [0. 1. 0. 0. 0. 0.]
+2018-05-12 12:51:56,312 - DEBUG - random
+2018-05-12 12:51:56,312 - DEBUG - [0. 1. 0. 0. 0. 0.]
+2018-05-12 12:52:02,308 - DEBUG - random
+2018-05-12 12:52:02,309 - DEBUG - [0. 1. 0. 0. 0. 0.]
+2018-05-12 12:52:08,315 - DEBUG - random
+2018-05-12 12:52:08,315 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-12 12:52:12,914 - DEBUG - random
+2018-05-12 12:52:12,914 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-12 12:52:21,093 - DEBUG - random
+2018-05-12 12:52:21,093 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-12 12:52:25,058 - DEBUG - random
+2018-05-12 12:52:25,058 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-12 12:52:30,516 - DEBUG - random
+2018-05-12 12:52:30,517 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-12 12:52:38,848 - DEBUG - random
+2018-05-12 12:52:38,848 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-12 12:52:43,925 - DEBUG - random
+2018-05-12 12:52:43,926 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-12 12:52:47,862 - DEBUG - random
+2018-05-12 12:52:47,862 - DEBUG - [0. 1. 0. 0. 0. 0.]
+2018-05-12 12:52:51,781 - DEBUG - random
+2018-05-12 12:52:51,781 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-12 12:52:54,673 - DEBUG - random
+2018-05-12 12:52:54,674 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-12 12:52:57,865 - DEBUG - random
+2018-05-12 12:52:57,866 - DEBUG - [0. 1. 0. 0. 0. 0.]
+2018-05-12 12:53:01,411 - DEBUG - random
+2018-05-12 12:53:01,411 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-12 12:53:04,853 - DEBUG - random
+2018-05-12 12:53:04,853 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-12 12:53:08,697 - DEBUG - random
+2018-05-12 12:53:08,697 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-12 12:53:12,422 - DEBUG - random
+2018-05-12 12:53:12,422 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-12 12:53:15,781 - DEBUG - random
+2018-05-12 12:53:15,781 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-12 12:53:19,725 - DEBUG - random
+2018-05-12 12:53:19,725 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-12 12:53:23,986 - DEBUG - random
+2018-05-12 12:53:23,986 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-12 12:53:27,767 - DEBUG - random
+2018-05-12 12:53:27,767 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-12 12:53:32,337 - DEBUG - random
+2018-05-12 12:53:32,337 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-12 12:53:36,170 - DEBUG - random
+2018-05-12 12:53:36,170 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-12 12:53:39,959 - DEBUG - random
+2018-05-12 12:53:39,959 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-12 12:53:43,442 - DEBUG - random
+2018-05-12 12:53:43,442 - DEBUG - [0. 1. 0. 0. 0. 0.]
+2018-05-12 12:53:46,938 - DEBUG - random
+2018-05-12 12:53:46,938 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-12 12:53:50,691 - DEBUG - random
+2018-05-12 12:53:50,691 - DEBUG - [0. 1. 0. 0. 0. 0.]
+2018-05-12 12:53:54,473 - DEBUG - random
+2018-05-12 12:53:54,473 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-12 12:53:57,625 - DEBUG - random
+2018-05-12 12:53:57,625 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-12 12:54:01,553 - DEBUG - random
+2018-05-12 12:54:01,554 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-12 12:54:05,692 - DEBUG - random
+2018-05-12 12:54:05,692 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-12 12:54:09,884 - DEBUG - random
+2018-05-12 12:54:09,884 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-12 12:54:14,406 - DEBUG - random
+2018-05-12 12:54:14,406 - DEBUG - [0. 1. 0. 0. 0. 0.]
+2018-05-12 12:54:18,181 - DEBUG - random
+2018-05-12 12:54:18,181 - DEBUG - [0. 1. 0. 0. 0. 0.]
+2018-05-12 12:54:21,333 - DEBUG - random
+2018-05-12 12:54:21,333 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-12 12:54:24,128 - DEBUG - random
+2018-05-12 12:54:24,128 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-12 12:54:28,479 - DEBUG - random
+2018-05-12 12:54:28,479 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-12 12:54:32,358 - DEBUG - random
+2018-05-12 12:54:32,358 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-12 12:54:36,054 - DEBUG - random
+2018-05-12 12:54:36,054 - DEBUG - [0. 1. 0. 0. 0. 0.]
+2018-05-12 12:54:36,328 - INFO - EPSILON: 1.0 4010 lepesszam mellett, reward: -1886  eredeti reward: 41.858599999999996
+2018-05-12 12:54:36,328 - INFO - EPSILON: 1.0 4010 lepesszam mellett, reward: -1886  eredeti reward: 41.858599999999996
+2018-05-12 12:54:36,328 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-12 12:54:36,328 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-12 12:54:38,524 - DEBUG - random
+2018-05-12 12:54:38,524 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-12 12:54:38,526 - DEBUG - random
+2018-05-12 12:54:38,527 - DEBUG - [0. 1. 0. 0. 0. 0.]
+2018-05-12 12:54:46,878 - DEBUG - random
+2018-05-12 12:54:46,878 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-12 12:54:49,223 - INFO - EPSILON: 1.0 125 lepesszam mellett, reward: 91  eredeti reward: 13.564100000000002
+2018-05-12 12:54:49,223 - INFO - EPSILON: 1.0 125 lepesszam mellett, reward: 91  eredeti reward: 13.564100000000002
+2018-05-12 12:54:49,224 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-12 12:54:49,224 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-12 12:54:51,528 - DEBUG - random
+2018-05-12 12:54:52,171 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-12 12:54:52,174 - DEBUG - random
+2018-05-12 12:54:52,174 - DEBUG - [0. 1. 0. 0. 0. 0.]
+2018-05-12 12:54:56,970 - DEBUG - random
+2018-05-12 12:54:56,970 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-12 12:55:03,514 - DEBUG - random
+2018-05-12 12:55:03,514 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-12 12:55:07,898 - DEBUG - random
+2018-05-12 12:55:07,899 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-12 12:55:16,130 - DEBUG - random
+2018-05-12 12:55:16,130 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-12 12:55:23,272 - DEBUG - random
+2018-05-12 12:55:23,272 - DEBUG - [0. 1. 0. 0. 0. 0.]
+2018-05-12 12:55:29,381 - DEBUG - random
+2018-05-12 12:55:29,381 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-12 12:55:34,122 - DEBUG - random
+2018-05-12 12:55:34,122 - DEBUG - [0. 1. 0. 0. 0. 0.]
+2018-05-12 12:55:38,862 - DEBUG - random
+2018-05-12 12:55:38,863 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-12 12:55:40,966 - INFO - EPSILON: 1.0 826 lepesszam mellett, reward: -72  eredeti reward: 37.8078
+2018-05-12 12:55:40,966 - INFO - EPSILON: 1.0 826 lepesszam mellett, reward: -72  eredeti reward: 37.8078
+2018-05-12 12:55:40,966 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-12 12:55:40,966 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-12 12:55:43,245 - DEBUG - random
+2018-05-12 12:55:43,245 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-12 12:55:43,247 - DEBUG - random
+2018-05-12 12:55:43,247 - DEBUG - [0. 1. 0. 0. 0. 0.]
+2018-05-12 12:55:48,999 - DEBUG - random
+2018-05-12 12:55:48,999 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-12 12:55:55,233 - DEBUG - random
+2018-05-12 12:55:55,233 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-12 12:56:04,546 - DEBUG - random
+2018-05-12 12:56:04,546 - DEBUG - [0. 1. 0. 0. 0. 0.]
+2018-05-12 12:56:09,436 - DEBUG - random
+2018-05-12 12:56:09,436 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-12 12:56:15,476 - DEBUG - random
+2018-05-12 12:56:15,476 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-12 12:56:22,410 - DEBUG - random
+2018-05-12 12:56:22,410 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-12 12:56:27,665 - DEBUG - random
+2018-05-12 12:56:27,666 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-12 12:56:31,922 - DEBUG - random
+2018-05-12 12:56:31,922 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-12 12:56:35,105 - DEBUG - random
+2018-05-12 12:56:35,105 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-12 12:56:38,722 - DEBUG - random
+2018-05-12 12:56:38,722 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-12 12:56:46,603 - DEBUG - random
+2018-05-12 12:56:46,603 - DEBUG - [0. 1. 0. 0. 0. 0.]
+2018-05-12 12:56:50,600 - DEBUG - random
+2018-05-12 12:56:50,600 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-12 12:56:54,956 - DEBUG - random
+2018-05-12 12:56:54,956 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-12 12:56:59,026 - DEBUG - random
+2018-05-12 12:56:59,026 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-12 12:57:02,482 - DEBUG - random
+2018-05-12 12:57:02,482 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-12 12:57:06,409 - DEBUG - random
+2018-05-12 12:57:06,409 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-12 12:57:10,416 - DEBUG - random
+2018-05-12 12:57:10,416 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-12 12:57:14,277 - DEBUG - random
+2018-05-12 12:57:14,277 - DEBUG - [0. 1. 0. 0. 0. 0.]
+2018-05-12 12:57:18,549 - DEBUG - random
+2018-05-12 12:57:18,550 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-12 12:57:22,406 - DEBUG - random
+2018-05-12 12:57:22,406 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-12 12:57:27,153 - DEBUG - random
+2018-05-12 12:57:27,153 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-12 12:57:31,804 - DEBUG - random
+2018-05-12 12:57:31,804 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-12 12:57:36,179 - DEBUG - random
+2018-05-12 12:57:36,179 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-12 12:57:44,628 - DEBUG - random
+2018-05-12 12:57:44,628 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-12 12:57:49,222 - DEBUG - random
+2018-05-12 12:57:49,222 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-12 12:57:53,482 - DEBUG - random
+2018-05-12 12:57:53,482 - DEBUG - [0. 1. 0. 0. 0. 0.]
+2018-05-12 12:57:57,300 - DEBUG - random
+2018-05-12 12:57:57,300 - DEBUG - [0. 1. 0. 0. 0. 0.]
+2018-05-12 12:58:01,272 - DEBUG - random
+2018-05-12 12:58:01,273 - DEBUG - [0. 1. 0. 0. 0. 0.]
+2018-05-12 12:58:04,600 - DEBUG - random
+2018-05-12 12:58:04,600 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-12 12:58:08,387 - DEBUG - random
+2018-05-12 12:58:08,388 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-12 12:58:12,040 - DEBUG - random
+2018-05-12 12:58:12,040 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-12 12:58:16,353 - DEBUG - random
+2018-05-12 12:58:16,353 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-12 12:58:20,199 - DEBUG - random
+2018-05-12 12:58:20,199 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-12 12:58:24,016 - DEBUG - random
+2018-05-12 12:58:24,016 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-12 12:58:27,958 - DEBUG - random
+2018-05-12 12:58:27,958 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-12 12:58:31,434 - DEBUG - random
+2018-05-12 12:58:31,434 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-12 12:58:34,842 - DEBUG - random
+2018-05-12 12:58:34,842 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-12 12:58:38,054 - DEBUG - random
+2018-05-12 12:58:38,054 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-12 12:58:41,474 - DEBUG - random
+2018-05-12 12:58:41,474 - DEBUG - [0. 0. 0. 1. 1. 0.]
+2018-05-12 12:58:45,078 - DEBUG - random
+2018-05-12 12:58:45,078 - DEBUG - [0. 1. 0. 0. 0. 0.]
+2018-05-12 12:58:47,494 - INFO - EPSILON: 1.0 4067 lepesszam mellett, reward: -1833  eredeti reward: 52.6608
+2018-05-12 12:58:47,494 - INFO - EPSILON: 1.0 4067 lepesszam mellett, reward: -1833  eredeti reward: 52.6608
+2018-05-12 12:58:47,494 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-12 12:58:47,494 - INFO - Making new env: SuperMarioBros-1-1-v0
+2018-05-12 12:58:49,995 - DEBUG - random
+2018-05-12 12:58:49,995 - DEBUG - [0. 1. 0. 0. 0. 0.]
+2018-05-12 12:58:49,998 - DEBUG - random
+2018-05-12 12:58:49,998 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-12 12:58:58,462 - DEBUG - random
+2018-05-12 12:58:58,462 - DEBUG - [0. 0. 0. 0. 0. 0.]
+2018-05-12 12:59:05,278 - DEBUG - random
+2018-05-12 12:59:05,278 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-12 12:59:11,350 - DEBUG - random
+2018-05-12 12:59:11,350 - DEBUG - [0. 0. 0. 0. 1. 0.]
+2018-05-12 12:59:18,645 - DEBUG - random
+2018-05-12 12:59:18,646 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-12 12:59:23,605 - DEBUG - random
+2018-05-12 12:59:23,606 - DEBUG - [0. 1. 0. 0. 0. 0.]
+2018-05-12 12:59:27,986 - DEBUG - random
+2018-05-12 12:59:27,986 - DEBUG - [0. 0. 0. 1. 0. 0.]
+2018-05-12 12:59:36,180 - DEBUG - random
+2018-05-12 12:59:36,180 - DEBUG - [0. 1. 0. 0. 0. 0.]

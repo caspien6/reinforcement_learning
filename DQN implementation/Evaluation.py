@@ -25,7 +25,7 @@ FINAL_EPSILON = 0.1
 INITIAL_REPLAY_SIZE = 50000  # Number of steps to populate the replay memory before training starts
 NUM_REPLAY_MEMORY = 400000  # Number of replay memory the agent uses for training
 LEARNING_FACTOR = 0.00025
-INFO_GRAPH_WEIGHTS_DIR='./record0503/'
+INFO_GRAPH_WEIGHTS_DIR='./record0502/'
 
 
 
@@ -108,7 +108,7 @@ def init_network():
 
 def VideoRecord(env, episode):
 	#Video recorder init
-	video_recorder = VideoRecorder(env, INFO_GRAPH_WEIGHTS_DIR +'video_with_weight34'+str(episode)+'.mp4', enabled=True)
+	video_recorder = VideoRecorder(env, INFO_GRAPH_WEIGHTS_DIR +'video_with_weight26'+str(episode)+'.mp4', enabled=True)
 	video_recorder.enabled=True
 	return video_recorder
 
@@ -157,9 +157,9 @@ def main():
 
 		Q = init_network()
 
-		if os.path.isfile(INFO_GRAPH_WEIGHTS_DIR+'weights34.h5'):
+		if os.path.isfile(INFO_GRAPH_WEIGHTS_DIR+'weights26.h5'):
 			print('loading weights')
-			Q.load_weights(INFO_GRAPH_WEIGHTS_DIR + 'weights34.h5')
+			Q.load_weights(INFO_GRAPH_WEIGHTS_DIR + 'weights26.h5')
 			epsgrdy.epsilon = 0.1
 
 		#Q_freeze.set_weights(Q.get_weights())

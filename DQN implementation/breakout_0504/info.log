@@ -1,0 +1,928 @@
+2018-05-04 21:57:33,199 - INFO - ACTION_SET: 3
+2018-05-04 21:57:33,199 - INFO - ACTION_SET: 3
+2018-05-04 21:57:33,199 - INFO - BATCH_SIZE: 32
+2018-05-04 21:57:33,199 - INFO - BATCH_SIZE: 32
+2018-05-04 21:57:33,200 - INFO - UPDATE_FREQUENCY: 4
+2018-05-04 21:57:33,200 - INFO - UPDATE_FREQUENCY: 4
+2018-05-04 21:57:33,200 - INFO - STATE_LENGTH: 4
+2018-05-04 21:57:33,200 - INFO - STATE_LENGTH: 4
+2018-05-04 21:57:33,200 - INFO - EXPLORATION_STEPS: 1000000
+2018-05-04 21:57:33,200 - INFO - EXPLORATION_STEPS: 1000000
+2018-05-04 21:57:33,200 - INFO - INITIAL_EPSILON: 1.0
+2018-05-04 21:57:33,200 - INFO - INITIAL_EPSILON: 1.0
+2018-05-04 21:57:33,200 - INFO - FINAL_EPSILON: 0.1
+2018-05-04 21:57:33,200 - INFO - FINAL_EPSILON: 0.1
+2018-05-04 21:57:33,200 - INFO - INITIAL_REPLAY_SIZE: 20000
+2018-05-04 21:57:33,200 - INFO - INITIAL_REPLAY_SIZE: 20000
+2018-05-04 21:57:33,200 - INFO - NUM_REPLAY_MEMORY: 400000
+2018-05-04 21:57:33,200 - INFO - NUM_REPLAY_MEMORY: 400000
+2018-05-04 21:57:33,200 - INFO - LEARNING_FACTOR: 0.00025
+2018-05-04 21:57:33,200 - INFO - LEARNING_FACTOR: 0.00025
+2018-05-04 21:57:33,201 - INFO - INFO_GRAPH_WEIGHTS_DIR: ./breakout_0504/
+2018-05-04 21:57:33,201 - INFO - INFO_GRAPH_WEIGHTS_DIR: ./breakout_0504/
+2018-05-04 21:57:33,201 - INFO - REFRESH_Q_WEIGHT_STEP: 3
+2018-05-04 21:57:33,201 - INFO - REFRESH_Q_WEIGHT_STEP: 3
+2018-05-04 21:57:33,251 - INFO - Making new env: Breakout-v0
+2018-05-04 21:57:33,251 - INFO - Making new env: Breakout-v0
+2018-05-04 21:57:36,929 - INFO - EPSILON: 1.0 224 lepesszam mellett, reward: 1.0
+2018-05-04 21:57:36,929 - INFO - EPSILON: 1.0 224 lepesszam mellett, reward: 1.0
+2018-05-04 21:57:36,929 - INFO - Making new env: Breakout-v0
+2018-05-04 21:57:36,929 - INFO - Making new env: Breakout-v0
+2018-05-04 21:58:18,747 - INFO - EPSILON: 1.0 9999 lepesszam mellett, reward: 0.0
+2018-05-04 21:58:18,747 - INFO - EPSILON: 1.0 9999 lepesszam mellett, reward: 0.0
+2018-05-04 21:58:18,747 - INFO - Making new env: Breakout-v0
+2018-05-04 21:58:18,747 - INFO - Making new env: Breakout-v0
+2018-05-04 21:58:19,696 - INFO - EPSILON: 1.0 159 lepesszam mellett, reward: 0.0
+2018-05-04 21:58:19,696 - INFO - EPSILON: 1.0 159 lepesszam mellett, reward: 0.0
+2018-05-04 21:58:19,696 - INFO - Making new env: Breakout-v0
+2018-05-04 21:58:19,696 - INFO - Making new env: Breakout-v0
+2018-05-04 21:58:20,681 - INFO - EPSILON: 1.0 164 lepesszam mellett, reward: 0.0
+2018-05-04 21:58:20,681 - INFO - EPSILON: 1.0 164 lepesszam mellett, reward: 0.0
+2018-05-04 21:58:20,681 - INFO - Making new env: Breakout-v0
+2018-05-04 21:58:20,681 - INFO - Making new env: Breakout-v0
+2018-05-04 21:58:21,745 - INFO - EPSILON: 1.0 164 lepesszam mellett, reward: 0.0
+2018-05-04 21:58:21,745 - INFO - EPSILON: 1.0 164 lepesszam mellett, reward: 0.0
+2018-05-04 21:58:21,746 - INFO - Making new env: Breakout-v0
+2018-05-04 21:58:21,746 - INFO - Making new env: Breakout-v0
+2018-05-04 21:58:23,578 - INFO - EPSILON: 1.0 372 lepesszam mellett, reward: 4.0
+2018-05-04 21:58:23,578 - INFO - EPSILON: 1.0 372 lepesszam mellett, reward: 4.0
+2018-05-04 21:58:23,578 - INFO - Making new env: Breakout-v0
+2018-05-04 21:58:23,578 - INFO - Making new env: Breakout-v0
+2018-05-04 21:58:24,545 - INFO - EPSILON: 1.0 163 lepesszam mellett, reward: 0.0
+2018-05-04 21:58:24,545 - INFO - EPSILON: 1.0 163 lepesszam mellett, reward: 0.0
+2018-05-04 21:58:24,545 - INFO - Making new env: Breakout-v0
+2018-05-04 21:58:24,545 - INFO - Making new env: Breakout-v0
+2018-05-04 21:58:26,294 - INFO - EPSILON: 1.0 353 lepesszam mellett, reward: 3.0
+2018-05-04 21:58:26,294 - INFO - EPSILON: 1.0 353 lepesszam mellett, reward: 3.0
+2018-05-04 21:58:26,294 - INFO - Making new env: Breakout-v0
+2018-05-04 21:58:26,294 - INFO - Making new env: Breakout-v0
+2018-05-04 21:58:28,350 - INFO - EPSILON: 1.0 431 lepesszam mellett, reward: 5.0
+2018-05-04 21:58:28,350 - INFO - EPSILON: 1.0 431 lepesszam mellett, reward: 5.0
+2018-05-04 21:58:28,350 - INFO - Making new env: Breakout-v0
+2018-05-04 21:58:28,350 - INFO - Making new env: Breakout-v0
+2018-05-04 21:58:29,296 - INFO - EPSILON: 1.0 159 lepesszam mellett, reward: 0.0
+2018-05-04 21:58:29,296 - INFO - EPSILON: 1.0 159 lepesszam mellett, reward: 0.0
+2018-05-04 21:58:29,296 - INFO - Making new env: Breakout-v0
+2018-05-04 21:58:29,296 - INFO - Making new env: Breakout-v0
+2018-05-04 21:58:30,448 - INFO - EPSILON: 1.0 226 lepesszam mellett, reward: 1.0
+2018-05-04 21:58:30,448 - INFO - EPSILON: 1.0 226 lepesszam mellett, reward: 1.0
+2018-05-04 21:58:30,448 - INFO - Making new env: Breakout-v0
+2018-05-04 21:58:30,448 - INFO - Making new env: Breakout-v0
+2018-05-04 21:59:44,232 - INFO - EPSILON: 0.9978283000000715 9999 lepesszam mellett, reward: 1.0
+2018-05-04 21:59:44,232 - INFO - EPSILON: 0.9978283000000715 9999 lepesszam mellett, reward: 1.0
+2018-05-04 21:59:44,232 - INFO - Making new env: Breakout-v0
+2018-05-04 21:59:44,232 - INFO - Making new env: Breakout-v0
+2018-05-04 21:59:47,274 - INFO - EPSILON: 0.9976825000000763 162 lepesszam mellett, reward: 0.0
+2018-05-04 21:59:47,274 - INFO - EPSILON: 0.9976825000000763 162 lepesszam mellett, reward: 0.0
+2018-05-04 21:59:47,274 - INFO - Making new env: Breakout-v0
+2018-05-04 21:59:47,274 - INFO - Making new env: Breakout-v0
+2018-05-04 21:59:51,511 - INFO - EPSILON: 0.9974818000000829 223 lepesszam mellett, reward: 1.0
+2018-05-04 21:59:51,511 - INFO - EPSILON: 0.9974818000000829 223 lepesszam mellett, reward: 1.0
+2018-05-04 21:59:51,511 - INFO - Making new env: Breakout-v0
+2018-05-04 21:59:51,511 - INFO - Making new env: Breakout-v0
+2018-05-04 21:59:54,665 - INFO - EPSILON: 0.9973324000000878 166 lepesszam mellett, reward: 0.0
+2018-05-04 21:59:54,665 - INFO - EPSILON: 0.9973324000000878 166 lepesszam mellett, reward: 0.0
+2018-05-04 21:59:54,665 - INFO - Making new env: Breakout-v0
+2018-05-04 21:59:54,665 - INFO - Making new env: Breakout-v0
+2018-05-04 21:59:58,204 - INFO - EPSILON: 0.9971551000000937 197 lepesszam mellett, reward: 1.0
+2018-05-04 21:59:58,204 - INFO - EPSILON: 0.9971551000000937 197 lepesszam mellett, reward: 1.0
+2018-05-04 21:59:58,204 - INFO - Making new env: Breakout-v0
+2018-05-04 21:59:58,204 - INFO - Making new env: Breakout-v0
+2018-05-04 22:00:04,093 - INFO - EPSILON: 0.9968581000001034 330 lepesszam mellett, reward: 3.0
+2018-05-04 22:00:04,093 - INFO - EPSILON: 0.9968581000001034 330 lepesszam mellett, reward: 3.0
+2018-05-04 22:00:04,093 - INFO - Making new env: Breakout-v0
+2018-05-04 22:00:04,093 - INFO - Making new env: Breakout-v0
+2018-05-04 22:03:01,276 - INFO - EPSILON: 0.9878590000003997 9999 lepesszam mellett, reward: 0.0
+2018-05-04 22:03:01,276 - INFO - EPSILON: 0.9878590000003997 9999 lepesszam mellett, reward: 0.0
+2018-05-04 22:03:01,276 - INFO - Making new env: Breakout-v0
+2018-05-04 22:03:01,276 - INFO - Making new env: Breakout-v0
+2018-05-04 22:03:06,189 - INFO - EPSILON: 0.9876241000004075 261 lepesszam mellett, reward: 2.0
+2018-05-04 22:03:06,189 - INFO - EPSILON: 0.9876241000004075 261 lepesszam mellett, reward: 2.0
+2018-05-04 22:03:06,190 - INFO - Making new env: Breakout-v0
+2018-05-04 22:03:06,190 - INFO - Making new env: Breakout-v0
+2018-05-04 22:03:10,197 - INFO - EPSILON: 0.9874387000004136 206 lepesszam mellett, reward: 1.0
+2018-05-04 22:03:10,197 - INFO - EPSILON: 0.9874387000004136 206 lepesszam mellett, reward: 1.0
+2018-05-04 22:03:10,197 - INFO - Making new env: Breakout-v0
+2018-05-04 22:03:10,197 - INFO - Making new env: Breakout-v0
+2018-05-04 22:06:07,437 - INFO - EPSILON: 0.9784396000007098 9999 lepesszam mellett, reward: 2.0
+2018-05-04 22:06:07,437 - INFO - EPSILON: 0.9784396000007098 9999 lepesszam mellett, reward: 2.0
+2018-05-04 22:06:07,438 - INFO - Making new env: Breakout-v0
+2018-05-04 22:06:07,438 - INFO - Making new env: Breakout-v0
+2018-05-04 22:06:10,740 - INFO - EPSILON: 0.9782938000007146 162 lepesszam mellett, reward: 0.0
+2018-05-04 22:06:10,740 - INFO - EPSILON: 0.9782938000007146 162 lepesszam mellett, reward: 0.0
+2018-05-04 22:06:10,740 - INFO - Making new env: Breakout-v0
+2018-05-04 22:06:10,740 - INFO - Making new env: Breakout-v0
+2018-05-04 22:06:15,510 - INFO - EPSILON: 0.9780544000007225 266 lepesszam mellett, reward: 2.0
+2018-05-04 22:06:15,510 - INFO - EPSILON: 0.9780544000007225 266 lepesszam mellett, reward: 2.0
+2018-05-04 22:06:15,511 - INFO - Making new env: Breakout-v0
+2018-05-04 22:06:15,511 - INFO - Making new env: Breakout-v0
+2018-05-04 22:06:18,562 - INFO - EPSILON: 0.9779050000007274 166 lepesszam mellett, reward: 0.0
+2018-05-04 22:06:18,562 - INFO - EPSILON: 0.9779050000007274 166 lepesszam mellett, reward: 0.0
+2018-05-04 22:06:18,562 - INFO - Making new env: Breakout-v0
+2018-05-04 22:06:18,562 - INFO - Making new env: Breakout-v0
+2018-05-04 22:06:23,976 - INFO - EPSILON: 0.9776413000007361 293 lepesszam mellett, reward: 2.0
+2018-05-04 22:06:23,976 - INFO - EPSILON: 0.9776413000007361 293 lepesszam mellett, reward: 2.0
+2018-05-04 22:06:23,976 - INFO - Making new env: Breakout-v0
+2018-05-04 22:06:23,976 - INFO - Making new env: Breakout-v0
+2018-05-04 22:06:27,251 - INFO - EPSILON: 0.9774964000007409 161 lepesszam mellett, reward: 0.0
+2018-05-04 22:06:27,251 - INFO - EPSILON: 0.9774964000007409 161 lepesszam mellett, reward: 0.0
+2018-05-04 22:06:27,251 - INFO - Making new env: Breakout-v0
+2018-05-04 22:06:27,251 - INFO - Making new env: Breakout-v0
+2018-05-04 22:06:31,677 - INFO - EPSILON: 0.9772921000007476 227 lepesszam mellett, reward: 1.0
+2018-05-04 22:06:31,677 - INFO - EPSILON: 0.9772921000007476 227 lepesszam mellett, reward: 1.0
+2018-05-04 22:06:31,677 - INFO - Making new env: Breakout-v0
+2018-05-04 22:06:31,677 - INFO - Making new env: Breakout-v0
+2018-05-04 22:06:37,295 - INFO - EPSILON: 0.9770149000007567 308 lepesszam mellett, reward: 3.0
+2018-05-04 22:06:37,295 - INFO - EPSILON: 0.9770149000007567 308 lepesszam mellett, reward: 3.0
+2018-05-04 22:06:37,296 - INFO - Making new env: Breakout-v0
+2018-05-04 22:06:37,296 - INFO - Making new env: Breakout-v0
+2018-05-04 22:06:42,583 - INFO - EPSILON: 0.9767602000007651 283 lepesszam mellett, reward: 2.0
+2018-05-04 22:06:42,583 - INFO - EPSILON: 0.9767602000007651 283 lepesszam mellett, reward: 2.0
+2018-05-04 22:06:42,584 - INFO - Making new env: Breakout-v0
+2018-05-04 22:06:42,584 - INFO - Making new env: Breakout-v0
+2018-05-04 22:06:48,312 - INFO - EPSILON: 0.9764884000007741 302 lepesszam mellett, reward: 3.0
+2018-05-04 22:06:48,312 - INFO - EPSILON: 0.9764884000007741 302 lepesszam mellett, reward: 3.0
+2018-05-04 22:06:48,312 - INFO - Making new env: Breakout-v0
+2018-05-04 22:06:48,312 - INFO - Making new env: Breakout-v0
+2018-05-04 22:06:53,924 - INFO - EPSILON: 0.9762247000007828 293 lepesszam mellett, reward: 2.0
+2018-05-04 22:06:53,924 - INFO - EPSILON: 0.9762247000007828 293 lepesszam mellett, reward: 2.0
+2018-05-04 22:06:53,924 - INFO - Making new env: Breakout-v0
+2018-05-04 22:06:53,924 - INFO - Making new env: Breakout-v0
+2018-05-04 22:06:58,752 - INFO - EPSILON: 0.9759898000007905 261 lepesszam mellett, reward: 2.0
+2018-05-04 22:06:58,752 - INFO - EPSILON: 0.9759898000007905 261 lepesszam mellett, reward: 2.0
+2018-05-04 22:06:58,752 - INFO - Making new env: Breakout-v0
+2018-05-04 22:06:58,752 - INFO - Making new env: Breakout-v0
+2018-05-04 22:07:04,285 - INFO - EPSILON: 0.9757144000007996 306 lepesszam mellett, reward: 3.0
+2018-05-04 22:07:04,285 - INFO - EPSILON: 0.9757144000007996 306 lepesszam mellett, reward: 3.0
+2018-05-04 22:07:04,285 - INFO - Making new env: Breakout-v0
+2018-05-04 22:07:04,285 - INFO - Making new env: Breakout-v0
+2018-05-04 22:09:59,393 - INFO - EPSILON: 0.9667153000010958 9999 lepesszam mellett, reward: 0.0
+2018-05-04 22:09:59,393 - INFO - EPSILON: 0.9667153000010958 9999 lepesszam mellett, reward: 0.0
+2018-05-04 22:09:59,393 - INFO - Making new env: Breakout-v0
+2018-05-04 22:09:59,393 - INFO - Making new env: Breakout-v0
+2018-05-04 22:10:02,653 - INFO - EPSILON: 0.9665668000011007 165 lepesszam mellett, reward: 0.0
+2018-05-04 22:10:02,653 - INFO - EPSILON: 0.9665668000011007 165 lepesszam mellett, reward: 0.0
+2018-05-04 22:10:02,654 - INFO - Making new env: Breakout-v0
+2018-05-04 22:10:02,654 - INFO - Making new env: Breakout-v0
+2018-05-04 22:10:07,431 - INFO - EPSILON: 0.9663634000011074 226 lepesszam mellett, reward: 1.0
+2018-05-04 22:10:07,431 - INFO - EPSILON: 0.9663634000011074 226 lepesszam mellett, reward: 1.0
+2018-05-04 22:10:07,431 - INFO - Making new env: Breakout-v0
+2018-05-04 22:10:07,431 - INFO - Making new env: Breakout-v0
+2018-05-04 22:10:12,001 - INFO - EPSILON: 0.966165400001114 220 lepesszam mellett, reward: 1.0
+2018-05-04 22:10:12,001 - INFO - EPSILON: 0.966165400001114 220 lepesszam mellett, reward: 1.0
+2018-05-04 22:10:12,002 - INFO - Making new env: Breakout-v0
+2018-05-04 22:10:12,002 - INFO - Making new env: Breakout-v0
+2018-05-04 22:13:12,929 - INFO - EPSILON: 0.9571663000014102 9999 lepesszam mellett, reward: 0.0
+2018-05-04 22:13:12,929 - INFO - EPSILON: 0.9571663000014102 9999 lepesszam mellett, reward: 0.0
+2018-05-04 22:13:12,929 - INFO - Making new env: Breakout-v0
+2018-05-04 22:13:12,929 - INFO - Making new env: Breakout-v0
+2018-05-04 22:13:17,076 - INFO - EPSILON: 0.9569647000014169 224 lepesszam mellett, reward: 1.0
+2018-05-04 22:13:17,076 - INFO - EPSILON: 0.9569647000014169 224 lepesszam mellett, reward: 1.0
+2018-05-04 22:13:17,076 - INFO - Making new env: Breakout-v0
+2018-05-04 22:13:17,076 - INFO - Making new env: Breakout-v0
+2018-05-04 22:13:20,838 - INFO - EPSILON: 0.9567847000014228 200 lepesszam mellett, reward: 1.0
+2018-05-04 22:13:20,838 - INFO - EPSILON: 0.9567847000014228 200 lepesszam mellett, reward: 1.0
+2018-05-04 22:13:20,839 - INFO - Making new env: Breakout-v0
+2018-05-04 22:13:20,839 - INFO - Making new env: Breakout-v0
+2018-05-04 22:13:26,858 - INFO - EPSILON: 0.9564859000014326 332 lepesszam mellett, reward: 3.0
+2018-05-04 22:13:26,858 - INFO - EPSILON: 0.9564859000014326 332 lepesszam mellett, reward: 3.0
+2018-05-04 22:13:26,859 - INFO - Making new env: Breakout-v0
+2018-05-04 22:13:26,859 - INFO - Making new env: Breakout-v0
+2018-05-04 22:13:32,208 - INFO - EPSILON: 0.9562159000014415 300 lepesszam mellett, reward: 2.0
+2018-05-04 22:13:32,208 - INFO - EPSILON: 0.9562159000014415 300 lepesszam mellett, reward: 2.0
+2018-05-04 22:13:32,208 - INFO - Making new env: Breakout-v0
+2018-05-04 22:13:32,208 - INFO - Making new env: Breakout-v0
+2018-05-04 22:13:37,401 - INFO - EPSILON: 0.9559648000014498 279 lepesszam mellett, reward: 2.0
+2018-05-04 22:13:37,401 - INFO - EPSILON: 0.9559648000014498 279 lepesszam mellett, reward: 2.0
+2018-05-04 22:13:37,401 - INFO - Making new env: Breakout-v0
+2018-05-04 22:13:37,401 - INFO - Making new env: Breakout-v0
+2018-05-04 22:13:41,254 - INFO - EPSILON: 0.9557830000014558 202 lepesszam mellett, reward: 1.0
+2018-05-04 22:13:41,254 - INFO - EPSILON: 0.9557830000014558 202 lepesszam mellett, reward: 1.0
+2018-05-04 22:13:41,254 - INFO - Making new env: Breakout-v0
+2018-05-04 22:13:41,254 - INFO - Making new env: Breakout-v0
+2018-05-04 22:16:38,504 - INFO - EPSILON: 0.946783900001752 9999 lepesszam mellett, reward: 0.0
+2018-05-04 22:16:38,504 - INFO - EPSILON: 0.946783900001752 9999 lepesszam mellett, reward: 0.0
+2018-05-04 22:16:38,504 - INFO - Making new env: Breakout-v0
+2018-05-04 22:16:38,504 - INFO - Making new env: Breakout-v0
+2018-05-04 22:16:42,864 - INFO - EPSILON: 0.9465823000017587 224 lepesszam mellett, reward: 1.0
+2018-05-04 22:16:42,864 - INFO - EPSILON: 0.9465823000017587 224 lepesszam mellett, reward: 1.0
+2018-05-04 22:16:42,865 - INFO - Making new env: Breakout-v0
+2018-05-04 22:16:42,865 - INFO - Making new env: Breakout-v0
+2018-05-04 22:19:38,268 - INFO - EPSILON: 0.937583200002055 9999 lepesszam mellett, reward: 2.0
+2018-05-04 22:19:38,268 - INFO - EPSILON: 0.937583200002055 9999 lepesszam mellett, reward: 2.0
+2018-05-04 22:19:38,269 - INFO - Making new env: Breakout-v0
+2018-05-04 22:19:38,269 - INFO - Making new env: Breakout-v0
+2018-05-04 22:19:42,502 - INFO - EPSILON: 0.9373771000020618 229 lepesszam mellett, reward: 1.0
+2018-05-04 22:19:42,502 - INFO - EPSILON: 0.9373771000020618 229 lepesszam mellett, reward: 1.0
+2018-05-04 22:19:42,502 - INFO - Making new env: Breakout-v0
+2018-05-04 22:19:42,502 - INFO - Making new env: Breakout-v0
+2018-05-04 22:19:46,193 - INFO - EPSILON: 0.9371989000020676 198 lepesszam mellett, reward: 1.0
+2018-05-04 22:19:46,193 - INFO - EPSILON: 0.9371989000020676 198 lepesszam mellett, reward: 1.0
+2018-05-04 22:19:46,194 - INFO - Making new env: Breakout-v0
+2018-05-04 22:19:46,194 - INFO - Making new env: Breakout-v0
+2018-05-04 22:19:51,143 - INFO - EPSILON: 0.9369586000020755 267 lepesszam mellett, reward: 2.0
+2018-05-04 22:19:51,143 - INFO - EPSILON: 0.9369586000020755 267 lepesszam mellett, reward: 2.0
+2018-05-04 22:19:51,143 - INFO - Making new env: Breakout-v0
+2018-05-04 22:19:51,143 - INFO - Making new env: Breakout-v0
+2018-05-04 22:19:54,336 - INFO - EPSILON: 0.9368083000020805 167 lepesszam mellett, reward: 0.0
+2018-05-04 22:19:54,336 - INFO - EPSILON: 0.9368083000020805 167 lepesszam mellett, reward: 0.0
+2018-05-04 22:19:54,336 - INFO - Making new env: Breakout-v0
+2018-05-04 22:19:54,336 - INFO - Making new env: Breakout-v0
+2018-05-04 22:19:58,752 - INFO - EPSILON: 0.9366013000020873 230 lepesszam mellett, reward: 1.0
+2018-05-04 22:19:58,752 - INFO - EPSILON: 0.9366013000020873 230 lepesszam mellett, reward: 1.0
+2018-05-04 22:19:58,752 - INFO - Making new env: Breakout-v0
+2018-05-04 22:19:58,752 - INFO - Making new env: Breakout-v0
+2018-05-04 22:20:02,744 - INFO - EPSILON: 0.9364195000020933 202 lepesszam mellett, reward: 1.0
+2018-05-04 22:20:02,744 - INFO - EPSILON: 0.9364195000020933 202 lepesszam mellett, reward: 1.0
+2018-05-04 22:20:02,744 - INFO - Making new env: Breakout-v0
+2018-05-04 22:20:02,744 - INFO - Making new env: Breakout-v0
+2018-05-04 22:20:09,356 - INFO - EPSILON: 0.9360874000021042 369 lepesszam mellett, reward: 4.0
+2018-05-04 22:20:09,356 - INFO - EPSILON: 0.9360874000021042 369 lepesszam mellett, reward: 4.0
+2018-05-04 22:20:09,357 - INFO - Making new env: Breakout-v0
+2018-05-04 22:20:09,357 - INFO - Making new env: Breakout-v0
+2018-05-04 22:20:12,544 - INFO - EPSILON: 0.9359452000021089 158 lepesszam mellett, reward: 0.0
+2018-05-04 22:20:12,544 - INFO - EPSILON: 0.9359452000021089 158 lepesszam mellett, reward: 0.0
+2018-05-04 22:20:12,544 - INFO - Making new env: Breakout-v0
+2018-05-04 22:20:12,544 - INFO - Making new env: Breakout-v0
+2018-05-04 22:23:06,999 - INFO - EPSILON: 0.9269461000024052 9999 lepesszam mellett, reward: 0.0
+2018-05-04 22:23:06,999 - INFO - EPSILON: 0.9269461000024052 9999 lepesszam mellett, reward: 0.0
+2018-05-04 22:23:07,000 - INFO - Making new env: Breakout-v0
+2018-05-04 22:23:07,000 - INFO - Making new env: Breakout-v0
+2018-05-04 22:23:10,225 - INFO - EPSILON: 0.92679940000241 163 lepesszam mellett, reward: 0.0
+2018-05-04 22:23:10,225 - INFO - EPSILON: 0.92679940000241 163 lepesszam mellett, reward: 0.0
+2018-05-04 22:23:10,225 - INFO - Making new env: Breakout-v0
+2018-05-04 22:23:10,225 - INFO - Making new env: Breakout-v0
+2018-05-04 22:23:13,563 - INFO - EPSILON: 0.9266500000024149 166 lepesszam mellett, reward: 0.0
+2018-05-04 22:23:13,563 - INFO - EPSILON: 0.9266500000024149 166 lepesszam mellett, reward: 0.0
+2018-05-04 22:23:13,563 - INFO - Making new env: Breakout-v0
+2018-05-04 22:23:13,563 - INFO - Making new env: Breakout-v0
+2018-05-04 22:23:16,600 - INFO - EPSILON: 0.9265060000024197 160 lepesszam mellett, reward: 0.0
+2018-05-04 22:23:16,600 - INFO - EPSILON: 0.9265060000024197 160 lepesszam mellett, reward: 0.0
+2018-05-04 22:23:16,600 - INFO - Making new env: Breakout-v0
+2018-05-04 22:23:16,600 - INFO - Making new env: Breakout-v0
+2018-05-04 22:23:21,395 - INFO - EPSILON: 0.9262765000024272 255 lepesszam mellett, reward: 2.0
+2018-05-04 22:23:21,395 - INFO - EPSILON: 0.9262765000024272 255 lepesszam mellett, reward: 2.0
+2018-05-04 22:23:21,395 - INFO - Making new env: Breakout-v0
+2018-05-04 22:23:21,395 - INFO - Making new env: Breakout-v0
+2018-05-04 22:26:18,084 - INFO - EPSILON: 0.9172774000027235 9999 lepesszam mellett, reward: 0.0
+2018-05-04 22:26:18,084 - INFO - EPSILON: 0.9172774000027235 9999 lepesszam mellett, reward: 0.0
+2018-05-04 22:26:18,085 - INFO - Making new env: Breakout-v0
+2018-05-04 22:26:18,085 - INFO - Making new env: Breakout-v0
+2018-05-04 22:26:24,152 - INFO - EPSILON: 0.9169867000027331 323 lepesszam mellett, reward: 3.0
+2018-05-04 22:26:24,152 - INFO - EPSILON: 0.9169867000027331 323 lepesszam mellett, reward: 3.0
+2018-05-04 22:26:24,152 - INFO - Making new env: Breakout-v0
+2018-05-04 22:26:24,152 - INFO - Making new env: Breakout-v0
+2018-05-04 22:26:31,447 - INFO - EPSILON: 0.9166285000027449 398 lepesszam mellett, reward: 4.0
+2018-05-04 22:26:31,447 - INFO - EPSILON: 0.9166285000027449 398 lepesszam mellett, reward: 4.0
+2018-05-04 22:26:31,447 - INFO - Making new env: Breakout-v0
+2018-05-04 22:26:31,447 - INFO - Making new env: Breakout-v0
+2018-05-04 22:26:35,087 - INFO - EPSILON: 0.9164476000027508 201 lepesszam mellett, reward: 1.0
+2018-05-04 22:26:35,087 - INFO - EPSILON: 0.9164476000027508 201 lepesszam mellett, reward: 1.0
+2018-05-04 22:26:35,087 - INFO - Making new env: Breakout-v0
+2018-05-04 22:26:35,087 - INFO - Making new env: Breakout-v0
+2018-05-04 22:26:39,287 - INFO - EPSILON: 0.9162424000027576 228 lepesszam mellett, reward: 1.0
+2018-05-04 22:26:39,287 - INFO - EPSILON: 0.9162424000027576 228 lepesszam mellett, reward: 1.0
+2018-05-04 22:26:39,287 - INFO - Making new env: Breakout-v0
+2018-05-04 22:26:39,287 - INFO - Making new env: Breakout-v0
+2018-05-04 22:26:43,393 - INFO - EPSILON: 0.9160435000027641 221 lepesszam mellett, reward: 1.0
+2018-05-04 22:26:43,393 - INFO - EPSILON: 0.9160435000027641 221 lepesszam mellett, reward: 1.0
+2018-05-04 22:26:43,393 - INFO - Making new env: Breakout-v0
+2018-05-04 22:26:43,393 - INFO - Making new env: Breakout-v0
+2018-05-04 22:26:48,085 - INFO - EPSILON: 0.9158122000027717 257 lepesszam mellett, reward: 2.0
+2018-05-04 22:26:48,085 - INFO - EPSILON: 0.9158122000027717 257 lepesszam mellett, reward: 2.0
+2018-05-04 22:26:48,085 - INFO - Making new env: Breakout-v0
+2018-05-04 22:26:48,085 - INFO - Making new env: Breakout-v0
+2018-05-04 22:29:44,437 - INFO - EPSILON: 0.906813100003068 9999 lepesszam mellett, reward: 0.0
+2018-05-04 22:29:44,437 - INFO - EPSILON: 0.906813100003068 9999 lepesszam mellett, reward: 0.0
+2018-05-04 22:29:44,437 - INFO - Making new env: Breakout-v0
+2018-05-04 22:29:44,437 - INFO - Making new env: Breakout-v0
+2018-05-04 22:32:42,777 - INFO - EPSILON: 0.8978140000033643 9999 lepesszam mellett, reward: 1.0
+2018-05-04 22:32:42,777 - INFO - EPSILON: 0.8978140000033643 9999 lepesszam mellett, reward: 1.0
+2018-05-04 22:32:42,777 - INFO - Making new env: Breakout-v0
+2018-05-04 22:32:42,777 - INFO - Making new env: Breakout-v0
+2018-05-04 22:32:46,039 - INFO - EPSILON: 0.8976655000033692 165 lepesszam mellett, reward: 0.0
+2018-05-04 22:32:46,039 - INFO - EPSILON: 0.8976655000033692 165 lepesszam mellett, reward: 0.0
+2018-05-04 22:32:46,039 - INFO - Making new env: Breakout-v0
+2018-05-04 22:32:46,039 - INFO - Making new env: Breakout-v0
+2018-05-04 22:32:51,217 - INFO - EPSILON: 0.8974153000033774 278 lepesszam mellett, reward: 2.0
+2018-05-04 22:32:51,217 - INFO - EPSILON: 0.8974153000033774 278 lepesszam mellett, reward: 2.0
+2018-05-04 22:32:51,217 - INFO - Making new env: Breakout-v0
+2018-05-04 22:32:51,217 - INFO - Making new env: Breakout-v0
+2018-05-04 22:32:54,149 - INFO - EPSILON: 0.8972722000033821 159 lepesszam mellett, reward: 0.0
+2018-05-04 22:32:54,149 - INFO - EPSILON: 0.8972722000033821 159 lepesszam mellett, reward: 0.0
+2018-05-04 22:32:54,149 - INFO - Making new env: Breakout-v0
+2018-05-04 22:32:54,149 - INFO - Making new env: Breakout-v0
+2018-05-04 22:32:59,667 - INFO - EPSILON: 0.8970112000033907 290 lepesszam mellett, reward: 2.0
+2018-05-04 22:32:59,667 - INFO - EPSILON: 0.8970112000033907 290 lepesszam mellett, reward: 2.0
+2018-05-04 22:32:59,667 - INFO - Making new env: Breakout-v0
+2018-05-04 22:32:59,667 - INFO - Making new env: Breakout-v0
+2018-05-04 22:33:07,747 - INFO - EPSILON: 0.8966197000034036 435 lepesszam mellett, reward: 5.0
+2018-05-04 22:33:07,747 - INFO - EPSILON: 0.8966197000034036 435 lepesszam mellett, reward: 5.0
+2018-05-04 22:33:07,747 - INFO - Making new env: Breakout-v0
+2018-05-04 22:33:07,747 - INFO - Making new env: Breakout-v0
+2018-05-04 22:33:10,830 - INFO - EPSILON: 0.8964748000034084 161 lepesszam mellett, reward: 0.0
+2018-05-04 22:33:10,830 - INFO - EPSILON: 0.8964748000034084 161 lepesszam mellett, reward: 0.0
+2018-05-04 22:33:10,830 - INFO - Making new env: Breakout-v0
+2018-05-04 22:33:10,830 - INFO - Making new env: Breakout-v0
+2018-05-04 22:33:15,733 - INFO - EPSILON: 0.8962381000034162 263 lepesszam mellett, reward: 2.0
+2018-05-04 22:33:15,733 - INFO - EPSILON: 0.8962381000034162 263 lepesszam mellett, reward: 2.0
+2018-05-04 22:33:15,734 - INFO - Making new env: Breakout-v0
+2018-05-04 22:33:15,734 - INFO - Making new env: Breakout-v0
+2018-05-04 22:33:18,670 - INFO - EPSILON: 0.8960941000034209 160 lepesszam mellett, reward: 0.0
+2018-05-04 22:33:18,670 - INFO - EPSILON: 0.8960941000034209 160 lepesszam mellett, reward: 0.0
+2018-05-04 22:33:18,670 - INFO - Making new env: Breakout-v0
+2018-05-04 22:33:18,670 - INFO - Making new env: Breakout-v0
+2018-05-04 22:33:26,161 - INFO - EPSILON: 0.8957179000034333 418 lepesszam mellett, reward: 4.0
+2018-05-04 22:33:26,161 - INFO - EPSILON: 0.8957179000034333 418 lepesszam mellett, reward: 4.0
+2018-05-04 22:33:26,161 - INFO - Making new env: Breakout-v0
+2018-05-04 22:33:26,161 - INFO - Making new env: Breakout-v0
+2018-05-04 22:33:30,413 - INFO - EPSILON: 0.89551540000344 225 lepesszam mellett, reward: 1.0
+2018-05-04 22:33:30,413 - INFO - EPSILON: 0.89551540000344 225 lepesszam mellett, reward: 1.0
+2018-05-04 22:33:30,414 - INFO - Making new env: Breakout-v0
+2018-05-04 22:33:30,414 - INFO - Making new env: Breakout-v0
+2018-05-04 22:33:36,384 - INFO - EPSILON: 0.8952229000034496 325 lepesszam mellett, reward: 3.0
+2018-05-04 22:33:36,384 - INFO - EPSILON: 0.8952229000034496 325 lepesszam mellett, reward: 3.0
+2018-05-04 22:33:36,384 - INFO - Making new env: Breakout-v0
+2018-05-04 22:33:36,384 - INFO - Making new env: Breakout-v0
+2018-05-04 22:33:40,270 - INFO - EPSILON: 0.8950402000034556 203 lepesszam mellett, reward: 1.0
+2018-05-04 22:33:40,270 - INFO - EPSILON: 0.8950402000034556 203 lepesszam mellett, reward: 1.0
+2018-05-04 22:33:40,270 - INFO - Making new env: Breakout-v0
+2018-05-04 22:33:40,270 - INFO - Making new env: Breakout-v0
+2018-05-04 22:33:43,502 - INFO - EPSILON: 0.8948890000034606 168 lepesszam mellett, reward: 0.0
+2018-05-04 22:33:43,502 - INFO - EPSILON: 0.8948890000034606 168 lepesszam mellett, reward: 0.0
+2018-05-04 22:33:43,502 - INFO - Making new env: Breakout-v0
+2018-05-04 22:33:43,502 - INFO - Making new env: Breakout-v0
+2018-05-04 22:33:47,595 - INFO - EPSILON: 0.8946856000034673 226 lepesszam mellett, reward: 1.0
+2018-05-04 22:33:47,595 - INFO - EPSILON: 0.8946856000034673 226 lepesszam mellett, reward: 1.0
+2018-05-04 22:33:47,595 - INFO - Making new env: Breakout-v0
+2018-05-04 22:33:47,595 - INFO - Making new env: Breakout-v0
+2018-05-04 22:33:52,154 - INFO - EPSILON: 0.8944705000034744 239 lepesszam mellett, reward: 2.0
+2018-05-04 22:33:52,154 - INFO - EPSILON: 0.8944705000034744 239 lepesszam mellett, reward: 2.0
+2018-05-04 22:33:52,154 - INFO - Making new env: Breakout-v0
+2018-05-04 22:33:52,154 - INFO - Making new env: Breakout-v0
+2018-05-04 22:33:56,469 - INFO - EPSILON: 0.8942626000034812 231 lepesszam mellett, reward: 1.0
+2018-05-04 22:33:56,469 - INFO - EPSILON: 0.8942626000034812 231 lepesszam mellett, reward: 1.0
+2018-05-04 22:33:56,470 - INFO - Making new env: Breakout-v0
+2018-05-04 22:33:56,470 - INFO - Making new env: Breakout-v0
+2018-05-04 22:34:04,878 - INFO - EPSILON: 0.893845000003495 464 lepesszam mellett, reward: 5.0
+2018-05-04 22:34:04,878 - INFO - EPSILON: 0.893845000003495 464 lepesszam mellett, reward: 5.0
+2018-05-04 22:34:04,878 - INFO - Making new env: Breakout-v0
+2018-05-04 22:34:04,878 - INFO - Making new env: Breakout-v0
+2018-05-04 22:34:09,977 - INFO - EPSILON: 0.8936119000035027 259 lepesszam mellett, reward: 2.0
+2018-05-04 22:34:09,977 - INFO - EPSILON: 0.8936119000035027 259 lepesszam mellett, reward: 2.0
+2018-05-04 22:34:09,977 - INFO - Making new env: Breakout-v0
+2018-05-04 22:34:09,977 - INFO - Making new env: Breakout-v0
+2018-05-04 22:34:14,230 - INFO - EPSILON: 0.8934130000035092 221 lepesszam mellett, reward: 1.0
+2018-05-04 22:34:14,230 - INFO - EPSILON: 0.8934130000035092 221 lepesszam mellett, reward: 1.0
+2018-05-04 22:34:14,230 - INFO - Making new env: Breakout-v0
+2018-05-04 22:34:14,230 - INFO - Making new env: Breakout-v0
+2018-05-04 22:34:20,713 - INFO - EPSILON: 0.8930935000035197 355 lepesszam mellett, reward: 3.0
+2018-05-04 22:34:20,713 - INFO - EPSILON: 0.8930935000035197 355 lepesszam mellett, reward: 3.0
+2018-05-04 22:34:20,714 - INFO - Making new env: Breakout-v0
+2018-05-04 22:34:20,714 - INFO - Making new env: Breakout-v0
+2018-05-04 22:34:23,684 - INFO - EPSILON: 0.8929504000035244 159 lepesszam mellett, reward: 0.0
+2018-05-04 22:34:23,684 - INFO - EPSILON: 0.8929504000035244 159 lepesszam mellett, reward: 0.0
+2018-05-04 22:34:23,684 - INFO - Making new env: Breakout-v0
+2018-05-04 22:34:23,684 - INFO - Making new env: Breakout-v0
+2018-05-04 22:37:19,115 - INFO - EPSILON: 0.8839513000038207 9999 lepesszam mellett, reward: 1.0
+2018-05-04 22:37:19,115 - INFO - EPSILON: 0.8839513000038207 9999 lepesszam mellett, reward: 1.0
+2018-05-04 22:37:19,115 - INFO - Making new env: Breakout-v0
+2018-05-04 22:37:19,115 - INFO - Making new env: Breakout-v0
+2018-05-04 22:37:22,088 - INFO - EPSILON: 0.8838064000038255 161 lepesszam mellett, reward: 0.0
+2018-05-04 22:37:22,088 - INFO - EPSILON: 0.8838064000038255 161 lepesszam mellett, reward: 0.0
+2018-05-04 22:37:22,088 - INFO - Making new env: Breakout-v0
+2018-05-04 22:37:22,088 - INFO - Making new env: Breakout-v0
+2018-05-04 22:37:24,947 - INFO - EPSILON: 0.8836624000038302 160 lepesszam mellett, reward: 0.0
+2018-05-04 22:37:24,947 - INFO - EPSILON: 0.8836624000038302 160 lepesszam mellett, reward: 0.0
+2018-05-04 22:37:24,948 - INFO - Making new env: Breakout-v0
+2018-05-04 22:37:24,948 - INFO - Making new env: Breakout-v0
+2018-05-04 22:37:30,105 - INFO - EPSILON: 0.8834104000038385 280 lepesszam mellett, reward: 2.0
+2018-05-04 22:37:30,105 - INFO - EPSILON: 0.8834104000038385 280 lepesszam mellett, reward: 2.0
+2018-05-04 22:37:30,106 - INFO - Making new env: Breakout-v0
+2018-05-04 22:37:30,106 - INFO - Making new env: Breakout-v0
+2018-05-04 22:40:28,482 - INFO - EPSILON: 0.8744113000041348 9999 lepesszam mellett, reward: 1.0
+2018-05-04 22:40:28,482 - INFO - EPSILON: 0.8744113000041348 9999 lepesszam mellett, reward: 1.0
+2018-05-04 22:40:28,482 - INFO - Making new env: Breakout-v0
+2018-05-04 22:40:28,482 - INFO - Making new env: Breakout-v0
+2018-05-04 22:40:31,891 - INFO - EPSILON: 0.8742664000041396 161 lepesszam mellett, reward: 0.0
+2018-05-04 22:40:31,891 - INFO - EPSILON: 0.8742664000041396 161 lepesszam mellett, reward: 0.0
+2018-05-04 22:40:31,891 - INFO - Making new env: Breakout-v0
+2018-05-04 22:40:31,891 - INFO - Making new env: Breakout-v0
+2018-05-04 22:40:37,027 - INFO - EPSILON: 0.8740279000041474 265 lepesszam mellett, reward: 2.0
+2018-05-04 22:40:37,027 - INFO - EPSILON: 0.8740279000041474 265 lepesszam mellett, reward: 2.0
+2018-05-04 22:40:37,027 - INFO - Making new env: Breakout-v0
+2018-05-04 22:40:37,027 - INFO - Making new env: Breakout-v0
+2018-05-04 22:40:40,000 - INFO - EPSILON: 0.8738812000041523 163 lepesszam mellett, reward: 0.0
+2018-05-04 22:40:40,000 - INFO - EPSILON: 0.8738812000041523 163 lepesszam mellett, reward: 0.0
+2018-05-04 22:40:40,000 - INFO - Making new env: Breakout-v0
+2018-05-04 22:40:40,000 - INFO - Making new env: Breakout-v0
+2018-05-04 22:40:43,350 - INFO - EPSILON: 0.8737291000041573 169 lepesszam mellett, reward: 0.0
+2018-05-04 22:40:43,350 - INFO - EPSILON: 0.8737291000041573 169 lepesszam mellett, reward: 0.0
+2018-05-04 22:40:43,350 - INFO - Making new env: Breakout-v0
+2018-05-04 22:40:43,350 - INFO - Making new env: Breakout-v0
+2018-05-04 23:20:53,891 - INFO - ACTION_SET: 3
+2018-05-04 23:20:53,891 - INFO - ACTION_SET: 3
+2018-05-04 23:20:53,891 - INFO - BATCH_SIZE: 32
+2018-05-04 23:20:53,891 - INFO - BATCH_SIZE: 32
+2018-05-04 23:20:53,891 - INFO - UPDATE_FREQUENCY: 4
+2018-05-04 23:20:53,891 - INFO - UPDATE_FREQUENCY: 4
+2018-05-04 23:20:53,892 - INFO - STATE_LENGTH: 4
+2018-05-04 23:20:53,892 - INFO - STATE_LENGTH: 4
+2018-05-04 23:20:53,892 - INFO - EXPLORATION_STEPS: 1000000
+2018-05-04 23:20:53,892 - INFO - EXPLORATION_STEPS: 1000000
+2018-05-04 23:20:53,892 - INFO - INITIAL_EPSILON: 1.0
+2018-05-04 23:20:53,892 - INFO - INITIAL_EPSILON: 1.0
+2018-05-04 23:20:53,893 - INFO - FINAL_EPSILON: 0.1
+2018-05-04 23:20:53,893 - INFO - FINAL_EPSILON: 0.1
+2018-05-04 23:20:53,893 - INFO - INITIAL_REPLAY_SIZE: 20000
+2018-05-04 23:20:53,893 - INFO - INITIAL_REPLAY_SIZE: 20000
+2018-05-04 23:20:53,893 - INFO - NUM_REPLAY_MEMORY: 400000
+2018-05-04 23:20:53,893 - INFO - NUM_REPLAY_MEMORY: 400000
+2018-05-04 23:20:53,893 - INFO - LEARNING_FACTOR: 0.00025
+2018-05-04 23:20:53,893 - INFO - LEARNING_FACTOR: 0.00025
+2018-05-04 23:20:53,894 - INFO - INFO_GRAPH_WEIGHTS_DIR: ./breakout_0504/
+2018-05-04 23:20:53,894 - INFO - INFO_GRAPH_WEIGHTS_DIR: ./breakout_0504/
+2018-05-04 23:20:53,894 - INFO - REFRESH_Q_WEIGHT_STEP: 3
+2018-05-04 23:20:53,894 - INFO - REFRESH_Q_WEIGHT_STEP: 3
+2018-05-04 23:20:56,047 - INFO - Making new env: Breakout-v0
+2018-05-04 23:20:56,047 - INFO - Making new env: Breakout-v0
+2018-05-04 23:20:59,331 - INFO - Could not load matplotlib icon: bad option "foobar": must be aspect, attributes, client, colormapwindows, command, deiconify, focusmodel, forget, frame, geometry, grid, group, iconbitmap, iconify, iconmask, iconname, iconphoto, iconposition, iconwindow, manage, maxsize, minsize, overrideredirect, positionfrom, protocol, resizable, sizefrom, stackorder, state, title, transient, or withdraw
+2018-05-04 23:20:59,331 - INFO - Could not load matplotlib icon: bad option "foobar": must be aspect, attributes, client, colormapwindows, command, deiconify, focusmodel, forget, frame, geometry, grid, group, iconbitmap, iconify, iconmask, iconname, iconphoto, iconposition, iconwindow, manage, maxsize, minsize, overrideredirect, positionfrom, protocol, resizable, sizefrom, stackorder, state, title, transient, or withdraw
+2018-05-04 23:20:59,784 - INFO - EPSILON: 0.8737291 257 lepesszam mellett, reward: 2.0
+2018-05-04 23:20:59,784 - INFO - EPSILON: 0.8737291 257 lepesszam mellett, reward: 2.0
+2018-05-04 23:20:59,784 - INFO - Making new env: Breakout-v0
+2018-05-04 23:20:59,784 - INFO - Making new env: Breakout-v0
+2018-05-04 23:21:01,617 - INFO - Could not load matplotlib icon: bad option "foobar": must be aspect, attributes, client, colormapwindows, command, deiconify, focusmodel, forget, frame, geometry, grid, group, iconbitmap, iconify, iconmask, iconname, iconphoto, iconposition, iconwindow, manage, maxsize, minsize, overrideredirect, positionfrom, protocol, resizable, sizefrom, stackorder, state, title, transient, or withdraw
+2018-05-04 23:21:01,617 - INFO - Could not load matplotlib icon: bad option "foobar": must be aspect, attributes, client, colormapwindows, command, deiconify, focusmodel, forget, frame, geometry, grid, group, iconbitmap, iconify, iconmask, iconname, iconphoto, iconposition, iconwindow, manage, maxsize, minsize, overrideredirect, positionfrom, protocol, resizable, sizefrom, stackorder, state, title, transient, or withdraw
+2018-05-04 23:21:01,995 - INFO - EPSILON: 0.8737291 335 lepesszam mellett, reward: 3.0
+2018-05-04 23:21:01,995 - INFO - EPSILON: 0.8737291 335 lepesszam mellett, reward: 3.0
+2018-05-04 23:21:01,995 - INFO - Making new env: Breakout-v0
+2018-05-04 23:21:01,995 - INFO - Making new env: Breakout-v0
+2018-05-04 23:21:02,937 - INFO - Could not load matplotlib icon: bad option "foobar": must be aspect, attributes, client, colormapwindows, command, deiconify, focusmodel, forget, frame, geometry, grid, group, iconbitmap, iconify, iconmask, iconname, iconphoto, iconposition, iconwindow, manage, maxsize, minsize, overrideredirect, positionfrom, protocol, resizable, sizefrom, stackorder, state, title, transient, or withdraw
+2018-05-04 23:21:02,937 - INFO - Could not load matplotlib icon: bad option "foobar": must be aspect, attributes, client, colormapwindows, command, deiconify, focusmodel, forget, frame, geometry, grid, group, iconbitmap, iconify, iconmask, iconname, iconphoto, iconposition, iconwindow, manage, maxsize, minsize, overrideredirect, positionfrom, protocol, resizable, sizefrom, stackorder, state, title, transient, or withdraw
+2018-05-04 23:21:03,467 - INFO - EPSILON: 0.8737291 198 lepesszam mellett, reward: 1.0
+2018-05-04 23:21:03,467 - INFO - EPSILON: 0.8737291 198 lepesszam mellett, reward: 1.0
+2018-05-04 23:21:03,468 - INFO - Making new env: Breakout-v0
+2018-05-04 23:21:03,468 - INFO - Making new env: Breakout-v0
+2018-05-04 23:21:04,482 - INFO - Could not load matplotlib icon: bad option "foobar": must be aspect, attributes, client, colormapwindows, command, deiconify, focusmodel, forget, frame, geometry, grid, group, iconbitmap, iconify, iconmask, iconname, iconphoto, iconposition, iconwindow, manage, maxsize, minsize, overrideredirect, positionfrom, protocol, resizable, sizefrom, stackorder, state, title, transient, or withdraw
+2018-05-04 23:21:04,482 - INFO - Could not load matplotlib icon: bad option "foobar": must be aspect, attributes, client, colormapwindows, command, deiconify, focusmodel, forget, frame, geometry, grid, group, iconbitmap, iconify, iconmask, iconname, iconphoto, iconposition, iconwindow, manage, maxsize, minsize, overrideredirect, positionfrom, protocol, resizable, sizefrom, stackorder, state, title, transient, or withdraw
+2018-05-04 23:21:04,875 - INFO - EPSILON: 0.8737291 159 lepesszam mellett, reward: 0.0
+2018-05-04 23:21:04,875 - INFO - EPSILON: 0.8737291 159 lepesszam mellett, reward: 0.0
+2018-05-04 23:21:04,876 - INFO - Making new env: Breakout-v0
+2018-05-04 23:21:04,876 - INFO - Making new env: Breakout-v0
+2018-05-04 23:21:06,325 - INFO - Could not load matplotlib icon: bad option "foobar": must be aspect, attributes, client, colormapwindows, command, deiconify, focusmodel, forget, frame, geometry, grid, group, iconbitmap, iconify, iconmask, iconname, iconphoto, iconposition, iconwindow, manage, maxsize, minsize, overrideredirect, positionfrom, protocol, resizable, sizefrom, stackorder, state, title, transient, or withdraw
+2018-05-04 23:21:06,325 - INFO - Could not load matplotlib icon: bad option "foobar": must be aspect, attributes, client, colormapwindows, command, deiconify, focusmodel, forget, frame, geometry, grid, group, iconbitmap, iconify, iconmask, iconname, iconphoto, iconposition, iconwindow, manage, maxsize, minsize, overrideredirect, positionfrom, protocol, resizable, sizefrom, stackorder, state, title, transient, or withdraw
+2018-05-04 23:21:06,671 - INFO - EPSILON: 0.8737291 299 lepesszam mellett, reward: 2.0
+2018-05-04 23:21:06,671 - INFO - EPSILON: 0.8737291 299 lepesszam mellett, reward: 2.0
+2018-05-04 23:21:06,671 - INFO - Making new env: Breakout-v0
+2018-05-04 23:21:06,671 - INFO - Making new env: Breakout-v0
+2018-05-04 23:21:08,005 - INFO - Could not load matplotlib icon: bad option "foobar": must be aspect, attributes, client, colormapwindows, command, deiconify, focusmodel, forget, frame, geometry, grid, group, iconbitmap, iconify, iconmask, iconname, iconphoto, iconposition, iconwindow, manage, maxsize, minsize, overrideredirect, positionfrom, protocol, resizable, sizefrom, stackorder, state, title, transient, or withdraw
+2018-05-04 23:21:08,005 - INFO - Could not load matplotlib icon: bad option "foobar": must be aspect, attributes, client, colormapwindows, command, deiconify, focusmodel, forget, frame, geometry, grid, group, iconbitmap, iconify, iconmask, iconname, iconphoto, iconposition, iconwindow, manage, maxsize, minsize, overrideredirect, positionfrom, protocol, resizable, sizefrom, stackorder, state, title, transient, or withdraw
+2018-05-04 23:21:08,551 - INFO - EPSILON: 0.8737291 307 lepesszam mellett, reward: 3.0
+2018-05-04 23:21:08,551 - INFO - EPSILON: 0.8737291 307 lepesszam mellett, reward: 3.0
+2018-05-04 23:21:08,552 - INFO - Making new env: Breakout-v0
+2018-05-04 23:21:08,552 - INFO - Making new env: Breakout-v0
+2018-05-04 23:21:10,211 - INFO - Could not load matplotlib icon: bad option "foobar": must be aspect, attributes, client, colormapwindows, command, deiconify, focusmodel, forget, frame, geometry, grid, group, iconbitmap, iconify, iconmask, iconname, iconphoto, iconposition, iconwindow, manage, maxsize, minsize, overrideredirect, positionfrom, protocol, resizable, sizefrom, stackorder, state, title, transient, or withdraw
+2018-05-04 23:21:10,211 - INFO - Could not load matplotlib icon: bad option "foobar": must be aspect, attributes, client, colormapwindows, command, deiconify, focusmodel, forget, frame, geometry, grid, group, iconbitmap, iconify, iconmask, iconname, iconphoto, iconposition, iconwindow, manage, maxsize, minsize, overrideredirect, positionfrom, protocol, resizable, sizefrom, stackorder, state, title, transient, or withdraw
+2018-05-04 23:21:10,574 - INFO - EPSILON: 0.8737291 359 lepesszam mellett, reward: 3.0
+2018-05-04 23:21:10,574 - INFO - EPSILON: 0.8737291 359 lepesszam mellett, reward: 3.0
+2018-05-04 23:21:10,574 - INFO - Making new env: Breakout-v0
+2018-05-04 23:21:10,574 - INFO - Making new env: Breakout-v0
+2018-05-04 23:21:52,412 - INFO - Could not load matplotlib icon: bad option "foobar": must be aspect, attributes, client, colormapwindows, command, deiconify, focusmodel, forget, frame, geometry, grid, group, iconbitmap, iconify, iconmask, iconname, iconphoto, iconposition, iconwindow, manage, maxsize, minsize, overrideredirect, positionfrom, protocol, resizable, sizefrom, stackorder, state, title, transient, or withdraw
+2018-05-04 23:21:52,412 - INFO - Could not load matplotlib icon: bad option "foobar": must be aspect, attributes, client, colormapwindows, command, deiconify, focusmodel, forget, frame, geometry, grid, group, iconbitmap, iconify, iconmask, iconname, iconphoto, iconposition, iconwindow, manage, maxsize, minsize, overrideredirect, positionfrom, protocol, resizable, sizefrom, stackorder, state, title, transient, or withdraw
+2018-05-04 23:21:52,818 - INFO - EPSILON: 0.8737291 9999 lepesszam mellett, reward: 1.0
+2018-05-04 23:21:52,818 - INFO - EPSILON: 0.8737291 9999 lepesszam mellett, reward: 1.0
+2018-05-04 23:21:52,818 - INFO - Making new env: Breakout-v0
+2018-05-04 23:21:52,818 - INFO - Making new env: Breakout-v0
+2018-05-04 23:21:54,174 - INFO - Could not load matplotlib icon: bad option "foobar": must be aspect, attributes, client, colormapwindows, command, deiconify, focusmodel, forget, frame, geometry, grid, group, iconbitmap, iconify, iconmask, iconname, iconphoto, iconposition, iconwindow, manage, maxsize, minsize, overrideredirect, positionfrom, protocol, resizable, sizefrom, stackorder, state, title, transient, or withdraw
+2018-05-04 23:21:54,174 - INFO - Could not load matplotlib icon: bad option "foobar": must be aspect, attributes, client, colormapwindows, command, deiconify, focusmodel, forget, frame, geometry, grid, group, iconbitmap, iconify, iconmask, iconname, iconphoto, iconposition, iconwindow, manage, maxsize, minsize, overrideredirect, positionfrom, protocol, resizable, sizefrom, stackorder, state, title, transient, or withdraw
+2018-05-04 23:21:54,602 - INFO - EPSILON: 0.8737291 290 lepesszam mellett, reward: 2.0
+2018-05-04 23:21:54,602 - INFO - EPSILON: 0.8737291 290 lepesszam mellett, reward: 2.0
+2018-05-04 23:21:54,603 - INFO - Making new env: Breakout-v0
+2018-05-04 23:21:54,603 - INFO - Making new env: Breakout-v0
+2018-05-04 23:21:54,922 - INFO - Could not load matplotlib icon: bad option "foobar": must be aspect, attributes, client, colormapwindows, command, deiconify, focusmodel, forget, frame, geometry, grid, group, iconbitmap, iconify, iconmask, iconname, iconphoto, iconposition, iconwindow, manage, maxsize, minsize, overrideredirect, positionfrom, protocol, resizable, sizefrom, stackorder, state, title, transient, or withdraw
+2018-05-04 23:21:54,922 - INFO - Could not load matplotlib icon: bad option "foobar": must be aspect, attributes, client, colormapwindows, command, deiconify, focusmodel, forget, frame, geometry, grid, group, iconbitmap, iconify, iconmask, iconname, iconphoto, iconposition, iconwindow, manage, maxsize, minsize, overrideredirect, positionfrom, protocol, resizable, sizefrom, stackorder, state, title, transient, or withdraw
+2018-05-04 23:21:55,340 - INFO - --Felbeszakitas: EPSILON: 0.8737291 290 lepesszam mellett, reward: 2.0
+2018-05-04 23:21:55,340 - INFO - --Felbeszakitas: EPSILON: 0.8737291 290 lepesszam mellett, reward: 2.0
+2018-05-04 23:23:59,283 - INFO - ACTION_SET: 3
+2018-05-04 23:23:59,283 - INFO - ACTION_SET: 3
+2018-05-04 23:23:59,283 - INFO - BATCH_SIZE: 32
+2018-05-04 23:23:59,283 - INFO - BATCH_SIZE: 32
+2018-05-04 23:23:59,284 - INFO - UPDATE_FREQUENCY: 4
+2018-05-04 23:23:59,284 - INFO - UPDATE_FREQUENCY: 4
+2018-05-04 23:23:59,284 - INFO - STATE_LENGTH: 4
+2018-05-04 23:23:59,284 - INFO - STATE_LENGTH: 4
+2018-05-04 23:23:59,284 - INFO - EXPLORATION_STEPS: 1000000
+2018-05-04 23:23:59,284 - INFO - EXPLORATION_STEPS: 1000000
+2018-05-04 23:23:59,284 - INFO - INITIAL_EPSILON: 1.0
+2018-05-04 23:23:59,284 - INFO - INITIAL_EPSILON: 1.0
+2018-05-04 23:23:59,284 - INFO - FINAL_EPSILON: 0.1
+2018-05-04 23:23:59,284 - INFO - FINAL_EPSILON: 0.1
+2018-05-04 23:23:59,284 - INFO - INITIAL_REPLAY_SIZE: 20000
+2018-05-04 23:23:59,284 - INFO - INITIAL_REPLAY_SIZE: 20000
+2018-05-04 23:23:59,284 - INFO - NUM_REPLAY_MEMORY: 400000
+2018-05-04 23:23:59,284 - INFO - NUM_REPLAY_MEMORY: 400000
+2018-05-04 23:23:59,284 - INFO - LEARNING_FACTOR: 0.00025
+2018-05-04 23:23:59,284 - INFO - LEARNING_FACTOR: 0.00025
+2018-05-04 23:23:59,284 - INFO - INFO_GRAPH_WEIGHTS_DIR: ./breakout_0504/
+2018-05-04 23:23:59,284 - INFO - INFO_GRAPH_WEIGHTS_DIR: ./breakout_0504/
+2018-05-04 23:23:59,285 - INFO - REFRESH_Q_WEIGHT_STEP: 3
+2018-05-04 23:23:59,285 - INFO - REFRESH_Q_WEIGHT_STEP: 3
+2018-05-04 23:24:01,218 - INFO - Making new env: Breakout-v0
+2018-05-04 23:24:01,218 - INFO - Making new env: Breakout-v0
+2018-05-04 23:24:02,928 - INFO - EPSILON: 0.8737291 224 lepesszam mellett, reward: 1.0
+2018-05-04 23:24:02,928 - INFO - EPSILON: 0.8737291 224 lepesszam mellett, reward: 1.0
+2018-05-04 23:24:02,928 - INFO - Making new env: Breakout-v0
+2018-05-04 23:24:02,928 - INFO - Making new env: Breakout-v0
+2018-05-04 23:24:04,132 - INFO - EPSILON: 0.8737291 220 lepesszam mellett, reward: 1.0
+2018-05-04 23:24:04,132 - INFO - EPSILON: 0.8737291 220 lepesszam mellett, reward: 1.0
+2018-05-04 23:24:04,132 - INFO - Making new env: Breakout-v0
+2018-05-04 23:24:04,132 - INFO - Making new env: Breakout-v0
+2018-05-04 23:24:05,115 - INFO - EPSILON: 0.8737291 163 lepesszam mellett, reward: 0.0
+2018-05-04 23:24:05,115 - INFO - EPSILON: 0.8737291 163 lepesszam mellett, reward: 0.0
+2018-05-04 23:24:05,115 - INFO - Making new env: Breakout-v0
+2018-05-04 23:24:05,115 - INFO - Making new env: Breakout-v0
+2018-05-04 23:24:06,026 - INFO - EPSILON: 0.8737291 164 lepesszam mellett, reward: 0.0
+2018-05-04 23:24:06,026 - INFO - EPSILON: 0.8737291 164 lepesszam mellett, reward: 0.0
+2018-05-04 23:24:06,026 - INFO - Making new env: Breakout-v0
+2018-05-04 23:24:06,026 - INFO - Making new env: Breakout-v0
+2018-05-04 23:24:07,187 - INFO - EPSILON: 0.8737291 227 lepesszam mellett, reward: 1.0
+2018-05-04 23:24:07,187 - INFO - EPSILON: 0.8737291 227 lepesszam mellett, reward: 1.0
+2018-05-04 23:24:07,187 - INFO - Making new env: Breakout-v0
+2018-05-04 23:24:07,187 - INFO - Making new env: Breakout-v0
+2018-05-04 23:24:08,388 - INFO - EPSILON: 0.8737291 259 lepesszam mellett, reward: 2.0
+2018-05-04 23:24:08,388 - INFO - EPSILON: 0.8737291 259 lepesszam mellett, reward: 2.0
+2018-05-04 23:24:08,388 - INFO - Making new env: Breakout-v0
+2018-05-04 23:24:08,388 - INFO - Making new env: Breakout-v0
+2018-05-04 23:24:10,083 - INFO - EPSILON: 0.8737291 323 lepesszam mellett, reward: 3.0
+2018-05-04 23:24:10,083 - INFO - EPSILON: 0.8737291 323 lepesszam mellett, reward: 3.0
+2018-05-04 23:24:10,084 - INFO - Making new env: Breakout-v0
+2018-05-04 23:24:10,084 - INFO - Making new env: Breakout-v0
+2018-05-04 23:24:49,974 - INFO - EPSILON: 0.8737291 9999 lepesszam mellett, reward: 2.0
+2018-05-04 23:24:49,974 - INFO - EPSILON: 0.8737291 9999 lepesszam mellett, reward: 2.0
+2018-05-04 23:24:49,974 - INFO - Making new env: Breakout-v0
+2018-05-04 23:24:49,974 - INFO - Making new env: Breakout-v0
+2018-05-04 23:24:51,205 - INFO - EPSILON: 0.8737291 225 lepesszam mellett, reward: 1.0
+2018-05-04 23:24:51,205 - INFO - EPSILON: 0.8737291 225 lepesszam mellett, reward: 1.0
+2018-05-04 23:24:51,205 - INFO - Making new env: Breakout-v0
+2018-05-04 23:24:51,205 - INFO - Making new env: Breakout-v0
+2018-05-04 23:24:52,995 - INFO - EPSILON: 0.8737291 331 lepesszam mellett, reward: 3.0
+2018-05-04 23:24:52,995 - INFO - EPSILON: 0.8737291 331 lepesszam mellett, reward: 3.0
+2018-05-04 23:24:52,995 - INFO - Making new env: Breakout-v0
+2018-05-04 23:24:52,995 - INFO - Making new env: Breakout-v0
+2018-05-04 23:26:02,624 - INFO - EPSILON: 0.8718085000000633 9999 lepesszam mellett, reward: 0.0
+2018-05-04 23:26:02,624 - INFO - EPSILON: 0.8718085000000633 9999 lepesszam mellett, reward: 0.0
+2018-05-04 23:26:02,624 - INFO - Making new env: Breakout-v0
+2018-05-04 23:26:02,624 - INFO - Making new env: Breakout-v0
+2018-05-04 23:26:08,055 - INFO - EPSILON: 0.871542100000072 296 lepesszam mellett, reward: 2.0
+2018-05-04 23:26:08,055 - INFO - EPSILON: 0.871542100000072 296 lepesszam mellett, reward: 2.0
+2018-05-04 23:26:08,055 - INFO - Making new env: Breakout-v0
+2018-05-04 23:26:08,055 - INFO - Making new env: Breakout-v0
+2018-05-04 23:26:13,230 - INFO - EPSILON: 0.8712820000000806 289 lepesszam mellett, reward: 2.0
+2018-05-04 23:26:13,230 - INFO - EPSILON: 0.8712820000000806 289 lepesszam mellett, reward: 2.0
+2018-05-04 23:26:13,231 - INFO - Making new env: Breakout-v0
+2018-05-04 23:26:13,231 - INFO - Making new env: Breakout-v0
+2018-05-04 23:26:17,375 - INFO - EPSILON: 0.8710732000000875 232 lepesszam mellett, reward: 1.0
+2018-05-04 23:26:17,375 - INFO - EPSILON: 0.8710732000000875 232 lepesszam mellett, reward: 1.0
+2018-05-04 23:26:17,376 - INFO - Making new env: Breakout-v0
+2018-05-04 23:26:17,376 - INFO - Making new env: Breakout-v0
+2018-05-04 23:26:21,747 - INFO - EPSILON: 0.8708680000000942 228 lepesszam mellett, reward: 1.0
+2018-05-04 23:26:21,747 - INFO - EPSILON: 0.8708680000000942 228 lepesszam mellett, reward: 1.0
+2018-05-04 23:26:21,748 - INFO - Making new env: Breakout-v0
+2018-05-04 23:26:21,748 - INFO - Making new env: Breakout-v0
+2018-05-04 23:26:24,931 - INFO - EPSILON: 0.8707177000000992 167 lepesszam mellett, reward: 0.0
+2018-05-04 23:26:24,931 - INFO - EPSILON: 0.8707177000000992 167 lepesszam mellett, reward: 0.0
+2018-05-04 23:26:24,931 - INFO - Making new env: Breakout-v0
+2018-05-04 23:26:24,931 - INFO - Making new env: Breakout-v0
+2018-05-04 23:26:28,075 - INFO - EPSILON: 0.870572800000104 161 lepesszam mellett, reward: 0.0
+2018-05-04 23:26:28,075 - INFO - EPSILON: 0.870572800000104 161 lepesszam mellett, reward: 0.0
+2018-05-04 23:26:28,075 - INFO - Making new env: Breakout-v0
+2018-05-04 23:26:28,075 - INFO - Making new env: Breakout-v0
+2018-05-04 23:26:32,363 - INFO - EPSILON: 0.8703676000001107 228 lepesszam mellett, reward: 1.0
+2018-05-04 23:26:32,363 - INFO - EPSILON: 0.8703676000001107 228 lepesszam mellett, reward: 1.0
+2018-05-04 23:26:32,364 - INFO - Making new env: Breakout-v0
+2018-05-04 23:26:32,364 - INFO - Making new env: Breakout-v0
+2018-05-04 23:26:35,553 - INFO - EPSILON: 0.8702182000001156 166 lepesszam mellett, reward: 0.0
+2018-05-04 23:26:35,553 - INFO - EPSILON: 0.8702182000001156 166 lepesszam mellett, reward: 0.0
+2018-05-04 23:26:35,553 - INFO - Making new env: Breakout-v0
+2018-05-04 23:26:35,553 - INFO - Making new env: Breakout-v0
+2018-05-04 23:29:31,844 - INFO - EPSILON: 0.8612191000004119 9999 lepesszam mellett, reward: 0.0
+2018-05-04 23:29:31,844 - INFO - EPSILON: 0.8612191000004119 9999 lepesszam mellett, reward: 0.0
+2018-05-04 23:29:31,844 - INFO - Making new env: Breakout-v0
+2018-05-04 23:29:31,844 - INFO - Making new env: Breakout-v0
+2018-05-04 23:29:34,914 - INFO - EPSILON: 0.8610742000004167 161 lepesszam mellett, reward: 0.0
+2018-05-04 23:29:34,914 - INFO - EPSILON: 0.8610742000004167 161 lepesszam mellett, reward: 0.0
+2018-05-04 23:29:34,915 - INFO - Making new env: Breakout-v0
+2018-05-04 23:29:34,915 - INFO - Making new env: Breakout-v0
+2018-05-04 23:29:38,466 - INFO - EPSILON: 0.8608942000004226 200 lepesszam mellett, reward: 1.0
+2018-05-04 23:29:38,466 - INFO - EPSILON: 0.8608942000004226 200 lepesszam mellett, reward: 1.0
+2018-05-04 23:29:38,466 - INFO - Making new env: Breakout-v0
+2018-05-04 23:29:38,466 - INFO - Making new env: Breakout-v0
+2018-05-04 23:32:37,193 - INFO - EPSILON: 0.8518951000007189 9999 lepesszam mellett, reward: 0.0
+2018-05-04 23:32:37,193 - INFO - EPSILON: 0.8518951000007189 9999 lepesszam mellett, reward: 0.0
+2018-05-04 23:32:37,194 - INFO - Making new env: Breakout-v0
+2018-05-04 23:32:37,194 - INFO - Making new env: Breakout-v0
+2018-05-04 23:32:41,265 - INFO - EPSILON: 0.8517007000007253 216 lepesszam mellett, reward: 1.0
+2018-05-04 23:32:41,265 - INFO - EPSILON: 0.8517007000007253 216 lepesszam mellett, reward: 1.0
+2018-05-04 23:32:41,265 - INFO - Making new env: Breakout-v0
+2018-05-04 23:32:41,265 - INFO - Making new env: Breakout-v0
+2018-05-04 23:32:47,884 - INFO - EPSILON: 0.8513902000007355 345 lepesszam mellett, reward: 4.0
+2018-05-04 23:32:47,884 - INFO - EPSILON: 0.8513902000007355 345 lepesszam mellett, reward: 4.0
+2018-05-04 23:32:47,884 - INFO - Making new env: Breakout-v0
+2018-05-04 23:32:47,884 - INFO - Making new env: Breakout-v0
+2018-05-04 23:32:52,151 - INFO - EPSILON: 0.8511913000007421 221 lepesszam mellett, reward: 1.0
+2018-05-04 23:32:52,151 - INFO - EPSILON: 0.8511913000007421 221 lepesszam mellett, reward: 1.0
+2018-05-04 23:32:52,151 - INFO - Making new env: Breakout-v0
+2018-05-04 23:32:52,151 - INFO - Making new env: Breakout-v0
+2018-05-04 23:32:56,254 - INFO - EPSILON: 0.8509924000007486 221 lepesszam mellett, reward: 1.0
+2018-05-04 23:32:56,254 - INFO - EPSILON: 0.8509924000007486 221 lepesszam mellett, reward: 1.0
+2018-05-04 23:32:56,254 - INFO - Making new env: Breakout-v0
+2018-05-04 23:32:56,254 - INFO - Making new env: Breakout-v0
+2018-05-04 23:33:01,418 - INFO - EPSILON: 0.850736800000757 284 lepesszam mellett, reward: 2.0
+2018-05-04 23:33:01,418 - INFO - EPSILON: 0.850736800000757 284 lepesszam mellett, reward: 2.0
+2018-05-04 23:33:01,418 - INFO - Making new env: Breakout-v0
+2018-05-04 23:33:01,418 - INFO - Making new env: Breakout-v0
+2018-05-04 23:33:05,422 - INFO - EPSILON: 0.8505370000007636 222 lepesszam mellett, reward: 1.0
+2018-05-04 23:33:05,422 - INFO - EPSILON: 0.8505370000007636 222 lepesszam mellett, reward: 1.0
+2018-05-04 23:33:05,422 - INFO - Making new env: Breakout-v0
+2018-05-04 23:33:05,422 - INFO - Making new env: Breakout-v0
+2018-05-04 23:33:10,780 - INFO - EPSILON: 0.8502769000007722 289 lepesszam mellett, reward: 2.0
+2018-05-04 23:33:10,780 - INFO - EPSILON: 0.8502769000007722 289 lepesszam mellett, reward: 2.0
+2018-05-04 23:33:10,780 - INFO - Making new env: Breakout-v0
+2018-05-04 23:33:10,780 - INFO - Making new env: Breakout-v0
+2018-05-04 23:33:17,074 - INFO - EPSILON: 0.8499655000007824 346 lepesszam mellett, reward: 3.0
+2018-05-04 23:33:17,074 - INFO - EPSILON: 0.8499655000007824 346 lepesszam mellett, reward: 3.0
+2018-05-04 23:33:17,074 - INFO - Making new env: Breakout-v0
+2018-05-04 23:33:17,074 - INFO - Making new env: Breakout-v0
+2018-05-04 23:33:22,005 - INFO - EPSILON: 0.8497180000007906 275 lepesszam mellett, reward: 2.0
+2018-05-04 23:33:22,005 - INFO - EPSILON: 0.8497180000007906 275 lepesszam mellett, reward: 2.0
+2018-05-04 23:33:22,006 - INFO - Making new env: Breakout-v0
+2018-05-04 23:33:22,006 - INFO - Making new env: Breakout-v0
+2018-05-04 23:33:26,185 - INFO - EPSILON: 0.8495191000007971 221 lepesszam mellett, reward: 1.0
+2018-05-04 23:33:26,185 - INFO - EPSILON: 0.8495191000007971 221 lepesszam mellett, reward: 1.0
+2018-05-04 23:33:26,185 - INFO - Making new env: Breakout-v0
+2018-05-04 23:33:26,185 - INFO - Making new env: Breakout-v0
+2018-05-04 23:33:29,194 - INFO - EPSILON: 0.8493724000008019 163 lepesszam mellett, reward: 0.0
+2018-05-04 23:33:29,194 - INFO - EPSILON: 0.8493724000008019 163 lepesszam mellett, reward: 0.0
+2018-05-04 23:33:29,195 - INFO - Making new env: Breakout-v0
+2018-05-04 23:33:29,195 - INFO - Making new env: Breakout-v0
+2018-05-04 23:33:33,171 - INFO - EPSILON: 0.8491744000008085 220 lepesszam mellett, reward: 1.0
+2018-05-04 23:33:33,171 - INFO - EPSILON: 0.8491744000008085 220 lepesszam mellett, reward: 1.0
+2018-05-04 23:33:33,171 - INFO - Making new env: Breakout-v0
+2018-05-04 23:33:33,171 - INFO - Making new env: Breakout-v0
+2018-05-04 23:33:37,298 - INFO - EPSILON: 0.8489674000008153 230 lepesszam mellett, reward: 1.0
+2018-05-04 23:33:37,298 - INFO - EPSILON: 0.8489674000008153 230 lepesszam mellett, reward: 1.0
+2018-05-04 23:33:37,298 - INFO - Making new env: Breakout-v0
+2018-05-04 23:33:37,298 - INFO - Making new env: Breakout-v0
+2018-05-04 23:33:41,512 - INFO - EPSILON: 0.848764000000822 226 lepesszam mellett, reward: 1.0
+2018-05-04 23:33:41,512 - INFO - EPSILON: 0.848764000000822 226 lepesszam mellett, reward: 1.0
+2018-05-04 23:33:41,513 - INFO - Making new env: Breakout-v0
+2018-05-04 23:33:41,513 - INFO - Making new env: Breakout-v0
+2018-05-04 23:33:45,936 - INFO - EPSILON: 0.8485642000008286 222 lepesszam mellett, reward: 1.0
+2018-05-04 23:33:45,936 - INFO - EPSILON: 0.8485642000008286 222 lepesszam mellett, reward: 1.0
+2018-05-04 23:33:45,936 - INFO - Making new env: Breakout-v0
+2018-05-04 23:33:45,936 - INFO - Making new env: Breakout-v0
+2018-05-04 23:33:51,145 - INFO - EPSILON: 0.8482978000008373 296 lepesszam mellett, reward: 2.0
+2018-05-04 23:33:51,145 - INFO - EPSILON: 0.8482978000008373 296 lepesszam mellett, reward: 2.0
+2018-05-04 23:33:51,145 - INFO - Making new env: Breakout-v0
+2018-05-04 23:33:51,145 - INFO - Making new env: Breakout-v0
+2018-05-04 23:33:53,976 - INFO - EPSILON: 0.8481502000008422 164 lepesszam mellett, reward: 0.0
+2018-05-04 23:33:53,976 - INFO - EPSILON: 0.8481502000008422 164 lepesszam mellett, reward: 0.0
+2018-05-04 23:33:53,976 - INFO - Making new env: Breakout-v0
+2018-05-04 23:33:53,976 - INFO - Making new env: Breakout-v0
+2018-05-04 23:33:58,838 - INFO - EPSILON: 0.8479099000008501 267 lepesszam mellett, reward: 2.0
+2018-05-04 23:33:58,838 - INFO - EPSILON: 0.8479099000008501 267 lepesszam mellett, reward: 2.0
+2018-05-04 23:33:58,839 - INFO - Making new env: Breakout-v0
+2018-05-04 23:33:58,839 - INFO - Making new env: Breakout-v0
+2018-05-04 23:34:05,522 - INFO - EPSILON: 0.8475697000008613 378 lepesszam mellett, reward: 4.0
+2018-05-04 23:34:05,522 - INFO - EPSILON: 0.8475697000008613 378 lepesszam mellett, reward: 4.0
+2018-05-04 23:34:05,522 - INFO - Making new env: Breakout-v0
+2018-05-04 23:34:05,522 - INFO - Making new env: Breakout-v0
+2018-05-04 23:34:10,337 - INFO - EPSILON: 0.8473303000008692 266 lepesszam mellett, reward: 2.0
+2018-05-04 23:34:10,337 - INFO - EPSILON: 0.8473303000008692 266 lepesszam mellett, reward: 2.0
+2018-05-04 23:34:10,337 - INFO - Making new env: Breakout-v0
+2018-05-04 23:34:10,337 - INFO - Making new env: Breakout-v0
+2018-05-04 23:34:15,330 - INFO - EPSILON: 0.8470882000008771 269 lepesszam mellett, reward: 2.0
+2018-05-04 23:34:15,330 - INFO - EPSILON: 0.8470882000008771 269 lepesszam mellett, reward: 2.0
+2018-05-04 23:34:15,331 - INFO - Making new env: Breakout-v0
+2018-05-04 23:34:15,331 - INFO - Making new env: Breakout-v0
+2018-05-04 23:34:21,167 - INFO - EPSILON: 0.8467984000008867 322 lepesszam mellett, reward: 3.0
+2018-05-04 23:34:21,167 - INFO - EPSILON: 0.8467984000008867 322 lepesszam mellett, reward: 3.0
+2018-05-04 23:34:21,167 - INFO - Making new env: Breakout-v0
+2018-05-04 23:34:21,167 - INFO - Making new env: Breakout-v0
+2018-05-04 23:34:25,776 - INFO - EPSILON: 0.8465824000008938 240 lepesszam mellett, reward: 1.0
+2018-05-04 23:34:25,776 - INFO - EPSILON: 0.8465824000008938 240 lepesszam mellett, reward: 1.0
+2018-05-04 23:34:25,777 - INFO - Making new env: Breakout-v0
+2018-05-04 23:34:25,777 - INFO - Making new env: Breakout-v0
+2018-05-04 23:34:30,103 - INFO - EPSILON: 0.8463844000009003 220 lepesszam mellett, reward: 1.0
+2018-05-04 23:34:30,103 - INFO - EPSILON: 0.8463844000009003 220 lepesszam mellett, reward: 1.0
+2018-05-04 23:34:30,104 - INFO - Making new env: Breakout-v0
+2018-05-04 23:34:30,104 - INFO - Making new env: Breakout-v0
+2018-05-04 23:34:34,416 - INFO - EPSILON: 0.8461846000009069 222 lepesszam mellett, reward: 1.0
+2018-05-04 23:34:34,416 - INFO - EPSILON: 0.8461846000009069 222 lepesszam mellett, reward: 1.0
+2018-05-04 23:34:34,416 - INFO - Making new env: Breakout-v0
+2018-05-04 23:34:34,416 - INFO - Making new env: Breakout-v0
+2018-05-04 23:34:37,470 - INFO - EPSILON: 0.8460352000009118 166 lepesszam mellett, reward: 0.0
+2018-05-04 23:34:37,470 - INFO - EPSILON: 0.8460352000009118 166 lepesszam mellett, reward: 0.0
+2018-05-04 23:34:37,471 - INFO - Making new env: Breakout-v0
+2018-05-04 23:34:37,471 - INFO - Making new env: Breakout-v0
+2018-05-04 23:34:40,704 - INFO - EPSILON: 0.8458867000009167 165 lepesszam mellett, reward: 0.0
+2018-05-04 23:34:40,704 - INFO - EPSILON: 0.8458867000009167 165 lepesszam mellett, reward: 0.0
+2018-05-04 23:34:40,704 - INFO - Making new env: Breakout-v0
+2018-05-04 23:34:40,704 - INFO - Making new env: Breakout-v0
+2018-05-04 23:34:43,733 - INFO - EPSILON: 0.8457409000009215 162 lepesszam mellett, reward: 0.0
+2018-05-04 23:34:43,733 - INFO - EPSILON: 0.8457409000009215 162 lepesszam mellett, reward: 0.0
+2018-05-04 23:34:43,734 - INFO - Making new env: Breakout-v0
+2018-05-04 23:34:43,734 - INFO - Making new env: Breakout-v0
+2018-05-04 23:34:48,532 - INFO - EPSILON: 0.8455240000009286 241 lepesszam mellett, reward: 2.0
+2018-05-04 23:34:48,532 - INFO - EPSILON: 0.8455240000009286 241 lepesszam mellett, reward: 2.0
+2018-05-04 23:34:48,532 - INFO - Making new env: Breakout-v0
+2018-05-04 23:34:48,532 - INFO - Making new env: Breakout-v0
+2018-05-04 23:34:51,748 - INFO - EPSILON: 0.8453773000009335 163 lepesszam mellett, reward: 0.0
+2018-05-04 23:34:51,748 - INFO - EPSILON: 0.8453773000009335 163 lepesszam mellett, reward: 0.0
+2018-05-04 23:34:51,748 - INFO - Making new env: Breakout-v0
+2018-05-04 23:34:51,748 - INFO - Making new env: Breakout-v0
+2018-05-04 23:34:56,151 - INFO - EPSILON: 0.8451730000009402 227 lepesszam mellett, reward: 1.0
+2018-05-04 23:34:56,151 - INFO - EPSILON: 0.8451730000009402 227 lepesszam mellett, reward: 1.0
+2018-05-04 23:34:56,151 - INFO - Making new env: Breakout-v0
+2018-05-04 23:34:56,151 - INFO - Making new env: Breakout-v0
+2018-05-04 23:35:02,714 - INFO - EPSILON: 0.8448508000009508 358 lepesszam mellett, reward: 3.0
+2018-05-04 23:35:02,714 - INFO - EPSILON: 0.8448508000009508 358 lepesszam mellett, reward: 3.0
+2018-05-04 23:35:02,714 - INFO - Making new env: Breakout-v0
+2018-05-04 23:35:02,714 - INFO - Making new env: Breakout-v0
+2018-05-04 23:35:05,930 - INFO - EPSILON: 0.8447032000009557 164 lepesszam mellett, reward: 0.0
+2018-05-04 23:35:05,930 - INFO - EPSILON: 0.8447032000009557 164 lepesszam mellett, reward: 0.0
+2018-05-04 23:35:05,930 - INFO - Making new env: Breakout-v0
+2018-05-04 23:35:05,930 - INFO - Making new env: Breakout-v0
+2018-05-04 23:35:08,936 - INFO - EPSILON: 0.8445574000009605 162 lepesszam mellett, reward: 0.0
+2018-05-04 23:35:08,936 - INFO - EPSILON: 0.8445574000009605 162 lepesszam mellett, reward: 0.0
+2018-05-04 23:35:08,936 - INFO - Making new env: Breakout-v0
+2018-05-04 23:35:08,936 - INFO - Making new env: Breakout-v0
+2018-05-04 23:35:12,595 - INFO - EPSILON: 0.8443747000009665 203 lepesszam mellett, reward: 1.0
+2018-05-04 23:35:12,595 - INFO - EPSILON: 0.8443747000009665 203 lepesszam mellett, reward: 1.0
+2018-05-04 23:35:12,595 - INFO - Making new env: Breakout-v0
+2018-05-04 23:35:12,595 - INFO - Making new env: Breakout-v0
+2018-05-04 23:35:16,668 - INFO - EPSILON: 0.8441695000009732 228 lepesszam mellett, reward: 1.0
+2018-05-04 23:35:16,668 - INFO - EPSILON: 0.8441695000009732 228 lepesszam mellett, reward: 1.0
+2018-05-04 23:35:16,668 - INFO - Making new env: Breakout-v0
+2018-05-04 23:35:16,668 - INFO - Making new env: Breakout-v0
+2018-05-04 23:35:19,677 - INFO - EPSILON: 0.8440192000009782 167 lepesszam mellett, reward: 0.0
+2018-05-04 23:35:19,677 - INFO - EPSILON: 0.8440192000009782 167 lepesszam mellett, reward: 0.0
+2018-05-04 23:35:19,678 - INFO - Making new env: Breakout-v0
+2018-05-04 23:35:19,678 - INFO - Making new env: Breakout-v0
+2018-05-04 23:35:22,809 - INFO - EPSILON: 0.8438707000009831 165 lepesszam mellett, reward: 0.0
+2018-05-04 23:35:22,809 - INFO - EPSILON: 0.8438707000009831 165 lepesszam mellett, reward: 0.0
+2018-05-04 23:35:22,809 - INFO - Making new env: Breakout-v0
+2018-05-04 23:35:22,809 - INFO - Making new env: Breakout-v0
+2018-05-04 23:38:20,186 - INFO - EPSILON: 0.8348716000012794 9999 lepesszam mellett, reward: 0.0
+2018-05-04 23:38:20,186 - INFO - EPSILON: 0.8348716000012794 9999 lepesszam mellett, reward: 0.0
+2018-05-04 23:38:20,186 - INFO - Making new env: Breakout-v0
+2018-05-04 23:38:20,186 - INFO - Making new env: Breakout-v0
+2018-05-04 23:38:23,327 - INFO - EPSILON: 0.834729400001284 158 lepesszam mellett, reward: 0.0
+2018-05-04 23:38:23,327 - INFO - EPSILON: 0.834729400001284 158 lepesszam mellett, reward: 0.0
+2018-05-04 23:38:23,327 - INFO - Making new env: Breakout-v0
+2018-05-04 23:38:23,327 - INFO - Making new env: Breakout-v0
+2018-05-04 23:38:28,205 - INFO - EPSILON: 0.834489100001292 267 lepesszam mellett, reward: 2.0
+2018-05-04 23:38:28,205 - INFO - EPSILON: 0.834489100001292 267 lepesszam mellett, reward: 2.0
+2018-05-04 23:38:28,206 - INFO - Making new env: Breakout-v0
+2018-05-04 23:38:28,206 - INFO - Making new env: Breakout-v0
+2018-05-04 23:38:31,440 - INFO - EPSILON: 0.8343424000012968 163 lepesszam mellett, reward: 0.0
+2018-05-04 23:38:31,440 - INFO - EPSILON: 0.8343424000012968 163 lepesszam mellett, reward: 0.0
+2018-05-04 23:38:31,440 - INFO - Making new env: Breakout-v0
+2018-05-04 23:38:31,440 - INFO - Making new env: Breakout-v0
+2018-05-04 23:38:34,562 - INFO - EPSILON: 0.8341930000013017 166 lepesszam mellett, reward: 0.0
+2018-05-04 23:38:34,562 - INFO - EPSILON: 0.8341930000013017 166 lepesszam mellett, reward: 0.0
+2018-05-04 23:38:34,562 - INFO - Making new env: Breakout-v0
+2018-05-04 23:38:34,562 - INFO - Making new env: Breakout-v0
+2018-05-04 23:38:39,464 - INFO - EPSILON: 0.8339599000013094 259 lepesszam mellett, reward: 2.0
+2018-05-04 23:38:39,464 - INFO - EPSILON: 0.8339599000013094 259 lepesszam mellett, reward: 2.0
+2018-05-04 23:38:39,464 - INFO - Making new env: Breakout-v0
+2018-05-04 23:38:39,464 - INFO - Making new env: Breakout-v0
+2018-05-04 23:38:44,143 - INFO - EPSILON: 0.833726800001317 259 lepesszam mellett, reward: 2.0
+2018-05-04 23:38:44,143 - INFO - EPSILON: 0.833726800001317 259 lepesszam mellett, reward: 2.0
+2018-05-04 23:38:44,143 - INFO - Making new env: Breakout-v0
+2018-05-04 23:38:44,143 - INFO - Making new env: Breakout-v0
+2018-05-04 23:38:47,146 - INFO - EPSILON: 0.833575600001322 168 lepesszam mellett, reward: 0.0
+2018-05-04 23:38:47,146 - INFO - EPSILON: 0.833575600001322 168 lepesszam mellett, reward: 0.0
+2018-05-04 23:38:47,147 - INFO - Making new env: Breakout-v0
+2018-05-04 23:38:47,147 - INFO - Making new env: Breakout-v0
+2018-05-04 23:38:52,627 - INFO - EPSILON: 0.833302900001331 303 lepesszam mellett, reward: 3.0
+2018-05-04 23:38:52,627 - INFO - EPSILON: 0.833302900001331 303 lepesszam mellett, reward: 3.0
+2018-05-04 23:38:52,628 - INFO - Making new env: Breakout-v0
+2018-05-04 23:38:52,628 - INFO - Making new env: Breakout-v0
+2018-05-04 23:38:58,034 - INFO - EPSILON: 0.8330338000013399 299 lepesszam mellett, reward: 3.0
+2018-05-04 23:38:58,034 - INFO - EPSILON: 0.8330338000013399 299 lepesszam mellett, reward: 3.0
+2018-05-04 23:38:58,034 - INFO - Making new env: Breakout-v0
+2018-05-04 23:38:58,034 - INFO - Making new env: Breakout-v0
+2018-05-04 23:39:04,244 - INFO - EPSILON: 0.8327278000013499 340 lepesszam mellett, reward: 3.0
+2018-05-04 23:39:04,244 - INFO - EPSILON: 0.8327278000013499 340 lepesszam mellett, reward: 3.0
+2018-05-04 23:39:04,244 - INFO - Making new env: Breakout-v0
+2018-05-04 23:39:04,244 - INFO - Making new env: Breakout-v0
+2018-05-04 23:39:08,752 - INFO - EPSILON: 0.8324938000013576 260 lepesszam mellett, reward: 2.0
+2018-05-04 23:39:08,752 - INFO - EPSILON: 0.8324938000013576 260 lepesszam mellett, reward: 2.0
+2018-05-04 23:39:08,753 - INFO - Making new env: Breakout-v0
+2018-05-04 23:39:08,753 - INFO - Making new env: Breakout-v0
+2018-05-04 23:39:11,721 - INFO - EPSILON: 0.8323480000013624 162 lepesszam mellett, reward: 0.0
+2018-05-04 23:39:11,721 - INFO - EPSILON: 0.8323480000013624 162 lepesszam mellett, reward: 0.0
+2018-05-04 23:39:11,721 - INFO - Making new env: Breakout-v0
+2018-05-04 23:39:11,721 - INFO - Making new env: Breakout-v0
+2018-05-04 23:39:16,667 - INFO - EPSILON: 0.8321068000013704 268 lepesszam mellett, reward: 2.0
+2018-05-04 23:39:16,667 - INFO - EPSILON: 0.8321068000013704 268 lepesszam mellett, reward: 2.0
+2018-05-04 23:39:16,668 - INFO - Making new env: Breakout-v0
+2018-05-04 23:39:16,668 - INFO - Making new env: Breakout-v0
+2018-05-04 23:39:21,064 - INFO - EPSILON: 0.8318998000013772 230 lepesszam mellett, reward: 1.0
+2018-05-04 23:39:21,064 - INFO - EPSILON: 0.8318998000013772 230 lepesszam mellett, reward: 1.0
+2018-05-04 23:39:21,064 - INFO - Making new env: Breakout-v0
+2018-05-04 23:39:21,064 - INFO - Making new env: Breakout-v0
+2018-05-04 23:39:24,301 - INFO - EPSILON: 0.8317513000013821 165 lepesszam mellett, reward: 0.0
+2018-05-04 23:39:24,301 - INFO - EPSILON: 0.8317513000013821 165 lepesszam mellett, reward: 0.0
+2018-05-04 23:39:24,302 - INFO - Making new env: Breakout-v0
+2018-05-04 23:39:24,302 - INFO - Making new env: Breakout-v0
+2018-05-04 23:39:29,195 - INFO - EPSILON: 0.8315137000013899 264 lepesszam mellett, reward: 2.0
+2018-05-04 23:39:29,195 - INFO - EPSILON: 0.8315137000013899 264 lepesszam mellett, reward: 2.0
+2018-05-04 23:39:29,195 - INFO - Making new env: Breakout-v0
+2018-05-04 23:39:29,195 - INFO - Making new env: Breakout-v0
+2018-05-04 23:42:26,801 - INFO - EPSILON: 0.8225146000016862 9999 lepesszam mellett, reward: 0.0
+2018-05-04 23:42:26,801 - INFO - EPSILON: 0.8225146000016862 9999 lepesszam mellett, reward: 0.0
+2018-05-04 23:42:26,801 - INFO - Making new env: Breakout-v0
+2018-05-04 23:42:26,801 - INFO - Making new env: Breakout-v0
+2018-05-04 23:42:32,222 - INFO - EPSILON: 0.8222617000016945 281 lepesszam mellett, reward: 2.0
+2018-05-04 23:42:32,222 - INFO - EPSILON: 0.8222617000016945 281 lepesszam mellett, reward: 2.0
+2018-05-04 23:42:32,223 - INFO - Making new env: Breakout-v0
+2018-05-04 23:42:32,223 - INFO - Making new env: Breakout-v0
+2018-05-04 23:42:35,202 - INFO - EPSILON: 0.8221195000016992 158 lepesszam mellett, reward: 0.0
+2018-05-04 23:42:35,202 - INFO - EPSILON: 0.8221195000016992 158 lepesszam mellett, reward: 0.0
+2018-05-04 23:42:35,202 - INFO - Making new env: Breakout-v0
+2018-05-04 23:42:35,202 - INFO - Making new env: Breakout-v0
+2018-05-04 23:42:41,370 - INFO - EPSILON: 0.821821600001709 331 lepesszam mellett, reward: 3.0
+2018-05-04 23:42:41,370 - INFO - EPSILON: 0.821821600001709 331 lepesszam mellett, reward: 3.0
+2018-05-04 23:42:41,370 - INFO - Making new env: Breakout-v0
+2018-05-04 23:42:41,370 - INFO - Making new env: Breakout-v0
+2018-05-04 23:42:47,600 - INFO - EPSILON: 0.8215102000017193 346 lepesszam mellett, reward: 3.0
+2018-05-04 23:42:47,600 - INFO - EPSILON: 0.8215102000017193 346 lepesszam mellett, reward: 3.0
+2018-05-04 23:42:47,601 - INFO - Making new env: Breakout-v0
+2018-05-04 23:42:47,601 - INFO - Making new env: Breakout-v0
+2018-05-04 23:42:52,593 - INFO - EPSILON: 0.8212672000017273 270 lepesszam mellett, reward: 2.0
+2018-05-04 23:42:52,593 - INFO - EPSILON: 0.8212672000017273 270 lepesszam mellett, reward: 2.0
+2018-05-04 23:42:52,593 - INFO - Making new env: Breakout-v0
+2018-05-04 23:42:52,593 - INFO - Making new env: Breakout-v0
+2018-05-04 23:42:58,043 - INFO - EPSILON: 0.821002600001736 294 lepesszam mellett, reward: 2.0
+2018-05-04 23:42:58,043 - INFO - EPSILON: 0.821002600001736 294 lepesszam mellett, reward: 2.0
+2018-05-04 23:42:58,044 - INFO - Making new env: Breakout-v0
+2018-05-04 23:42:58,044 - INFO - Making new env: Breakout-v0
+2018-05-04 23:43:05,558 - INFO - EPSILON: 0.8206345000017481 409 lepesszam mellett, reward: 4.0
+2018-05-04 23:43:05,558 - INFO - EPSILON: 0.8206345000017481 409 lepesszam mellett, reward: 4.0
+2018-05-04 23:43:05,559 - INFO - Making new env: Breakout-v0
+2018-05-04 23:43:05,559 - INFO - Making new env: Breakout-v0
+2018-05-04 23:43:09,785 - INFO - EPSILON: 0.8204320000017548 225 lepesszam mellett, reward: 1.0
+2018-05-04 23:43:09,785 - INFO - EPSILON: 0.8204320000017548 225 lepesszam mellett, reward: 1.0
+2018-05-04 23:43:09,785 - INFO - Making new env: Breakout-v0
+2018-05-04 23:43:09,785 - INFO - Making new env: Breakout-v0
+2018-05-04 23:43:13,010 - INFO - EPSILON: 0.8202853000017596 163 lepesszam mellett, reward: 0.0
+2018-05-04 23:43:13,010 - INFO - EPSILON: 0.8202853000017596 163 lepesszam mellett, reward: 0.0
+2018-05-04 23:43:13,010 - INFO - Making new env: Breakout-v0
+2018-05-04 23:43:13,010 - INFO - Making new env: Breakout-v0
+2018-05-04 23:43:17,960 - INFO - EPSILON: 0.8200450000017675 267 lepesszam mellett, reward: 2.0
+2018-05-04 23:43:17,960 - INFO - EPSILON: 0.8200450000017675 267 lepesszam mellett, reward: 2.0
+2018-05-04 23:43:17,960 - INFO - Making new env: Breakout-v0
+2018-05-04 23:43:17,960 - INFO - Making new env: Breakout-v0
+2018-05-04 23:43:21,199 - INFO - EPSILON: 0.8199010000017722 160 lepesszam mellett, reward: 0.0
+2018-05-04 23:43:21,199 - INFO - EPSILON: 0.8199010000017722 160 lepesszam mellett, reward: 0.0
+2018-05-04 23:43:21,199 - INFO - Making new env: Breakout-v0
+2018-05-04 23:43:21,199 - INFO - Making new env: Breakout-v0
+2018-05-04 23:43:27,524 - INFO - EPSILON: 0.8195932000017824 342 lepesszam mellett, reward: 4.0
+2018-05-04 23:43:27,524 - INFO - EPSILON: 0.8195932000017824 342 lepesszam mellett, reward: 4.0
+2018-05-04 23:43:27,524 - INFO - Making new env: Breakout-v0
+2018-05-04 23:43:27,524 - INFO - Making new env: Breakout-v0
+2018-05-04 23:43:30,699 - INFO - EPSILON: 0.8194474000017872 162 lepesszam mellett, reward: 0.0
+2018-05-04 23:43:30,699 - INFO - EPSILON: 0.8194474000017872 162 lepesszam mellett, reward: 0.0
+2018-05-04 23:43:30,699 - INFO - Making new env: Breakout-v0
+2018-05-04 23:43:30,699 - INFO - Making new env: Breakout-v0
+2018-05-04 23:46:27,213 - INFO - EPSILON: 0.8104483000020835 9999 lepesszam mellett, reward: 0.0
+2018-05-04 23:46:27,213 - INFO - EPSILON: 0.8104483000020835 9999 lepesszam mellett, reward: 0.0
+2018-05-04 23:46:27,214 - INFO - Making new env: Breakout-v0
+2018-05-04 23:46:27,214 - INFO - Making new env: Breakout-v0
+2018-05-04 23:46:30,441 - INFO - EPSILON: 0.8103034000020882 161 lepesszam mellett, reward: 0.0
+2018-05-04 23:46:30,441 - INFO - EPSILON: 0.8103034000020882 161 lepesszam mellett, reward: 0.0
+2018-05-04 23:46:30,441 - INFO - Making new env: Breakout-v0
+2018-05-04 23:46:30,441 - INFO - Making new env: Breakout-v0
+2018-05-04 23:46:33,723 - INFO - EPSILON: 0.8101558000020931 164 lepesszam mellett, reward: 0.0
+2018-05-04 23:46:33,723 - INFO - EPSILON: 0.8101558000020931 164 lepesszam mellett, reward: 0.0
+2018-05-04 23:46:33,724 - INFO - Making new env: Breakout-v0
+2018-05-04 23:46:33,724 - INFO - Making new env: Breakout-v0
+2018-05-04 23:46:40,578 - INFO - EPSILON: 0.809825500002104 367 lepesszam mellett, reward: 4.0
+2018-05-04 23:46:40,578 - INFO - EPSILON: 0.809825500002104 367 lepesszam mellett, reward: 4.0
+2018-05-04 23:46:40,579 - INFO - Making new env: Breakout-v0
+2018-05-04 23:46:40,579 - INFO - Making new env: Breakout-v0
+2018-05-04 23:46:45,496 - INFO - EPSILON: 0.8095834000021119 269 lepesszam mellett, reward: 2.0
+2018-05-04 23:46:45,496 - INFO - EPSILON: 0.8095834000021119 269 lepesszam mellett, reward: 2.0
+2018-05-04 23:46:45,496 - INFO - Making new env: Breakout-v0
+2018-05-04 23:46:45,496 - INFO - Making new env: Breakout-v0
+2018-05-04 23:49:42,543 - INFO - EPSILON: 0.8005843000024082 9999 lepesszam mellett, reward: 0.0
+2018-05-04 23:49:42,543 - INFO - EPSILON: 0.8005843000024082 9999 lepesszam mellett, reward: 0.0
+2018-05-04 23:49:42,543 - INFO - Making new env: Breakout-v0
+2018-05-04 23:49:42,543 - INFO - Making new env: Breakout-v0
+2018-05-04 23:49:45,922 - INFO - EPSILON: 0.800438500002413 162 lepesszam mellett, reward: 0.0
+2018-05-04 23:49:45,922 - INFO - EPSILON: 0.800438500002413 162 lepesszam mellett, reward: 0.0
+2018-05-04 23:49:45,923 - INFO - Making new env: Breakout-v0
+2018-05-04 23:49:45,923 - INFO - Making new env: Breakout-v0

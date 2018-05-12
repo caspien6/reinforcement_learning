@@ -1,0 +1,12 @@
+global all_action
+ACTION_SET=6
+BATCH_SIZE= 32
+UPDATE_FREQUENCY=4
+STATE_LENGTH=4
+EXPLORATION_STEPS = 1000000
+INITIAL_EPSILON = 1.0
+FINAL_EPSILON = 0.1
+INITIAL_REPLAY_SIZE = 50000  # Number of steps to populate the replay memory before training starts
+NUM_REPLAY_MEMORY = 400000  # Number of replay memory the agent uses for training
+LEARNING_FACTOR = 0.00025
+INFO_GRAPH_WEIGHTS_DIR='./record0502/'

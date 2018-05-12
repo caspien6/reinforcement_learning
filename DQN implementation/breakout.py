@@ -47,18 +47,18 @@ from keras import regularizers
 
 
 global all_action
-ACTION_SET=4
+ACTION_SET=2
 BATCH_SIZE= 32
 UPDATE_FREQUENCY=4
 STATE_LENGTH=4
-EXPLORATION_STEPS = 1000000
+EXPLORATION_STEPS = 1500000
 INITIAL_EPSILON = 1.0
 FINAL_EPSILON = 0.1
 INITIAL_REPLAY_SIZE = 20000  # Number of steps to populate the replay memory before training starts
 NUM_REPLAY_MEMORY = 400000  # Number of replay memory the agent uses for training
 LEARNING_FACTOR = 0.00025
-INFO_GRAPH_WEIGHTS_DIR='./breakout_0504/'
-REFRESH_Q_WEIGHT_STEP=3
+INFO_GRAPH_WEIGHTS_DIR='./breakout_0511/'
+REFRESH_Q_WEIGHT_STEP=5
 
 
 def init_logger(outdir):
@@ -104,9 +104,8 @@ class EpsilonGreedy():
 
 def get_all_action():
 	allactionlist = np.zeros((ACTION_SET,1))
-	allactionlist[0] = [0]#noon
-	allactionlist[1] = [2]#right
-	allactionlist[2] = [3]#left
+	allactionlist[0] = [2]#right
+	allactionlist[1] = [3]#left
 	return allactionlist
 
 def get_random_action(Q, state):
@@ -128,10 +127,10 @@ def get_random_action(Q, state):
 
 
 def preprocess_image(observation, last_observation):
-	processed_observation = np.maximum(observation, last_observation)
+	processed_observation = np.maximum(observation, last_observation)[20:]
 	processed_observation = np.uint8(resize(rgb2gray(processed_observation), (84, 84)) * 255)
-	#plt.imshow(processed_observation)
-	#plt.show()
+	plt.imshow(processed_observation)
+	plt.show()
 	return np.reshape(processed_observation, (84, 84, 1))
 
 def argmax(Q,state, t=1):
@@ -172,7 +171,7 @@ def VideoRecord(env, episode):
 		video_recorder.enabled=False
 
 def get_initial_state(observation, last_observation):
-	processed_observation = np.maximum(observation, last_observation)
+	processed_observation = np.maximum(observation, last_observation)[20:]
 	processed_observation = np.uint8(resize(rgb2gray(processed_observation), (84, 84)) * 255)
 	state = [processed_observation for _ in range(STATE_LENGTH)]
 	return np.stack(state, axis=2)
@@ -237,10 +236,10 @@ def main():
 		printParameters(logger)
 		logger2 = init_logger(INFO_GRAPH_WEIGHTS_DIR + 'action.log')
 
-		if sys.argv[-1] == 'y' and os.path.isfile(INFO_GRAPH_WEIGHTS_DIR+'weights7.h5'):
+		if sys.argv[-1] == 'y' and os.path.isfile(INFO_GRAPH_WEIGHTS_DIR+'weights2.h5'):
 			print('loading weights')
-			Q.load_weights(INFO_GRAPH_WEIGHTS_DIR + 'weights1.h5')
-			epsgrdy.epsilon = 0.93168
+			Q.load_weights(INFO_GRAPH_WEIGHTS_DIR + 'weights2.h5')
+			epsgrdy.epsilon = 0.8737291
 
 		Q_freeze = init_network()
 		#Q_freeze.set_weights(Q.get_weights())
@@ -248,7 +247,7 @@ def main():
 		global all_action
 		all_action = get_all_action()
 
-		maxrange=50000
+		maxrange=100000
 
 		for episode in range(1,maxrange):
 			
@@ -285,11 +284,12 @@ def main():
 				
 				action_t = get_action(epsilon, Q, state, logger2, t)
 				
-				if lives == info['ale.lives']:
-					observation, reward, done, info = env.step(action_t.astype(np.uint8).tolist())
-				else:
-					lives = info['ale.lives']
-					observation, reward, done, info = env.step(1)
+				#if int(lives) == int(info['ale.lives']):
+				observation, reward, done, info = env.step(1)
+				observation, reward, done, info = env.step(action_t.astype(np.uint8).tolist())
+				#else:
+				lives = info['ale.lives']
+				
 
 				#env.render()
 
@@ -316,12 +316,12 @@ def main():
 			rewards_list.append(sum_rewards)
 			if (episode) % REFRESH_Q_WEIGHT_STEP == 0:
 					Q_freeze.set_weights(Q.get_weights())
-			if episode % 50 == 0:
-				Q.save_weights(INFO_GRAPH_WEIGHTS_DIR + 'weights' + str(int(episode/50)) + '.h5')
-			if episode % 100 == 0:
-				plt.plot(rewards_list)
-				plt.savefig(INFO_GRAPH_WEIGHTS_DIR+'reward_diagram'+str(episode)+'.png')
-				plt.close()
+			if episode % 200 == 0:
+				Q.save_weights(INFO_GRAPH_WEIGHTS_DIR + 'weights' + str(int(episode/200)) + '.h5')
+			# if episode % 100 == 0:
+			# 	plt.plot(rewards_list)
+			# 	plt.savefig(INFO_GRAPH_WEIGHTS_DIR+'reward_diagram'+str(episode)+'.png')
+			# 	plt.close()
 			logger.info('EPSILON: '+ str(epsilon) + ' '+  str(t) + " lepesszam mellett, reward: " + str(sum_rewards))
 	finally:
 		
